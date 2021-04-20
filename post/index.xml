@@ -1,27 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Posts on ZZB&#39;s blog</title>
-    <link>https://a390177226.github.io/post/</link>
-    <description>Recent content in Posts on ZZB&#39;s blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>zzb2021.</copyright>
-    <lastBuildDate>Tue, 20 Apr 2021 18:53:42 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hugo&#43;github pages创建个人博客</title>
-      <link>https://a390177226.github.io/post/hugo/</link>
-      <pubDate>Tue, 20 Apr 2021 18:53:42 +0800</pubDate>
-      
-      <guid>https://a390177226.github.io/post/hugo/</guid>
-      <description>hugo 官网：The world’s fastest framework for building websites | Hugo (gohugo.io)
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on ZZB's blog</title><link>https://a390177226.github.io/post/</link><description>Recent content in Posts on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Tue, 20 Apr 2021 18:53:42 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo+github pages创建个人博客</title><link>https://a390177226.github.io/post/hugo/</link><pubDate>Tue, 20 Apr 2021 18:53:42 +0800</pubDate><guid>https://a390177226.github.io/post/hugo/</guid><description>hugo 官网：The world’s fastest framework for building websites | Hugo (gohugo.io)
 视频教程：手把手教你从0开始搭建自己的个人博客 |hugo|bilibili
-基础命令 查看hugo版本 hugo version创建一个hugo项目 hugo new site mysite创建一个页面 hugo new post/first.md本地调试，在浏览器输入http://localhost:1313/访问 hugo server --buildDraftshugo部署到github pages上   在github上创建一个新的仓库（注：仓库名为username.github.io）
-  在blog根目录的git上输入huge来生成public文件夹
-  进入public文件夹
-cd publicgit initgit add .git commit -m &amp;quot;frist&amp;quot;git remote add origin https://github.com/a390177226/a390177226.github.io.gitgit push -u origin master  在浏览器输入https://a390177226.github.io/访问
-  </description>
-    </item>
-    
-  </channel>
-</rss>
+基础命令 查看hugo版本 hugo version
+创建一个hugo项目 hugo new site mysite
+创建一个页面 hugo new post/first.md
+本地调试，在浏览器输入http://localhost:1313/访问 hugo server --buildDrafts
+部署到github pages 在github上创建一个新的仓库（注：仓库名为username.github.io）
+在blog根目录的git上输入huge来生成public文件夹
+进入public文件夹
+cd public
+git init
+git add .
+git commit -m &amp;quot;frist&amp;quot;
+git remote add origin https://github.com/a390177226/a390177226.github.io.git
+git push -u origin master
+在浏览器输入https://a390177226.github.io/访问
+自动部署脚本 Hugo部署方案 - 神秘极客 (xbc.</description></item></channel></rss>
