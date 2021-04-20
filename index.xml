@@ -1,0 +1,34 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZZB&#39;s blog</title>
+    <link>https://a390177226.github.io/</link>
+    <description>Recent content on ZZB&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>zzb2021.</copyright>
+    <lastBuildDate>Tue, 20 Apr 2021 14:09:42 +0800</lastBuildDate>
+    
+        <atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Simple Template</title>
+        <link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/simple_template/</link>
+        <pubDate>Tue, 20 Apr 2021 14:09:42 +0800</pubDate>
+        
+        <guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/simple_template/</guid>
+        <description>ZZB&#39;s blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/simple_template/ -&lt;h1 id=&#34;11&#34;&gt;11&lt;/h1&gt;
+&lt;h2 id=&#34;aaaaaaaaaaaaaa&#34;&gt;aaaaaaaaaaaaaa&lt;/h2&gt;
+&lt;p&gt;aaaaaaaabbbbbbbbbbbbbbbbbbb&lt;/p&gt;
+&lt;p&gt;aaaaaaaabbbbbbbbbbbbbbbbbbb&lt;/p&gt;
+&lt;h2 id=&#34;b&#34;&gt;b&lt;/h2&gt;
+&lt;h1 id=&#34;22&#34;&gt;22&lt;/h1&gt;
+&lt;h2 id=&#34;abc&#34;&gt;abc&lt;/h2&gt;
+&lt;p&gt;test&lt;/p&gt;
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/simple_template/ - zzb2021.</description>
+        </item>
+    
+    
+  </channel>
+</rss> 
