@@ -6,27 +6,52 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>zzb2021.</copyright>
-    <lastBuildDate>Tue, 20 Apr 2021 14:09:42 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 20 Apr 2021 18:53:42 +0800</lastBuildDate>
     
         <atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     
         <item>
-        <title>Simple Template</title>
-        <link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/simple_template/</link>
-        <pubDate>Tue, 20 Apr 2021 14:09:42 +0800</pubDate>
+        <title>Hugo&#43;github pages创建个人博客</title>
+        <link>https://a390177226.github.io/post/hugo/</link>
+        <pubDate>Tue, 20 Apr 2021 18:53:42 +0800</pubDate>
         
-        <guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/simple_template/</guid>
-        <description>ZZB&#39;s blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/simple_template/ -&lt;h1 id=&#34;11&#34;&gt;11&lt;/h1&gt;
-&lt;h2 id=&#34;aaaaaaaaaaaaaa&#34;&gt;aaaaaaaaaaaaaa&lt;/h2&gt;
-&lt;p&gt;aaaaaaaabbbbbbbbbbbbbbbbbbb&lt;/p&gt;
-&lt;p&gt;aaaaaaaabbbbbbbbbbbbbbbbbbb&lt;/p&gt;
-&lt;h2 id=&#34;b&#34;&gt;b&lt;/h2&gt;
-&lt;h1 id=&#34;22&#34;&gt;22&lt;/h1&gt;
-&lt;h2 id=&#34;abc&#34;&gt;abc&lt;/h2&gt;
-&lt;p&gt;test&lt;/p&gt;
-- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/simple_template/ - zzb2021.</description>
+        <guid>https://a390177226.github.io/post/hugo/</guid>
+        <description>ZZB&#39;s blog https://a390177226.github.io/post/hugo/ -&lt;h1 id=&#34;hugo&#34;&gt;hugo&lt;/h1&gt;
+&lt;p&gt;官网：&lt;a href=&#34;https://gohugo.io/&#34;&gt;The world’s fastest framework for building websites | Hugo (gohugo.io)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;视频教程：&lt;a href=&#34;https://www.bilibili.com/video/BV1q4411i7gL&#34;&gt;手把手教你从0开始搭建自己的个人博客 |hugo|bilibili&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;基础命令&#34;&gt;基础命令&lt;/h2&gt;
+&lt;h3 id=&#34;查看hugo版本&#34;&gt;查看hugo版本&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;hugo version
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;创建一个hugo项目&#34;&gt;创建一个hugo项目&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;hugo new site mysite
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;创建一个页面&#34;&gt;创建一个页面&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;hugo new post/first.md
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;本地调试在浏览器输入httplocalhost1313httplocalhost1313访问&#34;&gt;本地调试，在浏览器输入&lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;访问&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;hugo server --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;hugo部署到github-pages上&#34;&gt;hugo部署到github pages上&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在github上创建一个新的仓库（注：仓库名为username.github.io）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在blog根目录的git上输入&lt;code&gt;huge&lt;/code&gt;来生成public文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入public文件夹&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-git&#34; data-lang=&#34;git&#34;&gt;cd public
+git init
+git add .
+git commit -m &amp;quot;frist&amp;quot;
+git remote add origin https://github.com/a390177226/a390177226.github.io.git
+git push -u origin master
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在浏览器输入&lt;a href=&#34;https://a390177226.github.io/&#34;&gt;https://a390177226.github.io/&lt;/a&gt;访问&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+- https://a390177226.github.io/post/hugo/ - zzb2021.</description>
         </item>
     
     
