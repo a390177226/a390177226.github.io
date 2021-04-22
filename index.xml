@@ -1,4 +1,313 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Tue, 20 Apr 2021 18:53:42 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo+github pages创建个人博客</title><link>https://a390177226.github.io/post/hugo/</link><pubDate>Tue, 20 Apr 2021 18:53:42 +0800</pubDate><guid>https://a390177226.github.io/post/hugo/</guid><description>ZZB's blog https://a390177226.github.io/post/hugo/ -&lt;h1 id="hugo">hugo&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Wed, 21 Apr 2021 18:50:24 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML标签</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ -&lt;h1 id="骨架标签">骨架标签&lt;/h1>
+&lt;p>每个网页都会有的基本的结构标签。&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE.png" alt="基本的结构标签">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>标签名&lt;/th>
+&lt;th>定义&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;html&amp;gt;&amp;lt;/html&amp;gt;&lt;/code>&lt;/td>
+&lt;td>HTML标签&lt;/td>
+&lt;td>页面中最大的标签，我们称为&lt;strong>根标签&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code>&lt;/td>
+&lt;td>文档的头部&lt;/td>
+&lt;td>注意在head标签中我们必须要设置的标签是title&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&lt;/code>&lt;/td>
+&lt;td>文档的标题&lt;/td>
+&lt;td>网页的标题&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&lt;/code>&lt;/td>
+&lt;td>文档的主体&lt;/td>
+&lt;td>页面内容基本上是放在body里的&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>VSCode工具生成骨架标签代码&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span> &lt;span style="color:#658b00">lang&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;en&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">charset&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;UTF-8&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">http-equiv&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;X-UA-Compatible&amp;#34;&lt;/span> &lt;span style="color:#658b00">content&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;IE=edge&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">name&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span style="color:#658b00">content&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;width=device-width, initial-scale=1.0&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">title&lt;/span>&amp;gt;Document&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">title&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>相较之前，主要多了：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;!DOCTYPE html&amp;gt;&lt;/code>告诉浏览器文档是HTML5版本编写。&amp;lt;!DOCTYPE&amp;gt;`不是 HTML 标签, 只是文档类型声明。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&lt;/code>用来定义当前文档的语言是英文，&amp;ldquo;zh-CN&amp;quot;是中文。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/code>如果不写就会乱码，其中UTF-8被称为万国码，charset字符集是多个字符的集合，以便计算机能够识别和存储各种文字。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>第5、6行用于移动端的显示。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="标题">标题&lt;/h1>
+&lt;p>标题（Heading）是通过 &lt;code>&amp;lt;h1&amp;gt; - &amp;lt;h6&amp;gt; &lt;/code>等标签进行定义的。&lt;/p>
+&lt;p>&lt;code>&amp;lt;h1&amp;gt;&lt;/code> 定义最大的标题,&lt;code>&amp;lt;h6&amp;gt;&lt;/code> 定义最小的标题。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;This is a heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h2&lt;/span>&amp;gt;This is a heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h2&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h3&lt;/span>&amp;gt;This is a heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h3&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="段落">段落&lt;/h1>
+&lt;p>段落是通过&lt;code> &amp;lt;p&amp;gt;&lt;/code> 标签定义的。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is another paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>文本在一个段落中会根据浏览器窗口的大小自动换行。&lt;/li>
+&lt;li>浏览器会自动地在段落的前后添加空行。&lt;/li>
+&lt;/ul>
+&lt;h1 id="换行">换行&lt;/h1>
+&lt;p>如果您希望在不产生一个新段落的情况下进行换行（新行），请使用 &lt;code>&amp;lt;br /&amp;gt;&lt;/code>标签：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">br&lt;/span> /&amp;gt;a para&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">br&lt;/span> /&amp;gt;graph with line breaks&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>&amp;lt;br /&amp;gt;&lt;/code> 元素是一个空的 HTML 元素。由于关闭标签没有任何意义，因此它没有结束标签。&lt;/p>
+&lt;p>即使 &lt;code>&amp;lt;br&amp;gt;&lt;/code> 在所有浏览器中的显示都没有问题，使用 &lt;code>&amp;lt;br /&amp;gt;&lt;/code> 是&lt;strong>更长远的保障&lt;/strong>。&lt;/p>
+&lt;h1 id="水平线">水平线&lt;/h1>
+&lt;p>&lt;code>&amp;lt;hr /&amp;gt;&lt;/code> 标签在 HTML 页面中创建水平线。hr 元素可用于分隔内容。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">hr&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">hr&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="文本格式化">文本格式化&lt;/h1>
+&lt;p>HTML 可定义很多供格式化输出的元素，比如粗体和斜体字。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">标签&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;&lt;/code>或&lt;code>&amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">加粗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;i&amp;gt;&amp;lt;/i&amp;gt;&lt;/code>或&lt;code>&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">倾斜&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;del&amp;gt;&amp;lt;/del&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">删除线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;ins&amp;gt;&amp;lt;/ins&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">下划线&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="引用">引用&lt;/h1>
+&lt;p>HTML &lt;code>&amp;lt;q&amp;gt;&lt;/code> 元素定义&lt;strong>短的引用&lt;/strong>，&lt;code>&amp;lt;blockquote&amp;gt;&lt;/code>元素定义&lt;strong>被引用的节&lt;/strong>。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;WWF 的目标是：&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">q&lt;/span>&amp;gt;构建人与自然和谐共存的世界。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">q&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;浏览器通常会对 blockquote 元素进行缩进处理。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">blockquote&lt;/span> &lt;span style="color:#658b00">cite&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;http://www.worldwildlife.org/who/index.html&amp;#34;&lt;/span>&amp;gt;
+五十年来，WWF 一直致力于保护自然界的未来。
+WWF 工作于 100 个国家，并得到美国一百二十万会员及全球近五百万会员的支持。
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">blockquote&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ - zzb2021.</description></item><item><title>Html简介</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/</link><pubDate>Wed, 21 Apr 2021 18:23:09 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/ -&lt;h1 id="what-is-html">What is HTML?&lt;/h1>
+&lt;p>HTML 是用来描述网页的一种语言。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>HTML 指的是超文本标记语言 (&lt;strong>H&lt;/strong>yper &lt;strong>T&lt;/strong>ext &lt;strong>M&lt;/strong>arkup &lt;strong>L&lt;/strong>anguage)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>HTML 不是一种编程语言，而是一种&lt;strong>标记语言&lt;/strong> (markup language)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>标记语言是一套&lt;strong>标记标签&lt;/strong> (markup tag)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>HTML 使用&lt;strong>标记标签&lt;/strong>来描述网页&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="html-标签">HTML 标签&lt;/h1>
+&lt;p>HTML 标记标签通常被称为 HTML 标签 (HTML tag)。&lt;/p>
+&lt;ul>
+&lt;li>HTML 标签是由&lt;strong>尖括号&lt;/strong>包围的关键词，比如 &lt;code>&amp;lt;html&amp;gt;&lt;/code>&lt;/li>
+&lt;li>HTML 标签通常是&lt;strong>成对出现&lt;/strong>的，我们称为&lt;strong>双标签&lt;/strong>，比如 &lt;code>&amp;lt;b&amp;gt;&lt;/code>和 &lt;code>&amp;lt;/b&amp;gt;&lt;/code>&lt;/li>
+&lt;li>标签对中的第一个标签是&lt;strong>开始标签&lt;/strong>，第二个标签是&lt;strong>结束标签&lt;/strong>&lt;/li>
+&lt;li>开始和结束标签也被称为&lt;strong>开放标签&lt;/strong>和&lt;strong>闭合标签&lt;/strong>&lt;/li>
+&lt;li>有些特殊的标签必须是单个标签（极少情况），例如&lt;code>&amp;lt;br /&amp;gt;&lt;/code>，我们称为&lt;strong>单标签&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h1 id="html-文档--网页">HTML 文档 = 网页&lt;/h1>
+&lt;ul>
+&lt;li>HTML 文档&lt;strong>描述网页&lt;/strong>&lt;/li>
+&lt;li>HTML 文档&lt;strong>包含 HTML 标签&lt;/strong>和纯文本&lt;/li>
+&lt;li>HTML 文档也被称为&lt;strong>网页&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;p>Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;我的第一个标题&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;我的第一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="例子解释">例子解释&lt;/h3>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;html&amp;gt;&lt;/code> 与 &lt;code>&amp;lt;/html&amp;gt; &lt;/code>之间的文本描述网页&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;body&amp;gt;&lt;/code> 与 &lt;code>&amp;lt;/body&amp;gt; &lt;/code>之间的文本是可见的页面内容&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;h1&amp;gt;&lt;/code> 与 &lt;code>&amp;lt;/h1&amp;gt; &lt;/code>之间的文本被显示为标题&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;p&amp;gt; &lt;/code>与 &lt;code>&amp;lt;/p&amp;gt;&lt;/code> 之间的文本被显示为段落&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="html-元素">HTML 元素&lt;/h1>
+&lt;p>HTML 文档是由 HTML 元素定义的。HTML 元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">开始标签&lt;/th>
+&lt;th style="text-align:left">元素内容&lt;/th>
+&lt;th style="text-align:left">结束标签&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;p&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">This is a paragraph&lt;/td>
+&lt;td style="text-align:left">&lt;code>&amp;lt;/p&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;a href=&amp;quot;default.htm&amp;quot; &amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">This is a link&lt;/td>
+&lt;td style="text-align:left">&lt;code>&amp;lt;/a&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;br /&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="html-元素语法">HTML 元素语法&lt;/h2>
+&lt;ul>
+&lt;li>HTML 元素以开始标签起始,以结束标签终止,元素的内容是开始标签与结束标签之间的内容&lt;/li>
+&lt;li>某些 HTML 元素具有&lt;strong>空内容（empty content）&lt;/strong>&lt;/li>
+&lt;li>空元素在开始标签中进行关闭（以开始标签的结束而结束）&lt;/li>
+&lt;li>大多数 HTML 元素可拥有&lt;strong>属性&lt;/strong>&lt;/li>
+&lt;/ul>
+&lt;h1 id="html-属性">HTML 属性&lt;/h1>
+&lt;p>HTML 标签可以拥有&lt;strong>属性&lt;/strong>。属性提供了有关 HTML 元素的&lt;strong>更多的信息&lt;/strong>。&lt;/p>
+&lt;p>属性总是以名称/值对的形式出现，比如：&lt;strong>name=&amp;ldquo;value&amp;rdquo;&lt;/strong>。&lt;/p>
+&lt;p>属性总是在 HTML 元素的&lt;strong>开始标签&lt;/strong>中规定。&lt;/p>
+&lt;h2 id="属性实例">属性实例&lt;/h2>
+&lt;p>HTML 链接由 &lt;code>&amp;lt;a&amp;gt;&lt;/code>标签定义。链接的地址在 href 属性中指定：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">a&lt;/span> &lt;span style="color:#658b00">href&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;http://www.w3school.com.cn&amp;#34;&lt;/span>&amp;gt;This is a link&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">a&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="html-注释">HTML 注释&lt;/h1>
+&lt;p>可以将注释插入 HTML 代码提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#228b22">&amp;lt;!-- This is a comment --&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="html-notes">HTML Notes&lt;/h1>
+&lt;ul>
+&lt;li>使用小写标签，HTML 标签对大小写不敏感：&lt;code>&amp;lt;P&amp;gt;&lt;/code> 等同于 &lt;code>&amp;lt;p&amp;gt;&lt;/code>。&lt;strong>推荐&lt;/strong>使用小写，在未来版本中可能&lt;strong>强制&lt;/strong>使用小写。&lt;/li>
+&lt;li>&lt;strong>推荐&lt;/strong>使用小写属性，尽管属性和属性值对大小写&lt;strong>不敏感&lt;/strong>。&lt;/li>
+&lt;li>属性值应该始终被包括在引号内，双引号是最常用的。&lt;/li>
+&lt;li>无法通过在 HTML 代码中添加额外的空格或换行来改变输出的效果。浏览器会移除&lt;strong>源代码&lt;/strong>中多余的空格和空行，所有连续的空格或空行都会被算作一个空格。&lt;/li>
+&lt;/ul>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/ - zzb2021.</description></item><item><title>Web基础知识</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/</link><pubDate>Wed, 21 Apr 2021 17:59:55 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/ -&lt;h1 id="web-标准">Web 标准&lt;/h1>
+&lt;h2 id="构成">构成&lt;/h2>
+&lt;p>主要包括&lt;strong>结构(Structure)&lt;/strong>、&lt;strong>表现(Presentation)&lt;/strong> 和 &lt;strong>行为(Behavior)&lt;/strong> 三个方面。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>标准&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>结构&lt;/td>
+&lt;td>结构用于对&lt;strong>网页元素&lt;/strong>进行整理和分类，现阶段主要学的是HTML&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>表现&lt;/td>
+&lt;td>表现用于设置网页元素的版式、颜色、大小等&lt;strong>外观样式&lt;/strong>，主要指的是CSS&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>行为&lt;/td>
+&lt;td>行为是指网页模型的定义及&lt;strong>交互&lt;/strong>的编写，现阶段主要学的是JavaScript&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Web标准提出的最佳体验方案：结构、样式、行为相分离。&lt;/p>
+&lt;p>简单理解：结构写到HTML文件中，表现写到CSS文件中，行为写到JavaScript文件中。&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/ - zzb2021.</description></item><item><title>Overview of front-end web development</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</link><pubDate>Wed, 21 Apr 2021 14:55:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/ -&lt;h1 id="links">Links&lt;/h1>
+&lt;p>参考手册：&lt;a href="https://www.w3school.com.cn/">w3school 在线教程&lt;/a>&lt;/p>
+&lt;p>路线视频：&lt;a href="https://www.youtube.com/watch?v=i5zRYMc7PFw">Frontend Learning Path in 2021 - YouTube&lt;/a>&lt;/p>
+&lt;h1 id="a">a&lt;/h1>
+&lt;p>aaaa&lt;/p>
+&lt;h1 id="前端学习路线图">前端学习路线图&lt;/h1>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/front_end_route.png" alt="前端学习路线图">&lt;/p>
+&lt;h2 id="从开始到找到工作的六个阶段">从开始到找到工作的六个阶段&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>阶段&lt;/th>
+&lt;th>需要学的东西&lt;/th>
+&lt;th>时间&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>1&lt;/td>
+&lt;td>HTML+CSS&lt;/td>
+&lt;td>1-2周&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>2&lt;/td>
+&lt;td>JavaScript&lt;/td>
+&lt;td>一个月左右&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>3&lt;/td>
+&lt;td>ES6、ES7、ES8、ES9&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>4&lt;/td>
+&lt;td>移动端和多端布局&lt;/td>
+&lt;td>在工作中不断精进&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>5&lt;/td>
+&lt;td>Node.js&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>6&lt;/td>
+&lt;td>Vue框架&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/ - zzb2021.</description></item><item><title>Hugo+github pages创建个人博客</title><link>https://a390177226.github.io/post/hugo/</link><pubDate>Tue, 20 Apr 2021 18:53:42 +0800</pubDate><guid>https://a390177226.github.io/post/hugo/</guid><description>ZZB's blog https://a390177226.github.io/post/hugo/ -&lt;h1 id="hugo">hugo&lt;/h1>
 &lt;p>官网：&lt;a href="https://gohugo.io/">The world’s fastest framework for building websites | Hugo (gohugo.io)&lt;/a>&lt;/p>
 &lt;p>视频教程：&lt;a href="https://www.bilibili.com/video/BV1q4411i7gL">手把手教你从0开始搭建自己的个人博客 |hugo|bilibili&lt;/a>&lt;/p>
 &lt;h2 id="基础命令">基础命令&lt;/h2>
