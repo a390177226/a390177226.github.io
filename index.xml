@@ -1,4 +1,52 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Wed, 21 Apr 2021 18:50:24 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML标签</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ -&lt;h1 id="骨架标签">骨架标签&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Wed, 21 Apr 2021 18:50:24 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML标签</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ -&lt;h1 id="参考手册">参考手册&lt;/h1>
+&lt;p>&lt;a href="https://www.w3school.com.cn/tags/index.asp">HTML 标签参考手册 (w3school.com.cn)&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://man.ilovefishc.com/html5/">鱼C-Web-HTML5-速查宝典 (ilovefishc.com)&lt;/a>&lt;/p>
+&lt;h1 id="特殊字符">特殊字符&lt;/h1>
+&lt;p>在 HTML 中，某些字符是预留的。不能使用包含这些字符的文本。&lt;/p>
+&lt;p>在 HTML 中&lt;strong>不能&lt;/strong>使用小于号&lt;code>（&amp;lt;）&lt;/code>和大于号&lt;code>（&amp;gt;）&lt;/code>，这是因为浏览器会误认为它们是标签。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>显示结果&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;th>实体名称&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>空格符&lt;/td>
+&lt;td>&lt;code>&amp;amp;nbsp;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;lt;&lt;/td>
+&lt;td>less-than&lt;/td>
+&lt;td>&lt;code>&amp;amp;lt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;gt;&lt;/td>
+&lt;td>greater-than&lt;/td>
+&lt;td>&lt;code>&amp;amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;amp;&lt;/td>
+&lt;td>ampersand&lt;/td>
+&lt;td>&lt;code>&amp;amp;amp;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>©&lt;/td>
+&lt;td>版权（copyright）&lt;/td>
+&lt;td>&lt;code>&amp;amp;copy;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>²&lt;/td>
+&lt;td>superscript 2&lt;/td>
+&lt;td>&lt;code>&amp;amp;sup2;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>如需完整的实体符号参考，请访问我们的 &lt;a href="https://www.w3school.com.cn/tags/html_ref_entities.html">HTML 实体符号参考手册&lt;/a>。&lt;/p>
+&lt;h1 id="骨架标签">骨架标签&lt;/h1>
 &lt;p>每个网页都会有的基本的结构标签。&lt;/p>
 &lt;p>&lt;img src="https://a390177226.github.io/images/html/%E5%9F%BA%E6%9C%AC%E6%A0%87%E7%AD%BE.png" alt="基本的结构标签">&lt;/p>
 &lt;table>
@@ -78,14 +126,7 @@
 &lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">br&lt;/span> /&amp;gt;a para&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">br&lt;/span> /&amp;gt;graph with line breaks&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>&amp;lt;br /&amp;gt;&lt;/code> 元素是一个空的 HTML 元素。由于关闭标签没有任何意义，因此它没有结束标签。&lt;/p>
 &lt;p>即使 &lt;code>&amp;lt;br&amp;gt;&lt;/code> 在所有浏览器中的显示都没有问题，使用 &lt;code>&amp;lt;br /&amp;gt;&lt;/code> 是&lt;strong>更长远的保障&lt;/strong>。&lt;/p>
-&lt;h1 id="水平线">水平线&lt;/h1>
-&lt;p>&lt;code>&amp;lt;hr /&amp;gt;&lt;/code> 标签在 HTML 页面中创建水平线。hr 元素可用于分隔内容。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">hr&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">hr&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="文本格式化">文本格式化&lt;/h1>
+&lt;h1 id="文本格式化">文本格式化&lt;/h1>
 &lt;p>HTML 可定义很多供格式化输出的元素，比如粗体和斜体字。&lt;/p>
 &lt;table>
 &lt;thead>
@@ -113,7 +154,158 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;h1 id="引用">引用&lt;/h1>
+&lt;h1 id="容器标签">容器标签&lt;/h1>
+&lt;p>&lt;code>&amp;lt;div&amp;gt;&lt;/code>和&lt;code>&amp;lt;span&amp;gt;&lt;/code>是没有语义的，它们就是一个盒子，用来装内容的。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;这是头部&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;今日价格&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>&amp;lt;div&amp;gt;&lt;/code>标签用来布局，但是现在一行只能放一个&lt;code>&amp;lt;div&amp;gt;&lt;/code>。大盒子&lt;/li>
+&lt;li>&lt;code>&amp;lt;span&amp;gt;&lt;/code>标签用来布局，一行上可以多个&lt;code>&amp;lt;span&amp;gt;&lt;/code>。小盒子&lt;/li>
+&lt;/ul>
+&lt;h1 id="图像标签">图像标签&lt;/h1>
+&lt;p>在 HTML 中，图像由 &lt;code>&amp;lt;img&amp;gt;&lt;/code> 标签定义，它并不会在网页中插入图像，而是从网页上链接图像。&lt;/p>
+&lt;p>&lt;code>&amp;lt;img&amp;gt;&lt;/code>是空标签，只包含属性，并且没有闭合标签。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">img&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;/i/eg_tulip.jpg&amp;#34;&lt;/span> &lt;span style="color:#658b00">alt&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;上海鲜花港 - 郁金香&amp;#34;&lt;/span> /&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">值&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/tags/att_img_alt.asp">alt&lt;/a>&lt;/td>
+&lt;td style="text-align:left">text&lt;/td>
+&lt;td style="text-align:left">必需属性，规定图像的替代文本。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/tags/att_img_src.asp">src&lt;/a>&lt;/td>
+&lt;td style="text-align:left">URL&lt;/td>
+&lt;td style="text-align:left">必需属性，规定显示图像的 URL。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/tags/att_img_height-width.asp">height&lt;/a>&lt;/td>
+&lt;td style="text-align:left">px(pixels)或%&lt;/td>
+&lt;td style="text-align:left">定义图像的高度（像素或百分比）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/tags/att_img_height-width.asp">width&lt;/a>&lt;/td>
+&lt;td style="text-align:left">px(pixels)或%&lt;/td>
+&lt;td style="text-align:left">设置图像的宽度（像素或百分比）。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="超链接">超链接&lt;/h1>
+&lt;p>&lt;code>&amp;lt;a&amp;gt;&lt;/code> 标签用于定义超链接，超链接可以让用户从一个网页跳转到另一个网页。&lt;/p>
+&lt;p>&lt;code>&amp;lt;a&amp;gt;&lt;/code> 标签最重要的属性是 href 属性，它指定了链接目标的 URL。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">a&lt;/span> &lt;span style="color:#658b00">href&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;http://www.w3school.com.cn/&amp;#34;&lt;/span> &lt;span style="color:#658b00">target&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;_blank&amp;#34;&lt;/span>&amp;gt;Visit W3School!&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">a&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;如果把链接的 target 属性设置为 &amp;#34;_blank&amp;#34;，该链接会在新窗口中打开。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>外部链接&lt;code>&amp;lt;a href=&amp;quot;https://www.w3school.com.cn/&amp;quot;&amp;gt;W3School&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>内部链接&lt;code>&amp;lt;a href=&amp;quot;../index.html&amp;quot;&amp;gt;首页&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>空链接&lt;code>&amp;lt;a href=&amp;quot;#&amp;quot;&amp;gt;空链接&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>下载链接&lt;code>&amp;lt;a href=&amp;quot;xxx.zip&amp;quot;&amp;gt;下载文件&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>锚点链接：点击链接可以快速定位到页面的某个位置
+&lt;ul>
+&lt;li>在链接文本的href属性中，设置属性值为#名字的形式，如&lt;code>&amp;lt;a href=&amp;quot;#two&amp;quot;&amp;gt;第二集&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>找到目标位置标签，添加一个id属性，如&lt;code>&amp;lt;h3 id=&amp;quot;two&amp;quot;&amp;gt;第二集介绍&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="表格标签">表格标签&lt;/h1>
+&lt;p>表格由 &lt;code>&amp;lt;table&amp;gt;&lt;/code> 标签来定义，主要用于显示、展示数据。&lt;/p>
+&lt;p>每个表格均有若干行（由 &lt;code>&amp;lt;tr&amp;gt;&lt;/code> 标签定义），每行被分割为若干单元格（由 &lt;code>&amp;lt;td&amp;gt;&lt;/code> 标签定义）。字母 td 指表格数据（table data），即数据单元格的内容。数据单元格可以包含文本、图片、段落、表格等等。&lt;/p>
+&lt;p>表格的表头使用 &lt;code>&amp;lt;th&amp;gt;&lt;/code>标签进行定义，大多数浏览器会把表头显示为粗体居中的文本。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">table&lt;/span> &lt;span style="color:#658b00">border&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;1&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">tr&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">th&lt;/span>&amp;gt;Heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">th&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">th&lt;/span>&amp;gt;Another Heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">th&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">tr&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">tr&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">td&lt;/span>&amp;gt;row 1, cell 1&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">td&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">td&lt;/span>&amp;gt;row 1, cell 2&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">td&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">tr&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">tr&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">td&lt;/span>&amp;gt;row 2, cell 1&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">td&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">td&lt;/span>&amp;gt;row 2, cell 2&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">td&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">tr&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">table&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>由于表格可能很长，为了更好的表示表格的语义，可以使用&lt;code>&amp;lt;thead&amp;gt;&lt;/code> 标签定义表格的表头内容，&lt;code>&amp;lt;tbody&amp;gt;&lt;/code> 标签定义表格的主体内容，&lt;code>&amp;lt;tfoot&amp;gt;&lt;/code> 标签定义表格的表注内容（脚注或表注）。&lt;/p>
+&lt;h2 id="合并单元格">合并单元格&lt;/h2>
+&lt;p>使用colspan和rowspan属性跨行或跨列&lt;/p>
+&lt;pre>&lt;code>&amp;lt;table border=&amp;quot;1&amp;quot; width=&amp;quot;500&amp;quot; height=&amp;quot;249&amp;quot; cellspacing=&amp;quot;0&amp;quot;&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td colspan=&amp;quot;2&amp;quot;&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td rowspan=&amp;quot;2&amp;quot;&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;tr&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;
+&amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;
+&lt;/code>&lt;/pre>&lt;h1 id="列表标签">列表标签&lt;/h1>
+&lt;p>HTML 支持有序、无序和自定义列表，列表是用来布局的。&lt;/p>
+&lt;p>&lt;strong>无序列表&lt;/strong>始于 &lt;code>&amp;lt;ul&amp;gt;&lt;/code> 标签。每个列表项始于 &lt;code>&amp;lt;li&amp;gt;&lt;/code>。使用较多。&lt;/p>
+&lt;p>有序列表始于 &lt;code>&amp;lt;ol&amp;gt;&lt;/code> 标签。每个列表项始于 &lt;code>&amp;lt;li&amp;gt;&lt;/code> 。使用较少。&lt;/p>
+&lt;p>自定义列表以 &lt;code>&amp;lt;dl&amp;gt;&lt;/code> 标签开始。每个自定义列表项以 &lt;code>&amp;lt;dt&amp;gt;&lt;/code> 开始。每个自定义列表项的定义以 &lt;code>&amp;lt;dd&amp;gt;&lt;/code> 开始。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">ul&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">li&lt;/span>&amp;gt;Coffee&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">li&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">li&lt;/span>&amp;gt;Milk&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">li&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">ul&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="表单标签">表单标签&lt;/h1>
+&lt;p>HTML 表单用于搜集不同类型的用户输入。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>构成&lt;/th>
+&lt;th>标签&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>表单域&lt;/td>
+&lt;td>&lt;code>&amp;lt;form&amp;gt;&lt;/code>&lt;/td>
+&lt;td>把它范围内的表单元素信息提交给服务器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>表单元素&lt;/td>
+&lt;td>&lt;code>&amp;lt;input&amp;gt;&lt;/code>&lt;/td>
+&lt;td>输入，最重要的表单元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;code>&amp;lt;select&amp;gt;&lt;/code>&lt;/td>
+&lt;td>下拉列表&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>&lt;code>&amp;lt;textarea&amp;gt;&lt;/code>&lt;/td>
+&lt;td>文本域&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>提示信息&lt;/td>
+&lt;td>&lt;/td>
+&lt;td>给用户输入每一项的提示信息&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="其他">其他&lt;/h1>
+&lt;h2 id="水平线">水平线&lt;/h2>
+&lt;p>&lt;code>&amp;lt;hr /&amp;gt;&lt;/code> 标签在 HTML 页面中创建水平线。hr 元素可用于分隔内容。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">hr&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">hr&lt;/span> /&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="引用">引用&lt;/h2>
 &lt;p>HTML &lt;code>&amp;lt;q&amp;gt;&lt;/code> 元素定义&lt;strong>短的引用&lt;/strong>，&lt;code>&amp;lt;blockquote&amp;gt;&lt;/code>元素定义&lt;strong>被引用的节&lt;/strong>。&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
