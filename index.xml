@@ -1,4 +1,82 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Wed, 21 Apr 2021 18:50:24 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>HTML标签</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ -&lt;h1 id="参考手册">参考手册&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Fri, 23 Apr 2021 14:06:30 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CSS简介</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/</link><pubDate>Fri, 23 Apr 2021 14:06:30 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/ -&lt;h1 id="什么是-css">什么是 CSS？&lt;/h1>
+&lt;ul>
+&lt;li>CSS 指的是层叠样式表(&lt;strong>C&lt;/strong>ascading &lt;strong>S&lt;/strong>tyle &lt;strong>S&lt;/strong>heets)&lt;/li>
+&lt;li>CSS 描述了&lt;strong>如何在屏幕、纸张或其他媒体上显示 HTML 元素&lt;/strong>&lt;/li>
+&lt;li>CSS 也是一种标记语言，用于定义网页的样式，包括针对不同设备和屏幕尺寸的设计和布局&lt;/li>
+&lt;li>CSS &lt;strong>节省了大量工作&lt;/strong>。它可以同时控制多张网页的布局&lt;/li>
+&lt;li>外部样式表存储在 &lt;strong>CSS 文件&lt;/strong>中，只需改一个文件即可更改整个网站的外观&lt;/li>
+&lt;/ul>
+&lt;h1 id="css语法">CSS语法&lt;/h1>
+&lt;p>CSS 规则集（rule-set）由选择器和声明块组成：&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/selector.gif" alt="rule-set">&lt;/p>
+&lt;ul>
+&lt;li>选择器指向您需要设置样式的 HTML 元素。&lt;/li>
+&lt;li>声明块包含一条或多条用分号分隔的声明。&lt;/li>
+&lt;li>每条声明都包含一个 CSS 属性名称和一个值，以冒号分隔。&lt;/li>
+&lt;li>多条 CSS 声明用分号分隔，声明块用花括号括起来。&lt;/li>
+&lt;/ul>
+&lt;h1 id="css选择器">CSS选择器&lt;/h1>
+&lt;p>CSS 选择器用于“查找”（或选取）要设置样式的 HTML 元素。&lt;/p>
+&lt;p>我们可以将 CSS 选择器分为五类：&lt;/p>
+&lt;ul>
+&lt;li>简单选择器（根据名称、id、类来选取元素）&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_combinators.asp">组合器选择器&lt;/a>（根据它们之间的特定关系来选取元素）&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_pseudo_classes.asp">伪类选择器&lt;/a>（根据特定状态选取元素）&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_pseudo_elements.asp">伪元素选择器&lt;/a>（选取元素的一部分并设置其样式）&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_attribute_selectors.asp">属性选择器&lt;/a>（根据属性或属性值来选取元素）&lt;/li>
+&lt;/ul>
+&lt;h2 id="简单选择器">简单选择器&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">Selector&lt;/th>
+&lt;th style="text-align:left">Example&lt;/th>
+&lt;th style="text-align:left">Example description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3schools.com/cssref/sel_id.asp">#&lt;em>id&lt;/em>&lt;/a>&lt;/td>
+&lt;td style="text-align:left">#firstname&lt;/td>
+&lt;td style="text-align:left">Selects the element with id=&amp;ldquo;firstname&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3schools.com/cssref/sel_class.asp">.&lt;em>class&lt;/em>&lt;/a>&lt;/td>
+&lt;td style="text-align:left">.intro&lt;/td>
+&lt;td style="text-align:left">Selects all elements with class=&amp;ldquo;intro&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;em>&lt;a href="https://www.w3schools.com/cssref/sel_element_class.asp">element.class&lt;/a>&lt;/em>&lt;/td>
+&lt;td style="text-align:left">p.intro&lt;/td>
+&lt;td style="text-align:left">Selects only &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements with class=&amp;ldquo;intro&amp;rdquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3schools.com/cssref/sel_all.asp">*&lt;/a>&lt;/td>
+&lt;td style="text-align:left">*&lt;/td>
+&lt;td style="text-align:left">Selects all elements&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;em>&lt;a href="https://www.w3schools.com/cssref/sel_element.asp">element&lt;/a>&lt;/em>&lt;/td>
+&lt;td style="text-align:left">p&lt;/td>
+&lt;td style="text-align:left">Selects all &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;em>&lt;a href="https://www.w3schools.com/cssref/sel_element_comma.asp">element,element,..&lt;/a>&lt;/em>&lt;/td>
+&lt;td style="text-align:left">div, p&lt;/td>
+&lt;td style="text-align:left">Selects all &lt;code>&amp;lt;div&amp;gt;&lt;/code> elements and all &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="如何添加-css">如何添加 CSS&lt;/h1>
+&lt;p>有三种插入样式表的方法：&lt;/p>
+&lt;ul>
+&lt;li>外部 CSS&lt;/li>
+&lt;li>内部 CSS&lt;/li>
+&lt;li>行内 CSS&lt;/li>
+&lt;/ul>
+&lt;h1 id="css-注释">CSS 注释&lt;/h1>
+&lt;p>位于 &lt;code>&amp;lt;style&amp;gt;&lt;/code> 元素内的 CSS 注释，以 /* 开始，以 */ 结束：&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/ - zzb2021.</description></item><item><title>HTML属性</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E5%B1%9E%E6%80%A7/</link><pubDate>Thu, 22 Apr 2021 20:38:40 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E5%B1%9E%E6%80%A7/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E5%B1%9E%E6%80%A7/ -- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E5%B1%9E%E6%80%A7/ - zzb2021.</description></item><item><title>HTML标签</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ -&lt;h1 id="参考手册">参考手册&lt;/h1>
 &lt;p>&lt;a href="https://www.w3school.com.cn/tags/index.asp">HTML 标签参考手册 (w3school.com.cn)&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://man.ilovefishc.com/html5/">鱼C-Web-HTML5-速查宝典 (ilovefishc.com)&lt;/a>&lt;/p>
 &lt;h1 id="特殊字符">特殊字符&lt;/h1>
@@ -156,6 +234,7 @@
 &lt;/table>
 &lt;h1 id="容器标签">容器标签&lt;/h1>
 &lt;p>&lt;code>&amp;lt;div&amp;gt;&lt;/code>和&lt;code>&amp;lt;span&amp;gt;&lt;/code>是没有语义的，它们就是一个盒子，用来装内容的。&lt;/p>
+&lt;p>&lt;strong>注释：&lt;/strong>&lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素常用作布局工具，因为能够轻松地通过 CSS 对其进行定位。&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;这是头部&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;今日价格&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;ul>
@@ -300,25 +379,11 @@
 &lt;h1 id="其他">其他&lt;/h1>
 &lt;h2 id="水平线">水平线&lt;/h2>
 &lt;p>&lt;code>&amp;lt;hr /&amp;gt;&lt;/code> 标签在 HTML 页面中创建水平线。hr 元素可用于分隔内容。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">hr&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">hr&lt;/span> /&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="引用">引用&lt;/h2>
+&lt;h2 id="引用">引用&lt;/h2>
 &lt;p>HTML &lt;code>&amp;lt;q&amp;gt;&lt;/code> 元素定义&lt;strong>短的引用&lt;/strong>，&lt;code>&amp;lt;blockquote&amp;gt;&lt;/code>元素定义&lt;strong>被引用的节&lt;/strong>。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;WWF 的目标是：&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">q&lt;/span>&amp;gt;构建人与自然和谐共存的世界。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">q&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;浏览器通常会对 blockquote 元素进行缩进处理。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">blockquote&lt;/span> &lt;span style="color:#658b00">cite&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;http://www.worldwildlife.org/who/index.html&amp;#34;&lt;/span>&amp;gt;
-五十年来，WWF 一直致力于保护自然界的未来。
-WWF 工作于 100 个国家，并得到美国一百二十万会员及全球近五百万会员的支持。
-&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">blockquote&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ - zzb2021.</description></item><item><title>Html简介</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/</link><pubDate>Wed, 21 Apr 2021 18:23:09 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/ -&lt;h1 id="what-is-html">What is HTML?&lt;/h1>
+&lt;h2 id="内联框架">内联框架&lt;/h2>
+&lt;p>iframe 用于在网页内显示网页。&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ - zzb2021.</description></item><item><title>Html简介</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/</link><pubDate>Wed, 21 Apr 2021 18:23:09 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E7%AE%80%E4%BB%8B/ -&lt;h1 id="what-is-html">What is HTML?&lt;/h1>
 &lt;p>HTML 是用来描述网页的一种语言。&lt;/p>
 &lt;ul>
 &lt;li>
@@ -416,7 +481,24 @@ WWF 工作于 100 个国家，并得到美国一百二十万会员及全球近�
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="html-注释">HTML 注释&lt;/h1>
 &lt;p>可以将注释插入 HTML 代码提高其可读性，使代码更易被人理解。浏览器会忽略注释，也不会显示它们。&lt;/p>
 &lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#228b22">&amp;lt;!-- This is a comment --&amp;gt;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="html-notes">HTML Notes&lt;/h1>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="html-响应式-web-设计">HTML 响应式 Web 设计&lt;/h1>
+&lt;h2 id="什么是响应式-web-设计">什么是响应式 Web 设计？&lt;/h2>
+&lt;ul>
+&lt;li>
+&lt;p>RWD 指的是响应式 Web 设计（Responsive Web Design）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>RWD 能够以可变尺寸传递网页&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>RWD 对于平板和移动设备是必需的&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="使用-bootstrap">使用 Bootstrap&lt;/h2>
+&lt;p>除了自己来创建响应式设计，使用现成的 CSS 框架。&lt;/p>
+&lt;p>Bootstrap 是最流行的开发响应式 web 的 HTML, CSS, 和 JS 框架。&lt;/p>
+&lt;p>Bootstrap 帮助您开发在任何尺寸都外观出众的站点：显示器、笔记本电脑、平板电脑或手机。&lt;/p>
+&lt;h1 id="html-notes">HTML Notes&lt;/h1>
 &lt;ul>
 &lt;li>使用小写标签，HTML 标签对大小写不敏感：&lt;code>&amp;lt;P&amp;gt;&lt;/code> 等同于 &lt;code>&amp;lt;p&amp;gt;&lt;/code>。&lt;strong>推荐&lt;/strong>使用小写，在未来版本中可能&lt;strong>强制&lt;/strong>使用小写。&lt;/li>
 &lt;li>&lt;strong>推荐&lt;/strong>使用小写属性，尽管属性和属性值对大小写&lt;strong>不敏感&lt;/strong>。&lt;/li>
