@@ -1,4 +1,286 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Fri, 23 Apr 2021 14:06:30 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CSS简介</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/</link><pubDate>Fri, 23 Apr 2021 14:06:30 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/ -&lt;h1 id="什么是-css">什么是 CSS？&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Thu, 06 May 2021 12:51:44 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CSS高级</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</link><pubDate>Thu, 06 May 2021 12:51:44 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/ -&lt;h1 id="精灵图">精灵图&lt;/h1>
+&lt;p>图像精灵（&lt;a href="https://www.w3schools.com/css/css_image_sprites.asp">Image Sprites&lt;/a>）是单个图像中包含的图像集合。&lt;/p>
+&lt;p>包含许多图像的网页可能需要很长时间才能加载，同时会生成多个服务器请求。&lt;/p>
+&lt;p>使用图像精灵将减少服务器请求的数量并节约带宽。&lt;/p>
+&lt;h1 id="字体图标">字体图标&lt;/h1>
+&lt;p>向 HTML 页面添加&lt;a href="https://www.w3school.com.cn/css/css_icons.asp">图标&lt;/a>的最简单方法是使用图标库。&lt;/p>
+&lt;p>如果遇到一些结构和样式比较简单的小图标，就用字体图片。&lt;/p>
+&lt;p>如果遇到一些结构和样式比较复杂的小图标，就用精灵图。&lt;/p>
+&lt;h1 id="三角triangle">三角(Triangle)&lt;/h1>
+&lt;p>&lt;a href="https://css-tricks.com/snippets/css/css-triangle/#html">CSS Triangle | CSS-Tricks&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">width&lt;/span>: &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">height&lt;/span>: &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">border&lt;/span>: &lt;span style="color:#b452cd">5&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">solid&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">transparent&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">border-left-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">pink&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="用户界面">用户界面&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>属性&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="https://www.w3school.com.cn/cssref/pr_class_cursor.asp">cursor &lt;/a>&lt;/td>
+&lt;td>更改用户的鼠标样式&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://www.w3school.com.cn/cssref/pr_outline.asp">outline&lt;/a>&lt;/td>
+&lt;td>轮廓&lt;/td>
+&lt;td>&lt;code>outline: none;&lt;/code>取消轮廓&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://www.w3school.com.cn/cssref/pr_resize.asp">resize&lt;/a>&lt;/td>
+&lt;td>规定可以由用户调整 div 元素的大小&lt;/td>
+&lt;td>&lt;code>resize: none;&lt;/code>防止表单拖拽&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="垂直对齐">垂直对齐&lt;/h1>
+&lt;p>&lt;a href="https://www.w3school.com.cn/cssref/pr_pos_vertical-align.asp">vertical-align&lt;/a> 属性设置元素的垂直对齐方式。&lt;/p>
+&lt;p>只针对于行内元素或者行内块元素。&lt;/p>
+&lt;p>使用场景：设置图片或者表单和文字垂直对齐。&lt;/p>
+&lt;h1 id="文本溢出">文本溢出&lt;/h1>
+&lt;p>&lt;a href="https://www.w3school.com.cn/css/css3_text_effects.asp">text-overflow&lt;/a> 属性规定应如何向用户呈现未显示的溢出内容。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>.&lt;span style="color:#008b45;font-weight:bold">test2&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">white-space&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">nowrap&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">width&lt;/span>: &lt;span style="color:#b452cd">200&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">border&lt;/span>: &lt;span style="color:#b452cd">1&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">solid&lt;/span> &lt;span style="color:#b452cd">#000000&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">overflow&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">hidden&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">text-overflow&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">ellipsis&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="css初始化">CSS初始化&lt;/h1>
+&lt;p>&lt;a href="https://gitee.com/xiaoqiang001/html_css_material/blob/master/%E7%AC%AC%E4%B9%9D%E5%A4%A9/14-%E4%BA%AC%E4%B8%9Ccss%E5%88%9D%E5%A7%8B%E5%8C%96.css">css初始化&lt;/a>是指重设浏览器的样式。不同的浏览器默认的样式可能不尽相同，所以开发时的第一件事可能就是如何把它们统一。如果没对CSS初始化往往会出现浏览器之间的页面差异。&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/ - zzb2021.</description></item><item><title>CSS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 26 Apr 2021 13:24:55 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/ -&lt;h1 id="字体属性">字体属性&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font.asp">font&lt;/a>&lt;/td>
+&lt;td style="text-align:left">简写属性。在一条声明中设置所有字体属性。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-family.asp">font-family&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体系列（字体族）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-size.asp">font-size&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体大小。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-style.asp">font-style&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体样式。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-variant.asp">font-variant&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定是否以小型大写字母的字体显示文本。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font-weight.asp">font-weight&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定字体的粗细。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="文本属性">文本属性&lt;/h1>
+&lt;p>CSS使用某些文本格式属性来设置样式。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;th>注意点&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_color.asp">color&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本颜色&lt;/td>
+&lt;td>通常用16进制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-align.asp">text-align&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本水平对齐方式&lt;/td>
+&lt;td>可以左对齐或右对齐，或居中对齐&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-indent.asp">text-indent&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本缩进&lt;/td>
+&lt;td>段落首行缩进两个字: &lt;code>text-indent=2em;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-decoration.asp">text-decoration&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本装饰&lt;/td>
+&lt;td>&lt;code>text-decoration: none;&lt;/code> 通常用于从链接上删除下划线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_dim_line-height.asp">line-height&lt;/a>&lt;/td>
+&lt;td style="text-align:left">行高&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="背景属性">背景属性&lt;/h1>
+&lt;p>背景图片：实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片或者是精灵图，优点是便于控制位置。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background.asp">background&lt;/a>&lt;/td>
+&lt;td style="text-align:left">在一条声明中设置所有背景属性的简写属性。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-color.asp">background-color&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置元素的背景色。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-image.asp">background-image&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置元素的背景图像。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-repeat.asp">background-repeat&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像是否及如何重复。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-position.asp">background-position&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像的开始位置。&lt;strong>最重要的属性&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-attachment.asp">background-attachment&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像是固定的还是与页面的其余部分一起滚动。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">背景色半透明&lt;/td>
+&lt;td style="text-align:left">&lt;code>background: rgba(0,0,0,0.3);&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="box-model">Box Model&lt;/h1>
+&lt;p>CSS 盒模型实质上是一个包围每个 HTML 元素的盒子。它包括：外边距、边框、内边距以及实际的内容。&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/boxModel.png" alt="Box Model">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Content&lt;/strong> - The content of the box, where text and images appear&lt;/li>
+&lt;li>&lt;strong>Padding&lt;/strong> - Clears an area around the content. The padding is transparent&lt;/li>
+&lt;li>&lt;strong>Border&lt;/strong> - A border that goes around the padding and content&lt;/li>
+&lt;li>&lt;strong>Margin&lt;/strong> - Clears an area outside the border. The margin is transparent&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">#&lt;span style="color:#008b45;text-decoration:underline">box&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">width&lt;/span>: &lt;span style="color:#b452cd">70&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">margin&lt;/span>: &lt;span style="color:#b452cd">10&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">padding&lt;/span>: &lt;span style="color:#b452cd">5&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://a390177226.github.io/images/html/boxmodel_example.gif" alt="Box Model Example">&lt;/p>
+&lt;p>元素总宽度 = 宽度 + 左内边距 + 右内边距 + 左边框 + 右边框 + 左外边距 + 右外边距&lt;/p>
+&lt;p>元素总高度 = 高度 + 上内边距 + 下内边距 + 上边框 + 下边框 + 上外边距 + 下外边距&lt;/p>
+&lt;p>&lt;code>70px(宽度)+10px(左+右内边距)+0px(左+右边框)+20px(左+右外边距)= 100px&lt;/code>&lt;/p>
+&lt;h2 id="border">Border&lt;/h2>
+&lt;p>CSS border 属性允许您指定元素边框的样式、宽度和颜色。为了缩减代码，也可以在一个属性中指定所有单独的边框属性。&lt;/p>
+&lt;p>&lt;code>border: border-width border-style(必须) border-color;&lt;/code>&lt;/p>
+&lt;p>还可以只为一个边指定所有单个边框(top, right, bottom, and left)属性：&lt;/p>
+&lt;pre>&lt;code>p {
+border-left: 6px solid red;
+background-color: lightgrey;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="padding">Padding&lt;/h2>
+&lt;p>为 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素的所有四个边设置不同的内边距：&lt;/p>
+&lt;pre>&lt;code>div {
+padding-top: 50px;
+padding-right: 30px;
+padding-bottom: 50px;
+padding-left: 80px;
+}
+&lt;/code>&lt;/pre>&lt;p>或者简写为&lt;/p>
+&lt;pre>&lt;code>div {
+padding: 25px 50px 75px 100px;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="margin">Margin&lt;/h2>
+&lt;pre>&lt;code>p {
+margin: 25px 50px 75px 100px;
+}
+&lt;/code>&lt;/pre>&lt;p>您可以将 margin 属性设置为 auto，以使元素在其容器中水平居中。&lt;/p>
+&lt;h1 id="布局">布局&lt;/h1>
+&lt;h2 id="display">Display&lt;/h2>
+&lt;p>display 属性是用于控制布局的最重要的 CSS 属性。display 属性规定是否/如何显示元素。&lt;/p>
+&lt;p>每个 HTML 元素都有一个默认的 display 值，具体取决于它的元素类型。大多数元素的默认 display 值为 block 或 inline。&lt;/p>
+&lt;p>&lt;code>display：none；&lt;/code>隐藏对象，不占有原来的位置，用处更多。&lt;/p>
+&lt;p>&lt;code>visibility：hidden；&lt;/code>隐藏对象，占有原来的位置。&lt;/p>
+&lt;h2 id="浮动">浮动&lt;/h2>
+&lt;p>float 属性用于定位和格式化内容，例如让图像向左浮动到容器中的文本那里。&lt;/p>
+&lt;p>浮动最典型的应用：可以让多个块级元素在一行内排列显示。&lt;/p>
+&lt;p>clear 属性指定哪些元素可以浮动于被清除元素的旁边以及哪一侧，最常见用法是&lt;code>clear: both;&lt;/code>。&lt;/p>
+&lt;p>清除浮动：&lt;/p>
+&lt;ul>
+&lt;li>额外标签法，或隔墙法&lt;/li>
+&lt;li>父级元素添加overflow&lt;/li>
+&lt;li>&lt;code>::after&lt;/code>伪元素法&lt;/li>
+&lt;li>双伪元素&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code class="language-css3" data-lang="css3">.clearfix::after {
+content: &amp;quot;&amp;quot;;
+clear: both;
+display: table;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="定位">定位&lt;/h2>
+&lt;p>让盒子自由的在某个盒子内移动位置或者固定屏幕中某个位置，并且可以压住其他盒子。&lt;/p>
+&lt;p>定位=定位模式+边偏移（top、bottom、left 和 right）&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">定位模式&lt;/th>
+&lt;th style="text-align:left">是否脱标&lt;/th>
+&lt;th>移动位置&lt;/th>
+&lt;th>是否常用&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">static&lt;/td>
+&lt;td style="text-align:left">否&lt;/td>
+&lt;td>不能使用边偏移&lt;/td>
+&lt;td>很少&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">relative&lt;/td>
+&lt;td style="text-align:left">否（占有位置）&lt;/td>
+&lt;td>相对于自身位置移动&lt;/td>
+&lt;td>常用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">absolute&lt;/td>
+&lt;td style="text-align:left">是（不占有位置）&lt;/td>
+&lt;td>带有定位的父级&lt;/td>
+&lt;td>常用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">fixed&lt;/td>
+&lt;td style="text-align:left">是（不占有位置）&lt;/td>
+&lt;td>浏览器可视区&lt;/td>
+&lt;td>常用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">sticky&lt;/td>
+&lt;td style="text-align:left">否（占有位置）&lt;/td>
+&lt;td>浏览器可视区&lt;/td>
+&lt;td>很少&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Note：子绝父相比较常见；z-index 属性指定元素的叠放顺序。&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/ - zzb2021.</description></item><item><title>CSS简介</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/</link><pubDate>Fri, 23 Apr 2021 14:06:30 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/ -&lt;h1 id="什么是-css">什么是 CSS？&lt;/h1>
 &lt;ul>
 &lt;li>CSS 指的是层叠样式表(&lt;strong>C&lt;/strong>ascading &lt;strong>S&lt;/strong>tyle &lt;strong>S&lt;/strong>heets)&lt;/li>
 &lt;li>CSS 描述了&lt;strong>如何在屏幕、纸张或其他媒体上显示 HTML 元素&lt;/strong>&lt;/li>
@@ -69,14 +351,48 @@
 &lt;/table>
 &lt;h1 id="如何添加-css">如何添加 CSS&lt;/h1>
 &lt;p>有三种插入样式表的方法：&lt;/p>
-&lt;ul>
-&lt;li>外部 CSS&lt;/li>
-&lt;li>内部 CSS&lt;/li>
-&lt;li>行内 CSS&lt;/li>
-&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">&lt;/th>
+&lt;th style="text-align:left">优点&lt;/th>
+&lt;th style="text-align:left">缺点&lt;/th>
+&lt;th>使用情况&lt;/th>
+&lt;th>控制范围&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Inline CSS&lt;/td>
+&lt;td style="text-align:left">书写方便，权重高&lt;/td>
+&lt;td style="text-align:left">结构和样式混写&lt;/td>
+&lt;td>较少&lt;/td>
+&lt;td>控制一个元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Internal CSS&lt;/td>
+&lt;td style="text-align:left">部分结构和样式相分离&lt;/td>
+&lt;td style="text-align:left">没有彻底分离&lt;/td>
+&lt;td>较多&lt;/td>
+&lt;td>控制一个页面&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">External CSS&lt;/td>
+&lt;td style="text-align:left">结构和样式完全相分离&lt;/td>
+&lt;td style="text-align:left">需要外部插入&lt;/td>
+&lt;td>最多&lt;/td>
+&lt;td>控制多个页面&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
 &lt;h1 id="css-注释">CSS 注释&lt;/h1>
 &lt;p>位于 &lt;code>&amp;lt;style&amp;gt;&lt;/code> 元素内的 CSS 注释，以 /* 开始，以 */ 结束：&lt;/p>
-- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/ - zzb2021.</description></item><item><title>HTML属性</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E5%B1%9E%E6%80%A7/</link><pubDate>Thu, 22 Apr 2021 20:38:40 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E5%B1%9E%E6%80%A7/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E5%B1%9E%E6%80%A7/ -- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E5%B1%9E%E6%80%A7/ - zzb2021.</description></item><item><title>HTML标签</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ -&lt;h1 id="参考手册">参考手册&lt;/h1>
+&lt;h1 id="emmet语法">Emmet语法&lt;/h1>
+&lt;p>Emmet语法使用缩写，来提高html/css的编写速度，vscode内部已经集成了语法。&lt;/p>
+&lt;h1 id="css三大特性">CSS三大特性&lt;/h1>
+&lt;p>CSS的一些最基本的概念——层叠、优先级和继承——这些概念决定着如何将CSS应用到HTML中，以及如何解决冲突。&lt;/p>
+&lt;p>&lt;a href="https://css-tricks.com/specifics-on-css-specificity/">Specifics on CSS Specificity | CSS-Tricks&lt;/a>&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E7%AE%80%E4%BB%8B/ - zzb2021.</description></item><item><title>HTML标签</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E6%A0%87%E7%AD%BE/ -&lt;h1 id="参考手册">参考手册&lt;/h1>
 &lt;p>&lt;a href="https://www.w3school.com.cn/tags/index.asp">HTML 标签参考手册 (w3school.com.cn)&lt;/a>&lt;/p>
 &lt;p>&lt;a href="https://man.ilovefishc.com/html5/">鱼C-Web-HTML5-速查宝典 (ilovefishc.com)&lt;/a>&lt;/p>
 &lt;h1 id="特殊字符">特殊字符&lt;/h1>
@@ -498,6 +814,8 @@
 &lt;p>除了自己来创建响应式设计，使用现成的 CSS 框架。&lt;/p>
 &lt;p>Bootstrap 是最流行的开发响应式 web 的 HTML, CSS, 和 JS 框架。&lt;/p>
 &lt;p>Bootstrap 帮助您开发在任何尺寸都外观出众的站点：显示器、笔记本电脑、平板电脑或手机。&lt;/p>
+&lt;h1 id="semantic-html">Semantic HTML&lt;/h1>
+&lt;p>&lt;a href="https://uxdesign.cc/semantic-html-the-foundation-of-web-accessibility-e5bbecad7c17">Semantic HTML: the foundation of web accessibility&lt;/a>&lt;/p>
 &lt;h1 id="html-notes">HTML Notes&lt;/h1>
 &lt;ul>
 &lt;li>使用小写标签，HTML 标签对大小写不敏感：&lt;code>&amp;lt;P&amp;gt;&lt;/code> 等同于 &lt;code>&amp;lt;p&amp;gt;&lt;/code>。&lt;strong>推荐&lt;/strong>使用小写，在未来版本中可能&lt;strong>强制&lt;/strong>使用小写。&lt;/li>
@@ -533,7 +851,15 @@
 &lt;p>Web标准提出的最佳体验方案：结构、样式、行为相分离。&lt;/p>
 &lt;p>简单理解：结构写到HTML文件中，表现写到CSS文件中，行为写到JavaScript文件中。&lt;/p>
 - https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/ - zzb2021.</description></item><item><title>Overview of front-end web development</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</link><pubDate>Wed, 21 Apr 2021 14:55:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/ -&lt;h1 id="links">Links&lt;/h1>
-&lt;p>参考手册：&lt;a href="https://www.w3school.com.cn/">w3school 在线教程&lt;/a>&lt;/p>
+&lt;p>参考手册：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;a href="https://www.w3school.com.cn/">w3school 在线教程&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://developer.mozilla.org/zh-CN/">MDN Web Docs (mozilla.org)&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ul>
 &lt;p>路线视频：&lt;a href="https://www.youtube.com/watch?v=i5zRYMc7PFw">Frontend Learning Path in 2021 - YouTube&lt;/a>&lt;/p>
 &lt;h1 id="a">a&lt;/h1>
 &lt;p>aaaa&lt;/p>
