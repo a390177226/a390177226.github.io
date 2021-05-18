@@ -1,4 +1,682 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Thu, 06 May 2021 12:51:44 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>CSS高级</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</link><pubDate>Thu, 06 May 2021 12:51:44 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/ -&lt;h1 id="精灵图">精灵图&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Tue, 11 May 2021 10:11:33 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>JS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ -&lt;h1 id="js的组成">JS的组成&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">组成&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">ECMAScript&lt;/td>
+&lt;td style="text-align:left">JavaScript的语法&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DOM&lt;/td>
+&lt;td style="text-align:left">页面文档对象类型&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">BOM&lt;/td>
+&lt;td style="text-align:left">浏览器对象模型&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="js使用">JS使用&lt;/h1>
+&lt;p>在 HTML 中，JavaScript 代码必须位于 &lt;code>&amp;lt;script&amp;gt;&lt;/code> 与 &lt;code>&amp;lt;/script&amp;gt;&lt;/code> 标签之间。&lt;/p>
+&lt;h2 id="内部脚本">内部脚本&lt;/h2>
+&lt;p>脚本可被放置与 HTML 页面的 &lt;code>&amp;lt;body&amp;gt;&lt;/code> 或 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 部分中，或兼而有之。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&amp;lt;script&amp;gt;
+&lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo&amp;#34;&lt;/span>).innerHTML = &lt;span style="color:#cd5555">&amp;#34;我的第一段 JavaScript&amp;#34;&lt;/span>;
+&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/script&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>提示:&lt;/strong> 把脚本置于 &lt;code>&amp;lt;body&amp;gt;&lt;/code>元素的底部，可改善显示速度，因为脚本编译会拖慢显示。&lt;/p>
+&lt;h2 id="外部脚本">外部脚本&lt;/h2>
+&lt;p>脚本可放置与外部文件中：&lt;/p>
+&lt;p>&lt;strong>外部文件：myScript.js&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction() {
+&lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo&amp;#34;&lt;/span>).innerHTML = &lt;span style="color:#cd5555">&amp;#34;段落被更改。&amp;#34;&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&amp;lt;script src=&lt;span style="color:#cd5555">&amp;#34;myScript.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/script&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注释:&lt;/strong> 外部脚本不能包含&lt;code>&amp;lt;script&amp;gt;&lt;/code>标签。&lt;/p>
+&lt;p>在外部文件中放置脚本有如下优势：&lt;/p>
+&lt;ul>
+&lt;li>分离了 HTML 和代码&lt;/li>
+&lt;li>使 HTML 和 JavaScript 更易于阅读和维护&lt;/li>
+&lt;li>已缓存的 JavaScript 文件可加速页面加载&lt;/li>
+&lt;/ul>
+&lt;h1 id="输入输出语句">输入输出语句&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>归属&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">window.alert()&lt;/td>
+&lt;td style="text-align:left">浏览器弹出警示框&lt;/td>
+&lt;td>浏览器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">console.log()&lt;/td>
+&lt;td style="text-align:left">浏览器控制台打印输出信息&lt;/td>
+&lt;td>浏览器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">prompt()&lt;/td>
+&lt;td style="text-align:left">浏览器弹出输入框，用户可以输入&lt;/td>
+&lt;td>浏览器&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="js变量">JS变量&lt;/h1>
+&lt;h2 id="声明">声明&lt;/h2>
+&lt;p>可以通过 var 关键词来声明 JavaScript 变量：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> carName = &lt;span style="color:#cd5555">&amp;#34;porsche&amp;#34;&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="数据类型">数据类型&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">类型&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Number&lt;/td>
+&lt;td style="text-align:left">数值&lt;/td>
+&lt;td>写数值时用不用小数点均可&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Boolean&lt;/td>
+&lt;td style="text-align:left">布尔值&lt;/td>
+&lt;td>布尔值只有两个值：true 或 false&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">String&lt;/td>
+&lt;td style="text-align:left">字符串&lt;/td>
+&lt;td>字符串被引号包围。可使用单引号或双引号&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Undefined&lt;/td>
+&lt;td style="text-align:left">没有值的变量&lt;/td>
+&lt;td>&lt;code>var person;&lt;/code>或者&lt;code>person = undefined;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Null&lt;/td>
+&lt;td style="text-align:left">nothing&lt;/td>
+&lt;td>可以通过设置值为 null 清空对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Object&lt;/td>
+&lt;td style="text-align:left">对象用花括号来书写&lt;/td>
+&lt;td>对象属性是 &lt;em>name&lt;/em>:&lt;em>value&lt;/em> 对，由逗号分隔&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Note: typeof可以查看数据类型，例如&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">typeof&lt;/span> &lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span> &lt;span style="color:#228b22">// 返回 &amp;#34;string&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="数据类型转换">数据类型转换&lt;/h2>
+&lt;h3 id="转换为字符串">转换为字符串&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">toString()&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td>&lt;code>var num=1; alert(num.toString());&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">String()&lt;/td>
+&lt;td style="text-align:left">强制转换&lt;/td>
+&lt;td>&lt;code>var num=1; alert(String(num));&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">加号拼接字符串&lt;/td>
+&lt;td style="text-align:left">用的最多&lt;/td>
+&lt;td>&lt;code>var num=1; alert(num+&amp;quot;&amp;quot;);&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="转换为数值">转换为数值&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">parseInt(string)&lt;/td>
+&lt;td style="text-align:left">将string类型转换为整数数值类型，重点&lt;/td>
+&lt;td>parseInt(&amp;lsquo;78&amp;rsquo;)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">parseFloat(string)&lt;/td>
+&lt;td style="text-align:left">将string类型转换为浮点数数值类型，重点&lt;/td>
+&lt;td>parseInt(&amp;lsquo;78.21&amp;rsquo;)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Number()&lt;/td>
+&lt;td style="text-align:left">将string类型强制转换&lt;/td>
+&lt;td>Number(12)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">- * /&lt;/td>
+&lt;td style="text-align:left">算数运算隐式转换&lt;/td>
+&lt;td>&amp;lsquo;12&amp;rsquo; - 0&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="转换为布尔型">转换为布尔型&lt;/h3>
+&lt;p>Boolean()函数把其他类型转成布尔值，代表空、否定的值会被转换成false，如''、0、NaN、null、undefined，其余值都会被转换为true。&lt;/p>
+&lt;h1 id="条件语句">条件语句&lt;/h1>
+&lt;p>&lt;strong>条件语句用于基于不同条件执行不同的动作。&lt;/strong>&lt;/p>
+&lt;p>在 JavaScript 中，我们可使用如下条件语句：&lt;/p>
+&lt;ul>
+&lt;li>使用 if 来规定要执行的代码块，如果指定条件为 true&lt;/li>
+&lt;li>使用 else 来规定要执行的代码块，如果相同的条件为 false&lt;/li>
+&lt;li>使用 else if 来规定要测试的新条件，如果第一个条件为 false&lt;/li>
+&lt;li>使用 switch 来规定多个被执行的备选代码块&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (time &amp;lt; &lt;span style="color:#b452cd">10&lt;/span>) {
+greeting = &lt;span style="color:#cd5555">&amp;#34;Good morning&amp;#34;&lt;/span>;
+} &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (time &amp;lt; &lt;span style="color:#b452cd">18&lt;/span>) {
+greeting = &lt;span style="color:#cd5555">&amp;#34;Good day&amp;#34;&lt;/span>;
+} &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> {
+greeting = &lt;span style="color:#cd5555">&amp;#34;Good evening&amp;#34;&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="循环语句">循环语句&lt;/h1>
+&lt;p>&lt;strong>循环可多次执行代码块。&lt;/strong>&lt;/p>
+&lt;p>JavaScript 支持不同类型的循环：&lt;/p>
+&lt;ul>
+&lt;li>for - 多次遍历代码块&lt;/li>
+&lt;li>for/in - 遍历对象属性&lt;/li>
+&lt;li>while - 当指定条件为 true 时循环一段代码块&lt;/li>
+&lt;li>do/while - 当指定条件为 true 时循环一段代码块&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code>for (i = 0; i &amp;lt; 5; i++) {
+text += &amp;quot;数字是 &amp;quot; + i + &amp;quot;&amp;lt;br&amp;gt;&amp;quot;;
+}
+&lt;/code>&lt;/pre>&lt;h1 id="js数组">JS数组&lt;/h1>
+&lt;h2 id="定义和创建">定义和创建&lt;/h2>
+&lt;p>JavaScript 数组用于在单一变量中存储多个值。&lt;/p>
+&lt;p>创建数组的两种方式：&lt;/p>
+&lt;ul>
+&lt;li>使用关键词 new，例如&lt;code>var cars = new Array(&amp;quot;Saab&amp;quot;, &amp;quot;Volvo&amp;quot;, &amp;quot;BMW&amp;quot;);&lt;/code>&lt;/li>
+&lt;li>使用数组字面量，常用，例如&lt;code>var cars = [&amp;quot;Saab&amp;quot;, &amp;quot;Volvo&amp;quot;, &amp;quot;BMW&amp;quot;];&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="访问数组元素">访问数组元素&lt;/h2>
+&lt;p>我们通过引用索引号（下标号）来引用某个数组元素。&lt;/p>
+&lt;p>这条语句访问 cars 中的首个元素的值：&lt;code>var name = cars[0];&lt;/code>&lt;/p>
+&lt;p>这条语句修改 cars 中的首个元素：&lt;code>cars[0] = &amp;quot;Opel&amp;quot;;&lt;/code>&lt;/p>
+&lt;h2 id="数组长度">数组长度&lt;/h2>
+&lt;p>length 属性返回数组的长度（数组元素的数目）。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+fruits.length; &lt;span style="color:#228b22">// fruits 的长度是 4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="遍历数组">遍历数组&lt;/h2>
+&lt;p>遍历数组的最安全方法是使用 &amp;ldquo;for&amp;rdquo; 循环：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (i = &lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; cars.length; i++) {
+console.log(cars[i]);
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="数组方法">数组方法&lt;/h2>
+&lt;p>JavaScript 数组的力量隐藏在数组方法中。&lt;a href="https://www.w3school.com.cn/js/js_array_methods.asp">JavaScript 数组方法 (w3school.com.cn)&lt;/a>&lt;/p>
+&lt;h1 id="函数">函数&lt;/h1>
+&lt;p>&lt;strong>JavaScript 函数是被设计为执行特定任务的代码块。&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>JavaScript 函数会在某代码调用它时被执行。&lt;/strong>&lt;/p>
+&lt;h2 id="为何使用函数">为何使用函数？&lt;/h2>
+&lt;p>您能够对代码进行复用：只要定义一次代码，就可以多次使用它。&lt;/p>
+&lt;p>您能够多次向同一函数传递不同的参数，以产生不同的结果。&lt;/p>
+&lt;h2 id="声明和调用">声明和调用&lt;/h2>
+&lt;p>当 JavaScript 到达 return 语句，函数将停止执行。&lt;/p>
+&lt;p>如果函数被某条语句调用，JavaScript 将在调用语句之后“返回”执行代码。&lt;/p>
+&lt;p>函数通常会计算出返回值。这个返回值会返回给调用者。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = myFunction(&lt;span style="color:#b452cd">7&lt;/span>, &lt;span style="color:#b452cd">8&lt;/span>); &lt;span style="color:#228b22">// 调用函数，返回值被赋值给 x
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction(a, b) {
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> a * b; &lt;span style="color:#228b22">// 函数返回 a 和 b 的乘积
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note：&lt;/p>
+&lt;ul>
+&lt;li>JavaScript 函数不会对参数值进行任何检查。如果调用参数时省略了参数（少于被声明的数量），则丢失的值被设置为：undefined。&lt;/li>
+&lt;li>如果函数调用的参数太多（超过声明），则可以使用 arguments 对象来达到这些参数。&lt;/li>
+&lt;/ul>
+&lt;h2 id="函数表达式">函数表达式&lt;/h2>
+&lt;p>JavaScript 函数也可以使用表达式来定义。&lt;/p>
+&lt;p>函数表达式可以在变量中存储：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> (a, b) {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> a * b};
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> z = x(&lt;span style="color:#b452cd">4&lt;/span>, &lt;span style="color:#b452cd">3&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面的函数实际上是一个匿名函数（没有名称的函数）。&lt;/p>
+&lt;h1 id="作用域">作用域&lt;/h1>
+&lt;p>作用域是指变量在某个范围内起作用，目的是提高程序的可靠性和减少命名冲突。&lt;/p>
+&lt;h2 id="es6之前的作用域">ES6之前的作用域&lt;/h2>
+&lt;p>在 JavaScript 中有两种作用域类型：&lt;/p>
+&lt;ul>
+&lt;li>局部作用域&lt;/li>
+&lt;li>全局作用域&lt;/li>
+&lt;/ul>
+&lt;p>JavaScript 拥有函数作用域：每个函数创建一个新的作用域。&lt;/p>
+&lt;p>作用域决定了这些变量的可访问性（可见性）。&lt;/p>
+&lt;p>函数内部定义的变量从函数外部是不可访问的（不可见的）。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">变量类型&lt;/th>
+&lt;th style="text-align:left">声明&lt;/th>
+&lt;th>作用域&lt;/th>
+&lt;th>有效期&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">局部变量&lt;/td>
+&lt;td style="text-align:left">函数中声明的变量&lt;/td>
+&lt;td>只能在函数内部访问它们&lt;/td>
+&lt;td>在函数完成时被删除&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">全局变量&lt;/td>
+&lt;td style="text-align:left">函数之外声明的变量&lt;/td>
+&lt;td>网页的所有脚本和函数都能够访问它&lt;/td>
+&lt;td>在关闭页面是被删除&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Note: 如果您为尚未声明的变量赋值，此变量会自动成为全局变量。所有现代浏览器都支持以“严格模式”运行 JavaScript。在“严格模式”中不会自动创建全局变量。除非有意为之，否则请勿创建全局变量。&lt;/p>
+&lt;h1 id="预解析提升">预解析/提升&lt;/h1>
+&lt;p>预解析也叫做提升（Hoisting）。预解析分为变量提升和函数提升。&lt;/p>
+&lt;p>变量提升就是把所有变量声明提升到当前的作用域最前面，不提升赋值操作。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">console.log(num); &lt;span style="color:#228b22">// 输出undefined
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> num = &lt;span style="color:#b452cd">10&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>函数提升就是把所有的函数声明提升到当前的作用域最前面，不调用函数。&lt;/p>
+&lt;p>使用表达式定义的函数不会被提升。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">console.log(myFunction(&lt;span style="color:#b452cd">5&lt;/span>)); &lt;span style="color:#228b22">// 输出25
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction(y) {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> y * y;}
+fun(); &lt;span style="color:#228b22">// 报错
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fun = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {console.log(&lt;span style="color:#b452cd">22&lt;/span>);}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="js对象">JS对象&lt;/h1>
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;p>对象是复杂数据类型，是一组无序的相关属性和方法的集合，几乎“所有事物”都是对象。&lt;/p>
+&lt;p>对象也是变量，能够包含很多值，以值按照名称 : 值对的形式编写。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {
+name: &lt;span style="color:#cd5555">&amp;#34;zzb&amp;#34;&lt;/span>,
+getName : &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>.firstName;}
+};
+&lt;/code>&lt;/pre>&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">组成&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>值&lt;/th>
+&lt;th>访问&lt;/th>
+&lt;th>注释&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">属性&lt;/td>
+&lt;td style="text-align:left">对象中的命名值&lt;/td>
+&lt;td>原始值、其他对象以及函数&lt;/td>
+&lt;td>&lt;code>person.name&lt;/code> 或者&lt;code>person['name']&lt;/code>&lt;/td>
+&lt;td>可以被修改、添加和删除，但是某些属性是只读的&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">方法&lt;/td>
+&lt;td style="text-align:left">在对象上执行的动作&lt;/td>
+&lt;td>以&lt;strong>函数定义&lt;/strong>被存储在属性中&lt;/td>
+&lt;td>&lt;code>person.getName()&lt;/code>&lt;/td>
+&lt;td>&lt;code>person.getName&lt;/code>将返回函数定义&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="创建对象">创建对象&lt;/h2>
+&lt;p>有不同的方法来创建对象。在 ES5 中，也可以通过函数 Object.create() 来创建对象。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>注释&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">使用对象字面量&lt;/td>
+&lt;td style="text-align:left">定义和创建单个对象&lt;/td>
+&lt;td>最简单、最常用，&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">使用关键词&lt;code>new&lt;/code>&lt;/td>
+&lt;td style="text-align:left">定义和创建单个对象&lt;/td>
+&lt;td>不推荐使用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">使用构造函数&lt;/td>
+&lt;td style="text-align:left">定义对象构造器&lt;/td>
+&lt;td>用大写首字母命名，调用必须使用&lt;code>new&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 使用对象字面量
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {firstName:&lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>, lastName:&lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>};
+&lt;span style="color:#228b22">// 使用关键词 new
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Object&lt;/span>();
+person.firstName = &lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>;
+person.lastName = &lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>;
+&lt;span style="color:#228b22">// 使用构造函数，不需要return就可以返回结果
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> Star(uname, age){
+&lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>.uname = uname;
+&lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>.age = age;
+}
+&lt;span style="color:#228b22">// 实例化
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> ldh = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> Star(&lt;span style="color:#cd5555">&amp;#39;刘德华&amp;#39;&lt;/span>, &lt;span style="color:#b452cd">18&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> zxy = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> Star(&lt;span style="color:#cd5555">&amp;#39;张学友&amp;#39;&lt;/span>, &lt;span style="color:#b452cd">19&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note： 对象是易变的：它们通过引用来寻址，而非值。&lt;/p>
+&lt;p>如果 person 是一个对象，下面的语句不会创建 person 的副本：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {firstName:&lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>, lastName:&lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>, age:&lt;span style="color:#b452cd">62&lt;/span>}
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = person; &lt;span style="color:#228b22">// 这不会创建 person 的副本。
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>x.age = &lt;span style="color:#b452cd">10&lt;/span>; &lt;span style="color:#228b22">// 这将同时改变 both x.age 和 person.age
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>对象 x &lt;strong>并非&lt;/strong>person 的副本。它&lt;strong>就是&lt;/strong>person。x 和 person 是同一个对象。&lt;/p>
+&lt;p>对 x 的任何改变都将改变 person，因为 x 和 person 是相同的对象。&lt;/p>
+&lt;h2 id="遍历对象">遍历对象&lt;/h2>
+&lt;p>使用 &lt;code>for...in&lt;/code> 语句遍历对象的属性。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {fname:&lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>, lname:&lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>, age:&lt;span style="color:#b452cd">62&lt;/span>};
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (x &lt;span style="color:#8b008b;font-weight:bold">in&lt;/span> person) {
+console.log(x); &lt;span style="color:#228b22">// x是属性名
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> console.log(person[x]); &lt;span style="color:#228b22">// person[x]是属性值
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="添加和删除属性">添加和删除属性&lt;/h2>
+&lt;p>通过简单的赋值，向已存在的对象添加新属性。&lt;/p>
+&lt;p>&lt;code>delete&lt;/code> 关键词从对象中删除属性。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {firstName:&lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>, lastName:&lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>, age:&lt;span style="color:#b452cd">62&lt;/span>, eyeColor:&lt;span style="color:#cd5555">&amp;#34;blue&amp;#34;&lt;/span>};
+&lt;span style="color:#228b22">// 添加属性
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>person.nationality = &lt;span style="color:#cd5555">&amp;#34;English&amp;#34;&lt;/span>;
+&lt;span style="color:#228b22">// 删除属性
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">delete&lt;/span> person.age;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="this关键字">this关键字&lt;/h1>
+&lt;p>&lt;code>this&lt;/code> 关键词指的是它所属的对象。&lt;/p>
+&lt;p>它拥有不同的值，具体取决于它的使用位置：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">使用位置&lt;/th>
+&lt;th style="text-align:left">值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">在方法中&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 指的是所有者对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">单独的情况下&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 指的是全局对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">在函数中&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 指的是全局对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">在函数中，严格模式下&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 是 undefined&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">在事件中&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 指的是接收事件的元素&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>像&lt;code>call()&lt;/code> 和 &lt;code>apply()&lt;/code> 这样的方法可以将 this 引用到任何对象。&lt;/p>
+&lt;h2 id="方法中的-this">方法中的 this&lt;/h2>
+&lt;p>在对象方法中，this 指的是此方法的“拥有者”。&lt;/p>
+&lt;p>在下面例子中，this 指的是 person 对象，person 对象是 getName方法的拥有者。&lt;/p>
+&lt;p>&lt;code>this.firstName&lt;/code> 意味着 &lt;code>this&lt;/code>（person）对象的 &lt;code>firstName&lt;/code> 属性。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {
+name: &lt;span style="color:#cd5555">&amp;#34;zzb&amp;#34;&lt;/span>,
+getName : &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>.firstName;}
+};
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="单独的-this">单独的 this&lt;/h2>
+&lt;p>在单独使用时，拥有者是全局对象，因此 &lt;code>this&lt;/code> 指的是全局对象。&lt;/p>
+&lt;p>在浏览器窗口中，全局对象是 &lt;code>[object Window]&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>在严格模式中, 同样。&lt;/p>
+&lt;h2 id="函数中的-this默认">函数中的 this（默认）&lt;/h2>
+&lt;p>在 JS函数中，函数的拥有者默认绑定 &lt;code>this&lt;/code>。&lt;/p>
+&lt;p>因此，在函数中，&lt;code>this&lt;/code> 指的是全局对象 &lt;code>[object Window]&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction() {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>;}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="函数中的-this严格模式">函数中的 this（严格模式）&lt;/h2>
+&lt;p>严格模式不允许默认绑定。&lt;/p>
+&lt;p>因此，在函数中使用时，在严格模式下，this 是未定义的（undefined）。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#cd5555">&amp;#34;use strict&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction() {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>;}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="事件处理程序中的-this">事件处理程序中的 this&lt;/h2>
+&lt;p>在 HTML 事件处理程序中，this 指的是接收此事件的 HTML 元素：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span> &lt;span style="color:#658b00">onclick&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;this.style.display=&amp;#39;none&amp;#39;&amp;#34;&lt;/span>&amp;gt;单击来删除我！&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="显式函数绑定">显式函数绑定&lt;/h2>
+&lt;p>&lt;code>call()&lt;/code> 和 &lt;code>apply()&lt;/code> 方法是预定义的 JavaScript 方法。&lt;/p>
+&lt;p>它们都可以用于将另一个对象作为参数调用对象方法。&lt;/p>
+&lt;h1 id="内置对象">内置对象&lt;/h1>
+&lt;p>JS的对象分为三种：自定义对象、内置对象、浏览器对象。&lt;/p>
+&lt;p>前两种是JS基础内容，属于ECMAScipt；浏览器对象属于JS独有的，在JS API中讲解。&lt;/p>
+&lt;p>&lt;strong>内置对象&lt;/strong>是指JS语言自带的一些对象，这些对象供开发者使用，并提供了一些常用的或是最基本而必要的功能（属性和方法）。&lt;/p>
+&lt;p>内置对象最大的优点就是帮助我们快速开发。&lt;/p>
+&lt;p>JS提供了多个内置对象：Math、Date、Array、String等。&lt;/p>
+&lt;h2 id="math数学对象">Math数学对象&lt;/h2>
+&lt;p>&lt;code>Math&lt;/code>对象拥有一些数学常数属性和数学函数方法。&lt;code>Math&lt;/code> 不是一个函数对象，即不需要new来调用。&lt;/p>
+&lt;p>&lt;code>Math&lt;/code> 用于 &lt;a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">&lt;code>Number&lt;/code>&lt;/a> 类型。它不支持 &lt;a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt">&lt;code>BigInt&lt;/code>&lt;/a>。&lt;/p>
+&lt;p>&lt;code>Math&lt;/code> 的所有属性与方法都是静态的。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#658b00">Math&lt;/span>.PI; &lt;span style="color:#228b22">// 圆周率
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.floor(&lt;span style="color:#b452cd">1.9&lt;/span>); &lt;span style="color:#228b22">// 向下取整,返回1
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.ceil(&lt;span style="color:#b452cd">1.9&lt;/span>); &lt;span style="color:#228b22">// 向上取整,返回2
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.round(-&lt;span style="color:#b452cd">1.5&lt;/span>); &lt;span style="color:#228b22">// 四舍五入，但是.5特殊它往大了取值，返回-1
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.abs(-&lt;span style="color:#b452cd">1&lt;/span>); &lt;span style="color:#228b22">// 绝对值，返回1
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.max(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 求最大值，返回2
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.min(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 求最小值，返回1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>Math.random()&lt;/code>函数返回一个浮点数, 伪随机数的范围是 [0，1）。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 得到一个两数之间的随机整数，包括两个数在内
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> getRandom(min, max) {
+min = &lt;span style="color:#658b00">Math&lt;/span>.ceil(min);
+max = &lt;span style="color:#658b00">Math&lt;/span>.floor(max);
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#658b00">Math&lt;/span>.floor(&lt;span style="color:#658b00">Math&lt;/span>.random() * (max - min + &lt;span style="color:#b452cd">1&lt;/span>)) + min; &lt;span style="color:#228b22">//含最大值，含最小值
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="date日期对象">Date日期对象&lt;/h2>
+&lt;p>&lt;code>Date&lt;/code> 对象则基于 &lt;a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">Unix Time Stamp&lt;/a>，即自1970年1月1日（UTC）起经过的毫秒数。&lt;/p>
+&lt;p>创建一个新&lt;code>Date&lt;/code>对象的唯一方法是通过&lt;code>new&lt;/code>操作符，例如:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> date = &lt;span style="color:#658b00">Date&lt;/span>(); &lt;span style="color:#228b22">// 没有参数，返回系统的当前时间
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> date1 = &lt;span style="color:#658b00">Date&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;2021-5-18&amp;#39;&lt;/span>); &lt;span style="color:#228b22">// 常用，参数是日期的字符串值
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>日期格式化&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">getFullYear()&lt;/td>
+&lt;td style="text-align:left">获取四位的年（yyyy）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getMonth()&lt;/td>
+&lt;td style="text-align:left">获取月（0-11）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getDate()&lt;/td>
+&lt;td style="text-align:left">以数值返回天（1-31）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getDay()&lt;/td>
+&lt;td style="text-align:left">以数值获取周名（0-6），周日是0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getHours()&lt;/td>
+&lt;td style="text-align:left">获取小时（0-23）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getMinutes()&lt;/td>
+&lt;td style="text-align:left">获取分（0-59）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getSeconds()&lt;/td>
+&lt;td style="text-align:left">获取秒（0-59）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getTime()&lt;/td>
+&lt;td style="text-align:left">获取时间（从 1970 年 1 月 1 日至今）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>案例：倒计时&lt;/strong>&lt;/p>
+&lt;p>用时间戳来做，输入时间的总毫秒数减去现在时间的总毫秒数，得到剩余时间的总毫秒数。把剩余时间的总毫秒数转换成天、时、分、秒。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> countDown(time) {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> nowTime = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(); &lt;span style="color:#228b22">// 返回当前时间的总毫秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> inputTime = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(time); &lt;span style="color:#228b22">// 返回用户输入时间的总毫秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> times = (inputTime - nowTime) / &lt;span style="color:#b452cd">1000&lt;/span>; &lt;span style="color:#228b22">// 返回剩余时间的总秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> d = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>/&lt;span style="color:#b452cd">60&lt;/span>/&lt;span style="color:#b452cd">24&lt;/span>); &lt;span style="color:#228b22">// 返回天
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> d = d &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + d : d;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> h = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>/&lt;span style="color:#b452cd">60&lt;/span>%&lt;span style="color:#b452cd">24&lt;/span>); &lt;span style="color:#228b22">// 返回时
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> h = h &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + h : h;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> m = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>%&lt;span style="color:#b452cd">60&lt;/span>); &lt;span style="color:#228b22">// 返回分
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> m = m &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + m : m;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> s = &lt;span style="color:#658b00">parseInt&lt;/span>(times%&lt;span style="color:#b452cd">60&lt;/span>); &lt;span style="color:#228b22">// 返回秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> s = s &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + s : s;
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> d+&lt;span style="color:#cd5555">&amp;#39;天&amp;#39;&lt;/span>+h+&lt;span style="color:#cd5555">&amp;#39;时&amp;#39;&lt;/span>+m+&lt;span style="color:#cd5555">&amp;#39;分&amp;#39;&lt;/span>+s+&lt;span style="color:#cd5555">&amp;#39;秒&amp;#39;&lt;/span>;
+}
+console.log(countDown(&lt;span style="color:#cd5555">&amp;#39;2021-5-20 18:00:00&amp;#39;&lt;/span>));
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="array数组对象">Array数组对象&lt;/h2>
+&lt;h3 id="检测是否为数组">检测是否为数组&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> arr = [];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> obj = {};
+&lt;span style="color:#228b22">// instanceof 运算符
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.log(arr &lt;span style="color:#8b008b;font-weight:bold">instanceof&lt;/span> &lt;span style="color:#658b00">Array&lt;/span>); &lt;span style="color:#228b22">// 返回true
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.log(obj &lt;span style="color:#8b008b;font-weight:bold">instanceof&lt;/span> &lt;span style="color:#658b00">Array&lt;/span>); &lt;span style="color:#228b22">// 返回false
+&lt;/span>&lt;span style="color:#228b22">// Array.isArray()
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.log(&lt;span style="color:#658b00">Array&lt;/span>.isArray(arr)); &lt;span style="color:#228b22">// 返回true
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.log(&lt;span style="color:#658b00">Array&lt;/span>.isArray(obj)); &lt;span style="color:#228b22">// 返回false
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="添加数组元素">添加数组元素&lt;/h3>
+&lt;p>&lt;code>push()&lt;/code> 方法（在数组结尾处）向数组添加一个新的元素，返回新数组的长度:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = fruits.push(&lt;span style="color:#cd5555">&amp;#34;Kiwi&amp;#34;&lt;/span>); &lt;span style="color:#228b22">// x 的值是 5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>unshift()&lt;/code> 方法（在开头）向数组添加新元素，并“反向位移”旧元素，返回新数组的长度：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = fruits.unshift(&lt;span style="color:#cd5555">&amp;#34;Lemon&amp;#34;&lt;/span>); &lt;span style="color:#228b22">// x 的值是 5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="删除数组元素">删除数组元素&lt;/h3>
+&lt;p>&lt;code>pop()&lt;/code>方法从数组中删除最后一个元素，返回“被弹出”的值：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = fruits.pop(); &lt;span style="color:#228b22">// x 的值是 &amp;#34;Mango&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>shift()&lt;/code>方法会删除首个数组元素，返回被“位移出”的字符串:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = fruits.pop(); &lt;span style="color:#228b22">// x 的值是 &amp;#34;Banana&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="数组排序">数组排序&lt;/h3>
+&lt;h4 id="反转数组">反转数组&lt;/h4>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+fruits.sort(); &lt;span style="color:#228b22">// 对 fruits 中的元素以字母顺序进行排序
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>fruits.reverse(); &lt;span style="color:#228b22">// 反转元素顺序
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="数字排序">数字排序&lt;/h4>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 升序排序
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> points = [&lt;span style="color:#b452cd">40&lt;/span>, &lt;span style="color:#b452cd">100&lt;/span>, &lt;span style="color:#b452cd">1&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">25&lt;/span>, &lt;span style="color:#b452cd">10&lt;/span>];
+points.sort(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(a, b){&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> a - b});
+&lt;span style="color:#228b22">// 降序排序
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> points = [&lt;span style="color:#b452cd">40&lt;/span>, &lt;span style="color:#b452cd">100&lt;/span>, &lt;span style="color:#b452cd">1&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">25&lt;/span>, &lt;span style="color:#b452cd">10&lt;/span>];
+points.sort(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(a, b){&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> b - a});
+&lt;span style="color:#228b22">// 以随机顺序排序
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> points = [&lt;span style="color:#b452cd">40&lt;/span>, &lt;span style="color:#b452cd">100&lt;/span>, &lt;span style="color:#b452cd">1&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">25&lt;/span>, &lt;span style="color:#b452cd">10&lt;/span>];
+points.sort(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(a, b){&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#b452cd">0.5&lt;/span> - &lt;span style="color:#658b00">Math&lt;/span>.random()});
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="数组索引">数组索引&lt;/h3>
+&lt;p>&lt;code>indexOf()&lt;/code>方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> array = [&lt;span style="color:#b452cd">2&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">9&lt;/span>];
+array.indexOf(&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 0
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>array.indexOf(&lt;span style="color:#b452cd">7&lt;/span>); &lt;span style="color:#228b22">// -1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>lastIndexOf() &lt;/code>方法返回指定元素在数组中的最后一个的索引，如果不存在则返回 -1。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> array = [&lt;span style="color:#b452cd">2&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">9&lt;/span>, &lt;span style="color:#b452cd">2&lt;/span>];
+array.lastIndexOf(&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 3
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>array.lastIndexOf(&lt;span style="color:#b452cd">7&lt;/span>); &lt;span style="color:#228b22">// -1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>案例：数组去重&lt;/strong>&lt;/p>
+&lt;p>目标：把旧数组里面不重复的元素选取出来放到新数组中，重复的元素只保留一个。&lt;/p>
+&lt;p>核心算法：遍历旧数组，然后拿着旧数组元素去查询新数组，如果该元素在新数组里面没有出现过就添加，否则不添加。&lt;/p>
+&lt;p>我们怎么知道该元素没有存在？利用新数组的&lt;code>indexOf()&lt;/code>方法，如果返回-1就说明新数组里面没有该元素。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> unique(arr) {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> newArr = [];
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i=&lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; arr.length; i++) {
+&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (newArr.indexOf(arr[i]) === -&lt;span style="color:#b452cd">1&lt;/span>)
+newArr.push(arr[i]);
+}
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> newArr;
+}
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> demo = unique([&lt;span style="color:#cd5555">&amp;#39;b&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;a&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;b&amp;#39;&lt;/span>]); &lt;span style="color:#228b22">// demo = [&amp;#39;b&amp;#39;, &amp;#39;a&amp;#39;]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="数组转换成字符串">数组转换成字符串&lt;/h3>
+&lt;p>&lt;code>toString()&lt;/code>方法 把数组转换为数组值（逗号分隔）的字符串。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+fruits.toString(); &lt;span style="color:#228b22">// 返回字符串&amp;#34;Banana,Orange,Apple,Mango&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>join() &lt;/code>方法也可将所有数组元素结合为一个字符串，可以规定分隔符。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>,&lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+fruits.join(&lt;span style="color:#cd5555">&amp;#34; * &amp;#34;&lt;/span>); &lt;span style="color:#228b22">// 返回字符串&amp;#34;Banana * Orange * Apple * Mango&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="其他方法">其他方法&lt;/h3>
+&lt;p>&lt;code>concat()&lt;/code>方法通过合并（连接）现有数组来创建一个新数组。&lt;/p>
+&lt;p>&lt;code>slice()&lt;/code>方法用数组的某个片段切出新数组，不会从原数组中删除任何元素。&lt;/p>
+&lt;p>&lt;code>splice()&lt;/code>方法可用于向数组添加新项或删除元素，会影响原数组，重点。&lt;/p>
+&lt;h2 id="string字符串对象">String字符串对象&lt;/h2>
+&lt;p>基本包装类型就是把简单数据类型包装成复杂数据类型，这样基本数据类型就有了属性和方法。&lt;/p>
+&lt;p>基本包装类型有String、Number和Boolean。&lt;/p>
+&lt;p>&lt;strong>字符串的不可变&lt;/strong>&lt;/p>
+&lt;p>指的是里面的值不可变，虽然看上去可以改变内容，但其实是地址变了，内存中新开辟了一个内存空间。&lt;/p>
+&lt;h3 id="根据字符返回位置">根据字符返回位置&lt;/h3>
+&lt;p>&lt;code>indexOf()&lt;/code>方法返回在字符串中可以找到给定字符的第一个索引，如果不存在，则返回-1。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;改革春风吹满地，春天来了&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> pos1 = str.indexOf(&lt;span style="color:#cd5555">&amp;#34;春&amp;#34;&lt;/span>); &lt;span style="color:#228b22">// pos1 = 2
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> pos2 = str.indexOf(&lt;span style="color:#cd5555">&amp;#34;春&amp;#34;&lt;/span>, &lt;span style="color:#b452cd">3&lt;/span>); &lt;span style="color:#228b22">// 第二个参数是起始的位置，pos2 = 8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>案例：求某个字符出现的位置和次数&lt;/strong>&lt;/p>
+&lt;p>查找字符串&amp;quot;abcoefoxyozzopp&amp;quot;中所有o出现的位置和次数。&lt;/p>
+&lt;p>核心算法：先查找第一个字符出现的位置，然后只要indexOf()返回不是-1就继续往后查找。因为indexOf()只能查找到第一个，所以后面的查找，利用第二参数，当前索引加1，从而继续查找。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> demo(str,&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>) {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> pos = [];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> num = &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> index = str.indexOf(&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">while&lt;/span>(index !== -&lt;span style="color:#b452cd">1&lt;/span>) {
+pos.push(index);
+num++;
+index = str.indexOf(&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>, index+&lt;span style="color:#b452cd">1&lt;/span>);
+}
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> {position:pos,number:num};
+}
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;abcoefoxyozzopp&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">char&lt;/span> = &lt;span style="color:#cd5555">&amp;#34;o&amp;#34;&lt;/span>;
+demo(str,&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="根据位置返回字符">根据位置返回字符&lt;/h2>
+&lt;p>两个提取字符串字符的安全方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>charAt()&lt;/code> 方法返回字符串中指定下标（位置）的字符串。&lt;/li>
+&lt;li>&lt;code>charCodeAt()&lt;/code> 方法返回字符串中指定索引的字符ASCII值，目的是判断用户按下了哪个键。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>属性访问（Property Access）&lt;/strong>&lt;/p>
+&lt;p>ECMAScript 5 (2009) 允许对字符串的属性访问 [ ]，不太靠谱，不推荐使用。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;HELLO WORLD&amp;#34;&lt;/span>;
+str[&lt;span style="color:#b452cd">0&lt;/span>]; &lt;span style="color:#228b22">// 返回 H
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>案例：统计出现次数最多的字符&lt;/strong>&lt;/p>
+&lt;p>判断一个字符串&amp;quot;abcoefoxyozzopp&amp;quot;中出现次数最多的字符，并统计其次数。&lt;/p>
+&lt;p>核心算法：利用&lt;code>charAt()&lt;/code> 遍历这个字符串，把每个字符都存储给对象，如果对象没有该属性，就为1，如果存在了就+1。遍历对象，得到最大值和该字符。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;abcoefoxyozzopp&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> obj = {};
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i = &lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; str.length; i++) {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> chars = str.charAt(i); &lt;span style="color:#228b22">// chars是字符串的每一个字符
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (o[chars]) { &lt;span style="color:#228b22">// o[chars]得到的是属性值
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> o[chars]++;
+} &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> {
+o[chars] = &lt;span style="color:#b452cd">1&lt;/span>;
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ - zzb2021.</description></item><item><title>CSS高级</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</link><pubDate>Thu, 06 May 2021 12:51:44 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/ -&lt;h1 id="精灵图">精灵图&lt;/h1>
 &lt;p>图像精灵（&lt;a href="https://www.w3schools.com/css/css_image_sprites.asp">Image Sprites&lt;/a>）是单个图像中包含的图像集合。&lt;/p>
 &lt;p>包含许多图像的网页可能需要很长时间才能加载，同时会生成多个服务器请求。&lt;/p>
 &lt;p>使用图像精灵将减少服务器请求的数量并节约带宽。&lt;/p>
@@ -853,12 +1531,9 @@ display: table;
 - https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/ - zzb2021.</description></item><item><title>Overview of front-end web development</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</link><pubDate>Wed, 21 Apr 2021 14:55:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/ -&lt;h1 id="links">Links&lt;/h1>
 &lt;p>参考手册：&lt;/p>
 &lt;ul>
-&lt;li>
-&lt;p>&lt;a href="https://www.w3school.com.cn/">w3school 在线教程&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://developer.mozilla.org/zh-CN/">MDN Web Docs (mozilla.org)&lt;/a>&lt;/p>
-&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/">w3school中文&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.w3schools.com/">W3Schools英文&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developer.mozilla.org/zh-CN/">MDN Web Docs (mozilla.org)&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>路线视频：&lt;a href="https://www.youtube.com/watch?v=i5zRYMc7PFw">Frontend Learning Path in 2021 - YouTube&lt;/a>&lt;/p>
 &lt;h1 id="a">a&lt;/h1>

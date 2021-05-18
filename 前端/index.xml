@@ -1,4 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>前端s on ZZB's blog</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/</link><description>Recent content in 前端s on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Thu, 06 May 2021 12:51:44 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>CSS高级</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</link><pubDate>Thu, 06 May 2021 12:51:44 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</guid><description>精灵图 图像精灵（Image Sprites）是单个图像中包含的图像集合。
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>前端s on ZZB's blog</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/</link><description>Recent content in 前端s on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Tue, 11 May 2021 10:11:33 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>JS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</guid><description>JS的组成 组成 描述 ECMAScript JavaScript的语法 DOM 页面文档对象类型 BOM 浏览器对象模型 JS使用 在 HTML 中，JavaScript 代码必须位于 &amp;lt;script&amp;gt; 与 &amp;lt;/script&amp;gt; 标签之间。
+内部脚本 脚本可被放置与 HTML 页面的 &amp;lt;body&amp;gt; 或 &amp;lt;head&amp;gt; 部分中，或兼而有之。
+&amp;lt;script&amp;gt; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = &amp;#34;我的第一段 JavaScript&amp;#34;; &amp;lt;/script&amp;gt; 提示: 把脚本置于 &amp;lt;body&amp;gt;元素的底部，可改善显示速度，因为脚本编译会拖慢显示。
+外部脚本 脚本可放置与外部文件中：
+外部文件：myScript.js
+function myFunction() { document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = &amp;#34;段落被更改。&amp;#34;; } &amp;lt;script src=&amp;#34;myScript.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 注释: 外部脚本不能包含&amp;lt;script&amp;gt;标签。
+在外部文件中放置脚本有如下优势：
+分离了 HTML 和代码 使 HTML 和 JavaScript 更易于阅读和维护 已缓存的 JavaScript 文件可加速页面加载 输入输出语句 方法 说明 归属 window.</description></item><item><title>CSS高级</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</link><pubDate>Thu, 06 May 2021 12:51:44 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</guid><description>精灵图 图像精灵（Image Sprites）是单个图像中包含的图像集合。
 包含许多图像的网页可能需要很长时间才能加载，同时会生成多个服务器请求。
 使用图像精灵将减少服务器请求的数量并节约带宽。
 字体图标 向 HTML 页面添加图标的最简单方法是使用图标库。
@@ -28,8 +35,6 @@ HTML 标签 HTML 标记标签通常被称为 HTML 标签 (HTML tag)。
 HTML 标签是由尖括号包围的关键词，比如 &amp;lt;html&amp;gt; HTML 标签通常是成对出现的，我们称为双标签，比如 &amp;lt;b&amp;gt;和 &amp;lt;/b&amp;gt; 标签对中的第一个标签是开始标签，第二个标签是结束标签 开始和结束标签也被称为开放标签和闭合标签 有些特殊的标签必须是单个标签（极少情况），例如&amp;lt;br /&amp;gt;，我们称为单标签 HTML 文档 = 网页 HTML 文档描述网页 HTML 文档包含 HTML 标签和纯文本 HTML 文档也被称为网页 Web 浏览器的作用是读取 HTML 文档，并以网页的形式显示出它们。浏览器不会显示 HTML 标签，而是使用标签来解释页面的内容：</description></item><item><title>Web基础知识</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/</link><pubDate>Wed, 21 Apr 2021 17:59:55 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/</guid><description>Web 标准 构成 主要包括结构(Structure)、表现(Presentation) 和 行为(Behavior) 三个方面。
 标准 说明 结构 结构用于对网页元素进行整理和分类，现阶段主要学的是HTML 表现 表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS 行为 行为是指网页模型的定义及交互的编写，现阶段主要学的是JavaScript Web标准提出的最佳体验方案：结构、样式、行为相分离。
 简单理解：结构写到HTML文件中，表现写到CSS文件中，行为写到JavaScript文件中。</description></item><item><title>Overview of front-end web development</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</link><pubDate>Wed, 21 Apr 2021 14:55:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</guid><description>Links 参考手册：
-w3school 在线教程
-MDN Web Docs (mozilla.org)
-路线视频：Frontend Learning Path in 2021 - YouTube
+w3school中文 W3Schools英文 MDN Web Docs (mozilla.org) 路线视频：Frontend Learning Path in 2021 - YouTube
 a aaaa
 前端学习路线图 从开始到找到工作的六个阶段 阶段 需要学的东西 时间 1 HTML+CSS 1-2周 2 JavaScript 一个月左右 3 ES6、ES7、ES8、ES9 4 移动端和多端布局 在工作中不断精进 5 Node.js 6 Vue框架</description></item></channel></rss>
