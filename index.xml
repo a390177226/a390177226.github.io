@@ -1,4 +1,207 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Tue, 11 May 2021 10:11:33 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>JS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ -&lt;h1 id="js的组成">JS的组成&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Wed, 19 May 2021 14:56:33 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>JS Web API</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/</link><pubDate>Wed, 19 May 2021 14:56:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/ -&lt;h1 id="web-api">Web API&lt;/h1>
+&lt;p>Web API是浏览器提供的一套操作&lt;strong>浏览器功能&lt;/strong>和&lt;strong>页面元素&lt;/strong>的API（BOM和DOM）。&lt;/p>
+&lt;p>Web API主要是针对于浏览器提供的接口，主要针对于浏览器做交互效果。&lt;/p>
+&lt;p>Web API一般都有输入和输出（函数的传参和返回值），Web API很多都是方法（函数）。&lt;/p>
+&lt;h1 id="dom">DOM&lt;/h1>
+&lt;p>文档对象类型（Document Object Model，DOM）是W3C定义的访问文档的标准：&lt;/p>
+&lt;blockquote>
+&lt;p>“W3C 文档对象模型（DOM）是中立于平台和语言的接口，它允许程序和脚本动态地访问、更新文档的内容、结构和样式。”&lt;/p>
+&lt;/blockquote>
+&lt;p>W3C DOM 标准被分为 3 个不同的部分：&lt;/p>
+&lt;ul>
+&lt;li>Core DOM - 所有文档类型的标准模型&lt;/li>
+&lt;li>XML DOM - XML 文档的标准模型&lt;/li>
+&lt;li>HTML DOM - HTML 文档的标准模型&lt;/li>
+&lt;/ul>
+&lt;p>HTML DOM 是 HTML 的标准对象模型和编程接口。它定义了：&lt;/p>
+&lt;ul>
+&lt;li>作为对象的 HTML 元素&lt;/li>
+&lt;li>所有 HTML 元素的属性&lt;/li>
+&lt;li>访问所有 HTML 元素的方法&lt;/li>
+&lt;li>所有 HTML 元素的事件&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>换言之：HTML DOM 是关于如何获取、更改、添加或删除 HTML 元素的标准&lt;/strong>。&lt;/p>
+&lt;h2 id="html-dom-树">HTML DOM 树&lt;/h2>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/domtree.gif" alt="HTML DOM 树">&lt;/p>
+&lt;ul>
+&lt;li>文档：一个页面就是一个文档，DOM中使用doument表示&lt;/li>
+&lt;li>元素：页面中的所有标签都是元素，DOM中使用element表示&lt;/li>
+&lt;li>节点：网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>DOM把以上内容都看作是对象&lt;/strong>&lt;/p>
+&lt;h2 id="查找元素">查找元素&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">document.getElementById(&lt;em>id&lt;/em>)&lt;/td>
+&lt;td style="text-align:left">通过元素 id 来查找元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">document.getElementsByTagName(&lt;em>name&lt;/em>)&lt;/td>
+&lt;td style="text-align:left">通过标签名来查找元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">document.getElementsByClassName(&lt;em>name&lt;/em>)&lt;/td>
+&lt;td style="text-align:left">通过类名来查找元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">document.querySelector(&amp;lsquo;选择器&amp;rsquo;)&lt;/td>
+&lt;td style="text-align:left">通过 CSS 选择器查找 HTML 元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/tiy/t.asp?f=js_doc_anchors">document.body&lt;/a>&lt;/td>
+&lt;td style="text-align:left">通过 HTML 对象集合查找 HTML 元素&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;time&amp;#34;&lt;/span>&amp;gt;2021-5-19&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> timer = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo&amp;#34;&lt;/span>);
+console.log(timer); &lt;span style="color:#228b22">// 打印2021-5-19
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.dir(timer); &lt;span style="color:#228b22">// 打印返回的元素对象，更好的查看里面的属性和方法
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="事件">事件&lt;/h2>
+&lt;p>JS使我们有能力创建动态页面，而事件是可以被JS侦测到的行为。&lt;/p>
+&lt;p>简单理解：触发——响应机制。&lt;/p>
+&lt;p>事件由三要素组成：事件源、事件类型和事件处理程序。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">三要素&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">事件源&lt;/td>
+&lt;td style="text-align:left">事件被触发的对象&lt;/td>
+&lt;td>按钮（button）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">事件类型&lt;/td>
+&lt;td style="text-align:left">如何触发事件&lt;/td>
+&lt;td>鼠标点击（onclick）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">事件处理程序&lt;/td>
+&lt;td style="text-align:left">做什么事&lt;/td>
+&lt;td>&lt;code>displayDate()&lt;/code>函数&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;myBtn&amp;#34;&lt;/span>&amp;gt;唐伯虎&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;myBtn&amp;#34;&lt;/span>).onclick = displayDate;
+&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> displayDate() {alert(&lt;span style="color:#658b00">Date&lt;/span>());}
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="操作元素">操作元素&lt;/h2>
+&lt;p>DOM操作可以改变网页内容、结构和样式，可以利用DOM操作元素里面的内容、属性等。&lt;/p>
+&lt;h3 id="改变元素内容">改变元素内容&lt;/h3>
+&lt;p>修改 HTML 文档内容最简单的方法是，使用 &lt;code>innerHTML&lt;/code>和&lt;code>innerText&lt;/code> 属性。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>innerHTML&lt;/code>&lt;/td>
+&lt;td style="text-align:left">可读写的，识别html标签，W3C标准&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>innerText&lt;/code>&lt;/td>
+&lt;td style="text-align:left">可读写的，不识别html标签，去除空格和换行&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="改变元素属性">改变元素属性&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;demo1&amp;#34;&lt;/span>&amp;gt;demo1&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;demo2&amp;#34;&lt;/span>&amp;gt;demo2&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span>&amp;gt; &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">br&lt;/span> &amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">img&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;/i/eg_smile.gif&amp;#34;&lt;/span> &lt;span style="color:#658b00">alt&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> demo1 = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo1&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> demo2 = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo2&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> img = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;img&amp;#39;&lt;/span>);
+demo1.onclick = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {img.src=&lt;span style="color:#cd5555">&amp;#39;/i/eg_smile.gif&amp;#39;&lt;/span>;};
+demo2.onclick = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {img.src=&lt;span style="color:#cd5555">&amp;#39;/i/porsche.jpg&amp;#39;&lt;/span>;};
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="改变css样式">改变CSS样式&lt;/h3>
+&lt;p>JS修改style是行内样式，权重比较高。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p2&amp;#34;&lt;/span>&amp;gt;Hello World!&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;p2&amp;#34;&lt;/span>).style.color = &lt;span style="color:#cd5555">&amp;#34;blue&amp;#34;&lt;/span>;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="自定义属性">自定义属性&lt;/h3>
+&lt;p>目的：保存并使用数据。&lt;/p>
+&lt;p>HTML5规定自定义属性data-开头作为属性名并且赋值。&lt;/p>
+&lt;p>比如&lt;code>&amp;lt;div data-index=&amp;quot;1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code>或者使用JS设置&lt;code>div.setAttribute('data-index',2)&lt;/code>&lt;/p>
+&lt;p>获取自定义属性的值:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>div.getAttribute('data-index')&lt;/code>&lt;/li>
+&lt;li>&lt;code>div.dataset.index&lt;/code>或者&lt;code>div.dataset['index']&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>注：自定义属性有多个-链接的单词，采用驼峰命名法。&lt;/p>
+&lt;p>比如&lt;code>div.getAttribute('data-list-name')&lt;/code>&lt;/p>
+&lt;p>&lt;code>div.dataset.listName&lt;/code>或者&lt;code>div.dataset['listName']&lt;/code>&lt;/p>
+&lt;h2 id="节点操作">节点操作&lt;/h2>
+&lt;p>除了利用DOM提供的方法获取元素，还可以利用节点层级关系获取元素。&lt;/p>
+&lt;p>一般的，节点至少拥有nodeType（节点类型）、nodeName（节点名称）和nodeValue（节点值）这三个基本属性。&lt;/p>
+&lt;p>元素节点nodeType为1，属性节点nodeType为2，文本节点nodeType为3（文本节点包含文字、空格、换行等）。&lt;/p>
+&lt;p>实际开发中，主要操作的是元素节点。&lt;/p>
+&lt;h3 id="父级节点">父级节点&lt;/h3>
+&lt;blockquote>
+&lt;p>node.parentNode&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>parentNode属性可返回某节点的父节点，注意是最近的一个父节点&lt;/li>
+&lt;li>如果指定的节点没有父节点则返回null&lt;/li>
+&lt;/ul>
+&lt;h3 id="子级节点">子级节点&lt;/h3>
+&lt;blockquote>
+&lt;p>node.childNodes&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>node.childNodes返回包含指定节点的子节点的集合&lt;/li>
+&lt;li>返回值里面包含了所有的子节点，包括元素节点，文本节点等&lt;/li>
+&lt;li>如果只想要获得里面的元素节点，则需要专门处理（判断nodeType），所以不推荐使用&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>node.children&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>node.childNodes只返回子元素节点，实际开发常用&lt;/li>
+&lt;li>非标准，但得到了各个浏览器的支持，因此可以放心使用&lt;/li>
+&lt;/ul>
+&lt;h3 id="创建节点">创建节点&lt;/h3>
+&lt;blockquote>
+&lt;p>document.createElement(element）&lt;/p>
+&lt;/blockquote>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/ - zzb2021.</description></item><item><title>JS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ -&lt;h1 id="js的组成">JS的组成&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -653,7 +856,7 @@ index = str.indexOf(&lt;span style="color:#8b008b;font-weight:bold">char&lt;/spa
 &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;abcoefoxyozzopp&amp;#34;&lt;/span>;
 &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">char&lt;/span> = &lt;span style="color:#cd5555">&amp;#34;o&amp;#34;&lt;/span>;
 demo(str,&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>);
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="根据位置返回字符">根据位置返回字符&lt;/h2>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="根据位置返回字符">根据位置返回字符&lt;/h3>
 &lt;p>两个提取字符串字符的安全方法：&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>charAt()&lt;/code> 方法返回字符串中指定下标（位置）的字符串。&lt;/li>
@@ -670,12 +873,22 @@ str[&lt;span style="color:#b452cd">0&lt;/span>]; &lt;span style="color:#228b22">
 &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> obj = {};
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i = &lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; str.length; i++) {
 &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> chars = str.charAt(i); &lt;span style="color:#228b22">// chars是字符串的每一个字符
-&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (o[chars]) { &lt;span style="color:#228b22">// o[chars]得到的是属性值
-&lt;/span>&lt;span style="color:#228b22">&lt;/span> o[chars]++;
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (obj[chars]) { &lt;span style="color:#228b22">// o[chars]得到的是属性值
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> obj[chars]++;
 } &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> {
-o[chars] = &lt;span style="color:#b452cd">1&lt;/span>;
+obj[chars] = &lt;span style="color:#b452cd">1&lt;/span>;
 }
 }
+&lt;span style="color:#228b22">// 遍历对象
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> max = &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> ch = &lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> k &lt;span style="color:#8b008b;font-weight:bold">in&lt;/span> obj) {
+&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (obj[k] &amp;gt; max){
+max = obj[k];
+ch = k;
+}
+}
+console.log(&lt;span style="color:#cd5555">&amp;#39;最多的字符是&amp;#39;&lt;/span> + ch + &lt;span style="color:#cd5555">&amp;#39;, 出现了&amp;#39;&lt;/span> + max +&lt;span style="color:#cd5555">&amp;#39;次。&amp;#39;&lt;/span>);
 &lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ - zzb2021.</description></item><item><title>CSS高级</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</link><pubDate>Thu, 06 May 2021 12:51:44 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/ -&lt;h1 id="精灵图">精灵图&lt;/h1>
 &lt;p>图像精灵（&lt;a href="https://www.w3schools.com/css/css_image_sprites.asp">Image Sprites&lt;/a>）是单个图像中包含的图像集合。&lt;/p>
 &lt;p>包含许多图像的网页可能需要很长时间才能加载，同时会生成多个服务器请求。&lt;/p>
