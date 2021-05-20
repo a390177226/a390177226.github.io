@@ -109,6 +109,129 @@ console.log(timer); &lt;span style="color:#228b22">// 打印2021-5-19
 &amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
 &amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
 &amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="事件高级">事件高级&lt;/h2>
+&lt;h3 id="注册事件">注册事件&lt;/h3>
+&lt;p>给元素添加事件，称为注册事件或者绑定事件。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">注册事件&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;th>特点&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">传统方法&lt;/td>
+&lt;td style="text-align:left">利用on开头的事件，如onclick&lt;/td>
+&lt;td>唯一性，即同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">事件监听器&lt;/td>
+&lt;td style="text-align:left">&lt;code>addEventListener()&lt;/code> 方法，w3c标准，推荐方式&lt;/td>
+&lt;td>同一个元素同一个事件可以注册多个监听器，按注册顺序依次执行。能够向任何 DOM 对象添加事件处理程序而非仅仅 HTML 元素，例如 window 对象&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>addEventListener() 方法&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>element.addEventListener(event, function, useCapture);&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>event：事件的类型（比如 &amp;ldquo;click&amp;rdquo; 或 &amp;ldquo;mousedown&amp;rdquo;），注意这里不要带on&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>function：事件处理函数，事件发生时，会调用该监听函数&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>useCapture：可选参数，布尔值，默认值是 false，将使用冒泡传播，如果该值设置为 true，则事件使用捕获传播&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="删除事件">删除事件&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">解绑事件&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">传统方法&lt;/td>
+&lt;td style="text-align:left">&lt;code>eventTarget.onclick=null;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">事件监听器&lt;/td>
+&lt;td style="text-align:left">&lt;code>removeEventListener()&lt;/code>方法&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="事件流">事件流&lt;/h3>
+&lt;p>事件流描述的是页面中接受事件的顺序。&lt;/p>
+&lt;p>在 HTML DOM中有两种事件传播的方法：冒泡和捕获。&lt;/p>
+&lt;blockquote>
+&lt;p>假如 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素内有一个&lt;code>&amp;lt;p&amp;gt;&lt;/code>，然后用户点击了这个 &lt;code>&amp;lt;p&amp;gt;&lt;/code> 元素，应该首先处理哪个元素“click”事件？&lt;/p>
+&lt;p>在冒泡中，最内侧元素的事件会首先被处理，然后是更外侧的：首先处理 &lt;code>&amp;lt;p&amp;gt;&lt;/code> 元素的点击事件，然后是 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素的点击事件。&lt;/p>
+&lt;p>在捕获中，最外侧元素的事件会首先被处理，然后是更内侧的：首先处理 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素的点击事件，然后是 &lt;code>&amp;lt;p&amp;gt;&lt;/code> 元素的点击事件。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>注意&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>JS代码中只能执行捕获或者冒泡其中的一个阶段&lt;/li>
+&lt;li>onclick和attachEvent只能得到冒泡阶段&lt;/li>
+&lt;li>实际开发中，很少使用事件捕获，更关注事件冒泡&lt;/li>
+&lt;li>有些事件是没有冒泡的，如onblur、onfocus、onmouseenter、onmouseleave&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h3 id="事件对象">事件对象&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;123&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> div = &lt;span style="color:#658b00">document&lt;/span>.querSelector(&lt;span style="color:#cd5555">&amp;#39;div&amp;#39;&lt;/span>);
+div.onclick = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(event) { console.log(event);}
+&lt;span style="color:#228b22">// div.addEventListener(&amp;#39;click&amp;#39;, fn)
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#228b22">// function fn(e) { console.log(e);}
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>event&lt;/code>就是一个事件对象，写到事件处理函数中，当形参来看&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>事件对象只有有了事件才存在，他是系统给我们自动创建的，不需要传递参数&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://www.w3school.com.cn/jsref/dom_obj_event.asp">Event 对象&lt;/a>是事件的一系列相关信息数据的集合，如鼠标位置、键盘按键状态、鼠标按钮的状态等&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>这个事件对象我们可以自己命名，如event、evt、e&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h3 id="事件委托">事件委托&lt;/h3>
+&lt;p>事件委托也称为事件代理，在jQuery里面称为事件委派。&lt;/p>
+&lt;blockquote>
+&lt;p>原理：不是每个子节点单独设置事件监听器，而是事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点&lt;/p>
+&lt;p>作用：只操作了一次DOM，提高了程序的性能&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&lt;span style="color:#b452cd">1&lt;/span>&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/li&amp;gt;&lt;/span>
+&amp;lt;li&amp;gt;&lt;span style="color:#b452cd">2&lt;/span>&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/li&amp;gt;&lt;/span>
+&amp;lt;li&amp;gt;&lt;span style="color:#b452cd">3&lt;/span>&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/li&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/ul&amp;gt;&lt;/span>
+&amp;lt;script&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> ul = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#34;ul&amp;#34;&lt;/span>);
+ul.addEventListener(&lt;span style="color:#cd5555">&amp;#39;click&amp;#39;&lt;/span>, &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(e) {
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span>(&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i = &lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; ul.children.length; i++){
+ul.children[i].style.backgroundColor = &lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>;
+}
+e.target.style.backgroundColor = &lt;span style="color:#cd5555">&amp;#39;pink&amp;#39;&lt;/span>;
+})
+&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/script&amp;gt;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="操作元素">操作元素&lt;/h2>
 &lt;p>DOM操作可以改变网页内容、结构和样式，可以利用DOM操作元素里面的内容、属性等。&lt;/p>
 &lt;h3 id="改变元素内容">改变元素内容&lt;/h3>
@@ -197,11 +320,233 @@ demo2.onclick = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/spa
 &lt;li>node.childNodes只返回子元素节点，实际开发常用&lt;/li>
 &lt;li>非标准，但得到了各个浏览器的支持，因此可以放心使用&lt;/li>
 &lt;/ul>
-&lt;h3 id="创建节点">创建节点&lt;/h3>
+&lt;h3 id="创建和添加节点">创建和添加节点&lt;/h3>
+&lt;p>如需向 HTML DOM 添加新元素，您必须首先创建这个元素（元素节点），然后将其追加到已有元素。&lt;/p>
 &lt;blockquote>
 &lt;p>document.createElement(element）&lt;/p>
 &lt;/blockquote>
-- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/ - zzb2021.</description></item><item><title>JS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ -&lt;h1 id="js的组成">JS的组成&lt;/h1>
+&lt;p>添加节点&lt;/p>
+&lt;blockquote>
+&lt;p>para.appendChild(node) // 追加新元素作为父的最后一个子&lt;/p>
+&lt;p>element.insertBefore(para, child) // 在指定元素前面添加节点&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;div1&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p1&amp;#34;&lt;/span>&amp;gt;这是一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p2&amp;#34;&lt;/span>&amp;gt;这是另一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> para = &lt;span style="color:#658b00">document&lt;/span>.createElement(&lt;span style="color:#cd5555">&amp;#34;p&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> node = &lt;span style="color:#658b00">document&lt;/span>.createTextNode(&lt;span style="color:#cd5555">&amp;#34;这是新文本。&amp;#34;&lt;/span>);
+para.appendChild(node);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> element = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;div1&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> child = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;p1&amp;#34;&lt;/span>);
+element.insertBefore(para, child); &lt;span style="color:#228b22">// 在child前面插入para
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="删除节点">删除节点&lt;/h3>
+&lt;p>如需删除某个 HTML 元素，您需要知晓该元素的父：&lt;/p>
+&lt;blockquote>
+&lt;p>parent.removeChild(child）&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;div1&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p1&amp;#34;&lt;/span>&amp;gt;这是一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p2&amp;#34;&lt;/span>&amp;gt;这是另一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> parent = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;div1&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> child = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;p1&amp;#34;&lt;/span>);
+parent.removeChild(child);
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="复制节点">复制节点&lt;/h3>
+&lt;blockquote>
+&lt;p>node.cloneNode(）&lt;/p>
+&lt;/blockquote>
+&lt;p>括号为空或者false，浅拷贝，只复制标签不复制内容&lt;/p>
+&lt;p>括号为true，深拷贝，复制标签并且复制内容&lt;/p>
+&lt;h3 id="三种动态创建元素的区别">三种动态创建元素的区别&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">区别&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">document.write()&lt;/td>
+&lt;td style="text-align:left">直接将内容写入页面的内容流，会导致页面全部重绘&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">element.innerHTML&lt;/td>
+&lt;td style="text-align:left">将内容写入某个DOM节点，不会导致页面全部重绘。创建多个元素效率更高（不要拼接字符串，采取数组形式拼接），结构稍微复杂&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">document.createElement()&lt;/td>
+&lt;td style="text-align:left">创建多个元素效率稍微低一点点，但是结构更清晰&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> d1 = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>();
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> inner = &lt;span style="color:#658b00">document&lt;/span>.body;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> arr = [];
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i=&lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt;&lt;span style="color:#b452cd">1000&lt;/span>; i++){ &lt;span style="color:#228b22">// 数组拼接，效率最高
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> arr.push(&lt;span style="color:#cd5555">&amp;#39;&amp;lt;a href=&amp;#34;#&amp;#34;&amp;gt;baidu&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;&amp;#39;&lt;/span>)
+}
+inner.innerHTML = arr.join(&lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> d2 = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>();
+console.log(d2 - d1);
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dom重点核心">DOM重点核心&lt;/h2>
+&lt;p>关于DOM操作，主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作。&lt;/p>
+&lt;h3 id="创建">创建&lt;/h3>
+&lt;ul>
+&lt;li>document.write()&lt;/li>
+&lt;li>element.innerHTML&lt;/li>
+&lt;li>document.createElement()&lt;/li>
+&lt;/ul>
+&lt;h3 id="增">增&lt;/h3>
+&lt;ul>
+&lt;li>appendChild&lt;/li>
+&lt;li>insertBefore&lt;/li>
+&lt;/ul>
+&lt;h3 id="删">删&lt;/h3>
+&lt;ul>
+&lt;li>removeChild&lt;/li>
+&lt;/ul>
+&lt;h3 id="改">改&lt;/h3>
+&lt;p>主要修改dom的元素属性，dom元素的内容、属性、表单的值等&lt;/p>
+&lt;ul>
+&lt;li>修改元素属性：src、href、title等&lt;/li>
+&lt;li>修改普通元素内容：innerHTML、innerText&lt;/li>
+&lt;li>修改表单元素：value、type、disable等&lt;/li>
+&lt;li>修改元素样式：style、className&lt;/li>
+&lt;/ul>
+&lt;h3 id="查">查&lt;/h3>
+&lt;p>主要获取查询dom的元素&lt;/p>
+&lt;ul>
+&lt;li>DOM提供的API方法：getElementById、getElementByTagName 古老用法，不太推荐&lt;/li>
+&lt;li>H5提供的新方法：querySelector、querySelectorAll 提倡&lt;/li>
+&lt;li>利用节点操作获取元素：父（parentNode）、子（children）、兄（previousElementSibling、nextElementSibling）提倡&lt;/li>
+&lt;/ul>
+&lt;h3 id="属性操作">属性操作&lt;/h3>
+&lt;p>主要针对于自定义属性&lt;/p>
+&lt;ul>
+&lt;li>setAttribute：设置dom的属性值&lt;/li>
+&lt;li>getAttribute：得到dom的属性值&lt;/li>
+&lt;li>removeAttribute：移除属性&lt;/li>
+&lt;/ul>
+&lt;h3 id="事件操作">事件操作&lt;/h3>
+&lt;p>先给元素注册事件，然后采取&lt;code>事件源.事件类型=事件处理程序&lt;/code>&lt;/p>
+&lt;h1 id="bom">BOM&lt;/h1>
+&lt;p>BOM（Browser Object Model）即浏览器对象模型，它提供了独立于内容而与&lt;strong>浏览器窗口进行交互的对象&lt;/strong>，其核心对象是window。&lt;/p>
+&lt;h2 id="dom和bom对比">DOM和BOM对比&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">DOM&lt;/th>
+&lt;th style="text-align:left">BOM&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">文档对象模型&lt;/td>
+&lt;td style="text-align:left">浏览器对象模型&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">把&lt;strong>文档&lt;/strong>当作一个对象&lt;/td>
+&lt;td style="text-align:left">把&lt;strong>浏览器&lt;/strong>当作一个对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">顶级对象是&lt;code>document&lt;/code>&lt;/td>
+&lt;td style="text-align:left">顶级对象是&lt;code>window&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">主要学习的是操作页面元素&lt;/td>
+&lt;td style="text-align:left">学习的是浏览器窗口交互的一些对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">W3C标准规范&lt;/td>
+&lt;td style="text-align:left">不存在官方标准&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="bom构成">BOM构成&lt;/h2>
+&lt;p>BOM由一系列相关的对象构成，并且每个对象都提供了很多方法和属性。&lt;/p>
+&lt;p>BOM比DOM更大，它包含DOM。&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/bom.jfif" alt="BOM">&lt;/p>
+&lt;h2 id="window-对象">Window 对象&lt;/h2>
+&lt;p>&lt;code>window&lt;/code>对象是浏览器的顶级对象，它具有双重角色。&lt;/p>
+&lt;ul>
+&lt;li>是JS访问浏览器窗口的一个接口&lt;/li>
+&lt;li>是一个全局对象，定义在全局作用域中的变量、函数都会变成&lt;code>window&lt;/code>对象的属性和方法&lt;/li>
+&lt;li>注意：在调用的时候可以省略&lt;code>window&lt;/code>，如&lt;code>alert()&lt;/code>等；&lt;code>window&lt;/code>下的一个特殊属性&lt;code>window.name&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="定时器">定时器&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;code>window&lt;/code>对象提供了两种定时器方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.w3school.com.cn/jsref/met_win_settimeout.asp">setTimeout(callback,millisec)&lt;/a> 在指定的毫秒数后调用函数或计算表达式。&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/jsref/met_win_setinterval.asp">setInterval(callback,millisec)&lt;/a> 按照指定的周期（以毫秒计）来调用函数或计算表达式。&lt;/li>
+&lt;/ul>
+&lt;p>callback：回调函数&lt;/p>
+&lt;p>millisec：在执行代码前需等待的毫秒数&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&amp;lt;img src=&lt;span style="color:#cd5555">&amp;#39;ad.png&amp;#39;&lt;/span> alt=&lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;ad&amp;#39;&lt;/span>&amp;gt;
+&amp;lt;script&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> ad = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;.ad&amp;#39;&lt;/span>);
+setTimeout(fn,&lt;span style="color:#b452cd">5000&lt;/span>); &lt;span style="color:#228b22">// 5s后广告自动消失
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> fn() { ad.style.display = &lt;span style="color:#cd5555">&amp;#39;none&amp;#39;&lt;/span>;}
+&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/script&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>清除定时器&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.w3school.com.cn/jsref/met_win_clearinterval.asp">clearInterval()&lt;/a> 取消由 setInterval() 设置的 timeout&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/jsref/met_win_cleartimeout.asp">clearTimeout()&lt;/a> 取消由 setTimeout() 方法设置的 timeout&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>案例：倒计时效果&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">style&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">display&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">inline&lt;/span>-&lt;span style="color:#8b008b;font-weight:bold">block&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">white&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">black&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">width&lt;/span>: &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">height&lt;/span>: &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">text-align&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">center&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">line-height&lt;/span>: &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+}
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">style&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;hour&amp;#39;&lt;/span>&amp;gt;01&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;minute&amp;#39;&lt;/span>&amp;gt;02&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;second&amp;#39;&lt;/span>&amp;gt;03&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#228b22">// 1. 获取元素
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> hour = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;.hour&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> minute = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;.minute&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> second = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;.second&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> inputTime = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;2021-5-20 18:00:00&amp;#39;&lt;/span>); &lt;span style="color:#228b22">// 返回用户输入时间的总毫秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#228b22">// 2. 开启定时器
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> countDown(); &lt;span style="color:#228b22">// 先调用一次，f
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> setInterval(countDown, &lt;span style="color:#b452cd">1000&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> countDown() {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> nowTime = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(); &lt;span style="color:#228b22">// 返回当前时间的总毫秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> times = (inputTime - nowTime) / &lt;span style="color:#b452cd">1000&lt;/span>; &lt;span style="color:#228b22">// 返回剩余时间的总秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> h = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>/&lt;span style="color:#b452cd">60&lt;/span>%&lt;span style="color:#b452cd">24&lt;/span>); &lt;span style="color:#228b22">// 返回时
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> h = h &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + h : h;
+hour.innerHTML = h;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> m = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>%&lt;span style="color:#b452cd">60&lt;/span>); &lt;span style="color:#228b22">// 返回分
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> m = m &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + m : m;
+minute.innerHTML = m;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> s = &lt;span style="color:#658b00">parseInt&lt;/span>(times%&lt;span style="color:#b452cd">60&lt;/span>); &lt;span style="color:#228b22">// 返回秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> s = s &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + s : s;
+second.innerHTML = s;
+}
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/ - zzb2021.</description></item><item><title>JS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ -&lt;h1 id="js的组成">JS的组成&lt;/h1>
 &lt;table>
 &lt;thead>
 &lt;tr>
