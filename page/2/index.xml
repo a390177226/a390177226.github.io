@@ -1,0 +1,2611 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Fri, 25 Jun 2021 12:49:07 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>MathematicalModeling</title><link>https://a390177226.github.io/research/mathematicalmodeling/</link><pubDate>Fri, 28 May 2021 10:27:32 +0800</pubDate><guid>https://a390177226.github.io/research/mathematicalmodeling/</guid><description>ZZB's blog https://a390177226.github.io/research/mathematicalmodeling/ -- https://a390177226.github.io/research/mathematicalmodeling/ - zzb2021.</description></item><item><title>Cancer Facts</title><link>https://a390177226.github.io/research/cancerfacts/</link><pubDate>Fri, 28 May 2021 10:26:47 +0800</pubDate><guid>https://a390177226.github.io/research/cancerfacts/</guid><description>ZZB's blog https://a390177226.github.io/research/cancerfacts/ -&lt;h1 id="cancer-facts--figures-2021">Cancer Facts &amp;amp; Figures 2021&lt;/h1>
+&lt;p>links: &lt;a href="https://www.cancer.org/research/cancer-facts-statistics/all-cancer-facts-figures/cancer-facts-figures-2021.html">Cancer Facts &amp;amp; Figures 2021 | American Cancer Society&lt;/a>&lt;/p>
+&lt;h1 id="lung-cancer">Lung Cancer&lt;/h1>
+&lt;p>links: &lt;a href="https://www.cancer.org/cancer/lung-cancer.html">Lung Cancer Guide | American Cancer Society&lt;/a>&lt;/p>
+&lt;h2 id="types">Types&lt;/h2>
+- https://a390177226.github.io/research/cancerfacts/ - zzb2021.</description></item><item><title>JS 正则表达式</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jsregexp/</link><pubDate>Fri, 21 May 2021 15:47:41 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jsregexp/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jsregexp/ -&lt;h1 id="links">Links&lt;/h1>
+&lt;p>学习视频&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.bilibili.com/video/BV19t4y1y7qP?from=search&amp;amp;seid=7288451703501321671">正则表达式30分钟入门~bilibili&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>文档&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.runoob.com/regexp/regexp-tutorial.html">正则表达式 – 教程 | 菜鸟教程&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>在线测试网站&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://regexr.com/">RegExr英文&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://regexr-cn.com/">RegExr中文&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>练习网站&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.codejiaonang.com/#/course/regex_chapter1/0/0">编程胶囊 (codejiaonang.com)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="什么是正则表达式">什么是正则表达式？&lt;/h1>
+&lt;p>正则表达式是构成&lt;strong>搜索模式&lt;/strong>（search pattern）的字符序列。&lt;/p>
+&lt;p>正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。&lt;/p>
+&lt;p>正则表达式可用于执行所有类型的&lt;strong>文本搜索&lt;/strong>和&lt;strong>文本替换&lt;/strong>操作。&lt;/p>
+&lt;p>&lt;strong>语法&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>/pattern/modifiers;
+&lt;/code>&lt;/pre>&lt;p>&lt;strong>实例&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 从字符串 str 中提取数字部分的内容(匹配一次)：
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;abc123def&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> patt1 = &lt;span style="color:#1c7e71">/[0-9]+/&lt;/span>;
+&lt;span style="color:#658b00">document&lt;/span>.write(str.match(patt1)); &lt;span style="color:#228b22">// 输出123
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="修饰符">修饰符&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">修饰符&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">i&lt;/td>
+&lt;td style="text-align:left">执行对大小写不敏感的匹配&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">g&lt;/td>
+&lt;td style="text-align:left">执行全局匹配（查找所有匹配而非在找到第一个匹配后停止）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">m&lt;/td>
+&lt;td style="text-align:left">执行多行匹配&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="常用模式">常用模式&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>名称&lt;/th>
+&lt;th>语法&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>实例&lt;/th>
+&lt;th>实例说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>字符组&lt;/td>
+&lt;td>&lt;code>[ABC]&lt;/code>&lt;/td>
+&lt;td>匹配 &lt;strong>[&amp;hellip;]&lt;/strong> 中的所有字符&lt;/td>
+&lt;td>&lt;code>[Pp]ython&lt;/code>&lt;/td>
+&lt;td>匹配 “Python” 或 “python”&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>非集&lt;/td>
+&lt;td>&lt;code>[^ABC]&lt;/code>&lt;/td>
+&lt;td>匹配不在集合中的任何字符&lt;/td>
+&lt;td>&lt;code>[^au]&lt;/code>&lt;/td>
+&lt;td>除了au字母以外的所有字符&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>区间&lt;/td>
+&lt;td>&lt;code>[A-Z]&lt;/code>&lt;/td>
+&lt;td>匹配所有大写字母&lt;/td>
+&lt;td>&lt;code>[a-zA-Z0-9]&lt;/code>&lt;/td>
+&lt;td>匹配任何字母及数字&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>匹配特殊字符&lt;/td>
+&lt;td>&lt;code>\-&lt;/code>&lt;/td>
+&lt;td>使用 &lt;code>\&lt;/code> 就可以进行对特殊符号进行转义&lt;/td>
+&lt;td>&lt;code>\+&lt;/code>&lt;/td>
+&lt;td>匹配1 + 1 = 2中的加号&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>元字符&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>\w&lt;/code>&lt;/td>
+&lt;td>与任意单词字符匹配，等价于&lt;code>[A-Za-z0-9_]&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>\d&lt;/code>&lt;/td>
+&lt;td>与任意数字匹配，&lt;code>[0-9]&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>\s&lt;/code>&lt;/td>
+&lt;td>匹配任何空白字符 (空格, 制表符, 换行符)，&lt;code>[ \f\n\r\t\v]&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>\b&lt;/code>&lt;/td>
+&lt;td>匹配的是单词的边界，例如&lt;code>er\b&lt;/code> 可以匹配&amp;quot;never&amp;quot; 中的 &amp;lsquo;er&amp;rsquo;，但不能匹配 &amp;ldquo;verb&amp;rdquo; 中的 &amp;lsquo;er&amp;rsquo;&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>^&lt;/code>和&lt;code>$&lt;/code>&lt;/td>
+&lt;td>&lt;code>^&lt;/code>指定的是一个字符串的开始，&lt;code>$&lt;/code>指定的是一个字符串的结束&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>.&lt;/code>&lt;/td>
+&lt;td>匹配任何单个字符，只能出现在方括号以外，只有换行符（&lt;code>\n&lt;/code>）不能匹配&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>?&lt;/code>&lt;/td>
+&lt;td>匹配一个字符0次或1次，另一个作用是非贪婪模式&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>+&lt;/code>&lt;/td>
+&lt;td>匹配1次或多次，等价于&lt;code>{1,}&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>*&lt;/code>&lt;/td>
+&lt;td>匹配0次或多次，等价于&lt;code>{0,}&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="分组">分组&lt;/h1>
+&lt;p>在正则表达式中还提供了一种将表达式&lt;strong>分组&lt;/strong>的机制，当使用分组时，除了获得整个匹配。还能够在匹配中选择每一个分组。&lt;/p>
+&lt;p>要实现分组很简单，使用&lt;code>()&lt;/code>即可。&lt;/p>
+&lt;p>分组有一个非常重要的功能——&lt;strong>捕获数据&lt;/strong>。所以&lt;code>()&lt;/code>被称为捕获分组，当想要从匹配好的数据中提取关键数据的时候可以使用分组。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>应用&lt;/th>
+&lt;th>正则表达式&lt;/th>
+&lt;th>需要匹配的文本&lt;/th>
+&lt;th>提取的文本&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>提取p标签中的数据&lt;/td>
+&lt;td>&lt;code>&amp;lt;p&amp;gt;(.*?)&amp;lt;/p&amp;gt;&lt;/code>&lt;/td>
+&lt;td>&lt;code>&amp;lt;p&amp;gt;hello&amp;lt;/p&amp;gt;&lt;/code>&lt;/td>
+&lt;td>hello&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>提取学号&lt;/td>
+&lt;td>&lt;code>(\d{4}).?(\d{4}).?(\d{2})&lt;/code>&lt;/td>
+&lt;td>&lt;code>2019-5013-08&lt;/code>&lt;/td>
+&lt;td>2019，5013，08&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>使用分组的同时还可以使用 &lt;strong>或者&lt;/strong>（&lt;code>or&lt;/code>）条件，相邻的条件用 &lt;code>|&lt;/code> 分隔。&lt;/p>
+&lt;p>有时候，我们并不需要捕获某个分组的内容，但是又想使用分组的特性。这个时候就可以使用非捕获组&lt;code>(?:表达式)&lt;/code>，从而&lt;strong>不捕获数据&lt;/strong>，还能使用分组的功能。&lt;/p>
+&lt;p>可以使用&lt;strong>分组的回溯引用&lt;/strong>，使用&lt;code>\N&lt;/code>可以引用编号为&lt;code>N&lt;/code>的分组。&lt;/p>
+&lt;h1 id="断言">断言&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>断言&lt;/th>
+&lt;th>语法&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>正向先行断言&lt;/td>
+&lt;td>&lt;code>(?=表达式)&lt;/code>&lt;/td>
+&lt;td>在某个位置向右看，表示所在位置右侧必须能匹配表达式&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>反向先行断言&lt;/td>
+&lt;td>&lt;code>(?!表达式)&lt;/code>&lt;/td>
+&lt;td>保证右边不能出现某字符&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>正向后行断言&lt;/td>
+&lt;td>&lt;code>(?&amp;lt;=表达式)&lt;/code>&lt;/td>
+&lt;td>在某个位置向左看，表示所在位置左侧必须能匹配表达式&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>反向后行断言&lt;/td>
+&lt;td>&lt;code>(?&amp;lt;!表达式)&lt;/code>&lt;/td>
+&lt;td>保证左边不能出现某字符&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="js使用正则表达式">JS使用正则表达式&lt;/h1>
+&lt;h2 id="使用字符串方法">使用字符串方法&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>方法&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>search()&lt;/code>&lt;/td>
+&lt;td>使用表达式来搜索匹配，然后返回匹配的位置&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>match()&lt;/code>&lt;/td>
+&lt;td>使用表达式来搜索匹配，然后返回匹配的值&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>replace()&lt;/code>&lt;/td>
+&lt;td>替换与正则表达式匹配的子串&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="使用-regexp-对象">使用 RegExp 对象&lt;/h2>
+&lt;p>在 JavaScript 中，RegExp 对象是带有预定义属性和方法的正则表达式对象。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>方法&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>test()&lt;/code>&lt;/td>
+&lt;td>通过模式来搜索字符串，然后根据结果返回 true 或 false&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>exec()&lt;/code>&lt;/td>
+&lt;td>通过指定的模式搜索字符串，并返回已找到的文本，如果未找到匹配，则返回 null&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jsregexp/ - zzb2021.</description></item><item><title>JSON</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/</link><pubDate>Fri, 21 May 2021 13:51:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/ -&lt;h1 id="introduction">Introduction&lt;/h1>
+&lt;h2 id="what-is-json">What is JSON?&lt;/h2>
+&lt;blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>JSON 指的是 JavaScript 对象表示（&lt;strong>J&lt;/strong>ava&lt;strong>S&lt;/strong>cript &lt;strong>O&lt;/strong>bject &lt;strong>N&lt;/strong>otation）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>JSON 是一种轻量级的&lt;strong>文本格式&lt;/strong>，用于&lt;strong>数据存储和交换&lt;/strong>&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>JSON 具有自我描述性（self-describing），更易理解&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h2 id="why-use-json">Why use JSON?&lt;/h2>
+&lt;p>由于JSON格式是纯文本的，因此可以很容易地将其发送到服务器或从服务器发送出去，并被任何编程语言用作数据格式。&lt;/p>
+&lt;h2 id="json-vs-xml">JSON vs XML&lt;/h2>
+&lt;p>JSON和XML都可以用来从web服务器接收数据。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">JSON类似 XML&lt;/th>
+&lt;th style="text-align:left">JSON相比 XML 的不同之处&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">都是纯文本&lt;/td>
+&lt;td style="text-align:left">JSON没有结束标签&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">具有“自我描述性”（人类可读）&lt;/td>
+&lt;td style="text-align:left">JSON更短&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">具有层级结构（值中存在值）&lt;/td>
+&lt;td style="text-align:left">JSON读写的速度更快&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">可通过 JavaScript 进行解析&lt;/td>
+&lt;td style="text-align:left">JSON能够使用JS的内建方法进行解析&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">可使用 AJAX 进行传输&lt;/td>
+&lt;td style="text-align:left">JSON可以使用数组，不使用保留字&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="syntax">Syntax&lt;/h1>
+&lt;blockquote>
+&lt;p>JSON 语法是 JavaScript 语法的子集。&lt;/p>
+&lt;ul>
+&lt;li>数据在名称/值对中&lt;/li>
+&lt;li>数据由逗号分隔&lt;/li>
+&lt;li>花括号保存对象&lt;/li>
+&lt;li>方括号保存数组&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;p>JSON 数据的书写格式是：name: value对。&lt;/p>
+&lt;p>name 必须是字符串， 在双引号中。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">value的类型&lt;/th>
+&lt;th style="text-align:left">特点&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">数字&lt;/td>
+&lt;td style="text-align:left">数字必须是整数或浮点&lt;/td>
+&lt;td>&lt;code>{ &amp;quot;name&amp;quot;:&amp;quot;John&amp;quot; }&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">字符串&lt;/td>
+&lt;td style="text-align:left">字符串必须在双引号中&lt;/td>
+&lt;td>&lt;code>{ &amp;quot;age&amp;quot;:30 }&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">逻辑值&lt;/td>
+&lt;td style="text-align:left">true 或 false&lt;/td>
+&lt;td>&lt;code>{ &amp;quot;sale&amp;quot;:true }&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">对象&lt;/td>
+&lt;td style="text-align:left">对象在花括号中&lt;/td>
+&lt;td>&lt;code>{ &amp;quot;employee&amp;quot;:{ &amp;quot;name&amp;quot;:&amp;quot;John&amp;quot;, &amp;quot;age&amp;quot;:30, &amp;quot;city&amp;quot;:&amp;quot;New York&amp;quot; } }&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">数组&lt;/td>
+&lt;td style="text-align:left">数组在方括号中&lt;/td>
+&lt;td>&lt;code>{&amp;quot;employees&amp;quot;:[ &amp;quot;John&amp;quot;, &amp;quot;Anna&amp;quot;, &amp;quot;Peter&amp;quot; ]}&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">null&lt;/td>
+&lt;td style="text-align:left">值可以为null&lt;/td>
+&lt;td>&lt;code>{ &amp;quot;middlename&amp;quot;:null }&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="json解析">JSON解析&lt;/h1>
+&lt;blockquote>
+&lt;p>JSON的一个常见用法是与web服务器交换数据。&lt;/p>
+&lt;p>从web服务器接收数据时，数据始终是字符串。&lt;/p>
+&lt;p>用&lt;code>JSON.Parse()&lt;/code>解析数据，数据就变成了一个JS对象。&lt;/p>
+&lt;/blockquote>
+&lt;p>假设我们从web服务器收到以下文本：&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;lsquo;{ &amp;ldquo;name&amp;rdquo;:&amp;ldquo;John&amp;rdquo;, &amp;ldquo;age&amp;rdquo;:30, &amp;ldquo;city&amp;rdquo;:&amp;ldquo;New York&amp;rdquo;}&amp;rsquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>使用JS函数&lt;code>JSON.parse()&lt;/code>将文本转换为JS对象：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> obj = JSON.parse(&lt;span style="color:#cd5555">&amp;#39;{ &amp;#34;name&amp;#34;:&amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;:30, &amp;#34;city&amp;#34;:&amp;#34;New York&amp;#34;}&amp;#39;&lt;/span>);
+alert(obj.name); &lt;span style="color:#228b22">// obj.name = &amp;#34;John&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="js对象转化成json">JS对象转化成JSON&lt;/h1>
+&lt;p>JSON的一个常见用法是与web服务器交换数据。
+向web服务器发送数据时，数据必须是字符串。
+使用&lt;code>JSON.stringify()&lt;/code>将JavaScript对象转换为字符串。&lt;/p>
+&lt;p>假设我们在JS中有这样一个对象：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> obj = JSON.parse(&lt;span style="color:#cd5555">&amp;#39;{ &amp;#34;name&amp;#34;:&amp;#34;John&amp;#34;, &amp;#34;age&amp;#34;:30, &amp;#34;city&amp;#34;:&amp;#34;New York&amp;#34;}&amp;#39;&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>使用JS函数&lt;code>JSON.stringify()&lt;/code>将其转换为字符串。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> myJSON = JSON.stringify(obj);
+alert(myJSON); &lt;span style="color:#228b22">// myJSON = &amp;#39;{&amp;#34;name&amp;#34;:&amp;#34;John&amp;#34;,&amp;#34;age&amp;#34;:30,&amp;#34;city&amp;#34;:&amp;#34;New York&amp;#34;}&amp;#39;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/ - zzb2021.</description></item><item><title>JS Web API</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/</link><pubDate>Wed, 19 May 2021 14:56:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/ -&lt;h1 id="web-api">Web API&lt;/h1>
+&lt;p>Web API是浏览器提供的一套操作&lt;strong>浏览器功能&lt;/strong>和&lt;strong>页面元素&lt;/strong>的API（BOM和DOM）。&lt;/p>
+&lt;p>Web API主要是针对于浏览器提供的接口，主要针对于浏览器做交互效果。&lt;/p>
+&lt;p>Web API一般都有输入和输出（函数的传参和返回值），Web API很多都是方法（函数）。&lt;/p>
+&lt;h1 id="dom">DOM&lt;/h1>
+&lt;p>文档对象类型（Document Object Model，DOM）是W3C定义的访问文档的标准：&lt;/p>
+&lt;blockquote>
+&lt;p>“W3C 文档对象模型（DOM）是中立于平台和语言的接口，它允许程序和脚本动态地访问、更新文档的内容、结构和样式。”&lt;/p>
+&lt;/blockquote>
+&lt;p>W3C DOM 标准被分为 3 个不同的部分：&lt;/p>
+&lt;ul>
+&lt;li>Core DOM - 所有文档类型的标准模型&lt;/li>
+&lt;li>XML DOM - XML 文档的标准模型&lt;/li>
+&lt;li>HTML DOM - HTML 文档的标准模型&lt;/li>
+&lt;/ul>
+&lt;p>HTML DOM 是 HTML 的标准对象模型和编程接口。它定义了：&lt;/p>
+&lt;ul>
+&lt;li>作为对象的 HTML 元素&lt;/li>
+&lt;li>所有 HTML 元素的属性&lt;/li>
+&lt;li>访问所有 HTML 元素的方法&lt;/li>
+&lt;li>所有 HTML 元素的事件&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>换言之：HTML DOM 是关于如何获取、更改、添加或删除 HTML 元素的标准&lt;/strong>。&lt;/p>
+&lt;h2 id="html-dom-树">HTML DOM 树&lt;/h2>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/domtree.gif" alt="HTML DOM 树">&lt;/p>
+&lt;ul>
+&lt;li>文档：一个页面就是一个文档，DOM中使用doument表示&lt;/li>
+&lt;li>元素：页面中的所有标签都是元素，DOM中使用element表示&lt;/li>
+&lt;li>节点：网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>DOM把以上内容都看作是对象&lt;/strong>&lt;/p>
+&lt;h2 id="查找元素">查找元素&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">document.getElementById(&lt;em>id&lt;/em>)&lt;/td>
+&lt;td style="text-align:left">通过元素 id 来查找元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">document.getElementsByTagName(&lt;em>name&lt;/em>)&lt;/td>
+&lt;td style="text-align:left">通过标签名来查找元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">document.getElementsByClassName(&lt;em>name&lt;/em>)&lt;/td>
+&lt;td style="text-align:left">通过类名来查找元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">document.querySelector(&amp;lsquo;选择器&amp;rsquo;)&lt;/td>
+&lt;td style="text-align:left">通过 CSS 选择器查找 HTML 元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/tiy/t.asp?f=js_doc_anchors">document.body&lt;/a>&lt;/td>
+&lt;td style="text-align:left">通过 HTML 对象集合查找 HTML 元素&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;time&amp;#34;&lt;/span>&amp;gt;2021-5-19&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> timer = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo&amp;#34;&lt;/span>);
+console.log(timer); &lt;span style="color:#228b22">// 打印2021-5-19
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.dir(timer); &lt;span style="color:#228b22">// 打印返回的元素对象，更好的查看里面的属性和方法
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="事件">事件&lt;/h2>
+&lt;p>JS使我们有能力创建动态页面，而事件是可以被JS侦测到的行为。&lt;/p>
+&lt;p>简单理解：触发——响应机制。&lt;/p>
+&lt;p>事件由三要素组成：事件源、事件类型和事件处理程序。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">三要素&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">事件源&lt;/td>
+&lt;td style="text-align:left">事件被触发的对象&lt;/td>
+&lt;td>按钮（button）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">事件类型&lt;/td>
+&lt;td style="text-align:left">如何触发事件&lt;/td>
+&lt;td>鼠标点击（onclick）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">事件处理程序&lt;/td>
+&lt;td style="text-align:left">做什么事&lt;/td>
+&lt;td>&lt;code>displayDate()&lt;/code>函数&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;myBtn&amp;#34;&lt;/span>&amp;gt;唐伯虎&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;myBtn&amp;#34;&lt;/span>).onclick = displayDate;
+&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> displayDate() {alert(&lt;span style="color:#658b00">Date&lt;/span>());}
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="事件高级">事件高级&lt;/h2>
+&lt;h3 id="注册事件">注册事件&lt;/h3>
+&lt;p>给元素添加事件，称为注册事件或者绑定事件。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">注册事件&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;th>特点&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">传统方法&lt;/td>
+&lt;td style="text-align:left">利用on开头的事件，如onclick&lt;/td>
+&lt;td>唯一性，即同一个元素同一个事件只能设置一个处理函数，最后注册的处理函数将会覆盖前面注册的处理函数&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">事件监听器&lt;/td>
+&lt;td style="text-align:left">&lt;code>addEventListener()&lt;/code> 方法，w3c标准，推荐方式&lt;/td>
+&lt;td>同一个元素同一个事件可以注册多个监听器，按注册顺序依次执行。能够向任何 DOM 对象添加事件处理程序而非仅仅 HTML 元素，例如 window 对象&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>addEventListener() 方法&lt;/strong>&lt;/p>
+&lt;blockquote>
+&lt;p>element.addEventListener(event, function, useCapture);&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>event：事件的类型（比如 &amp;ldquo;click&amp;rdquo; 或 &amp;ldquo;mousedown&amp;rdquo;），注意这里不要带on&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>function：事件处理函数，事件发生时，会调用该监听函数&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>useCapture：可选参数，布尔值，默认值是 false，将使用冒泡传播，如果该值设置为 true，则事件使用捕获传播&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="删除事件">删除事件&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">解绑事件&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">传统方法&lt;/td>
+&lt;td style="text-align:left">&lt;code>eventTarget.onclick=null;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">事件监听器&lt;/td>
+&lt;td style="text-align:left">&lt;code>removeEventListener()&lt;/code>方法&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="事件流">事件流&lt;/h3>
+&lt;p>事件流描述的是页面中接受事件的顺序。&lt;/p>
+&lt;p>在 HTML DOM中有两种事件传播的方法：冒泡和捕获。&lt;/p>
+&lt;blockquote>
+&lt;p>假如 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素内有一个&lt;code>&amp;lt;p&amp;gt;&lt;/code>，然后用户点击了这个 &lt;code>&amp;lt;p&amp;gt;&lt;/code> 元素，应该首先处理哪个元素“click”事件？&lt;/p>
+&lt;p>在冒泡中，最内侧元素的事件会首先被处理，然后是更外侧的：首先处理 &lt;code>&amp;lt;p&amp;gt;&lt;/code> 元素的点击事件，然后是 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素的点击事件。&lt;/p>
+&lt;p>在捕获中，最外侧元素的事件会首先被处理，然后是更内侧的：首先处理 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素的点击事件，然后是 &lt;code>&amp;lt;p&amp;gt;&lt;/code> 元素的点击事件。&lt;/p>
+&lt;/blockquote>
+&lt;blockquote>
+&lt;p>&lt;strong>注意&lt;/strong>：&lt;/p>
+&lt;ul>
+&lt;li>JS代码中只能执行捕获或者冒泡其中的一个阶段&lt;/li>
+&lt;li>onclick和attachEvent只能得到冒泡阶段&lt;/li>
+&lt;li>实际开发中，很少使用事件捕获，更关注事件冒泡&lt;/li>
+&lt;li>有些事件是没有冒泡的，如onblur、onfocus、onmouseenter、onmouseleave&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h3 id="事件对象">事件对象&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;123&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> div = &lt;span style="color:#658b00">document&lt;/span>.querSelector(&lt;span style="color:#cd5555">&amp;#39;div&amp;#39;&lt;/span>);
+div.onclick = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(event) { console.log(event);}
+&lt;span style="color:#228b22">// div.addEventListener(&amp;#39;click&amp;#39;, fn)
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#228b22">// function fn(e) { console.log(e);}
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;ul>
+&lt;li>
+&lt;p>&lt;code>event&lt;/code>就是一个事件对象，写到事件处理函数中，当形参来看&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>事件对象只有有了事件才存在，他是系统给我们自动创建的，不需要传递参数&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;a href="https://www.w3school.com.cn/jsref/dom_obj_event.asp">Event 对象&lt;/a>是事件的一系列相关信息数据的集合，如鼠标位置、键盘按键状态、鼠标按钮的状态等&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>这个事件对象我们可以自己命名，如event、evt、e&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h3 id="事件委托">事件委托&lt;/h3>
+&lt;p>事件委托也称为事件代理，在jQuery里面称为事件委派。&lt;/p>
+&lt;blockquote>
+&lt;p>原理：不是每个子节点单独设置事件监听器，而是事件监听器设置在其父节点上，然后利用冒泡原理影响设置每个子节点&lt;/p>
+&lt;p>作用：只操作了一次DOM，提高了程序的性能&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&amp;lt;ul&amp;gt;
+&amp;lt;li&amp;gt;&lt;span style="color:#b452cd">1&lt;/span>&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/li&amp;gt;&lt;/span>
+&amp;lt;li&amp;gt;&lt;span style="color:#b452cd">2&lt;/span>&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/li&amp;gt;&lt;/span>
+&amp;lt;li&amp;gt;&lt;span style="color:#b452cd">3&lt;/span>&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/li&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/ul&amp;gt;&lt;/span>
+&amp;lt;script&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> ul = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#34;ul&amp;#34;&lt;/span>);
+ul.addEventListener(&lt;span style="color:#cd5555">&amp;#39;click&amp;#39;&lt;/span>, &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(e) {
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span>(&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i = &lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; ul.children.length; i++){
+ul.children[i].style.backgroundColor = &lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>;
+}
+e.target.style.backgroundColor = &lt;span style="color:#cd5555">&amp;#39;pink&amp;#39;&lt;/span>;
+})
+&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/script&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="操作元素">操作元素&lt;/h2>
+&lt;p>DOM操作可以改变网页内容、结构和样式，可以利用DOM操作元素里面的内容、属性等。&lt;/p>
+&lt;h3 id="改变元素内容">改变元素内容&lt;/h3>
+&lt;p>修改 HTML 文档内容最简单的方法是，使用 &lt;code>innerHTML&lt;/code>和&lt;code>innerText&lt;/code> 属性。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>innerHTML&lt;/code>&lt;/td>
+&lt;td style="text-align:left">可读写的，识别html标签，W3C标准&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>innerText&lt;/code>&lt;/td>
+&lt;td style="text-align:left">可读写的，不识别html标签，去除空格和换行&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="改变元素属性">改变元素属性&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;demo1&amp;#34;&lt;/span>&amp;gt;demo1&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;demo2&amp;#34;&lt;/span>&amp;gt;demo2&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span>&amp;gt; &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">br&lt;/span> &amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">img&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;/i/eg_smile.gif&amp;#34;&lt;/span> &lt;span style="color:#658b00">alt&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> demo1 = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo1&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> demo2 = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo2&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> img = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;img&amp;#39;&lt;/span>);
+demo1.onclick = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {img.src=&lt;span style="color:#cd5555">&amp;#39;/i/eg_smile.gif&amp;#39;&lt;/span>;};
+demo2.onclick = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {img.src=&lt;span style="color:#cd5555">&amp;#39;/i/porsche.jpg&amp;#39;&lt;/span>;};
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="改变css样式">改变CSS样式&lt;/h3>
+&lt;p>JS修改style是行内样式，权重比较高。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p2&amp;#34;&lt;/span>&amp;gt;Hello World!&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;p2&amp;#34;&lt;/span>).style.color = &lt;span style="color:#cd5555">&amp;#34;blue&amp;#34;&lt;/span>;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="自定义属性">自定义属性&lt;/h3>
+&lt;p>目的：保存并使用数据。&lt;/p>
+&lt;p>HTML5规定自定义属性data-开头作为属性名并且赋值。&lt;/p>
+&lt;p>比如&lt;code>&amp;lt;div data-index=&amp;quot;1&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&lt;/code>或者使用JS设置&lt;code>div.setAttribute('data-index',2)&lt;/code>&lt;/p>
+&lt;p>获取自定义属性的值:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>div.getAttribute('data-index')&lt;/code>&lt;/li>
+&lt;li>&lt;code>div.dataset.index&lt;/code>或者&lt;code>div.dataset['index']&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>注：自定义属性有多个-链接的单词，采用驼峰命名法。&lt;/p>
+&lt;p>比如&lt;code>div.getAttribute('data-list-name')&lt;/code>&lt;/p>
+&lt;p>&lt;code>div.dataset.listName&lt;/code>或者&lt;code>div.dataset['listName']&lt;/code>&lt;/p>
+&lt;h2 id="节点操作">节点操作&lt;/h2>
+&lt;p>除了利用DOM提供的方法获取元素，还可以利用节点层级关系获取元素。&lt;/p>
+&lt;p>一般的，节点至少拥有nodeType（节点类型）、nodeName（节点名称）和nodeValue（节点值）这三个基本属性。&lt;/p>
+&lt;p>元素节点nodeType为1，属性节点nodeType为2，文本节点nodeType为3（文本节点包含文字、空格、换行等）。&lt;/p>
+&lt;p>实际开发中，主要操作的是元素节点。&lt;/p>
+&lt;h3 id="父级节点">父级节点&lt;/h3>
+&lt;blockquote>
+&lt;p>node.parentNode&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>parentNode属性可返回某节点的父节点，注意是最近的一个父节点&lt;/li>
+&lt;li>如果指定的节点没有父节点则返回null&lt;/li>
+&lt;/ul>
+&lt;h3 id="子级节点">子级节点&lt;/h3>
+&lt;blockquote>
+&lt;p>node.childNodes&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>node.childNodes返回包含指定节点的子节点的集合&lt;/li>
+&lt;li>返回值里面包含了所有的子节点，包括元素节点，文本节点等&lt;/li>
+&lt;li>如果只想要获得里面的元素节点，则需要专门处理（判断nodeType），所以不推荐使用&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>node.children&lt;/p>
+&lt;/blockquote>
+&lt;ul>
+&lt;li>node.childNodes只返回子元素节点，实际开发常用&lt;/li>
+&lt;li>非标准，但得到了各个浏览器的支持，因此可以放心使用&lt;/li>
+&lt;/ul>
+&lt;h3 id="创建和添加节点">创建和添加节点&lt;/h3>
+&lt;p>如需向 HTML DOM 添加新元素，您必须首先创建这个元素（元素节点），然后将其追加到已有元素。&lt;/p>
+&lt;blockquote>
+&lt;p>document.createElement(element）&lt;/p>
+&lt;/blockquote>
+&lt;p>添加节点&lt;/p>
+&lt;blockquote>
+&lt;p>para.appendChild(node) // 追加新元素作为父的最后一个子&lt;/p>
+&lt;p>element.insertBefore(para, child) // 在指定元素前面添加节点&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;div1&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p1&amp;#34;&lt;/span>&amp;gt;这是一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p2&amp;#34;&lt;/span>&amp;gt;这是另一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> para = &lt;span style="color:#658b00">document&lt;/span>.createElement(&lt;span style="color:#cd5555">&amp;#34;p&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> node = &lt;span style="color:#658b00">document&lt;/span>.createTextNode(&lt;span style="color:#cd5555">&amp;#34;这是新文本。&amp;#34;&lt;/span>);
+para.appendChild(node);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> element = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;div1&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> child = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;p1&amp;#34;&lt;/span>);
+element.insertBefore(para, child); &lt;span style="color:#228b22">// 在child前面插入para
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="删除节点">删除节点&lt;/h3>
+&lt;p>如需删除某个 HTML 元素，您需要知晓该元素的父：&lt;/p>
+&lt;blockquote>
+&lt;p>parent.removeChild(child）&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;div1&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p1&amp;#34;&lt;/span>&amp;gt;这是一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;p2&amp;#34;&lt;/span>&amp;gt;这是另一个段落。&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> parent = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;div1&amp;#34;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> child = &lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;p1&amp;#34;&lt;/span>);
+parent.removeChild(child);
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="复制节点">复制节点&lt;/h3>
+&lt;blockquote>
+&lt;p>node.cloneNode(）&lt;/p>
+&lt;/blockquote>
+&lt;p>括号为空或者false，浅拷贝，只复制标签不复制内容&lt;/p>
+&lt;p>括号为true，深拷贝，复制标签并且复制内容&lt;/p>
+&lt;h3 id="三种动态创建元素的区别">三种动态创建元素的区别&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">区别&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">document.write()&lt;/td>
+&lt;td style="text-align:left">直接将内容写入页面的内容流，会导致页面全部重绘&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">element.innerHTML&lt;/td>
+&lt;td style="text-align:left">将内容写入某个DOM节点，不会导致页面全部重绘。创建多个元素效率更高（不要拼接字符串，采取数组形式拼接），结构稍微复杂&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">document.createElement()&lt;/td>
+&lt;td style="text-align:left">创建多个元素效率稍微低一点点，但是结构更清晰&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> d1 = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>();
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> inner = &lt;span style="color:#658b00">document&lt;/span>.body;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> arr = [];
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i=&lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt;&lt;span style="color:#b452cd">1000&lt;/span>; i++){ &lt;span style="color:#228b22">// 数组拼接，效率最高
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> arr.push(&lt;span style="color:#cd5555">&amp;#39;&amp;lt;a href=&amp;#34;#&amp;#34;&amp;gt;baidu&amp;lt;/a&amp;gt;&amp;lt;br /&amp;gt;&amp;#39;&lt;/span>)
+}
+inner.innerHTML = arr.join(&lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> d2 = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>();
+console.log(d2 - d1);
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="dom重点核心">DOM重点核心&lt;/h2>
+&lt;p>关于DOM操作，主要针对于元素的操作。主要有创建、增、删、改、查、属性操作、事件操作。&lt;/p>
+&lt;h3 id="创建">创建&lt;/h3>
+&lt;ul>
+&lt;li>document.write()&lt;/li>
+&lt;li>element.innerHTML&lt;/li>
+&lt;li>document.createElement()&lt;/li>
+&lt;/ul>
+&lt;h3 id="增">增&lt;/h3>
+&lt;ul>
+&lt;li>appendChild&lt;/li>
+&lt;li>insertBefore&lt;/li>
+&lt;/ul>
+&lt;h3 id="删">删&lt;/h3>
+&lt;ul>
+&lt;li>removeChild&lt;/li>
+&lt;/ul>
+&lt;h3 id="改">改&lt;/h3>
+&lt;p>主要修改dom的元素属性，dom元素的内容、属性、表单的值等&lt;/p>
+&lt;ul>
+&lt;li>修改元素属性：src、href、title等&lt;/li>
+&lt;li>修改普通元素内容：innerHTML、innerText&lt;/li>
+&lt;li>修改表单元素：value、type、disable等&lt;/li>
+&lt;li>修改元素样式：style、className&lt;/li>
+&lt;/ul>
+&lt;h3 id="查">查&lt;/h3>
+&lt;p>主要获取查询dom的元素&lt;/p>
+&lt;ul>
+&lt;li>DOM提供的API方法：getElementById、getElementByTagName 古老用法，不太推荐&lt;/li>
+&lt;li>H5提供的新方法：querySelector、querySelectorAll 提倡&lt;/li>
+&lt;li>利用节点操作获取元素：父（parentNode）、子（children）、兄（previousElementSibling、nextElementSibling）提倡&lt;/li>
+&lt;/ul>
+&lt;h3 id="属性操作">属性操作&lt;/h3>
+&lt;p>主要针对于自定义属性&lt;/p>
+&lt;ul>
+&lt;li>setAttribute：设置dom的属性值&lt;/li>
+&lt;li>getAttribute：得到dom的属性值&lt;/li>
+&lt;li>removeAttribute：移除属性&lt;/li>
+&lt;/ul>
+&lt;h3 id="事件操作">事件操作&lt;/h3>
+&lt;p>先给元素注册事件，然后采取&lt;code>事件源.事件类型=事件处理程序&lt;/code>&lt;/p>
+&lt;h1 id="bom">BOM&lt;/h1>
+&lt;p>BOM（Browser Object Model）即浏览器对象模型，它提供了独立于内容而与&lt;strong>浏览器窗口进行交互的对象&lt;/strong>，其核心对象是window。&lt;/p>
+&lt;h2 id="dom和bom对比">DOM和BOM对比&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">DOM&lt;/th>
+&lt;th style="text-align:left">BOM&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">文档对象模型&lt;/td>
+&lt;td style="text-align:left">浏览器对象模型&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">把&lt;strong>文档&lt;/strong>当作一个对象&lt;/td>
+&lt;td style="text-align:left">把&lt;strong>浏览器&lt;/strong>当作一个对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">顶级对象是&lt;code>document&lt;/code>&lt;/td>
+&lt;td style="text-align:left">顶级对象是&lt;code>window&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">主要学习的是操作页面元素&lt;/td>
+&lt;td style="text-align:left">学习的是浏览器窗口交互的一些对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">W3C标准规范&lt;/td>
+&lt;td style="text-align:left">不存在官方标准&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="bom构成">BOM构成&lt;/h2>
+&lt;p>BOM由一系列相关的对象构成，并且每个对象都提供了很多方法和属性。&lt;/p>
+&lt;p>BOM比DOM更大，它包含DOM。&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/bom.jfif" alt="BOM">&lt;/p>
+&lt;h2 id="window-对象">Window 对象&lt;/h2>
+&lt;p>&lt;code>window&lt;/code>对象是浏览器的顶级对象，它具有双重角色。&lt;/p>
+&lt;ul>
+&lt;li>是JS访问浏览器窗口的一个接口&lt;/li>
+&lt;li>是一个全局对象，定义在全局作用域中的变量、函数都会变成&lt;code>window&lt;/code>对象的属性和方法&lt;/li>
+&lt;li>注意：在调用的时候可以省略&lt;code>window&lt;/code>，如&lt;code>alert()&lt;/code>等；&lt;code>window&lt;/code>下的一个特殊属性&lt;code>window.name&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h3 id="定时器">定时器&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;code>window&lt;/code>对象提供了两种定时器方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.w3school.com.cn/jsref/met_win_settimeout.asp">setTimeout(callback,millisec)&lt;/a> 在指定的毫秒数后调用函数或计算表达式。&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/jsref/met_win_setinterval.asp">setInterval(callback,millisec)&lt;/a> 按照指定的周期（以毫秒计）来调用函数或计算表达式。&lt;/li>
+&lt;/ul>
+&lt;p>callback：回调函数&lt;/p>
+&lt;p>millisec：在执行代码前需等待的毫秒数&lt;/p>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&amp;lt;img src=&lt;span style="color:#cd5555">&amp;#39;ad.png&amp;#39;&lt;/span> alt=&lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;ad&amp;#39;&lt;/span>&amp;gt;
+&amp;lt;script&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> ad = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;.ad&amp;#39;&lt;/span>);
+setTimeout(fn,&lt;span style="color:#b452cd">5000&lt;/span>); &lt;span style="color:#228b22">// 5s后广告自动消失
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> fn() { ad.style.display = &lt;span style="color:#cd5555">&amp;#39;none&amp;#39;&lt;/span>;}
+&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/script&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>清除定时器&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.w3school.com.cn/jsref/met_win_clearinterval.asp">clearInterval()&lt;/a> 取消由 setInterval() 设置的 timeout&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/jsref/met_win_cleartimeout.asp">clearTimeout()&lt;/a> 取消由 setTimeout() 方法设置的 timeout&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>案例：倒计时效果&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">style&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">display&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">inline&lt;/span>-&lt;span style="color:#8b008b;font-weight:bold">block&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">white&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">black&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">width&lt;/span>: &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">height&lt;/span>: &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">text-align&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">center&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">line-height&lt;/span>: &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+}
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">style&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;hour&amp;#39;&lt;/span>&amp;gt;01&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;minute&amp;#39;&lt;/span>&amp;gt;02&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;second&amp;#39;&lt;/span>&amp;gt;03&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#228b22">// 1. 获取元素
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> hour = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;.hour&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> minute = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;.minute&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> second = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;.second&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> inputTime = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;2021-5-20 18:00:00&amp;#39;&lt;/span>); &lt;span style="color:#228b22">// 返回用户输入时间的总毫秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#228b22">// 2. 开启定时器
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> countDown(); &lt;span style="color:#228b22">// 先调用一次，f
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> setInterval(countDown, &lt;span style="color:#b452cd">1000&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> countDown() {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> nowTime = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(); &lt;span style="color:#228b22">// 返回当前时间的总毫秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> times = (inputTime - nowTime) / &lt;span style="color:#b452cd">1000&lt;/span>; &lt;span style="color:#228b22">// 返回剩余时间的总秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> h = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>/&lt;span style="color:#b452cd">60&lt;/span>%&lt;span style="color:#b452cd">24&lt;/span>); &lt;span style="color:#228b22">// 返回时
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> h = h &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + h : h;
+hour.innerHTML = h;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> m = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>%&lt;span style="color:#b452cd">60&lt;/span>); &lt;span style="color:#228b22">// 返回分
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> m = m &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + m : m;
+minute.innerHTML = m;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> s = &lt;span style="color:#658b00">parseInt&lt;/span>(times%&lt;span style="color:#b452cd">60&lt;/span>); &lt;span style="color:#228b22">// 返回秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> s = s &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + s : s;
+second.innerHTML = s;
+}
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="js执行机制">JS执行机制&lt;/h3>
+&lt;p>JS语言的一大特点就是&lt;strong>单线程&lt;/strong>，即同一时间只能做一件事。&lt;/p>
+&lt;h4 id="同步和异步">同步和异步&lt;/h4>
+&lt;blockquote>
+&lt;p>同步：前一个任务结束后在执行后一个任务，程序的执行顺序与任务的排列顺序是一致的、同步的。&lt;/p>
+&lt;p>异步：你在做一件事情时，因为这件事情会花费很长时间，在做这件事的同时，可以处理其他事情。&lt;/p>
+&lt;p>同步任务：都在主线程上执行，形成一个&lt;strong>执行栈&lt;/strong>。&lt;/p>
+&lt;p>异步任务：&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>异步是通过回调函数实现的&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>一般有三种类型：普通事件（click、resize）、资源加载（load、error）、定时器（setInterval、setTimeout）&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>异步任务相关回调函数添加到任务（消息）队列中&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">console.log(&lt;span style="color:#b452cd">1&lt;/span>);
+setTimeout(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(){console.log(&lt;span style="color:#b452cd">3&lt;/span>);}, &lt;span style="color:#b452cd">0&lt;/span>);
+console.log(&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 输出1，2，3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="执行机制">执行机制&lt;/h4>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/JS%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6.png" alt="JS执行机制">&lt;/p>
+&lt;blockquote>
+&lt;ol>
+&lt;li>先执行&lt;strong>执行栈中的同步任务&lt;/strong>。&lt;/li>
+&lt;li>遇到异步任务则将其提交给对应的异步进程处理。&lt;/li>
+&lt;li>异步任务经异步进程处理完毕被推入任务队列（也称消息队列）进行排队等待执行。即此时可以进入执行栈了。&lt;/li>
+&lt;li>一旦执行栈中的所有同步任务执行完毕，系统会按照&lt;strong>先进先出&lt;/strong>的原则读取任务队列的异步任务。被读取的异步任务结束其等待状态，进入执行栈，开始执行。&lt;/li>
+&lt;li>主线程从任务队列中读取任务的过程是不断循环的，每次执行栈被清空后，都会到任务队列中读取新的任务，如果没有任务则会等待直到新任务被推入任务队列。这种机制称为&lt;strong>事件循环（event loop）&lt;/strong>。&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;h2 id="location对象">Location对象&lt;/h2>
+&lt;p>&lt;a href="https://www.w3school.com.cn/jsref/dom_obj_location.asp">window.location 对象&lt;/a> 可用于&lt;strong>获取或设置当前页面地址（URL）&lt;/strong>，并且可以用于&lt;strong>解析URL&lt;/strong>。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">location对象属性和方法&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>location.href&lt;/code>&lt;/td>
+&lt;td style="text-align:left">设置或返回完整的 URL，&lt;strong>重点&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>location.host&lt;/code>&lt;/td>
+&lt;td style="text-align:left">设置或返回主机名和当前 URL 的端口号&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>location.pathname&lt;/code>&lt;/td>
+&lt;td style="text-align:left">设置或返回当前 URL 的路径部分&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>location.port&lt;/code>&lt;/td>
+&lt;td style="text-align:left">设置或返回当前 URL 的端口号。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>location.search&lt;/code>&lt;/td>
+&lt;td style="text-align:left">设置或返回从问号 (?) 开始的 URL（查询部分），&lt;strong>重点&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>location.hash&lt;/code>&lt;/td>
+&lt;td style="text-align:left">设置或返回从井号 (#) 开始的 URL（锚）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/jsref/met_loc_assign.asp">location.assign()&lt;/a>&lt;/td>
+&lt;td style="text-align:left">加载新的文档，重定向页面&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/jsref/met_loc_reload.asp">location.reload()&lt;/a>&lt;/td>
+&lt;td style="text-align:left">重新加载当前文档，相当于F5&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/jsref/met_loc_replace.asp">location.replace()&lt;/a>&lt;/td>
+&lt;td style="text-align:left">用新的文档替换当前文档，因为不记录历史，所以不能后退页面&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>案列：5s后自动跳转页面&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;您将在5s后跳转到首页&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> div = &lt;span style="color:#658b00">document&lt;/span>.querySelector(&lt;span style="color:#cd5555">&amp;#39;div&amp;#39;&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> timer = &lt;span style="color:#b452cd">4&lt;/span>;
+setInterval(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(){
+&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (timer == &lt;span style="color:#b452cd">0&lt;/span>) {
+location.href = &lt;span style="color:#cd5555">&amp;#39;https://www.baidu.com/&amp;#39;&lt;/span>;
+} &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> {
+div.innerHTML = &lt;span style="color:#cd5555">&amp;#39;您将在&amp;#39;&lt;/span>+timer+&lt;span style="color:#cd5555">&amp;#39;s后跳转到首页&amp;#39;&lt;/span>;
+timer--;
+}
+}, &lt;span style="color:#b452cd">1000&lt;/span>);
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="navigator对象">Navigator对象&lt;/h2>
+&lt;p>Navigator 对象包含有关浏览器的信息，它有很多属性。&lt;/p>
+&lt;p>我们最常用的是&lt;code>navigator.userAgent&lt;/code>，该属性是一个只读的字符串，可以返回由客户机发送服务器的user-agent头部的值。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span>((navigator.userAgent.match(&lt;span style="color:#1c7e71">/(phone|pad|pod|iPhone|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|woSBrowser|BrowserNG|WebOS|Symbian|WindowsPhone)/i&lt;/span>))) {
+&lt;span style="color:#658b00">window&lt;/span>.location.href = &lt;span style="color:#cd5555">&amp;#34; &amp;#34;&lt;/span>;&lt;span style="color:#228b22">// 手机
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>} &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> {
+&lt;span style="color:#658b00">window&lt;/span>.location.href = &lt;span style="color:#cd5555">&amp;#34; &amp;#34;&lt;/span>;&lt;span style="color:#228b22">// 电脑
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="history对象">History对象&lt;/h2>
+&lt;p>window.history 对象包含浏览器历史。&lt;/p>
+&lt;p>history 对象一般很少使用，但是会在一些OA办公系统见到。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">history对象方法&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/jsref/met_his_back.asp">back()&lt;/a>&lt;/td>
+&lt;td style="text-align:left">加载 history 列表中的前一个 URL。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/jsref/met_his_forward.asp">forward()&lt;/a>&lt;/td>
+&lt;td style="text-align:left">加载 history 列表中的下一个 URL。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/jsref/met_his_go.asp">go(num)&lt;/a>&lt;/td>
+&lt;td style="text-align:left">前进后退功能，如果num=1则前进1个页面，如果num=-1则后退1个页面&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/ - zzb2021.</description></item><item><title>JS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ -&lt;h1 id="js的组成">JS的组成&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">组成&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">ECMAScript&lt;/td>
+&lt;td style="text-align:left">JavaScript的语法&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">DOM&lt;/td>
+&lt;td style="text-align:left">页面文档对象类型&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">BOM&lt;/td>
+&lt;td style="text-align:left">浏览器对象模型&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="js使用">JS使用&lt;/h1>
+&lt;p>在 HTML 中，JavaScript 代码必须位于 &lt;code>&amp;lt;script&amp;gt;&lt;/code> 与 &lt;code>&amp;lt;/script&amp;gt;&lt;/code> 标签之间。&lt;/p>
+&lt;h2 id="内部脚本">内部脚本&lt;/h2>
+&lt;p>脚本可被放置与 HTML 页面的 &lt;code>&amp;lt;body&amp;gt;&lt;/code> 或 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 部分中，或兼而有之。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&amp;lt;script&amp;gt;
+&lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo&amp;#34;&lt;/span>).innerHTML = &lt;span style="color:#cd5555">&amp;#34;我的第一段 JavaScript&amp;#34;&lt;/span>;
+&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/script&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>提示:&lt;/strong> 把脚本置于 &lt;code>&amp;lt;body&amp;gt;&lt;/code>元素的底部，可改善显示速度，因为脚本编译会拖慢显示。&lt;/p>
+&lt;h2 id="外部脚本">外部脚本&lt;/h2>
+&lt;p>脚本可放置与外部文件中：&lt;/p>
+&lt;p>&lt;strong>外部文件：myScript.js&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction() {
+&lt;span style="color:#658b00">document&lt;/span>.getElementById(&lt;span style="color:#cd5555">&amp;#34;demo&amp;#34;&lt;/span>).innerHTML = &lt;span style="color:#cd5555">&amp;#34;段落被更改。&amp;#34;&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&amp;lt;script src=&lt;span style="color:#cd5555">&amp;#34;myScript.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;&lt;span style="color:#a61717;background-color:#e3d2d2">/script&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>注释:&lt;/strong> 外部脚本不能包含&lt;code>&amp;lt;script&amp;gt;&lt;/code>标签。&lt;/p>
+&lt;p>在外部文件中放置脚本有如下优势：&lt;/p>
+&lt;ul>
+&lt;li>分离了 HTML 和代码&lt;/li>
+&lt;li>使 HTML 和 JavaScript 更易于阅读和维护&lt;/li>
+&lt;li>已缓存的 JavaScript 文件可加速页面加载&lt;/li>
+&lt;/ul>
+&lt;h1 id="输入输出语句">输入输出语句&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>归属&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">window.alert()&lt;/td>
+&lt;td style="text-align:left">浏览器弹出警示框&lt;/td>
+&lt;td>浏览器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">console.log()&lt;/td>
+&lt;td style="text-align:left">浏览器控制台打印输出信息&lt;/td>
+&lt;td>浏览器&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">prompt()&lt;/td>
+&lt;td style="text-align:left">浏览器弹出输入框，用户可以输入&lt;/td>
+&lt;td>浏览器&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="js变量">JS变量&lt;/h1>
+&lt;h2 id="声明">声明&lt;/h2>
+&lt;p>可以通过 var 关键词来声明 JavaScript 变量：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> carName = &lt;span style="color:#cd5555">&amp;#34;porsche&amp;#34;&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="数据类型">数据类型&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">类型&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">Number&lt;/td>
+&lt;td style="text-align:left">数值&lt;/td>
+&lt;td>写数值时用不用小数点均可&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Boolean&lt;/td>
+&lt;td style="text-align:left">布尔值&lt;/td>
+&lt;td>布尔值只有两个值：true 或 false&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">String&lt;/td>
+&lt;td style="text-align:left">字符串&lt;/td>
+&lt;td>字符串被引号包围。可使用单引号或双引号&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Undefined&lt;/td>
+&lt;td style="text-align:left">没有值的变量&lt;/td>
+&lt;td>&lt;code>var person;&lt;/code>或者&lt;code>person = undefined;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Null&lt;/td>
+&lt;td style="text-align:left">nothing&lt;/td>
+&lt;td>可以通过设置值为 null 清空对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Object&lt;/td>
+&lt;td style="text-align:left">对象用花括号来书写&lt;/td>
+&lt;td>对象属性是 &lt;em>name&lt;/em>:&lt;em>value&lt;/em> 对，由逗号分隔&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Note: typeof可以查看数据类型，例如&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">typeof&lt;/span> &lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span> &lt;span style="color:#228b22">// 返回 &amp;#34;string&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="数据类型转换">数据类型转换&lt;/h2>
+&lt;h3 id="转换为字符串">转换为字符串&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">toString()&lt;/td>
+&lt;td style="text-align:left">&lt;/td>
+&lt;td>&lt;code>var num=1; alert(num.toString());&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">String()&lt;/td>
+&lt;td style="text-align:left">强制转换&lt;/td>
+&lt;td>&lt;code>var num=1; alert(String(num));&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">加号拼接字符串&lt;/td>
+&lt;td style="text-align:left">用的最多&lt;/td>
+&lt;td>&lt;code>var num=1; alert(num+&amp;quot;&amp;quot;);&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="转换为数值">转换为数值&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">parseInt(string)&lt;/td>
+&lt;td style="text-align:left">将string类型转换为整数数值类型，重点&lt;/td>
+&lt;td>parseInt(&amp;lsquo;78&amp;rsquo;)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">parseFloat(string)&lt;/td>
+&lt;td style="text-align:left">将string类型转换为浮点数数值类型，重点&lt;/td>
+&lt;td>parseInt(&amp;lsquo;78.21&amp;rsquo;)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">Number()&lt;/td>
+&lt;td style="text-align:left">将string类型强制转换&lt;/td>
+&lt;td>Number(12)&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">- * /&lt;/td>
+&lt;td style="text-align:left">算数运算隐式转换&lt;/td>
+&lt;td>&amp;lsquo;12&amp;rsquo; - 0&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="转换为布尔型">转换为布尔型&lt;/h3>
+&lt;p>Boolean()函数把其他类型转成布尔值，代表空、否定的值会被转换成false，如''、0、NaN、null、undefined，其余值都会被转换为true。&lt;/p>
+&lt;h1 id="条件语句">条件语句&lt;/h1>
+&lt;p>&lt;strong>条件语句用于基于不同条件执行不同的动作。&lt;/strong>&lt;/p>
+&lt;p>在 JavaScript 中，我们可使用如下条件语句：&lt;/p>
+&lt;ul>
+&lt;li>使用 if 来规定要执行的代码块，如果指定条件为 true&lt;/li>
+&lt;li>使用 else 来规定要执行的代码块，如果相同的条件为 false&lt;/li>
+&lt;li>使用 else if 来规定要测试的新条件，如果第一个条件为 false&lt;/li>
+&lt;li>使用 switch 来规定多个被执行的备选代码块&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (time &amp;lt; &lt;span style="color:#b452cd">10&lt;/span>) {
+greeting = &lt;span style="color:#cd5555">&amp;#34;Good morning&amp;#34;&lt;/span>;
+} &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (time &amp;lt; &lt;span style="color:#b452cd">18&lt;/span>) {
+greeting = &lt;span style="color:#cd5555">&amp;#34;Good day&amp;#34;&lt;/span>;
+} &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> {
+greeting = &lt;span style="color:#cd5555">&amp;#34;Good evening&amp;#34;&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="循环语句">循环语句&lt;/h1>
+&lt;p>&lt;strong>循环可多次执行代码块。&lt;/strong>&lt;/p>
+&lt;p>JavaScript 支持不同类型的循环：&lt;/p>
+&lt;ul>
+&lt;li>for - 多次遍历代码块&lt;/li>
+&lt;li>for/in - 遍历对象属性&lt;/li>
+&lt;li>while - 当指定条件为 true 时循环一段代码块&lt;/li>
+&lt;li>do/while - 当指定条件为 true 时循环一段代码块&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code>for (i = 0; i &amp;lt; 5; i++) {
+text += &amp;quot;数字是 &amp;quot; + i + &amp;quot;&amp;lt;br&amp;gt;&amp;quot;;
+}
+&lt;/code>&lt;/pre>&lt;h1 id="js数组">JS数组&lt;/h1>
+&lt;h2 id="定义和创建">定义和创建&lt;/h2>
+&lt;p>JavaScript 数组用于在单一变量中存储多个值。&lt;/p>
+&lt;p>创建数组的两种方式：&lt;/p>
+&lt;ul>
+&lt;li>使用关键词 new，例如&lt;code>var cars = new Array(&amp;quot;Saab&amp;quot;, &amp;quot;Volvo&amp;quot;, &amp;quot;BMW&amp;quot;);&lt;/code>&lt;/li>
+&lt;li>使用数组字面量，常用，例如&lt;code>var cars = [&amp;quot;Saab&amp;quot;, &amp;quot;Volvo&amp;quot;, &amp;quot;BMW&amp;quot;];&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="访问数组元素">访问数组元素&lt;/h2>
+&lt;p>我们通过引用索引号（下标号）来引用某个数组元素。&lt;/p>
+&lt;p>这条语句访问 cars 中的首个元素的值：&lt;code>var name = cars[0];&lt;/code>&lt;/p>
+&lt;p>这条语句修改 cars 中的首个元素：&lt;code>cars[0] = &amp;quot;Opel&amp;quot;;&lt;/code>&lt;/p>
+&lt;h2 id="数组长度">数组长度&lt;/h2>
+&lt;p>length 属性返回数组的长度（数组元素的数目）。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+fruits.length; &lt;span style="color:#228b22">// fruits 的长度是 4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="遍历数组">遍历数组&lt;/h2>
+&lt;p>遍历数组的最安全方法是使用 &amp;ldquo;for&amp;rdquo; 循环：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (i = &lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; cars.length; i++) {
+console.log(cars[i]);
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="数组方法">数组方法&lt;/h2>
+&lt;p>JavaScript 数组的力量隐藏在数组方法中。&lt;a href="https://www.w3school.com.cn/js/js_array_methods.asp">JavaScript 数组方法 (w3school.com.cn)&lt;/a>&lt;/p>
+&lt;h1 id="函数">函数&lt;/h1>
+&lt;p>&lt;strong>JavaScript 函数是被设计为执行特定任务的代码块。&lt;/strong>&lt;/p>
+&lt;p>&lt;strong>JavaScript 函数会在某代码调用它时被执行。&lt;/strong>&lt;/p>
+&lt;h2 id="为何使用函数">为何使用函数？&lt;/h2>
+&lt;p>您能够对代码进行复用：只要定义一次代码，就可以多次使用它。&lt;/p>
+&lt;p>您能够多次向同一函数传递不同的参数，以产生不同的结果。&lt;/p>
+&lt;h2 id="声明和调用">声明和调用&lt;/h2>
+&lt;p>当 JavaScript 到达 return 语句，函数将停止执行。&lt;/p>
+&lt;p>如果函数被某条语句调用，JavaScript 将在调用语句之后“返回”执行代码。&lt;/p>
+&lt;p>函数通常会计算出返回值。这个返回值会返回给调用者。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = myFunction(&lt;span style="color:#b452cd">7&lt;/span>, &lt;span style="color:#b452cd">8&lt;/span>); &lt;span style="color:#228b22">// 调用函数，返回值被赋值给 x
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction(a, b) {
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> a * b; &lt;span style="color:#228b22">// 函数返回 a 和 b 的乘积
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note：&lt;/p>
+&lt;ul>
+&lt;li>JavaScript 函数不会对参数值进行任何检查。如果调用参数时省略了参数（少于被声明的数量），则丢失的值被设置为：undefined。&lt;/li>
+&lt;li>如果函数调用的参数太多（超过声明），则可以使用 arguments 对象来达到这些参数。&lt;/li>
+&lt;/ul>
+&lt;h2 id="函数表达式">函数表达式&lt;/h2>
+&lt;p>JavaScript 函数也可以使用表达式来定义。&lt;/p>
+&lt;p>函数表达式可以在变量中存储：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> (a, b) {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> a * b};
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> z = x(&lt;span style="color:#b452cd">4&lt;/span>, &lt;span style="color:#b452cd">3&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>上面的函数实际上是一个匿名函数（没有名称的函数）。&lt;/p>
+&lt;h1 id="作用域">作用域&lt;/h1>
+&lt;p>作用域是指变量在某个范围内起作用，目的是提高程序的可靠性和减少命名冲突。&lt;/p>
+&lt;h2 id="es6之前的作用域">ES6之前的作用域&lt;/h2>
+&lt;p>在 JavaScript 中有两种作用域类型：&lt;/p>
+&lt;ul>
+&lt;li>局部作用域&lt;/li>
+&lt;li>全局作用域&lt;/li>
+&lt;/ul>
+&lt;p>JavaScript 拥有函数作用域：每个函数创建一个新的作用域。&lt;/p>
+&lt;p>作用域决定了这些变量的可访问性（可见性）。&lt;/p>
+&lt;p>函数内部定义的变量从函数外部是不可访问的（不可见的）。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">变量类型&lt;/th>
+&lt;th style="text-align:left">声明&lt;/th>
+&lt;th>作用域&lt;/th>
+&lt;th>有效期&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">局部变量&lt;/td>
+&lt;td style="text-align:left">函数中声明的变量&lt;/td>
+&lt;td>只能在函数内部访问它们&lt;/td>
+&lt;td>在函数完成时被删除&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">全局变量&lt;/td>
+&lt;td style="text-align:left">函数之外声明的变量&lt;/td>
+&lt;td>网页的所有脚本和函数都能够访问它&lt;/td>
+&lt;td>在关闭页面是被删除&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Note: 如果您为尚未声明的变量赋值，此变量会自动成为全局变量。所有现代浏览器都支持以“严格模式”运行 JavaScript。在“严格模式”中不会自动创建全局变量。除非有意为之，否则请勿创建全局变量。&lt;/p>
+&lt;h1 id="预解析提升">预解析/提升&lt;/h1>
+&lt;p>预解析也叫做提升（Hoisting）。预解析分为变量提升和函数提升。&lt;/p>
+&lt;p>变量提升就是把所有变量声明提升到当前的作用域最前面，不提升赋值操作。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">console.log(num); &lt;span style="color:#228b22">// 输出undefined
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> num = &lt;span style="color:#b452cd">10&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>函数提升就是把所有的函数声明提升到当前的作用域最前面，不调用函数。&lt;/p>
+&lt;p>使用表达式定义的函数不会被提升。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">console.log(myFunction(&lt;span style="color:#b452cd">5&lt;/span>)); &lt;span style="color:#228b22">// 输出25
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction(y) {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> y * y;}
+fun(); &lt;span style="color:#228b22">// 报错
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fun = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {console.log(&lt;span style="color:#b452cd">22&lt;/span>);}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="js对象">JS对象&lt;/h1>
+&lt;h2 id="定义">定义&lt;/h2>
+&lt;p>对象是复杂数据类型，是一组无序的相关属性和方法的集合，几乎“所有事物”都是对象。&lt;/p>
+&lt;p>对象也是变量，能够包含很多值，以值按照名称 : 值对的形式编写。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {
+name: &lt;span style="color:#cd5555">&amp;#34;zzb&amp;#34;&lt;/span>,
+getName : &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>.firstName;}
+};
+&lt;/code>&lt;/pre>&lt;/div>&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">组成&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>值&lt;/th>
+&lt;th>访问&lt;/th>
+&lt;th>注释&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">属性&lt;/td>
+&lt;td style="text-align:left">对象中的命名值&lt;/td>
+&lt;td>原始值、其他对象以及函数&lt;/td>
+&lt;td>&lt;code>person.name&lt;/code> 或者&lt;code>person['name']&lt;/code>&lt;/td>
+&lt;td>可以被修改、添加和删除，但是某些属性是只读的&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">方法&lt;/td>
+&lt;td style="text-align:left">在对象上执行的动作&lt;/td>
+&lt;td>以&lt;strong>函数定义&lt;/strong>被存储在属性中&lt;/td>
+&lt;td>&lt;code>person.getName()&lt;/code>&lt;/td>
+&lt;td>&lt;code>person.getName&lt;/code>将返回函数定义&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="创建对象">创建对象&lt;/h2>
+&lt;p>有不同的方法来创建对象。在 ES5 中，也可以通过函数 Object.create() 来创建对象。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">说明&lt;/th>
+&lt;th>注释&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">使用对象字面量&lt;/td>
+&lt;td style="text-align:left">定义和创建单个对象&lt;/td>
+&lt;td>最简单、最常用，&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">使用关键词&lt;code>new&lt;/code>&lt;/td>
+&lt;td style="text-align:left">定义和创建单个对象&lt;/td>
+&lt;td>不推荐使用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">使用构造函数&lt;/td>
+&lt;td style="text-align:left">定义对象构造器&lt;/td>
+&lt;td>用大写首字母命名，调用必须使用&lt;code>new&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 使用对象字面量
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {firstName:&lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>, lastName:&lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>};
+&lt;span style="color:#228b22">// 使用关键词 new
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Object&lt;/span>();
+person.firstName = &lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>;
+person.lastName = &lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>;
+&lt;span style="color:#228b22">// 使用构造函数，不需要return就可以返回结果
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> Star(uname, age){
+&lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>.uname = uname;
+&lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>.age = age;
+}
+&lt;span style="color:#228b22">// 实例化
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> ldh = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> Star(&lt;span style="color:#cd5555">&amp;#39;刘德华&amp;#39;&lt;/span>, &lt;span style="color:#b452cd">18&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> zxy = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> Star(&lt;span style="color:#cd5555">&amp;#39;张学友&amp;#39;&lt;/span>, &lt;span style="color:#b452cd">19&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Note： 对象是易变的：它们通过引用来寻址，而非值。&lt;/p>
+&lt;p>如果 person 是一个对象，下面的语句不会创建 person 的副本：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {firstName:&lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>, lastName:&lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>, age:&lt;span style="color:#b452cd">62&lt;/span>}
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = person; &lt;span style="color:#228b22">// 这不会创建 person 的副本。
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>x.age = &lt;span style="color:#b452cd">10&lt;/span>; &lt;span style="color:#228b22">// 这将同时改变 both x.age 和 person.age
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>对象 x &lt;strong>并非&lt;/strong>person 的副本。它&lt;strong>就是&lt;/strong>person。x 和 person 是同一个对象。&lt;/p>
+&lt;p>对 x 的任何改变都将改变 person，因为 x 和 person 是相同的对象。&lt;/p>
+&lt;h2 id="遍历对象">遍历对象&lt;/h2>
+&lt;p>使用 &lt;code>for...in&lt;/code> 语句遍历对象的属性。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {fname:&lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>, lname:&lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>, age:&lt;span style="color:#b452cd">62&lt;/span>};
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (x &lt;span style="color:#8b008b;font-weight:bold">in&lt;/span> person) {
+console.log(x); &lt;span style="color:#228b22">// x是属性名
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> console.log(person[x]); &lt;span style="color:#228b22">// person[x]是属性值
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="添加和删除属性">添加和删除属性&lt;/h2>
+&lt;p>通过简单的赋值，向已存在的对象添加新属性。&lt;/p>
+&lt;p>&lt;code>delete&lt;/code> 关键词从对象中删除属性。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {firstName:&lt;span style="color:#cd5555">&amp;#34;Bill&amp;#34;&lt;/span>, lastName:&lt;span style="color:#cd5555">&amp;#34;Gates&amp;#34;&lt;/span>, age:&lt;span style="color:#b452cd">62&lt;/span>, eyeColor:&lt;span style="color:#cd5555">&amp;#34;blue&amp;#34;&lt;/span>};
+&lt;span style="color:#228b22">// 添加属性
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>person.nationality = &lt;span style="color:#cd5555">&amp;#34;English&amp;#34;&lt;/span>;
+&lt;span style="color:#228b22">// 删除属性
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">delete&lt;/span> person.age;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="this关键字">this关键字&lt;/h1>
+&lt;p>&lt;code>this&lt;/code> 关键词指的是它所属的对象。&lt;/p>
+&lt;p>它拥有不同的值，具体取决于它的使用位置：&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">使用位置&lt;/th>
+&lt;th style="text-align:left">值&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">在方法中&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 指的是所有者对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">单独的情况下&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 指的是全局对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">在函数中&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 指的是全局对象&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">在函数中，严格模式下&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 是 undefined&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">在事件中&lt;/td>
+&lt;td style="text-align:left">&lt;code>this&lt;/code> 指的是接收事件的元素&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>像&lt;code>call()&lt;/code> 和 &lt;code>apply()&lt;/code> 这样的方法可以将 this 引用到任何对象。&lt;/p>
+&lt;h2 id="方法中的-this">方法中的 this&lt;/h2>
+&lt;p>在对象方法中，this 指的是此方法的“拥有者”。&lt;/p>
+&lt;p>在下面例子中，this 指的是 person 对象，person 对象是 getName方法的拥有者。&lt;/p>
+&lt;p>&lt;code>this.firstName&lt;/code> 意味着 &lt;code>this&lt;/code>（person）对象的 &lt;code>firstName&lt;/code> 属性。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> person = {
+name: &lt;span style="color:#cd5555">&amp;#34;zzb&amp;#34;&lt;/span>,
+getName : &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>.firstName;}
+};
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="单独的-this">单独的 this&lt;/h2>
+&lt;p>在单独使用时，拥有者是全局对象，因此 &lt;code>this&lt;/code> 指的是全局对象。&lt;/p>
+&lt;p>在浏览器窗口中，全局对象是 &lt;code>[object Window]&lt;/code>：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>在严格模式中, 同样。&lt;/p>
+&lt;h2 id="函数中的-this默认">函数中的 this（默认）&lt;/h2>
+&lt;p>在 JS函数中，函数的拥有者默认绑定 &lt;code>this&lt;/code>。&lt;/p>
+&lt;p>因此，在函数中，&lt;code>this&lt;/code> 指的是全局对象 &lt;code>[object Window]&lt;/code>。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction() {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>;}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="函数中的-this严格模式">函数中的 this（严格模式）&lt;/h2>
+&lt;p>严格模式不允许默认绑定。&lt;/p>
+&lt;p>因此，在函数中使用时，在严格模式下，this 是未定义的（undefined）。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#cd5555">&amp;#34;use strict&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> myFunction() {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">this&lt;/span>;}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="事件处理程序中的-this">事件处理程序中的 this&lt;/h2>
+&lt;p>在 HTML 事件处理程序中，this 指的是接收此事件的 HTML 元素：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span> &lt;span style="color:#658b00">onclick&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;this.style.display=&amp;#39;none&amp;#39;&amp;#34;&lt;/span>&amp;gt;单击来删除我！&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">button&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="显式函数绑定">显式函数绑定&lt;/h2>
+&lt;p>&lt;code>call()&lt;/code> 和 &lt;code>apply()&lt;/code> 方法是预定义的 JavaScript 方法。&lt;/p>
+&lt;p>它们都可以用于将另一个对象作为参数调用对象方法。&lt;/p>
+&lt;h1 id="内置对象">内置对象&lt;/h1>
+&lt;p>JS的对象分为三种：自定义对象、内置对象、浏览器对象。&lt;/p>
+&lt;p>前两种是JS基础内容，属于ECMAScipt；浏览器对象属于JS独有的，在JS API中讲解。&lt;/p>
+&lt;p>&lt;strong>内置对象&lt;/strong>是指JS语言自带的一些对象，这些对象供开发者使用，并提供了一些常用的或是最基本而必要的功能（属性和方法）。&lt;/p>
+&lt;p>内置对象最大的优点就是帮助我们快速开发。&lt;/p>
+&lt;p>JS提供了多个内置对象：Math、Date、Array、String等。&lt;/p>
+&lt;h2 id="math数学对象">Math数学对象&lt;/h2>
+&lt;p>&lt;code>Math&lt;/code>对象拥有一些数学常数属性和数学函数方法。&lt;code>Math&lt;/code> 不是一个函数对象，即不需要new来调用。&lt;/p>
+&lt;p>&lt;code>Math&lt;/code> 用于 &lt;a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number">&lt;code>Number&lt;/code>&lt;/a> 类型。它不支持 &lt;a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt">&lt;code>BigInt&lt;/code>&lt;/a>。&lt;/p>
+&lt;p>&lt;code>Math&lt;/code> 的所有属性与方法都是静态的。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#658b00">Math&lt;/span>.PI; &lt;span style="color:#228b22">// 圆周率
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.floor(&lt;span style="color:#b452cd">1.9&lt;/span>); &lt;span style="color:#228b22">// 向下取整,返回1
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.ceil(&lt;span style="color:#b452cd">1.9&lt;/span>); &lt;span style="color:#228b22">// 向上取整,返回2
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.round(-&lt;span style="color:#b452cd">1.5&lt;/span>); &lt;span style="color:#228b22">// 四舍五入，但是.5特殊它往大了取值，返回-1
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.abs(-&lt;span style="color:#b452cd">1&lt;/span>); &lt;span style="color:#228b22">// 绝对值，返回1
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.max(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 求最大值，返回2
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#658b00">Math&lt;/span>.min(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 求最小值，返回1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>Math.random()&lt;/code>函数返回一个浮点数, 伪随机数的范围是 [0，1）。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 得到一个两数之间的随机整数，包括两个数在内
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> getRandom(min, max) {
+min = &lt;span style="color:#658b00">Math&lt;/span>.ceil(min);
+max = &lt;span style="color:#658b00">Math&lt;/span>.floor(max);
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#658b00">Math&lt;/span>.floor(&lt;span style="color:#658b00">Math&lt;/span>.random() * (max - min + &lt;span style="color:#b452cd">1&lt;/span>)) + min; &lt;span style="color:#228b22">//含最大值，含最小值
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="date日期对象">Date日期对象&lt;/h2>
+&lt;p>&lt;code>Date&lt;/code> 对象则基于 &lt;a href="https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16">Unix Time Stamp&lt;/a>，即自1970年1月1日（UTC）起经过的毫秒数。&lt;/p>
+&lt;p>创建一个新&lt;code>Date&lt;/code>对象的唯一方法是通过&lt;code>new&lt;/code>操作符，例如:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> date = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(); &lt;span style="color:#228b22">// 没有参数，返回系统的当前时间
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> date1 = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;2021-5-18&amp;#39;&lt;/span>); &lt;span style="color:#228b22">// 常用，参数是日期的字符串值
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>日期格式化&lt;/strong>&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">方法&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">getFullYear()&lt;/td>
+&lt;td style="text-align:left">获取四位的年（yyyy）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getMonth()&lt;/td>
+&lt;td style="text-align:left">获取月（0-11）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getDate()&lt;/td>
+&lt;td style="text-align:left">以数值返回天（1-31）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getDay()&lt;/td>
+&lt;td style="text-align:left">以数值获取周名（0-6），周日是0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getHours()&lt;/td>
+&lt;td style="text-align:left">获取小时（0-23）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getMinutes()&lt;/td>
+&lt;td style="text-align:left">获取分（0-59）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getSeconds()&lt;/td>
+&lt;td style="text-align:left">获取秒（0-59）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">getTime()&lt;/td>
+&lt;td style="text-align:left">获取时间（从 1970 年 1 月 1 日至今）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>&lt;strong>案例：倒计时&lt;/strong>&lt;/p>
+&lt;p>用时间戳来做，输入时间的总毫秒数减去现在时间的总毫秒数，得到剩余时间的总毫秒数。把剩余时间的总毫秒数转换成天、时、分、秒。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> countDown(time) {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> nowTime = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(); &lt;span style="color:#228b22">// 返回当前时间的总毫秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> inputTime = +&lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> &lt;span style="color:#658b00">Date&lt;/span>(time); &lt;span style="color:#228b22">// 返回用户输入时间的总毫秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> times = (inputTime - nowTime) / &lt;span style="color:#b452cd">1000&lt;/span>; &lt;span style="color:#228b22">// 返回剩余时间的总秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> d = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>/&lt;span style="color:#b452cd">60&lt;/span>/&lt;span style="color:#b452cd">24&lt;/span>); &lt;span style="color:#228b22">// 返回天
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> d = d &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + d : d;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> h = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>/&lt;span style="color:#b452cd">60&lt;/span>%&lt;span style="color:#b452cd">24&lt;/span>); &lt;span style="color:#228b22">// 返回时
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> h = h &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + h : h;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> m = &lt;span style="color:#658b00">parseInt&lt;/span>(times/&lt;span style="color:#b452cd">60&lt;/span>%&lt;span style="color:#b452cd">60&lt;/span>); &lt;span style="color:#228b22">// 返回分
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> m = m &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + m : m;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> s = &lt;span style="color:#658b00">parseInt&lt;/span>(times%&lt;span style="color:#b452cd">60&lt;/span>); &lt;span style="color:#228b22">// 返回秒数
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> s = s &amp;lt; &lt;span style="color:#b452cd">10&lt;/span> ? &lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span> + s : s;
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> d+&lt;span style="color:#cd5555">&amp;#39;天&amp;#39;&lt;/span>+h+&lt;span style="color:#cd5555">&amp;#39;时&amp;#39;&lt;/span>+m+&lt;span style="color:#cd5555">&amp;#39;分&amp;#39;&lt;/span>+s+&lt;span style="color:#cd5555">&amp;#39;秒&amp;#39;&lt;/span>;
+}
+console.log(countDown(&lt;span style="color:#cd5555">&amp;#39;2021-5-20 18:00:00&amp;#39;&lt;/span>));
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="array数组对象">Array数组对象&lt;/h2>
+&lt;h3 id="检测是否为数组">检测是否为数组&lt;/h3>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> arr = [];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> obj = {};
+&lt;span style="color:#228b22">// instanceof 运算符
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.log(arr &lt;span style="color:#8b008b;font-weight:bold">instanceof&lt;/span> &lt;span style="color:#658b00">Array&lt;/span>); &lt;span style="color:#228b22">// 返回true
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.log(obj &lt;span style="color:#8b008b;font-weight:bold">instanceof&lt;/span> &lt;span style="color:#658b00">Array&lt;/span>); &lt;span style="color:#228b22">// 返回false
+&lt;/span>&lt;span style="color:#228b22">// Array.isArray()
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.log(&lt;span style="color:#658b00">Array&lt;/span>.isArray(arr)); &lt;span style="color:#228b22">// 返回true
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>console.log(&lt;span style="color:#658b00">Array&lt;/span>.isArray(obj)); &lt;span style="color:#228b22">// 返回false
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="添加数组元素">添加数组元素&lt;/h3>
+&lt;p>&lt;code>push()&lt;/code> 方法（在数组结尾处）向数组添加一个新的元素，返回新数组的长度:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = fruits.push(&lt;span style="color:#cd5555">&amp;#34;Kiwi&amp;#34;&lt;/span>); &lt;span style="color:#228b22">// x 的值是 5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>unshift()&lt;/code> 方法（在开头）向数组添加新元素，并“反向位移”旧元素，返回新数组的长度：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = fruits.unshift(&lt;span style="color:#cd5555">&amp;#34;Lemon&amp;#34;&lt;/span>); &lt;span style="color:#228b22">// x 的值是 5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="删除数组元素">删除数组元素&lt;/h3>
+&lt;p>&lt;code>pop()&lt;/code>方法从数组中删除最后一个元素，返回“被弹出”的值：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = fruits.pop(); &lt;span style="color:#228b22">// x 的值是 &amp;#34;Mango&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>shift()&lt;/code>方法会删除首个数组元素，返回被“位移出”的字符串:&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> x = fruits.pop(); &lt;span style="color:#228b22">// x 的值是 &amp;#34;Banana&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="数组排序">数组排序&lt;/h3>
+&lt;h4 id="反转数组">反转数组&lt;/h4>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+fruits.sort(); &lt;span style="color:#228b22">// 对 fruits 中的元素以字母顺序进行排序
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>fruits.reverse(); &lt;span style="color:#228b22">// 反转元素顺序
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="数字排序">数字排序&lt;/h4>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 升序排序
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> points = [&lt;span style="color:#b452cd">40&lt;/span>, &lt;span style="color:#b452cd">100&lt;/span>, &lt;span style="color:#b452cd">1&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">25&lt;/span>, &lt;span style="color:#b452cd">10&lt;/span>];
+points.sort(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(a, b){&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> a - b});
+&lt;span style="color:#228b22">// 降序排序
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> points = [&lt;span style="color:#b452cd">40&lt;/span>, &lt;span style="color:#b452cd">100&lt;/span>, &lt;span style="color:#b452cd">1&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">25&lt;/span>, &lt;span style="color:#b452cd">10&lt;/span>];
+points.sort(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(a, b){&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> b - a});
+&lt;span style="color:#228b22">// 以随机顺序排序
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> points = [&lt;span style="color:#b452cd">40&lt;/span>, &lt;span style="color:#b452cd">100&lt;/span>, &lt;span style="color:#b452cd">1&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">25&lt;/span>, &lt;span style="color:#b452cd">10&lt;/span>];
+points.sort(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(a, b){&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#b452cd">0.5&lt;/span> - &lt;span style="color:#658b00">Math&lt;/span>.random()});
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="数组索引">数组索引&lt;/h3>
+&lt;p>&lt;code>indexOf()&lt;/code>方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> array = [&lt;span style="color:#b452cd">2&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">9&lt;/span>];
+array.indexOf(&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 0
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>array.indexOf(&lt;span style="color:#b452cd">7&lt;/span>); &lt;span style="color:#228b22">// -1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>lastIndexOf() &lt;/code>方法返回指定元素在数组中的最后一个的索引，如果不存在则返回 -1。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> array = [&lt;span style="color:#b452cd">2&lt;/span>, &lt;span style="color:#b452cd">5&lt;/span>, &lt;span style="color:#b452cd">9&lt;/span>, &lt;span style="color:#b452cd">2&lt;/span>];
+array.lastIndexOf(&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 3
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>array.lastIndexOf(&lt;span style="color:#b452cd">7&lt;/span>); &lt;span style="color:#228b22">// -1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>案例：数组去重&lt;/strong>&lt;/p>
+&lt;p>目标：把旧数组里面不重复的元素选取出来放到新数组中，重复的元素只保留一个。&lt;/p>
+&lt;p>核心算法：遍历旧数组，然后拿着旧数组元素去查询新数组，如果该元素在新数组里面没有出现过就添加，否则不添加。&lt;/p>
+&lt;p>我们怎么知道该元素没有存在？利用新数组的&lt;code>indexOf()&lt;/code>方法，如果返回-1就说明新数组里面没有该元素。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> unique(arr) {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> newArr = [];
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i=&lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; arr.length; i++) {
+&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (newArr.indexOf(arr[i]) === -&lt;span style="color:#b452cd">1&lt;/span>)
+newArr.push(arr[i]);
+}
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> newArr;
+}
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> demo = unique([&lt;span style="color:#cd5555">&amp;#39;b&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;a&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;b&amp;#39;&lt;/span>]); &lt;span style="color:#228b22">// demo = [&amp;#39;b&amp;#39;, &amp;#39;a&amp;#39;]
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="数组转换成字符串">数组转换成字符串&lt;/h3>
+&lt;p>&lt;code>toString()&lt;/code>方法 把数组转换为数组值（逗号分隔）的字符串。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+fruits.toString(); &lt;span style="color:#228b22">// 返回字符串&amp;#34;Banana,Orange,Apple,Mango&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>join() &lt;/code>方法也可将所有数组元素结合为一个字符串，可以规定分隔符。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> fruits = [&lt;span style="color:#cd5555">&amp;#34;Banana&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Orange&amp;#34;&lt;/span>,&lt;span style="color:#cd5555">&amp;#34;Apple&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;Mango&amp;#34;&lt;/span>];
+fruits.join(&lt;span style="color:#cd5555">&amp;#34; * &amp;#34;&lt;/span>); &lt;span style="color:#228b22">// 返回字符串&amp;#34;Banana * Orange * Apple * Mango&amp;#34;
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="其他方法">其他方法&lt;/h3>
+&lt;p>&lt;code>concat()&lt;/code>方法通过合并（连接）现有数组来创建一个新数组。&lt;/p>
+&lt;p>&lt;code>slice()&lt;/code>方法用数组的某个片段切出新数组，不会从原数组中删除任何元素。&lt;/p>
+&lt;p>&lt;code>splice()&lt;/code>方法可用于向数组添加新项或删除元素，会影响原数组，重点。&lt;/p>
+&lt;h2 id="string字符串对象">String字符串对象&lt;/h2>
+&lt;p>基本包装类型就是把简单数据类型包装成复杂数据类型，这样基本数据类型就有了属性和方法。&lt;/p>
+&lt;p>基本包装类型有String、Number和Boolean。&lt;/p>
+&lt;p>&lt;strong>字符串的不可变&lt;/strong>&lt;/p>
+&lt;p>指的是里面的值不可变，虽然看上去可以改变内容，但其实是地址变了，内存中新开辟了一个内存空间。&lt;/p>
+&lt;h3 id="根据字符返回位置">根据字符返回位置&lt;/h3>
+&lt;p>&lt;code>indexOf()&lt;/code>方法返回在字符串中可以找到给定字符的第一个索引，如果不存在，则返回-1。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;改革春风吹满地，春天来了&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> pos1 = str.indexOf(&lt;span style="color:#cd5555">&amp;#34;春&amp;#34;&lt;/span>); &lt;span style="color:#228b22">// pos1 = 2
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> pos2 = str.indexOf(&lt;span style="color:#cd5555">&amp;#34;春&amp;#34;&lt;/span>, &lt;span style="color:#b452cd">3&lt;/span>); &lt;span style="color:#228b22">// 第二个参数是起始的位置，pos2 = 8
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>案例：求某个字符出现的位置和次数&lt;/strong>&lt;/p>
+&lt;p>查找字符串&amp;quot;abcoefoxyozzopp&amp;quot;中所有o出现的位置和次数。&lt;/p>
+&lt;p>核心算法：先查找第一个字符出现的位置，然后只要indexOf()返回不是-1就继续往后查找。因为indexOf()只能查找到第一个，所以后面的查找，利用第二参数，当前索引加1，从而继续查找。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> demo(str,&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>) {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> pos = [];
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> num = &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> index = str.indexOf(&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>);
+&lt;span style="color:#8b008b;font-weight:bold">while&lt;/span>(index !== -&lt;span style="color:#b452cd">1&lt;/span>) {
+pos.push(index);
+num++;
+index = str.indexOf(&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>, index+&lt;span style="color:#b452cd">1&lt;/span>);
+}
+&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> {position:pos,number:num};
+}
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;abcoefoxyozzopp&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">char&lt;/span> = &lt;span style="color:#cd5555">&amp;#34;o&amp;#34;&lt;/span>;
+demo(str,&lt;span style="color:#8b008b;font-weight:bold">char&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="根据位置返回字符">根据位置返回字符&lt;/h3>
+&lt;p>两个提取字符串字符的安全方法：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>charAt()&lt;/code> 方法返回字符串中指定下标（位置）的字符串。&lt;/li>
+&lt;li>&lt;code>charCodeAt()&lt;/code> 方法返回字符串中指定索引的字符ASCII值，目的是判断用户按下了哪个键。&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>属性访问（Property Access）&lt;/strong>&lt;/p>
+&lt;p>ECMAScript 5 (2009) 允许对字符串的属性访问 [ ]，不太靠谱，不推荐使用。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;HELLO WORLD&amp;#34;&lt;/span>;
+str[&lt;span style="color:#b452cd">0&lt;/span>]; &lt;span style="color:#228b22">// 返回 H
+&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>案例：统计出现次数最多的字符&lt;/strong>&lt;/p>
+&lt;p>判断一个字符串&amp;quot;abcoefoxyozzopp&amp;quot;中出现次数最多的字符，并统计其次数。&lt;/p>
+&lt;p>核心算法：利用&lt;code>charAt()&lt;/code> 遍历这个字符串，把每个字符都存储给对象，如果对象没有该属性，就为1，如果存在了就+1。遍历对象，得到最大值和该字符。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = &lt;span style="color:#cd5555">&amp;#34;abcoefoxyozzopp&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> obj = {};
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i = &lt;span style="color:#b452cd">0&lt;/span>; i &amp;lt; str.length; i++) {
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> chars = str.charAt(i); &lt;span style="color:#228b22">// chars是字符串的每一个字符
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (obj[chars]) { &lt;span style="color:#228b22">// o[chars]得到的是属性值
+&lt;/span>&lt;span style="color:#228b22">&lt;/span> obj[chars]++;
+} &lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> {
+obj[chars] = &lt;span style="color:#b452cd">1&lt;/span>;
+}
+}
+&lt;span style="color:#228b22">// 遍历对象
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> max = &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> ch = &lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> k &lt;span style="color:#8b008b;font-weight:bold">in&lt;/span> obj) {
+&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (obj[k] &amp;gt; max){
+max = obj[k];
+ch = k;
+}
+}
+console.log(&lt;span style="color:#cd5555">&amp;#39;最多的字符是&amp;#39;&lt;/span> + ch + &lt;span style="color:#cd5555">&amp;#39;, 出现了&amp;#39;&lt;/span> + max +&lt;span style="color:#cd5555">&amp;#39;次。&amp;#39;&lt;/span>);
+&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/ - zzb2021.</description></item><item><title>CSS高级</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</link><pubDate>Thu, 06 May 2021 12:51:44 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/ -&lt;h1 id="精灵图">精灵图&lt;/h1>
+&lt;p>图像精灵（&lt;a href="https://www.w3schools.com/css/css_image_sprites.asp">Image Sprites&lt;/a>）是单个图像中包含的图像集合。&lt;/p>
+&lt;p>包含许多图像的网页可能需要很长时间才能加载，同时会生成多个服务器请求。&lt;/p>
+&lt;p>使用图像精灵将减少服务器请求的数量并节约带宽。&lt;/p>
+&lt;h1 id="字体图标">字体图标&lt;/h1>
+&lt;p>向 HTML 页面添加&lt;a href="https://www.w3school.com.cn/css/css_icons.asp">图标&lt;/a>的最简单方法是使用图标库。&lt;/p>
+&lt;p>如果遇到一些结构和样式比较简单的小图标，就用字体图片。&lt;/p>
+&lt;p>如果遇到一些结构和样式比较复杂的小图标，就用精灵图。&lt;/p>
+&lt;h1 id="三角triangle">三角(Triangle)&lt;/h1>
+&lt;p>&lt;a href="https://css-tricks.com/snippets/css/css-triangle/#html">CSS Triangle | CSS-Tricks&lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">width&lt;/span>: &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">height&lt;/span>: &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">border&lt;/span>: &lt;span style="color:#b452cd">5&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">solid&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">transparent&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">border-left-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">pink&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="用户界面">用户界面&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>属性&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;th>&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;a href="https://www.w3school.com.cn/cssref/pr_class_cursor.asp">cursor &lt;/a>&lt;/td>
+&lt;td>更改用户的鼠标样式&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://www.w3school.com.cn/cssref/pr_outline.asp">outline&lt;/a>&lt;/td>
+&lt;td>轮廓&lt;/td>
+&lt;td>&lt;code>outline: none;&lt;/code>取消轮廓&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;a href="https://www.w3school.com.cn/cssref/pr_resize.asp">resize&lt;/a>&lt;/td>
+&lt;td>规定可以由用户调整 div 元素的大小&lt;/td>
+&lt;td>&lt;code>resize: none;&lt;/code>防止表单拖拽&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="垂直对齐">垂直对齐&lt;/h1>
+&lt;p>&lt;a href="https://www.w3school.com.cn/cssref/pr_pos_vertical-align.asp">vertical-align&lt;/a> 属性设置元素的垂直对齐方式。&lt;/p>
+&lt;p>只针对于行内元素或者行内块元素。&lt;/p>
+&lt;p>使用场景：设置图片或者表单和文字垂直对齐。&lt;/p>
+&lt;h1 id="文本溢出">文本溢出&lt;/h1>
+&lt;p>&lt;a href="https://www.w3school.com.cn/css/css3_text_effects.asp">text-overflow&lt;/a> 属性规定应如何向用户呈现未显示的溢出内容。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>.&lt;span style="color:#008b45;font-weight:bold">test2&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">white-space&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">nowrap&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">width&lt;/span>: &lt;span style="color:#b452cd">200&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">border&lt;/span>: &lt;span style="color:#b452cd">1&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">solid&lt;/span> &lt;span style="color:#b452cd">#000000&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">overflow&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">hidden&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">text-overflow&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">ellipsis&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="css初始化">CSS初始化&lt;/h1>
+&lt;p>&lt;a href="https://gitee.com/xiaoqiang001/html_css_material/blob/master/%E7%AC%AC%E4%B9%9D%E5%A4%A9/14-%E4%BA%AC%E4%B8%9Ccss%E5%88%9D%E5%A7%8B%E5%8C%96.css">css初始化&lt;/a>是指重设浏览器的样式。不同的浏览器默认的样式可能不尽相同，所以开发时的第一件事可能就是如何把它们统一。如果没对CSS初始化往往会出现浏览器之间的页面差异。&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/ - zzb2021.</description></item><item><title>CSS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 26 Apr 2021 13:24:55 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/ -&lt;h1 id="字体属性">字体属性&lt;/h1>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font.asp">font&lt;/a>&lt;/td>
+&lt;td style="text-align:left">简写属性。在一条声明中设置所有字体属性。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-family.asp">font-family&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体系列（字体族）。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-size.asp">font-size&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体大小。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-style.asp">font-style&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体样式。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-variant.asp">font-variant&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定是否以小型大写字母的字体显示文本。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font-weight.asp">font-weight&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定字体的粗细。&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="文本属性">文本属性&lt;/h1>
+&lt;p>CSS使用某些文本格式属性来设置样式。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;th>注意点&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_color.asp">color&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本颜色&lt;/td>
+&lt;td>通常用16进制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-align.asp">text-align&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本水平对齐方式&lt;/td>
+&lt;td>可以左对齐或右对齐，或居中对齐&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-indent.asp">text-indent&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本缩进&lt;/td>
+&lt;td>段落首行缩进两个字: &lt;code>text-indent=2em;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-decoration.asp">text-decoration&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本装饰&lt;/td>
+&lt;td>&lt;code>text-decoration: none;&lt;/code> 通常用于从链接上删除下划线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_dim_line-height.asp">line-height&lt;/a>&lt;/td>
+&lt;td style="text-align:left">行高&lt;/td>
+&lt;td>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="背景属性">背景属性&lt;/h1>
+&lt;p>背景图片：实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片或者是精灵图，优点是便于控制位置。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background.asp">background&lt;/a>&lt;/td>
+&lt;td style="text-align:left">在一条声明中设置所有背景属性的简写属性。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-color.asp">background-color&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置元素的背景色。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-image.asp">background-image&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置元素的背景图像。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-repeat.asp">background-repeat&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像是否及如何重复。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-position.asp">background-position&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像的开始位置。&lt;strong>最重要的属性&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-attachment.asp">background-attachment&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像是固定的还是与页面的其余部分一起滚动。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">背景色半透明&lt;/td>
+&lt;td style="text-align:left">&lt;code>background: rgba(0,0,0,0.3);&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="box-model">Box Model&lt;/h1>
+&lt;p>CSS 盒模型实质上是一个包围每个 HTML 元素的盒子。它包括：外边距、边框、内边距以及实际的内容。&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/boxModel.png" alt="Box Model">&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Content&lt;/strong> - The content of the box, where text and images appear&lt;/li>
+&lt;li>&lt;strong>Padding&lt;/strong> - Clears an area around the content. The padding is transparent&lt;/li>
+&lt;li>&lt;strong>Border&lt;/strong> - A border that goes around the padding and content&lt;/li>
+&lt;li>&lt;strong>Margin&lt;/strong> - Clears an area outside the border. The margin is transparent&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">#&lt;span style="color:#008b45;text-decoration:underline">box&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">width&lt;/span>: &lt;span style="color:#b452cd">70&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">margin&lt;/span>: &lt;span style="color:#b452cd">10&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">padding&lt;/span>: &lt;span style="color:#b452cd">5&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;img src="https://a390177226.github.io/images/html/boxmodel_example.gif" alt="Box Model Example">&lt;/p>
+&lt;p>元素总宽度 = 宽度 + 左内边距 + 右内边距 + 左边框 + 右边框 + 左外边距 + 右外边距&lt;/p>
+&lt;p>元素总高度 = 高度 + 上内边距 + 下内边距 + 上边框 + 下边框 + 上外边距 + 下外边距&lt;/p>
+&lt;p>&lt;code>70px(宽度)+10px(左+右内边距)+0px(左+右边框)+20px(左+右外边距)= 100px&lt;/code>&lt;/p>
+&lt;h2 id="border">Border&lt;/h2>
+&lt;p>CSS border 属性允许您指定元素边框的样式、宽度和颜色。为了缩减代码，也可以在一个属性中指定所有单独的边框属性。&lt;/p>
+&lt;p>&lt;code>border: border-width border-style(必须) border-color;&lt;/code>&lt;/p>
+&lt;p>还可以只为一个边指定所有单个边框(top, right, bottom, and left)属性：&lt;/p>
+&lt;pre>&lt;code>p {
+border-left: 6px solid red;
+background-color: lightgrey;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="padding">Padding&lt;/h2>
+&lt;p>为 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素的所有四个边设置不同的内边距：&lt;/p>
+&lt;pre>&lt;code>div {
+padding-top: 50px;
+padding-right: 30px;
+padding-bottom: 50px;
+padding-left: 80px;
+}
+&lt;/code>&lt;/pre>&lt;p>或者简写为&lt;/p>
+&lt;pre>&lt;code>div {
+padding: 25px 50px 75px 100px;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="margin">Margin&lt;/h2>
+&lt;pre>&lt;code>p {
+margin: 25px 50px 75px 100px;
+}
+&lt;/code>&lt;/pre>&lt;p>您可以将 margin 属性设置为 auto，以使元素在其容器中水平居中。&lt;/p>
+&lt;h1 id="布局">布局&lt;/h1>
+&lt;h2 id="display">Display&lt;/h2>
+&lt;p>display 属性是用于控制布局的最重要的 CSS 属性。display 属性规定是否/如何显示元素。&lt;/p>
+&lt;p>每个 HTML 元素都有一个默认的 display 值，具体取决于它的元素类型。大多数元素的默认 display 值为 block 或 inline。&lt;/p>
+&lt;p>&lt;code>display：none；&lt;/code>隐藏对象，不占有原来的位置，用处更多。&lt;/p>
+&lt;p>&lt;code>visibility：hidden；&lt;/code>隐藏对象，占有原来的位置。&lt;/p>
+&lt;h2 id="浮动">浮动&lt;/h2>
+&lt;p>float 属性用于定位和格式化内容，例如让图像向左浮动到容器中的文本那里。&lt;/p>
+&lt;p>浮动最典型的应用：可以让多个块级元素在一行内排列显示。&lt;/p>
+&lt;p>clear 属性指定哪些元素可以浮动于被清除元素的旁边以及哪一侧，最常见用法是&lt;code>clear: both;&lt;/code>。&lt;/p>
+&lt;p>清除浮动：&lt;/p>
+&lt;ul>
+&lt;li>额外标签法，或隔墙法&lt;/li>
+&lt;li>父级元素添加overflow&lt;/li>
+&lt;li>&lt;code>::after&lt;/code>伪元素法&lt;/li>
+&lt;li>双伪元素&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code class="language-css3" data-lang="css3">.clearfix::after {
+content: &amp;quot;&amp;quot;;
+clear: both;
+display: table;
+}
+&lt;/code>&lt;/pre>&lt;h2 id="定位">定位&lt;/h2>
+&lt;p>让盒子自由的在某个盒子内移动位置或者固定屏幕中某个位置，并且可以压住其他盒子。&lt;/p>
+&lt;p>定位=定位模式+边偏移（top、bottom、left 和 right）&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">定位模式&lt;/th>
+&lt;th style="text-align:left">是否脱标&lt;/th>
+&lt;th>移动位置&lt;/th>
+&lt;th>是否常用&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">static&lt;/td>
+&lt;td style="text-align:left">否&lt;/td>
+&lt;td>不能使用边偏移&lt;/td>
+&lt;td>很少&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">relative&lt;/td>
+&lt;td style="text-align:left">否（占有位置）&lt;/td>
+&lt;td>相对于自身位置移动&lt;/td>
+&lt;td>常用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">absolute&lt;/td>
+&lt;td style="text-align:left">是（不占有位置）&lt;/td>
+&lt;td>带有定位的父级&lt;/td>
+&lt;td>常用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">fixed&lt;/td>
+&lt;td style="text-align:left">是（不占有位置）&lt;/td>
+&lt;td>浏览器可视区&lt;/td>
+&lt;td>常用&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">sticky&lt;/td>
+&lt;td style="text-align:left">否（占有位置）&lt;/td>
+&lt;td>浏览器可视区&lt;/td>
+&lt;td>很少&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Note：子绝父相比较常见；z-index 属性指定元素的叠放顺序。&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/ - zzb2021.</description></item><item><title>CSS Beginner Tutorial</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css_beginner_tutorial/</link><pubDate>Fri, 23 Apr 2021 14:06:30 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css_beginner_tutorial/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css_beginner_tutorial/ -&lt;h1 id="什么是-css">什么是 CSS？&lt;/h1>
+&lt;ul>
+&lt;li>CSS 指的是层叠样式表(&lt;strong>C&lt;/strong>ascading &lt;strong>S&lt;/strong>tyle &lt;strong>S&lt;/strong>heets)&lt;/li>
+&lt;li>CSS 描述了&lt;strong>如何在屏幕、纸张或其他媒体上显示 HTML 元素&lt;/strong>&lt;/li>
+&lt;li>CSS 也是一种标记语言，用于定义网页的样式，包括针对不同设备和屏幕尺寸的设计和布局&lt;/li>
+&lt;li>CSS &lt;strong>节省了大量工作&lt;/strong>。它可以同时控制多张网页的布局&lt;/li>
+&lt;li>外部样式表存储在 &lt;strong>CSS 文件&lt;/strong>中，只需改一个文件即可更改整个网站的外观&lt;/li>
+&lt;/ul>
+&lt;h1 id="css语法">CSS语法&lt;/h1>
+&lt;p>CSS 语法由&lt;strong>选择器&lt;/strong>和&lt;strong>声明块&lt;/strong>组成：&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/selector.gif" alt="rule-set">&lt;/p>
+&lt;ul>
+&lt;li>选择器指向需要设置样式的 HTML 元素&lt;/li>
+&lt;li>声明块用花括号括起来，包含一条或多条用分号分隔的声明&lt;/li>
+&lt;li>每条声明都包含一个 CSS 属性名称和一个值，以冒号分隔&lt;/li>
+&lt;/ul>
+&lt;h1 id="如何添加-css">如何添加 CSS&lt;/h1>
+&lt;h2 id="inline-css">Inline CSS&lt;/h2>
+&lt;p>行内样式（也称内联样式）可用于为单个元素应用唯一的样式。&lt;/p>
+&lt;p>特点：书写方便，权重高。&lt;/p>
+&lt;p>例子：&lt;code>&amp;lt;p style=&amp;quot;color:red;&amp;quot;&amp;gt;Test&amp;lt;/p&amp;gt;&lt;/code>&lt;/p>
+&lt;h2 id="internal-css">Internal CSS&lt;/h2>
+&lt;p>如果一张 HTML 页面拥有唯一的样式，那么可以使用内部样式表。&lt;/p>
+&lt;p>内部样式是在 head 部分的 &lt;code>&amp;lt;style&amp;gt; &lt;/code>元素中进行定义。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">style&lt;/span>&amp;gt;
+&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span> { &lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">linen&lt;/span>;}
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">style&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;This is a heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="external-css">External CSS&lt;/h2>
+&lt;p>通过使用外部样式表，只需修改一个文件即可改变整个网站的外观。&lt;/p>
+&lt;p>每张 HTML 页面必须在 head 部分的 &lt;code>&amp;lt;link&amp;gt;&lt;/code> 元素内包含对外部样式表文件的引用。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">link&lt;/span> &lt;span style="color:#658b00">rel&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#658b00">href&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;mystyle.css&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;This is a heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph.&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>外部样式表可以在任何文本编辑器中编写，并且必须以 .css 扩展名保存。上文中的&amp;quot;mystyle.css&amp;quot;：&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">lightblue&lt;/span>;
+}
+&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">navy&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">margin-left&lt;/span>: &lt;span style="color:#b452cd">20&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="selectors">Selectors&lt;/h1>
+&lt;p>CSS 选择器用于“查找”（或选取）要设置样式的 HTML 元素。&lt;/p>
+&lt;p>我们可以将 CSS 选择器分为五类：&lt;/p>
+&lt;ul>
+&lt;li>简单选择器（根据名称、id、类来选取元素）&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_combinators.asp">组合器选择器&lt;/a>（根据它们之间的特定关系来选取元素）&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_pseudo_classes.asp">伪类选择器&lt;/a>（根据特定状态选取元素）&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_pseudo_elements.asp">伪元素选择器&lt;/a>（选取元素的一部分并设置其样式）&lt;/li>
+&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_attribute_selectors.asp">属性选择器&lt;/a>（根据属性或属性值来选取元素）&lt;/li>
+&lt;/ul>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">Simple selectors&lt;/th>
+&lt;th style="text-align:left">Example&lt;/th>
+&lt;th style="text-align:left">Example description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">#id&lt;/td>
+&lt;td style="text-align:left">#firstname&lt;/td>
+&lt;td style="text-align:left">Selects the element with id=“firstname”&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">class&lt;/td>
+&lt;td style="text-align:left">.intro&lt;/td>
+&lt;td style="text-align:left">Selects all elements with class=“intro”&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">element.class&lt;/td>
+&lt;td style="text-align:left">p.intro&lt;/td>
+&lt;td style="text-align:left">Selects only &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements with class=“intro”&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">*&lt;/td>
+&lt;td style="text-align:left">*&lt;/td>
+&lt;td style="text-align:left">Selects all elements&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">element&lt;/td>
+&lt;td style="text-align:left">p&lt;/td>
+&lt;td style="text-align:left">Selects all &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">element,element,&amp;hellip;&lt;/td>
+&lt;td style="text-align:left">div, p&lt;/td>
+&lt;td style="text-align:left">Selects all &lt;code>&amp;lt;div&amp;gt;&lt;/code> elements and all &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="values-and-units">Values and Units&lt;/h1>
+&lt;h2 id="length">Length&lt;/h2>
+&lt;p>CSS 有几种表示长度的不同单位。&lt;/p>
+&lt;p>许多 CSS 属性接受“长度”值，诸如 &lt;code>width&lt;/code>、&lt;code>margin&lt;/code>、&lt;code>padding&lt;/code>、&lt;code>font-size&lt;/code> 等。&lt;/p>
+&lt;p>长度是一个后面跟着长度单位的数字，诸如 &lt;code>10px&lt;/code>、&lt;code>2em&lt;/code> 等。&lt;/p>
+&lt;h2 id="colors">Colors&lt;/h2>
+&lt;p>使用预定义的颜色名称或RGB、HEX、HSL、RGBA、HSLA值指定颜色。&lt;/p>
+&lt;p>设置文本的颜色：&lt;code>color: Tomato;&lt;/code>&lt;/p>
+&lt;p>设置背景色：&lt;code>background-color: DodgerBlue;&lt;/code>&lt;/p>
+&lt;h1 id="properties">Properties&lt;/h1>
+&lt;h2 id="backgrounds">Backgrounds&lt;/h2>
+&lt;p>CSS 背景属性用于定义元素的背景效果。实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片或者是精灵图，优点是便于控制位置。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background.asp">background&lt;/a>&lt;/td>
+&lt;td style="text-align:left">背景的简写属性&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-color.asp">background-color&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置元素的背景色&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-image.asp">background-image&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置元素的背景图像&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-repeat.asp">background-repeat&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像是否及如何重复&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-position.asp">background-position&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像的开始位置，&lt;strong>最重要的属性&lt;/strong>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_background-attachment.asp">background-attachment&lt;/a>&lt;/td>
+&lt;td style="text-align:left">设置背景图像是固定的还是与页面的其余部分一起滚动&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">背景半透明&lt;/td>
+&lt;td style="text-align:left">&lt;code>background: rgba(0,0,0,0.3);&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="font">Font&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font.asp">font&lt;/a>&lt;/td>
+&lt;td style="text-align:left">字体的简写属性&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-family.asp">font-family&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体系列（字体族）&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-size.asp">font-size&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体大小&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-style.asp">font-style&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定文本的字体样式&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font_font-variant.asp">font-variant&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定是否以小型大写字母的字体显示文本&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_font-weight.asp">font-weight&lt;/a>&lt;/td>
+&lt;td style="text-align:left">规定字体的粗细&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="text">Text&lt;/h2>
+&lt;p>CSS使用某些文本格式属性来设置样式。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">属性&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;th>注意点&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_color.asp">color&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本颜色&lt;/td>
+&lt;td>通常用16进制&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-align.asp">text-align&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本水平对齐方式&lt;/td>
+&lt;td>可以左对齐或右对齐，或居中对齐&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-indent.asp">text-indent&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本缩进&lt;/td>
+&lt;td>段落首行缩进两个字: &lt;code>text-indent=2em;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_text_text-decoration.asp">text-decoration&lt;/a>&lt;/td>
+&lt;td style="text-align:left">文本装饰&lt;/td>
+&lt;td>&lt;code>text-decoration: none;&lt;/code> 通常用于从链接上删除下划线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_dim_line-height.asp">line-height&lt;/a>&lt;/td>
+&lt;td style="text-align:left">行高&lt;/td>
+&lt;td>通常设置成元素的高度，使文本垂直居中&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="borders">Borders&lt;/h2>
+&lt;p>&lt;code>border&lt;/code>属性允许您指定元素边框的样式、宽度和颜色。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">Property&lt;/th>
+&lt;th style="text-align:left">Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3schools.com/cssref/pr_border.asp">border&lt;/a>&lt;/td>
+&lt;td style="text-align:left">简写属性，&lt;code>border: border-width border-style(必须) border-color;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_border-width.asp">border-width&lt;/a>&lt;/td>
+&lt;td style="text-align:left">简写属性，设置四条边框的宽度&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_border-style.asp">border-style&lt;/a>&lt;/td>
+&lt;td style="text-align:left">简写属性，设置四条边框的样式，常用的值有：&lt;code>solid&lt;/code>、&lt;code>dashed&lt;/code>、&lt;code>none&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_border-color.asp">border-color&lt;/a>&lt;/td>
+&lt;td style="text-align:left">简写属性，设置四条边框的颜色&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;a href="https://www.w3school.com.cn/cssref/pr_border-radius.asp">border-radius&lt;/a>&lt;/td>
+&lt;td style="text-align:left">简写属性，可设置圆角&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>在CSS中，也用于指定每个边框（top, right, bottom, and left）的属性，例如：&lt;code>border-top-style: dotted;&lt;/code>&lt;/p>
+&lt;h2 id="margins-and-padding">Margins and Padding&lt;/h2>
+&lt;p>&lt;code>margin&lt;/code> 属性用于在任何定义的边框之外，为元素周围创建空间。&lt;/p>
+&lt;p>&lt;code>padding&lt;/code> 属性用于在任何定义的边界内的元素内容周围生成空间。&lt;/p>
+&lt;p>&lt;code>margin&lt;/code>和&lt;code>padding&lt;/code>都可以单独指定每一条边（top, right, bottom, and left）的属性。&lt;/p>
+&lt;p>例子：&lt;/p>
+&lt;p>设置上外边距是 25px，右外边距是 50px，下外边距是 75px，左外边距是 100px&lt;/p>
+&lt;p>设置上内边距是 25px，右内边距是 50px，下内边距是 75px，左内边距是 100px&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">margin&lt;/span>: &lt;span style="color:#b452cd">25&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">50&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">75&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">padding&lt;/span>: &lt;span style="color:#b452cd">25&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">50&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">75&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>注意：&lt;code>margin: auto;&lt;/code>可以使元素在其容器中水平居中&lt;/p>
+&lt;h2 id="height-and-width">Height and Width&lt;/h2>
+&lt;p>&lt;code>height&lt;/code> 和 &lt;code>width&lt;/code> 属性用于设置元素的高度和宽度。&lt;/p>
+&lt;p>&lt;strong>Note:&lt;/strong> Remember that the &lt;code>height&lt;/code> and &lt;code>width&lt;/code> properties do not include padding, borders, or margins! They set the height/width of the area inside the padding, border, and margin of the element!&lt;/p>
+&lt;h1 id="box-model">Box Model&lt;/h1>
+&lt;p>盒模型实质上是一个包围每个 HTML 元素的盒子。它包括：外边距、边框、内边距以及实际的内容。&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/boxModel.png" alt="Box Model">&lt;/p>
+&lt;h2 id="标准盒模型">标准盒模型&lt;/h2>
+&lt;p>在标准模型中，如果你给盒设置 &lt;code>width&lt;/code> 和 &lt;code>height&lt;/code>，实际设置的是 content。&lt;/p>
+&lt;p>padding 和 border 再加上设置的宽高一起决定整个盒子的大小。&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/standard-box-model.png" alt="Showing the size of the box when the standard box model is being used.">&lt;/p>
+&lt;h2 id="ie盒模型">IE盒模型&lt;/h2>
+&lt;p>通过设置&lt;code>box-sizing: border-box;&lt;/code>使用IE盒模型，所有宽度都是可见宽度，所以内容宽度是该宽度减去边框和填充部分。&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/ie-box-model.png" alt="Showing the size of the box when the alternate box model is being used.">&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css_beginner_tutorial/ - zzb2021.</description></item><item><title>HTML Intermediate Tutorial</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_intermediate_tutorial/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_intermediate_tutorial/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_intermediate_tutorial/ -&lt;h1 id="block-and-inline-elements">Block and Inline Elements&lt;/h1>
+&lt;p>每个HTML元素都有一个默认的显示值，这取决于它是什么类型的元素。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Display value&lt;/th>
+&lt;th>区别&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Block-level elements&lt;/td>
+&lt;td>总是从新行开始，占据可用的全部宽度，有上下外边距（&lt;code>margin&lt;/code>）&lt;/td>
+&lt;td>&lt;code>&amp;lt;p&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Inline elements&lt;/td>
+&lt;td>不会从新行开始，只占用所需的宽度，没有上下外边距（&lt;code>margin&lt;/code>）&lt;/td>
+&lt;td>&lt;code>&amp;lt;a&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>注意：行内元素不能包含块级元素！&lt;/p>
+&lt;h1 id="div-and-span">Div and Span&lt;/h1>
+&lt;p>大多数HTML 标签都有语义（例如，&lt;code>p&lt;/code>表示段落、&lt;code>h1&lt;/code>表示标题），但是&lt;code>span&lt;/code>和&lt;code>div&lt;/code>标签没有特定的语义。&lt;/p>
+&lt;p>&lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素是块级元素，通常是其他 HTML 元素的容器，另一个常见的用途是文档布局。&lt;/p>
+&lt;p>&lt;code>&amp;lt;span&amp;gt;&lt;/code> 元素是行内元素，可用作文本的容器。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;scissors&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;paper&amp;#34;&lt;/span>&amp;gt;crazy&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">span&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>注：HTML5引入了许多新的语义标签，请尽可能的使用语义标签来代替&lt;code>&amp;lt;div&amp;gt;&lt;/code>和&lt;code>&amp;lt;span&amp;gt;&lt;/code>。&lt;/p>
+&lt;/blockquote>
+&lt;h1 id="head-element">Head Element&lt;/h1>
+&lt;p>HTML &lt;code>&amp;lt;head&amp;gt;&lt;/code>元素是以下元素的容器：&lt;code>&amp;lt;title&amp;gt;&lt;/code>、&lt;code>&amp;lt;style&amp;gt;&lt;/code>、&lt;code>&amp;lt;meta&amp;gt;&lt;/code>、&lt;code>&amp;lt;link&amp;gt;&lt;/code>、&lt;code>&amp;lt;script&amp;gt;&lt;/code>和&lt;code>&amp;lt;base&amp;gt;&lt;/code>。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>标签&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;title&amp;gt;&lt;/code>&lt;/td>
+&lt;td>定义文档的标题，是必需的&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;style&amp;gt;&lt;/code>&lt;/td>
+&lt;td>定义单个HTML页的样式信息&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;link&amp;gt;&lt;/code>&lt;/td>
+&lt;td>定义当前文档和外部资源之间的关系，最常用于链接外部样式表&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;meta&amp;gt;&lt;/code>&lt;/td>
+&lt;td>通常用于指定字符集、页面描述、关键字、文档作者和视口设置。&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;script&amp;gt;&lt;/code>&lt;/td>
+&lt;td>用于定义客户端JavaScripts&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;base&amp;gt;&lt;/code>&lt;/td>
+&lt;td>为页面上的所有链接规定默认地址或默认目标（target）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="meta-tags">Meta Tags&lt;/h2>
+&lt;p>元数据（metadata）是关于数据的信息。&lt;/p>
+&lt;p>&lt;code>&amp;lt;meta&amp;gt;&lt;/code>标签提供关于 HTML 文档的元数据。元数据不会显示在页面上，但是对于机器是可读的。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>常用&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;&lt;/code>&lt;/td>
+&lt;td>指定HTML文档的字符编码为UTF-8&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;HTML, CSS, JS&amp;quot;&amp;gt;&lt;/code>&lt;/td>
+&lt;td>为搜索引擎定义关键字&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;Tutorials for HTML&amp;quot;&amp;gt;&lt;/code>&lt;/td>
+&lt;td>定义网页的描述&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;John Doe&amp;quot;&amp;gt;&lt;/code>&lt;/td>
+&lt;td>定义网页的作者&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;meta http-equiv=&amp;quot;refresh&amp;quot; content=&amp;quot;30&amp;quot;&amp;gt;&lt;/code>&lt;/td>
+&lt;td>每30秒刷新一次网页&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&amp;gt;&lt;/code>&lt;/td>
+&lt;td>设置视口，兼容所有设备&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;meta http-equiv=&amp;quot;X-UA-Compatible&amp;quot; content=&amp;quot;IE=edge&amp;quot;&amp;gt;&lt;/code>&lt;/td>
+&lt;td>告诉IE浏览器使用渲染引擎（edge）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="layout-elements-in-html5">Layout Elements in HTML5&lt;/h1>
+&lt;p>HTML5提供了一些新的语义元素，可用于定义网页的不同部分：&lt;/p>
+&lt;p>&lt;img src="https://a390177226.github.io/images/html/ct_sem_elements.png" alt="ct_sem_elements">&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>常用&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>例子&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;header&amp;gt;&lt;/code>&lt;/td>
+&lt;td>被用作介绍性内容的容器或一组导航链接&lt;/td>
+&lt;td>通常包含标题、logo、作者信息&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;nav&amp;gt;&lt;/code>&lt;/td>
+&lt;td>定义导航链接集合&lt;/td>
+&lt;td>通常是大型的导航链接块&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;section&amp;gt;&lt;/code>&lt;/td>
+&lt;td>定义文档中的节&lt;/td>
+&lt;td>有主题的内容组，通常具有标题&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;article&amp;gt;&lt;/code>&lt;/td>
+&lt;td>指定独立的、自包含的内容&lt;/td>
+&lt;td>论坛帖子、博客文章、报纸文章&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;aside&amp;gt;&lt;/code>&lt;/td>
+&lt;td>页面主内容之外的某些内容&lt;/td>
+&lt;td>旁白内容应与周围内容间接相关&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;footer&amp;gt;&lt;/code>&lt;/td>
+&lt;td>为文档或节规定页脚&lt;/td>
+&lt;td>页脚通常包含文档的作者、版权信息、使用条款链接、联系信息等&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&lt;code>&amp;lt;main&amp;gt;&lt;/code>&lt;/td>
+&lt;td>规定文档的主内容，是独一无二的&lt;/td>
+&lt;td>不包含任何在一系列文档中重复的内容，比如导航栏链接(nav)&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="html-global-attributes">HTML Global Attributes&lt;/h1>
+&lt;p>全局属性是所有 HTML 元素都可以使用的属性。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>核心属性&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>用法&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>id&lt;/td>
+&lt;td>规定元素的唯一的id&lt;/td>
+&lt;td>链接锚（link anchor），通过 JS（HTML DOM）或通过 CSS 为带有指定 id 的元素改变或添加样式&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>class&lt;/td>
+&lt;td>规定元素的类名（classname）&lt;/td>
+&lt;td>大多数时候用于指向样式表中的类（class），也可以利用它通过 JS来改变带有指定 class 的 HTML 元素&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>style&lt;/td>
+&lt;td>规定元素的行内样式（inline style）&lt;/td>
+&lt;td>style 属性将覆盖任何全局的样式设定&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>title&lt;/td>
+&lt;td>规定关于元素的额外信息&lt;/td>
+&lt;td>这些信息通常会在鼠标移到元素上时显示一段工具提示文本（tooltip text）&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>其他属性&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>用法&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>lang&lt;/td>
+&lt;td>规定元素内容的语言&lt;/td>
+&lt;td>&lt;code>&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;&lt;/code>指定英文，zh为中文&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>accesskey&lt;/td>
+&lt;td>指定激活/聚焦元素的快捷键&lt;/td>
+&lt;td>使用 [ALT] + accesskey&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>tabindex&lt;/td>
+&lt;td>规定元素的 tab 键控制次序&lt;/td>
+&lt;td>&lt;code>&amp;lt;a href=&amp;quot;#&amp;quot; tabindex=&amp;quot;1&amp;quot;&amp;gt;Google&amp;lt;/a&amp;gt;&lt;/code>从1开始&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>dir&lt;/td>
+&lt;td>规定元素内容的文本方向&lt;/td>
+&lt;td>ltr默认，rtl从右向左的文本方向&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>HTML5新增&lt;/th>
+&lt;th>说明&lt;/th>
+&lt;th>用法&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>contenteditable&lt;/td>
+&lt;td>规定元素内容是否可编辑&lt;/td>
+&lt;td>&lt;code>&amp;lt;p contenteditable=&amp;quot;true&amp;quot;&amp;gt;Test&amp;lt;/p&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>draggable&lt;/td>
+&lt;td>规定元素是否可拖动&lt;/td>
+&lt;td>&lt;code>&amp;lt;p draggable=&amp;quot;true&amp;quot;&amp;gt;Test&amp;lt;/p&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>hidden&lt;/td>
+&lt;td>浏览器不应显示已规定 hidden 属性的元素&lt;/td>
+&lt;td>&lt;code>&amp;lt;p hidden&amp;gt;This paragraph should be hidden.&amp;lt;/p&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>data-*&lt;/td>
+&lt;td>&lt;strong>自定义属性&lt;/strong>，嵌入自定义数据&lt;/td>
+&lt;td>&lt;code>&amp;lt;p data-animal-type=&amp;quot;bird&amp;quot;&amp;gt;Owl&amp;lt;/p&amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h1 id="multimedia-and-embedding">Multimedia and Embedding&lt;/h1>
+&lt;h2 id="video-and-audio">Video and Audio&lt;/h2>
+&lt;p>Web 上的多媒体指的是声音、音乐、视频和动画。&lt;/p>
+&lt;p>HTML &lt;code>&amp;lt;video&amp;gt;&lt;/code>元素用于在网页上显示Ogg、MP4、WebM格式的视频。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">video&lt;/span> &lt;span style="color:#658b00">width&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;320&amp;#34;&lt;/span> &lt;span style="color:#658b00">height&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;240&amp;#34;&lt;/span> &lt;span style="color:#658b00">controls&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">source&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;movie.mp4&amp;#34;&lt;/span> &lt;span style="color:#658b00">type&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;video/mp4&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">source&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;movie.ogg&amp;#34;&lt;/span> &lt;span style="color:#658b00">type&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;video/ogg&amp;#34;&lt;/span>&amp;gt;
+Your browser does not support the video tag.
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">video&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>
+&lt;p>&lt;code>controls&lt;/code>属性添加视频控件，如播放、暂停和音量&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;source&amp;gt;&lt;/code>元素允许指定浏览器可以从中选择的备选视频文件，浏览器将使用第一个识别的格式&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>&lt;code>&amp;lt;video&amp;gt;&lt;/code>和&lt;code>&amp;lt;/video&amp;gt;&lt;/code>之间的文本将仅在不支持&lt;code>&amp;lt;video&amp;gt;&lt;/code>元素的浏览器中显示&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>HTML &lt;code>&amp;lt;audio&amp;gt;&lt;/code>元素用于在网页上播放MP3, WAV, OGG格式的音频文件。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">audio&lt;/span> &lt;span style="color:#658b00">controls&lt;/span> &lt;span style="color:#658b00">autoplay&lt;/span> &lt;span style="color:#658b00">muted&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">source&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;horse.ogg&amp;#34;&lt;/span> &lt;span style="color:#658b00">type&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;audio/ogg&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">source&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;horse.mp3&amp;#34;&lt;/span> &lt;span style="color:#658b00">type&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;audio/mpeg&amp;#34;&lt;/span>&amp;gt;
+Your browser does not support the audio element.
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">audio&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="embedding">Embedding&lt;/h2>
+&lt;p>嵌入（Embedding）指的是让你在网页中嵌入各种类型的内容。&lt;/p>
+&lt;p>主要的嵌入方法是使用&lt;code>&amp;lt;iframe&amp;gt;&lt;/code>、&lt;code>&amp;lt;embed&amp;gt;&lt;/code>和&lt;code>&amp;lt;object&amp;gt;&lt;/code>元素。&lt;/p>
+&lt;p>&lt;code>&amp;lt;iframe&amp;gt;&lt;/code>用来嵌入其他网页，通常是嵌入第三方内容（例如YouTube视频和地图）。&lt;/p>
+&lt;p>&lt;code>&amp;lt;object&amp;gt;&lt;/code>和&lt;code>&amp;lt;embed&amp;gt;&lt;/code>元素是用来嵌入多种类型的外部内容的通用嵌入工具，其中包括像Java小程序和Flash，PDF这样的插件技术，甚至像视频，SVG和图像的内容！&lt;/p>
+&lt;blockquote>
+&lt;p>注：实际上，这些元素并不常用&lt;/p>
+&lt;ul>
+&lt;li>Applet几年来一直没有被使用&lt;/li>
+&lt;li>由于许多原因，Flash不再受欢迎&lt;/li>
+&lt;li>PDF更倾向于被链接而不是被嵌入&lt;/li>
+&lt;li>其他内容，如图像和视频都有更优秀、更容易元素来处理&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_intermediate_tutorial/ - zzb2021.</description></item></channel></rss>

@@ -1,0 +1,371 @@
+<!doctype html><html><head><title>python爬虫[3]--数据解析</title><meta charset=utf-8><meta name=X-UA-Compatible content="IE=edge"><meta name=google-site-verification content><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport><meta content="telephone=no" name=format-detection><meta name=description content><meta name=renderer content="webkit"><meta name=theme-color content="#ffffff"><script src=/vendor/js/jquery.min.js></script><script src=/vendor/js/popper.min.js></script><script src=/vendor/js/bootstrap.min.js></script><script src=/vendor/js/smooth-scroll.polyfills.min.js></script><link type=text/css rel=stylesheet href=/vendor/css/bootstrap.min.css><script src=/vendor/js/vue.min.js></script><link rel=stylesheet href=https://a390177226.github.io/scss/journal.min.579b9706a9598d23683f569ff063cd9cae54a7a2832e27345bc621e5d9b61d58.css integrity="sha256-V5uXBqlZjSNoP1af8GPNnK5Up6KDLic0W8Yh5dm2HVg=" media=screen><link rel=stylesheet href=https://a390177226.github.io/scss/dark-mode.min.c8808fcf21682127815c96de88e1b749dcb247b5937d839340d8146cf0945a25.css integrity="sha256-yICPzyFoISeBXJbeiOG3SdyyR7WTfYOTQNgUbPCUWiU=" media=screen><script src=https://a390177226.github.io//js/loadCSS.js></script><script>loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons")</script><script src=https://a390177226.github.io//js/toc-collapse.js></script></head><body><div id=app><div ref=sideContainer class=side-container><a class="a-block nav-head false" href=https://a390177226.github.io/><div class=nav-title>ZZB's blog</div><div class=nav-subtitle>Record my study.</div></a><div class=nav-link-list><a class="a-block nav-link-item false" href=/categories>Categories</a>
+<a class="a-block nav-link-item false" href=/tags>Tags</a>
+<a class="a-block nav-link-item false" href=/post>文章</a>
+<a class="a-block nav-link-item false" href=/%E5%89%8D%E7%AB%AF>前端</a>
+<a class="a-block nav-link-item false" href=/research>Research</a>
+<a class="a-block nav-link-item active" href=/python>Python</a></div><div class=nav-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
+zzb2021.</div></div><div ref=extraContainer class=extra-container><div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }"><div class=toc-content><center>- TOC -</center><ul><li><a href=#%e6%96%b9%e6%b3%95 onclick="onNavClick(`#方法-nav`)" id=方法-nav>方法</a></li><li><a href=#%e5%8e%9f%e7%90%86 onclick="onNavClick(`#原理-nav`)" id=原理-nav>原理</a></li><li><a href=#%e7%88%ac%e5%8f%96%e4%b8%80%e5%bc%a0%e5%9b%be%e7%89%87 onclick="onNavClick(`#爬取一张图片-nav`)" id=爬取一张图片-nav>爬取一张图片</a></li><li><a href=#%e6%ad%a3%e5%88%99%e6%a1%88%e4%be%8b onclick="onNavClick(`#正则案例-nav`)" id=正则案例-nav>正则案例</a></li><ul class=collapse data-toggle=collapse><li><a href=#%e7%88%ac%e5%8f%96%e7%b3%97%e4%ba%8b%e7%99%be%e7%a7%91%e4%b8%ad%e7%83%ad%e5%9b%be%e6%9d%bf%e5%9d%97%e7%ac%ac%e4%b8%80%e9%a1%b5%e7%9a%84%e6%89%80%e6%9c%89%e5%9b%be%e7%89%87 onclick="onNavClick(`#爬取糗事百科中热图板块第一页的所有图片-nav`)" id=爬取糗事百科中热图板块第一页的所有图片-nav>爬取糗事百科中热图板块第一页的所有图片</a></li><li><a href=#%e7%88%ac%e5%8f%96%e7%b3%97%e4%ba%8b%e7%99%be%e7%a7%91%e4%b8%ad%e7%83%ad%e5%9b%be%e6%9d%bf%e5%9d%97%e5%a4%9a%e4%b8%aa%e9%a1%b5%e9%9d%a2%e4%b8%8b%e7%9a%84%e6%89%80%e6%9c%89%e5%9b%be%e7%89%87 onclick="onNavClick(`#爬取糗事百科中热图板块多个页面下的所有图片-nav`)" id=爬取糗事百科中热图板块多个页面下的所有图片-nav>爬取糗事百科中热图板块多个页面下的所有图片</a></li></ul><li><a href=#bs4 onclick="onNavClick(`#bs4-nav`)" id=bs4-nav>bs4</a></li><ul class=collapse data-toggle=collapse><li><a href=#%e5%8e%9f%e7%90%86-1 onclick="onNavClick(`#原理-1-nav`)" id=原理-1-nav>原理</a></li><li><a href=#%e7%8e%af%e5%a2%83%e5%ae%89%e8%a3%85 onclick="onNavClick(`#环境安装-nav`)" id=环境安装-nav>环境安装</a></li><li><a href=#%e5%ae%9e%e4%be%8b%e5%8c%96beautifulsoup%e5%af%b9%e8%b1%a1 onclick="onNavClick(`#实例化beautifulsoup对象-nav`)" id=实例化beautifulsoup对象-nav>实例化BeautifulSoup对象</a></li><li><a href=#testhtml onclick="onNavClick(`#testhtml-nav`)" id=testhtml-nav>test.html</a></li><li><a href=#beautifulsoup%e5%af%b9%e8%b1%a1%e7%9a%84%e5%b1%9e%e6%80%a7%e5%92%8c%e6%96%b9%e6%b3%95 onclick="onNavClick(`#beautifulsoup对象的属性和方法-nav`)" id=beautifulsoup对象的属性和方法-nav>BeautifulSoup对象的属性和方法</a></li><li><a href=#bs4%e6%a1%88%e4%be%8b onclick="onNavClick(`#bs4案例-nav`)" id=bs4案例-nav>bs4案例</a></li></ul><li><a href=#xpath onclick="onNavClick(`#xpath-nav`)" id=xpath-nav>xpath</a></li><ul class=collapse data-toggle=collapse><li><a href=#%e5%ae%89%e8%a3%85 onclick="onNavClick(`#安装-nav`)" id=安装-nav>安装</a></li><li><a href=#%e8%a7%a3%e6%9e%90%e5%8e%9f%e7%90%86 onclick="onNavClick(`#解析原理-nav`)" id=解析原理-nav>解析原理</a></li><li><a href=#%e5%ae%9e%e4%be%8b%e5%8c%96etree%e5%af%b9%e8%b1%a1 onclick="onNavClick(`#实例化etree对象-nav`)" id=实例化etree对象-nav>实例化etree对象</a></li><li><a href=#etree%e5%af%b9%e8%b1%a1%e7%9a%84%e5%b1%9e%e6%80%a7%e5%92%8c%e6%96%b9%e6%b3%95 onclick="onNavClick(`#etree对象的属性和方法-nav`)" id=etree对象的属性和方法-nav>etree对象的属性和方法</a></li><li><a href=#%e6%a1%88%e4%be%8b1-%e7%be%8e%e5%a5%b3%e5%9b%be%e7%89%87 onclick="onNavClick(`#案例1-美女图片-nav`)" id=案例1-美女图片-nav>案例1-美女图片</a></li><li><a href=#%e6%a1%88%e4%be%8b2-%e4%b8%aa%e4%ba%ba%e7%ae%80%e5%8e%86 onclick="onNavClick(`#案例2-个人简历-nav`)" id=案例2-个人简历-nav>案例2-个人简历</a></li></ul></div></div><div class=pagination><a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }"><i class="material-icons pagination-action-icon">keyboard_arrow_up</i></a>
+<a class=pagination-action v-on:click=toggleDarkMode><i class="material-icons pagination-action-icon" v-if=isDarkMode>brightness_4</i>
+<i class="material-icons pagination-action-icon" v-else=isDarkMode>brightness_7</i></a></div></div><div class=single-column-drawer-container ref=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }"><div class=drawer-content><div class=drawer-menu><a class="a-block drawer-menu-item false" href=/categories>Categories</a>
+<a class="a-block drawer-menu-item false" href=/tags>Tags</a>
+<a class="a-block drawer-menu-item false" href=/post>文章</a>
+<a class="a-block drawer-menu-item false" href=/%E5%89%8D%E7%AB%AF>前端</a>
+<a class="a-block drawer-menu-item false" href=/research>Research</a>
+<a class="a-block drawer-menu-item active" href=/python>Python</a><div class=toc><div class=toc-content><center>- TOC -</center><ul><li><a href=#%e6%96%b9%e6%b3%95 onclick="onNavClick(`#方法-nav`)" id=方法-nav>方法</a></li><li><a href=#%e5%8e%9f%e7%90%86 onclick="onNavClick(`#原理-nav`)" id=原理-nav>原理</a></li><li><a href=#%e7%88%ac%e5%8f%96%e4%b8%80%e5%bc%a0%e5%9b%be%e7%89%87 onclick="onNavClick(`#爬取一张图片-nav`)" id=爬取一张图片-nav>爬取一张图片</a></li><li><a href=#%e6%ad%a3%e5%88%99%e6%a1%88%e4%be%8b onclick="onNavClick(`#正则案例-nav`)" id=正则案例-nav>正则案例</a></li><ul class=collapse data-toggle=collapse><li><a href=#%e7%88%ac%e5%8f%96%e7%b3%97%e4%ba%8b%e7%99%be%e7%a7%91%e4%b8%ad%e7%83%ad%e5%9b%be%e6%9d%bf%e5%9d%97%e7%ac%ac%e4%b8%80%e9%a1%b5%e7%9a%84%e6%89%80%e6%9c%89%e5%9b%be%e7%89%87 onclick="onNavClick(`#爬取糗事百科中热图板块第一页的所有图片-nav`)" id=爬取糗事百科中热图板块第一页的所有图片-nav>爬取糗事百科中热图板块第一页的所有图片</a></li><li><a href=#%e7%88%ac%e5%8f%96%e7%b3%97%e4%ba%8b%e7%99%be%e7%a7%91%e4%b8%ad%e7%83%ad%e5%9b%be%e6%9d%bf%e5%9d%97%e5%a4%9a%e4%b8%aa%e9%a1%b5%e9%9d%a2%e4%b8%8b%e7%9a%84%e6%89%80%e6%9c%89%e5%9b%be%e7%89%87 onclick="onNavClick(`#爬取糗事百科中热图板块多个页面下的所有图片-nav`)" id=爬取糗事百科中热图板块多个页面下的所有图片-nav>爬取糗事百科中热图板块多个页面下的所有图片</a></li></ul><li><a href=#bs4 onclick="onNavClick(`#bs4-nav`)" id=bs4-nav>bs4</a></li><ul class=collapse data-toggle=collapse><li><a href=#%e5%8e%9f%e7%90%86-1 onclick="onNavClick(`#原理-1-nav`)" id=原理-1-nav>原理</a></li><li><a href=#%e7%8e%af%e5%a2%83%e5%ae%89%e8%a3%85 onclick="onNavClick(`#环境安装-nav`)" id=环境安装-nav>环境安装</a></li><li><a href=#%e5%ae%9e%e4%be%8b%e5%8c%96beautifulsoup%e5%af%b9%e8%b1%a1 onclick="onNavClick(`#实例化beautifulsoup对象-nav`)" id=实例化beautifulsoup对象-nav>实例化BeautifulSoup对象</a></li><li><a href=#testhtml onclick="onNavClick(`#testhtml-nav`)" id=testhtml-nav>test.html</a></li><li><a href=#beautifulsoup%e5%af%b9%e8%b1%a1%e7%9a%84%e5%b1%9e%e6%80%a7%e5%92%8c%e6%96%b9%e6%b3%95 onclick="onNavClick(`#beautifulsoup对象的属性和方法-nav`)" id=beautifulsoup对象的属性和方法-nav>BeautifulSoup对象的属性和方法</a></li><li><a href=#bs4%e6%a1%88%e4%be%8b onclick="onNavClick(`#bs4案例-nav`)" id=bs4案例-nav>bs4案例</a></li></ul><li><a href=#xpath onclick="onNavClick(`#xpath-nav`)" id=xpath-nav>xpath</a></li><ul class=collapse data-toggle=collapse><li><a href=#%e5%ae%89%e8%a3%85 onclick="onNavClick(`#安装-nav`)" id=安装-nav>安装</a></li><li><a href=#%e8%a7%a3%e6%9e%90%e5%8e%9f%e7%90%86 onclick="onNavClick(`#解析原理-nav`)" id=解析原理-nav>解析原理</a></li><li><a href=#%e5%ae%9e%e4%be%8b%e5%8c%96etree%e5%af%b9%e8%b1%a1 onclick="onNavClick(`#实例化etree对象-nav`)" id=实例化etree对象-nav>实例化etree对象</a></li><li><a href=#etree%e5%af%b9%e8%b1%a1%e7%9a%84%e5%b1%9e%e6%80%a7%e5%92%8c%e6%96%b9%e6%b3%95 onclick="onNavClick(`#etree对象的属性和方法-nav`)" id=etree对象的属性和方法-nav>etree对象的属性和方法</a></li><li><a href=#%e6%a1%88%e4%be%8b1-%e7%be%8e%e5%a5%b3%e5%9b%be%e7%89%87 onclick="onNavClick(`#案例1-美女图片-nav`)" id=案例1-美女图片-nav>案例1-美女图片</a></li><li><a href=#%e6%a1%88%e4%be%8b2-%e4%b8%aa%e4%ba%ba%e7%ae%80%e5%8e%86 onclick="onNavClick(`#案例2-个人简历-nav`)" id=案例2-个人简历-nav>案例2-个人简历</a></li></ul></div></div></div></div></div><transition name=fade><div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div></transition><nav ref=navBar class="navbar sticky-top navbar-light single-column-nav-container"><div ref=navBackground class=nav-background></div><div class="container container-narrow nav-content"><button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
+<i class=material-icons>menu</i></button>
+<a ref=navTitle class=navbar-brand href=https://a390177226.github.io/>ZZB's blog</a>
+<button type=button class=nav-darkmode-toggle v-on:click=toggleDarkMode>
+<i class=material-icons v-if=isDarkMode>brightness_4</i>
+<i class=material-icons v-else=isDarkMode>brightness_7</i></button></div></nav><div class=single-column-header-container ref=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"><a href=https://a390177226.github.io/><div class=single-column-header-title>ZZB's blog</div><div class=single-column-header-subtitle>Record my study.</div></a></div><div id=content><div ref=streamContainer class=stream-container><div class="post-list-container post-list-container-shadow"><div class=post><div class=post-head-wrapper-text-only><div class=post-title>python爬虫[3]--数据解析<div class=post-meta><time itemprop=datePublished>2021-06-18 15:07</time>
+<i class=material-icons>folder</i>
+<a href=/categories/python>python</a>
+&nbsp;
+<i class=material-icons>label</i>
+<a href=/tags/%E7%88%AC%E8%99%AB>爬虫</a>
+&nbsp;</div></div></div><div class=post-body-wrapper><div class=post-body v-pre><h1 id=方法>方法</h1><ul><li>正则表达式</li><li>bs4</li><li>xpath（重点）</li></ul><h1 id=原理>原理</h1><ul><li>解析的局部的文本内容都会在标签之间或者标签对应的属性中进行存储<ul><li>进行指定标签的定位</li><li>标签或者标签的对应属性中存储的数据值进行提取（解析）</li></ul></li></ul><h1 id=爬取一张图片>爬取一张图片</h1><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>url = <span style=color:#cd5555>&#39;https://pic.qiushibaike.com/system/pictures/12443/124437393/medium/6O8M8JJRDUFEGBAF.jpg&#39;</span>
+<span style=color:#228b22># content返回二进制形式的图片数据</span>
+<span style=color:#228b22># text（字符串） content（二进制） json() （对象）</span>
+img_data = requests.get(url=url).content
+<span style=color:#228b22># 保存至本地</span>
+<span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(<span style=color:#cd5555>&#39;./test.jpg&#39;</span>,<span style=color:#cd5555>&#39;wb&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+    fp.write(img_data)
+</code></pre></div><h1 id=正则案例>正则案例</h1><h2 id=爬取糗事百科中热图板块第一页的所有图片>爬取糗事百科中热图板块第一页的所有图片</h2><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>url = <span style=color:#cd5555>&#39;https://www.qiushibaike.com/imgrank/&#39;</span>
+<span style=color:#228b22># 先爬取url对应的一整张页面</span>
+page = requests.get(url=url,headers=headers)
+page.encoding = <span style=color:#cd5555>&#39;utf-8&#39;</span>
+page_text = page.text
+</code></pre></div><p>使用开发者工具查看一张图片的html源码为</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#8b008b;font-weight:700>div</span> <span style=color:#658b00>class</span>=<span style=color:#cd5555>&#34;thumb&#34;</span>&gt;
+
+&lt;<span style=color:#8b008b;font-weight:700>a</span> <span style=color:#658b00>href</span>=<span style=color:#cd5555>&#34;/article/124437391&#34;</span> <span style=color:#658b00>target</span>=<span style=color:#cd5555>&#34;_blank&#34;</span>&gt;
+&lt;<span style=color:#8b008b;font-weight:700>img</span> <span style=color:#658b00>src</span>=<span style=color:#cd5555>&#34;//pic.qiushibaike.com/system/pictures/12443/124437391/medium/ZS4RPHR1F7GTTTGC.jpg&#34;</span> <span style=color:#658b00>alt</span>=<span style=color:#cd5555>&#34;糗事#124437391&#34;</span> <span style=color:#658b00>class</span>=<span style=color:#cd5555>&#34;illustration&#34;</span> <span style=color:#658b00>width</span>=<span style=color:#cd5555>&#34;100%&#34;</span> <span style=color:#658b00>height</span>=<span style=color:#cd5555>&#34;auto&#34;</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>a</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>div</span>&gt;
+</code></pre></div><p>提取图片的src的正则表达式：</p><p><code>ex = '&lt;div class="thumb">.*?&lt;img src="(.*?)" alt.*?&lt;/div>'</code></p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 对页面中的所有图片进行解析/提取</span>
+ex = <span style=color:#cd5555>&#39;&lt;div class=&#34;thumb&#34;&gt;.*?&lt;img src=&#34;(.*?)&#34; alt.*?&lt;/div&gt;&#39;</span>
+<span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>re</span>
+img_src_list = re.findall(ex,page_text,re.S)
+<span style=color:#228b22># print(img_src_list)</span>
+<span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>os</span>
+<span style=color:#228b22># 创建文件夹,用来存放图片</span>
+<span style=color:#8b008b;font-weight:700>if</span> <span style=color:#8b008b>not</span> os.path.exists(<span style=color:#cd5555>&#39;./imgs&#39;</span>) :
+    os.mkdir(<span style=color:#cd5555>&#39;./imgs&#39;</span>)
+<span style=color:#228b22># 保存图片至文件夹中</span>
+<span style=color:#8b008b;font-weight:700>for</span> src <span style=color:#8b008b>in</span> img_src_list:
+    <span style=color:#228b22># 拼接出一个完整的图片地址</span>
+    src = <span style=color:#cd5555>&#39;https:&#39;</span> + src
+    <span style=color:#228b22># 请求到了图片的二进制数据</span>
+    img_data = requests.get(url=src, headers=headers).content
+    <span style=color:#228b22># 生成图片名称</span>
+    img_name = src.split(<span style=color:#cd5555>&#39;/&#39;</span>)[-<span style=color:#b452cd>1</span>]
+    <span style=color:#228b22># 图片存储的路径</span>
+    img_path = <span style=color:#cd5555>&#39;./imgs/&#39;</span> + img_name
+    <span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(img_path,<span style=color:#cd5555>&#39;wb&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+        fp.write(img_data)
+        <span style=color:#8b008b;font-weight:700>print</span>(img_name,<span style=color:#cd5555>&#39;下载成功！！！&#39;</span>)
+</code></pre></div><h2 id=爬取糗事百科中热图板块多个页面下的所有图片>爬取糗事百科中热图板块多个页面下的所有图片</h2><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>requests</span>
+<span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>re</span>
+<span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>os</span>
+headers = {
+    <span style=color:#cd5555>&#39;user-agent&#39;</span>:<span style=color:#cd5555>&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 Edg/91.0.864.48&#39;</span>
+}
+<span style=color:#228b22># 创建文件夹</span>
+<span style=color:#8b008b;font-weight:700>if</span> <span style=color:#8b008b>not</span> os.path.exists(<span style=color:#cd5555>&#39;./imgs&#39;</span>) :
+    os.mkdir(<span style=color:#cd5555>&#39;./imgs&#39;</span>)
+
+<span style=color:#228b22># 设置一个通用的url模板</span>
+url = <span style=color:#cd5555>&#39;https://www.qiushibaike.com/imgrank/page/{}/&#39;</span>
+
+<span style=color:#8b008b;font-weight:700>for</span> pageNum <span style=color:#8b008b>in</span> <span style=color:#658b00>range</span>(<span style=color:#b452cd>1</span>,<span style=color:#b452cd>3</span>):
+    <span style=color:#228b22># 对应页码的url</span>
+    new_url = url.format(pageNum)
+    <span style=color:#8b008b;font-weight:700>print</span>(new_url)
+    
+    <span style=color:#228b22># 先爬取url对应的一整张页面</span>
+    page = requests.get(url=new_url, headers=headers)
+    page.encoding = <span style=color:#cd5555>&#39;utf-8&#39;</span>
+    page_text = page.text
+    
+    <span style=color:#228b22># 对页面中的所有图片进行解析/提取</span>
+    ex = <span style=color:#cd5555>&#39;&lt;div class=&#34;thumb&#34;&gt;.*?&lt;img src=&#34;(.*?)&#34; alt.*?&lt;/div&gt;&#39;</span>
+    img_src_list = re.findall(ex,page_text,re.S)
+    <span style=color:#228b22># print(img_src_list)</span>
+    
+    <span style=color:#8b008b;font-weight:700>for</span> src <span style=color:#8b008b>in</span> img_src_list:
+        <span style=color:#228b22># 拼接出一个完整的图片地址</span>
+        src = <span style=color:#cd5555>&#39;https:&#39;</span> + src
+        <span style=color:#228b22># 请求到了图片的二进制数据</span>
+        img_data = requests.get(url=src, headers=headers).content
+        <span style=color:#228b22># 生成图片名称</span>
+        img_name = src.split(<span style=color:#cd5555>&#39;/&#39;</span>)[-<span style=color:#b452cd>1</span>]
+        <span style=color:#228b22># 图片存储的路径</span>
+        img_path = <span style=color:#cd5555>&#39;./imgs/&#39;</span> + img_name
+        <span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(img_path,<span style=color:#cd5555>&#39;wb&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+            fp.write(img_data)
+            <span style=color:#8b008b;font-weight:700>print</span>(img_name,<span style=color:#cd5555>&#39;下载成功！！！&#39;</span>)
+</code></pre></div><h1 id=bs4>bs4</h1><h2 id=原理-1>原理</h2><ul><li>实例化一个BeautifulSoup对象，并且将页面源码数据加载到该对象中</li><li>通过调用BeautifulSoup对象中相关的属性或者方法进行标签定位和数据提取</li></ul><h2 id=环境安装>环境安装</h2><ul><li><code>pip install bs4</code></li><li><code>pip install lxml</code></li></ul><h2 id=实例化beautifulsoup对象>实例化BeautifulSoup对象</h2><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>from</span> <span style=color:#008b45;text-decoration:underline>bs4</span> <span style=color:#8b008b;font-weight:700>import</span> BeautifulSoup
+<span style=color:#228b22># 对象的实例化：</span>
+<span style=color:#228b22># 第一种：将本地的html文档中的数据加载到该对象中</span>
+<span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(<span style=color:#cd5555>&#39;./test.html&#39;</span>,<span style=color:#cd5555>&#39;r&#39;</span>,encoding=<span style=color:#cd5555>&#39;utf-8&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+	soup = BeautifulSoup(fp,<span style=color:#cd5555>&#39;lxml&#39;</span>)
+<span style=color:#228b22># 第二种：将互联网上获取的页面源码加载到该对象,更常用</span>
+url = <span style=color:#cd5555>&#39;https://www.sogou.com/&#39;</span>
+response = requests.get(url=url)
+page_text = response.text
+soup = BeautifulSoup(page_text,<span style=color:#cd5555>&#39;lxml&#39;</span>)
+</code></pre></div><h2 id=testhtml>test.html</h2><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#1e889b>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:#8b008b;font-weight:700>html</span>&gt;
+&lt;<span style=color:#8b008b;font-weight:700>head</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>title</span>&gt;Document&lt;/<span style=color:#8b008b;font-weight:700>title</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>head</span>&gt;
+&lt;<span style=color:#8b008b;font-weight:700>body</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>h1</span>&gt;My First Heading&lt;/<span style=color:#8b008b;font-weight:700>h1</span>&gt;
+	&lt;<span style=color:#8b008b;font-weight:700>p</span>&gt;My first paragraph.&lt;/<span style=color:#8b008b;font-weight:700>p</span>&gt;
+	&lt;<span style=color:#8b008b;font-weight:700>p</span> <span style=color:#658b00>class</span>=<span style=color:#cd5555>&#39;p1&#39;</span>&gt;My second paragraph.&lt;/<span style=color:#8b008b;font-weight:700>p</span>&gt;
+	&lt;<span style=color:#8b008b;font-weight:700>div</span> <span style=color:#658b00>class</span>=<span style=color:#cd5555>&#39;d1&#39;</span>&gt;
+		&lt;<span style=color:#8b008b;font-weight:700>ul</span>&gt;
+			&lt;<span style=color:#8b008b;font-weight:700>li</span>&gt;&lt;<span style=color:#8b008b;font-weight:700>a</span> <span style=color:#658b00>href</span>=<span style=color:#cd5555>&#39;www.baidu.com&#39;</span>&gt;111&lt;/<span style=color:#8b008b;font-weight:700>a</span>&gt;&lt;/<span style=color:#8b008b;font-weight:700>li</span>&gt;
+			&lt;<span style=color:#8b008b;font-weight:700>li</span>&gt;&lt;<span style=color:#8b008b;font-weight:700>a</span> <span style=color:#658b00>href</span>=<span style=color:#cd5555>&#39;&#39;</span>&gt;222&lt;/<span style=color:#8b008b;font-weight:700>a</span>&gt;&lt;/<span style=color:#8b008b;font-weight:700>li</span>&gt;
+			&lt;<span style=color:#8b008b;font-weight:700>li</span>&gt;&lt;<span style=color:#8b008b;font-weight:700>a</span> <span style=color:#658b00>href</span>=<span style=color:#cd5555>&#39;&#39;</span>&gt;333&lt;/<span style=color:#8b008b;font-weight:700>a</span>&gt;&lt;/<span style=color:#8b008b;font-weight:700>li</span>&gt;
+		&lt;/<span style=color:#8b008b;font-weight:700>ul</span>&gt;
+	&lt;/<span style=color:#8b008b;font-weight:700>div</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>body</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>html</span>&gt;
+</code></pre></div><h2 id=beautifulsoup对象的属性和方法>BeautifulSoup对象的属性和方法</h2><p>定位</p><ul><li>soup.tagName</li><li>soup.find()</li><li>soup.find_all()</li><li>soup.select()</li></ul><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(<span style=color:#cd5555>&#39;./test.html&#39;</span>,<span style=color:#cd5555>&#39;r&#39;</span>,encoding=<span style=color:#cd5555>&#39;utf-8&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+	soup = BeautifulSoup(fp,<span style=color:#cd5555>&#39;lxml&#39;</span>)
+
+<span style=color:#228b22># soup.tagName 返回的是html中第1次出现的tagName对象的标签</span>
+<span style=color:#8b008b;font-weight:700>print</span>(soup.p)
+
+<span style=color:#228b22># soup.find()</span>
+<span style=color:#228b22># 第一种：soup.find(&#39;tagName&#39;) 等同于soup.tagName</span>
+<span style=color:#8b008b;font-weight:700>print</span>(soup.find(<span style=color:#cd5555>&#39;p&#39;</span>))
+<span style=color:#228b22># 第二种：属性定位</span>
+<span style=color:#8b008b;font-weight:700>print</span>(soup.find(<span style=color:#cd5555>&#39;p&#39;</span>,class_= <span style=color:#cd5555>&#39;p1&#39;</span>))
+
+<span style=color:#228b22># soup.find_all() 返回符合要求的所有标签（列表）</span>
+<span style=color:#8b008b;font-weight:700>print</span>(soup.find_all(<span style=color:#cd5555>&#39;p&#39;</span>))
+
+<span style=color:#228b22># soup.select() 返回一个列表</span>
+<span style=color:#228b22># 标签选择器</span>
+<span style=color:#8b008b;font-weight:700>print</span>(soup.select(<span style=color:#cd5555>&#39;p&#39;</span>))
+<span style=color:#228b22># 类选择器</span>
+<span style=color:#8b008b;font-weight:700>print</span>(soup.select(<span style=color:#cd5555>&#39;.p1&#39;</span>))
+<span style=color:#228b22># 层级选择器：&#34;&gt;&#34;表示一个层级，空格表示多个层级</span>
+<span style=color:#8b008b;font-weight:700>print</span>(soup.select(<span style=color:#cd5555>&#39;.d1 &gt; ul &gt; li &gt; a&#39;</span>))
+<span style=color:#8b008b;font-weight:700>print</span>(soup.select(<span style=color:#cd5555>&#39;.d1 &gt; ul a&#39;</span>))
+</code></pre></div><p>获取标签之间的文本数据</p><ul><li>soup.a.text</li><li>soup.a.string</li><li>get_text()</li></ul><p>获取标签中的属性值</p><ul><li>soup.a[&lsquo;href&rsquo;]</li></ul><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>a = soup.select(<span style=color:#cd5555>&#39;.d1 &gt; ul&#39;</span>)[<span style=color:#b452cd>0</span>]
+<span style=color:#228b22># .text和get_text() 返回某个标签下中所有的文本内容</span>
+<span style=color:#228b22># .string只返回该标签下直系的文本内容</span>
+<span style=color:#8b008b;font-weight:700>print</span>(a.text)
+<span style=color:#8b008b;font-weight:700>print</span>(a.string)
+
+<span style=color:#228b22># 获取属性值</span>
+<span style=color:#8b008b;font-weight:700>print</span>(soup.a[<span style=color:#cd5555>&#39;href&#39;</span>])
+</code></pre></div><h2 id=bs4案例>bs4案例</h2><p>爬取诗词名句网的三国演义</p><ul><li>url：<a href=https://www.shicimingju.com/book/sanguoyanyi.html>https://www.shicimingju.com/book/sanguoyanyi.html</a></li></ul><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 对书籍的页面数据进行爬取</span>
+url = <span style=color:#cd5555>&#39;https://www.shicimingju.com/book/sanguoyanyi.html&#39;</span>
+response = requests.get(url=url, headers=headers)
+response.encoding = <span style=color:#cd5555>&#39;utf-8&#39;</span>
+page_text = response.text
+
+<span style=color:#228b22># 在首页中解析出章节的标题和详情页的url</span>
+<span style=color:#228b22># 1.实例化BeautifulSoup对象</span>
+soup = BeautifulSoup(page_text, <span style=color:#cd5555>&#39;lxml&#39;</span>)
+<span style=color:#228b22># 2.解析章节标题和详情页的url，并保存</span>
+a_list = soup.select(<span style=color:#cd5555>&#39;div.book-mulu &gt; ul &gt; li &gt; a&#39;</span>)
+<span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(<span style=color:#cd5555>&#39;./sanguo.txt&#39;</span>,<span style=color:#cd5555>&#39;w&#39;</span>,encoding=<span style=color:#cd5555>&#39;utf-8&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+    <span style=color:#8b008b;font-weight:700>for</span> a <span style=color:#8b008b>in</span> a_list:
+        title = a.string
+        detail_url = <span style=color:#cd5555>&#39;https://www.shicimingju.com&#39;</span> + a[<span style=color:#cd5555>&#39;href&#39;</span>]
+        <span style=color:#228b22># 对详情页发起请求</span>
+        detail_response = requests.get(url=detail_url, headers=headers)
+        detail_response.encoding = <span style=color:#cd5555>&#39;utf-8&#39;</span>
+        detail_page_text = detail_response.text
+        <span style=color:#228b22># 解析出详情页中相关的章节内容</span>
+        detail_soup = BeautifulSoup(detail_page_text, <span style=color:#cd5555>&#39;lxml&#39;</span>)
+        div_tag = detail_soup.find(<span style=color:#cd5555>&#39;div&#39;</span>,class_=<span style=color:#cd5555>&#39;chapter_content&#39;</span>)
+        content = div_tag.text
+        fp.write(title+<span style=color:#cd5555>&#39;:&#39;</span>+content +<span style=color:#cd5555>&#39;</span><span style=color:#cd5555>\n</span><span style=color:#cd5555>&#39;</span>)
+        <span style=color:#8b008b;font-weight:700>print</span>(title,<span style=color:#cd5555>&#39;爬取成功！！！&#39;</span>)
+</code></pre></div><h1 id=xpath>xpath</h1><h2 id=安装>安装</h2><p><code>pip install lxml</code></p><h2 id=解析原理>解析原理</h2><p>html标签是以树状的形式进行展示</p><ul><li>实例化一个etree的对象，且将待解析的页面源码数据加载到该对象中</li><li>调用etree对象的xpath方法结合着不同的xpath表达式实现标签的定位和数据提取</li></ul><h2 id=实例化etree对象>实例化etree对象</h2><ul><li>etree.parse(&lsquo;filename&rsquo;)：本地html文档加载到该对象中</li><li>etree.HTML(page_text)：网站获取的页面数据加载到该对象</li></ul><h2 id=etree对象的属性和方法>etree对象的属性和方法</h2><p>标签定位</p><ul><li>tree.xpath()</li></ul><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>from</span> <span style=color:#008b45;text-decoration:underline>lxml</span> <span style=color:#8b008b;font-weight:700>import</span> etree
+
+tree = etree.parse(<span style=color:#cd5555>&#39;./test.html&#39;</span>)
+
+<span style=color:#228b22># 定位div</span>
+<span style=color:#228b22># 一个&#34;/&#34;表示一个层级</span>
+tree.xpath(<span style=color:#cd5555>&#39;/html/body/div&#39;</span>)
+<span style=color:#228b22># 两个&#34;/&#34;表示多个层级</span>
+tree.xpath(<span style=color:#cd5555>&#39;/html//div&#39;</span>)
+tree.xpath(<span style=color:#cd5555>&#39;//div&#39;</span>)
+
+<span style=color:#228b22># 属性定位</span>
+<span style=color:#228b22># 定位class为d1的div下的所有a</span>
+tree.xpath(<span style=color:#cd5555>&#39;//div[@class=&#34;d1&#34;]//a&#39;</span>)
+
+<span style=color:#228b22># 索引定位: 索引从1开始</span>
+<span style=color:#228b22># 定位p下的第二个p</span>
+tree.xpath(<span style=color:#cd5555>&#39;//p[2]&#39;</span>)
+</code></pre></div><p>取文本和属性</p><ul><li>/text()</li><li>//text()</li><li>/@attrName</li></ul><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 取文本</span>
+<span style=color:#228b22># /text() 返回直系文本</span>
+tree.xpath(<span style=color:#cd5555>&#39;//div/text()&#39;</span>)
+<span style=color:#228b22># //text() 返回所有文本</span>
+tree.xpath(<span style=color:#cd5555>&#39;//div//text()&#39;</span>)
+
+<span style=color:#228b22># 取属性</span>
+tree.xpath(<span style=color:#cd5555>&#39;//div//a/@href&#39;</span>)
+</code></pre></div><h2 id=案例1-美女图片>案例1-美女图片</h2><p>解析图片数据</p><ul><li>url：<a href=https://pic.netbian.com/4kmeinv/>http://pic.netbian.com/4kmeinv/</a></li><li>重点：局部数据解析</li><li>xpath路径可以从开发者工具那里复制</li></ul><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>requests</span>
+<span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>os</span>
+<span style=color:#8b008b;font-weight:700>from</span> <span style=color:#008b45;text-decoration:underline>lxml</span> <span style=color:#8b008b;font-weight:700>import</span> etree
+
+headers = {
+    <span style=color:#cd5555>&#39;user-agent&#39;</span>:<span style=color:#cd5555>&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 Edg/91.0.864.48&#39;</span>
+}
+<span style=color:#228b22># 创建文件夹</span>
+<span style=color:#8b008b;font-weight:700>if</span> <span style=color:#8b008b>not</span> os.path.exists(<span style=color:#cd5555>&#39;./imgs&#39;</span>) :
+    os.mkdir(<span style=color:#cd5555>&#39;./imgs&#39;</span>)
+</code></pre></div><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 爬取第1页</span>
+url = <span style=color:#cd5555>&#39;https://pic.netbian.com/4kmeinv/&#39;</span>
+response = requests.get(url=url, headers=headers)
+response.encoding = <span style=color:#cd5555>&#39;gbk&#39;</span>
+page_text = response.text
+
+<span style=color:#228b22># 图片名称+图片数据</span>
+tree = etree.HTML(page_text)
+<span style=color:#228b22># 存储的是定位到的指定的li标签</span>
+li_list = tree.xpath(<span style=color:#cd5555>&#39;//div[@class=&#34;slist&#34;]/ul/li&#39;</span>)
+
+<span style=color:#8b008b;font-weight:700>for</span> li <span style=color:#8b008b>in</span> li_list:
+    <span style=color:#228b22># li的数据类型和tree的数据类型一样，li也可以调用xpath方法</span>
+    <span style=color:#228b22># print(type(li))</span>
+    
+    <span style=color:#228b22># 局部数据解析</span>
+    title = li.xpath(<span style=color:#cd5555>&#39;./a/img/@alt&#39;</span>)[<span style=color:#b452cd>0</span>]+<span style=color:#cd5555>&#39;.jpg&#39;</span>
+    img_src = <span style=color:#cd5555>&#39;https://pic.netbian.com&#39;</span>+li.xpath(<span style=color:#cd5555>&#39;./a/img/@src&#39;</span>)[<span style=color:#b452cd>0</span>]
+    <span style=color:#228b22># print(title,img_src)</span>
+    
+    img_data = requests.get(url=img_src, headers=headers).content
+    img_path = <span style=color:#cd5555>&#39;./imgs/&#39;</span>+ title
+    <span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(img_path,<span style=color:#cd5555>&#39;wb&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+        fp.write(img_data)
+    <span style=color:#8b008b;font-weight:700>print</span>(title,<span style=color:#cd5555>&#39;保存成功了&#39;</span>)
+</code></pre></div><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 爬取多页</span>
+<span style=color:#228b22># 定义一个通用的url模板：不可变</span>
+url = <span style=color:#cd5555>&#39;https://pic.netbian.com/4kmeinv/index_{}.html&#39;</span>
+<span style=color:#8b008b;font-weight:700>for</span> page <span style=color:#8b008b>in</span> <span style=color:#658b00>range</span>(<span style=color:#b452cd>1</span>,<span style=color:#b452cd>3</span>):
+    <span style=color:#8b008b;font-weight:700>if</span> page ==<span style=color:#b452cd>1</span>:
+        new_url = <span style=color:#cd5555>&#39;https://pic.netbian.com/4kmeinv/index.html&#39;</span>
+    <span style=color:#8b008b;font-weight:700>else</span>:
+        new_url = url.format(page)
+    <span style=color:#228b22># print(new_url)</span>
+
+    response = requests.get(url=new_url, headers=headers)
+    response.encoding = <span style=color:#cd5555>&#39;gbk&#39;</span>
+    page_text = response.text
+    
+    <span style=color:#228b22># 图片名称+图片数据</span>
+    tree = etree.HTML(page_text)
+    <span style=color:#228b22># 存储的是定位到的指定的li标签</span>
+    li_list = tree.xpath(<span style=color:#cd5555>&#39;//div[@class=&#34;slist&#34;]/ul/li&#39;</span>)
+    
+    <span style=color:#8b008b;font-weight:700>for</span> li <span style=color:#8b008b>in</span> li_list:
+        <span style=color:#228b22># li的数据类型和tree的数据类型一样，li也可以调用xpath方法</span>
+        <span style=color:#228b22># print(type(li))</span>
+
+        <span style=color:#228b22># 局部数据解析</span>
+        title = li.xpath(<span style=color:#cd5555>&#39;./a/img/@alt&#39;</span>)[<span style=color:#b452cd>0</span>]+<span style=color:#cd5555>&#39;.jpg&#39;</span>
+        img_src = <span style=color:#cd5555>&#39;https://pic.netbian.com&#39;</span>+li.xpath(<span style=color:#cd5555>&#39;./a/img/@src&#39;</span>)[<span style=color:#b452cd>0</span>]
+        <span style=color:#228b22># print(title,img_src)</span>
+
+        img_data = requests.get(url=img_src, headers=headers).content
+        img_path = <span style=color:#cd5555>&#39;./imgs/&#39;</span>+ title
+        <span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(img_path,<span style=color:#cd5555>&#39;wb&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+            fp.write(img_data)
+        <span style=color:#8b008b;font-weight:700>print</span>(title,<span style=color:#cd5555>&#39;保存成功了&#39;</span>)
+</code></pre></div><p>需求：要求解析出携带html标签的局部数据？</p><ul><li>使用bs4</li></ul><p>如何使xpath表达式更具有通用性？</p><ul><li>在xpath表达式中使用管道符"|"，可以表示管道符左右两侧的子xpath表达式同时生效或者一个生效</li></ul><h2 id=案例2-个人简历>案例2-个人简历</h2><p>爬取站长素材的个人简历</p><ul><li>url：<a href=https://sc.chinaz.com/jianli/>https://sc.chinaz.com/jianli/</a></li></ul><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>requests</span>
+<span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>os</span>
+<span style=color:#8b008b;font-weight:700>from</span> <span style=color:#008b45;text-decoration:underline>lxml</span> <span style=color:#8b008b;font-weight:700>import</span> etree
+
+headers = {
+    <span style=color:#cd5555>&#39;user-agent&#39;</span>:<span style=color:#cd5555>&#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 Edg/91.0.864.48&#39;</span>
+}
+<span style=color:#228b22># 创建文件夹</span>
+<span style=color:#8b008b;font-weight:700>if</span> <span style=color:#8b008b>not</span> os.path.exists(<span style=color:#cd5555>&#39;./imgs&#39;</span>) :
+    os.mkdir(<span style=color:#cd5555>&#39;./imgs&#39;</span>)
+</code></pre></div><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 爬取第1页</span>
+url = <span style=color:#cd5555>&#39;https://sc.chinaz.com/jianli/&#39;</span>
+response = requests.get(url=url, headers=headers)
+response.encoding = <span style=color:#cd5555>&#39;utf-8&#39;</span>
+page_text= response.text
+
+tree = etree.HTML(page_text)
+li_list = tree.xpath(<span style=color:#cd5555>&#39;//div[@id=&#34;container&#34;]/div&#39;</span>)
+<span style=color:#8b008b;font-weight:700>for</span> li <span style=color:#8b008b>in</span> li_list:
+    <span style=color:#228b22># 局部数据解析</span>
+    title = li.xpath(<span style=color:#cd5555>&#39;./a/img/@alt&#39;</span>)[<span style=color:#b452cd>0</span>] +<span style=color:#cd5555>&#39;.rar&#39;</span>
+    jianli_url = <span style=color:#cd5555>&#39;https:&#39;</span>+li.xpath(<span style=color:#cd5555>&#39;./a/@href&#39;</span>)[<span style=color:#b452cd>0</span>]
+    <span style=color:#228b22># print(title,jianli_url)</span>
+    
+    <span style=color:#228b22># 进入一个简历的页面</span>
+    jianli_page = requests.get(url=jianli_url, headers=headers)
+    jianli_page.encoding = <span style=color:#cd5555>&#39;utf-8&#39;</span>
+    jianli_text= jianli_page.text
+    <span style=color:#228b22># print(jianli_text)</span>
+    
+    <span style=color:#8b008b;font-weight:700>try</span>:
+        <span style=color:#228b22># 在该页面中找到下载地址</span>
+        jianli_tree = etree.HTML(jianli_text)
+        jianli_src = jianli_tree.xpath(<span style=color:#cd5555>&#39;//*[@id=&#34;down&#34;]/div[2]/ul/li[1]/a/@href&#39;</span>)[<span style=color:#b452cd>0</span>]
+        <span style=color:#228b22># print(&#39;下载链接：&#39;+jianli_src)</span>
+    
+        <span style=color:#228b22># 下载简历</span>
+        jianli_data = requests.get(url=jianli_src, headers=headers).content
+        jianli_path = <span style=color:#cd5555>&#39;./imgs/&#39;</span>+ title
+        <span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(jianli_path,<span style=color:#cd5555>&#39;wb&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+            fp.write(jianli_data)
+            <span style=color:#8b008b;font-weight:700>print</span>(title,<span style=color:#cd5555>&#39;保存成功了&#39;</span>)
+    <span style=color:#8b008b;font-weight:700>except</span> <span style=color:#008b45;font-weight:700>Exception</span> <span style=color:#8b008b;font-weight:700>as</span> err:
+        <span style=color:#8b008b;font-weight:700>print</span>(title,<span style=color:#cd5555>&#39;下载失败了&#39;</span>)
+</code></pre></div><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 爬取多页</span>
+url = <span style=color:#cd5555>&#39;https://sc.chinaz.com/jianli/index_{}.html&#39;</span>
+<span style=color:#8b008b;font-weight:700>for</span> page <span style=color:#8b008b>in</span> <span style=color:#658b00>range</span>(<span style=color:#b452cd>1</span>,<span style=color:#b452cd>3</span>):
+    <span style=color:#8b008b;font-weight:700>if</span> page ==<span style=color:#b452cd>1</span>:
+        new_url = <span style=color:#cd5555>&#39;https://sc.chinaz.com/jianli/index.html&#39;</span>
+    <span style=color:#8b008b;font-weight:700>else</span>:
+        new_url = url.format(page)
+    <span style=color:#228b22># print(new_url)</span>
+    
+    response = requests.get(url=new_url, headers=headers)
+    response.encoding = <span style=color:#cd5555>&#39;utf-8&#39;</span>
+    page_text= response.text
+    
+    tree = etree.HTML(page_text)
+    li_list = tree.xpath(<span style=color:#cd5555>&#39;//div[@id=&#34;container&#34;]/div&#39;</span>)
+    
+    <span style=color:#8b008b;font-weight:700>for</span> li <span style=color:#8b008b>in</span> li_list:
+        <span style=color:#228b22># 局部数据解析</span>
+        title = li.xpath(<span style=color:#cd5555>&#39;./a/img/@alt&#39;</span>)[<span style=color:#b452cd>0</span>] +<span style=color:#cd5555>&#39;.rar&#39;</span>
+        jianli_url = <span style=color:#cd5555>&#39;https:&#39;</span>+li.xpath(<span style=color:#cd5555>&#39;./a/@href&#39;</span>)[<span style=color:#b452cd>0</span>]
+        <span style=color:#228b22># print(title,jianli_url)</span>
+
+        <span style=color:#228b22># 进入一个简历的页面</span>
+        jianli_page = requests.get(url=jianli_url, headers=headers)
+        jianli_page.encoding = <span style=color:#cd5555>&#39;utf-8&#39;</span>
+        jianli_text= jianli_page.text
+        <span style=color:#228b22># print(jianli_text)</span>
+
+        <span style=color:#8b008b;font-weight:700>try</span>:
+            <span style=color:#228b22># 在该页面中找到下载地址</span>
+            jianli_tree = etree.HTML(jianli_text)
+            jianli_src = jianli_tree.xpath(<span style=color:#cd5555>&#39;//*[@id=&#34;down&#34;]/div[2]/ul/li[1]/a/@href&#39;</span>)[<span style=color:#b452cd>0</span>]
+            <span style=color:#228b22># print(&#39;下载链接：&#39;+jianli_src)</span>
+
+            <span style=color:#228b22># 下载简历</span>
+            jianli_data = requests.get(url=jianli_src, headers=headers).content
+            jianli_path = <span style=color:#cd5555>&#39;./imgs/&#39;</span>+ title
+            <span style=color:#8b008b;font-weight:700>with</span> <span style=color:#658b00>open</span>(jianli_path,<span style=color:#cd5555>&#39;wb&#39;</span>) <span style=color:#8b008b;font-weight:700>as</span> fp:
+                fp.write(jianli_data)
+                <span style=color:#8b008b;font-weight:700>print</span>(title,<span style=color:#cd5555>&#39;</span><span style=color:#cd5555>\t\t\t</span><span style=color:#cd5555>保存成功了&#39;</span>)
+        <span style=color:#8b008b;font-weight:700>except</span> <span style=color:#008b45;font-weight:700>Exception</span> <span style=color:#8b008b;font-weight:700>as</span> err:
+            <span style=color:#8b008b;font-weight:700>print</span>(title,<span style=color:#cd5555>&#39;</span><span style=color:#cd5555>\t\t\t</span><span style=color:#cd5555>下载失败了&#39;</span>)
+</code></pre></div><blockquote><p>站长素材高清图片下载</p><ul><li>反爬机制：图片懒加载，广泛应用于一些图片的网站中<ul><li>只有当图片被显示在浏览器可视化范围之内才会将img的伪属性变成真正的属性</li><li>如果是requests发起的请求，是没有可视化范围的，因此要解析img伪属性的值（图片地址）</li></ul></li></ul></blockquote><hr width=100% id=EOF><p style=color:#777>最后修改于 2021-06-18</p></div></div><nav class=post-pagination><a class=newer-posts href=https://a390177226.github.io/python/cookie/>Next<br>python爬虫[4]--cookie+代理操作+验证码识别+模拟登录</a>
+<a class=older-posts href=https://a390177226.github.io/python/requests/>Previous<br>python爬虫[2]--requests模块</a></nav><div class=post-comment-wrapper></div></div></div></div></div><div id=single-column-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
+zzb2021.</div></div><script>let app;app=new Vue({el:'#app',data:{scrollY:0,navOpacity:0,isDrawerOpen:!1,mounted:!1,isDarkMode:!1},methods:{sgn(a,b){let c=1/(1-2*a);return b<=a?0:b>=1-a?1:c*(b-a)},handleScroll(){this.scrollY=window.scrollY,this.navOpacity=this.sgn(0,Math.min(1,Math.max(0,window.scrollY/(this.pageHeadHeight()-this.navBarHeight()*.8))));const{navBar:c,navBackground:a,navTitle:b,extraContainer:d,streamContainer:e}=this.$refs;this.navOpacity>=1?(a.style.opacity=1,b.style.opacity=1):(a.style.opacity=0,b.style.opacity=0)},handleResize(){const{navBar:c,navBackground:d,navTitle:e,extraContainer:a,streamContainer:b}=this.$refs;a.style.left=b.offsetWidth-a.offsetWidth+'px'},navBarHeight(){return this.$refs.navBar.offsetHeight},pageHeadHeight(){return this.$refs.pageHead.offsetHeight},toggleDrawer(){this.isDrawerOpen=!this.isDrawerOpen,document.getElementsByTagName('html')[0].style.overflow=this.isDrawerOpen?'hidden':'unset'},closeDrawer(){this.isDrawerOpen=!1,document.getElementsByTagName('html')[0].style.overflow=this.isDrawerOpen?'hidden':'unset'},toggleDarkMode(){this.isDarkMode=!this.isDarkMode,this.isDarkMode==!0?(document.cookie="night=1;path=/",document.body.classList.add("night")):(document.cookie="night=0;path=/",document.body.classList.remove("night"))}},created(){window.addEventListener('scroll',this.handleScroll),window.addEventListener('resize',this.handleResize),window._nonDesktop=function(){let a=!1;return function(b){(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(b)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(b.substr(0,4)))&&(a=!0)}(navigator.userAgent||navigator.vendor||window.opera),a};var a=document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,"$1");a==""?window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches:a=="1"&&this.toggleDarkMode()},mounted(){this.handleScroll(),this.handleResize(),this.mounted=!0},destroyed(){window.removeEventListener('scroll',this.handleScroll),window.removeEventListener('resize',this.handleResize)}})</script><script src=https://a390177226.github.io//js/journal.js></script></body></html>

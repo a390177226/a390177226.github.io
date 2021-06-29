@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Codewars on ZZB's blog</title><link>https://a390177226.github.io/codewars/</link><description>Recent content in Codewars on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Fri, 04 Jun 2021 13:44:05 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/codewars/index.xml" rel="self" type="application/rss+xml"/><item><title>JS刷题</title><link>https://a390177226.github.io/codewars/js/algorithms/</link><pubDate>Fri, 04 Jun 2021 13:44:05 +0800</pubDate><guid>https://a390177226.github.io/codewars/js/algorithms/</guid><description>Day 1 2021-06-04
+1 Description:
+Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+My solution：
+var countBits = function(n) { var m = n.</description></item></channel></rss>

@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JS on ZZB's blog</title><link>https://a390177226.github.io/categories/js/</link><description>Recent content in JS on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Wed, 19 May 2021 14:56:33 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/categories/js/index.xml" rel="self" type="application/rss+xml"/><item><title>JS Web API</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/</link><pubDate>Wed, 19 May 2021 14:56:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/</guid><description>Web API Web API是浏览器提供的一套操作浏览器功能和页面元素的API（BOM和DOM）。
-Web API主要是针对于浏览器提供的接口，主要针对于浏览器做交互效果。
-Web API一般都有输入和输出（函数的传参和返回值），Web API很多都是方法（函数）。
-DOM 文档对象类型（Document Object Model，DOM）是W3C定义的访问文档的标准：
-“W3C 文档对象模型（DOM）是中立于平台和语言的接口，它允许程序和脚本动态地访问、更新文档的内容、结构和样式。”
-W3C DOM 标准被分为 3 个不同的部分：
-Core DOM - 所有文档类型的标准模型 XML DOM - XML 文档的标准模型 HTML DOM - HTML 文档的标准模型 HTML DOM 是 HTML 的标准对象模型和编程接口。它定义了：
-作为对象的 HTML 元素 所有 HTML 元素的属性 访问所有 HTML 元素的方法 所有 HTML 元素的事件 换言之：HTML DOM 是关于如何获取、更改、添加或删除 HTML 元素的标准。
-HTML DOM 树 文档：一个页面就是一个文档，DOM中使用doument表示 元素：页面中的所有标签都是元素，DOM中使用element表示 节点：网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示 DOM把以上内容都看作是对象</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JS on ZZB's blog</title><link>https://a390177226.github.io/categories/js/</link><description>Recent content in JS on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Fri, 21 May 2021 15:47:41 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/categories/js/index.xml" rel="self" type="application/rss+xml"/><item><title>JS 正则表达式</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jsregexp/</link><pubDate>Fri, 21 May 2021 15:47:41 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jsregexp/</guid><description>Links 学习视频
+正则表达式30分钟入门~bilibili 文档
+正则表达式 – 教程 | 菜鸟教程 在线测试网站
+RegExr英文 RegExr中文 练习网站
+编程胶囊 (codejiaonang.com) 什么是正则表达式？ 正则表达式是构成搜索模式（search pattern）的字符序列。
+正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。
+正则表达式可用于执行所有类型的文本搜索和文本替换操作。
+语法
+/pattern/modifiers; 实例
+// 从字符串 str 中提取数字部分的内容(匹配一次)： var str = &amp;#34;abc123def&amp;#34;; var patt1 = /[0-9]+/; document.write(str.match(patt1)); // 输出123 修饰符 修饰符 描述 i 执行对大小写不敏感的匹配 g 执行全局匹配（查找所有匹配而非在找到第一个匹配后停止） m 执行多行匹配 常用模式 名称 语法 说明 实例 实例说明 字符组 [ABC] 匹配 [&amp;hellip;] 中的所有字符 [Pp]ython 匹配 “Python” 或 “python” 非集 [^ABC] 匹配不在集合中的任何字符 [^au] 除了au字母以外的所有字符 区间 [A-Z] 匹配所有大写字母 [a-zA-Z0-9] 匹配任何字母及数字 匹配特殊字符 \- 使用 \ 就可以进行对特殊符号进行转义 \+ 匹配1 + 1 = 2中的加号 元字符 描述 \w 与任意单词字符匹配，等价于[A-Za-z0-9_] \d 与任意数字匹配，[0-9] \s 匹配任何空白字符 (空格, 制表符, 换行符)，[ \f\n\r\t\v] \b 匹配的是单词的边界，例如er\b 可以匹配&amp;quot;never&amp;quot; 中的 &amp;lsquo;er&amp;rsquo;，但不能匹配 &amp;ldquo;verb&amp;rdquo; 中的 &amp;lsquo;er&amp;rsquo; ^和$ ^指定的是一个字符串的开始，$指定的是一个字符串的结束 .</description></item></channel></rss>
