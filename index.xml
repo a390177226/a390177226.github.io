@@ -1033,114 +1033,7 @@ json.dump(all_data_list,fp=fp,ensure_ascii=False)
 &lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;Over!!!&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ol>
-- https://a390177226.github.io/python/requests/ - zzb2021.</description></item><item><title>JS刷题</title><link>https://a390177226.github.io/codewars/js/algorithms/</link><pubDate>Fri, 04 Jun 2021 13:44:05 +0800</pubDate><guid>https://a390177226.github.io/codewars/js/algorithms/</guid><description>ZZB's blog https://a390177226.github.io/codewars/js/algorithms/ -&lt;h1 id="day-1">Day 1&lt;/h1>
-&lt;p>2021-06-04&lt;/p>
-&lt;h2 id="1">1&lt;/h2>
-&lt;blockquote>
-&lt;p>Description:&lt;/p>
-&lt;p>Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Example: The binary representation of &lt;code>1234&lt;/code> is &lt;code>10011010010&lt;/code>, so the function should return &lt;code>5&lt;/code> in this case&lt;/p>
-&lt;/blockquote>
-&lt;p>My solution：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> countBits = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(n) {
-&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> m = n.toString(&lt;span style="color:#b452cd">2&lt;/span>); &lt;span style="color:#228b22">// 十进制转二进制
-&lt;/span>&lt;span style="color:#228b22">&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> count = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span>(&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i=&lt;span style="color:#b452cd">0&lt;/span>;i&amp;lt;m.length;i++) {
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (m[i] === &lt;span style="color:#cd5555">&amp;#39;1&amp;#39;&lt;/span>){
-count++;
-}
-}
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> count;
-};
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Best Practices:&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> countBits = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(n) {
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> n.toString(&lt;span style="color:#b452cd">2&lt;/span>).replace(&lt;span style="color:#1c7e71">/0/g&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>).length;
-&lt;span style="color:#228b22">// return n.toString(2).match(/1/g).length;
-&lt;/span>&lt;span style="color:#228b22">&lt;/span>};
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> countBits = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(n) {
-&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> count = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">while&lt;/span>(n &amp;gt; &lt;span style="color:#b452cd">0&lt;/span>){
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span>(n%&lt;span style="color:#b452cd">2&lt;/span> === &lt;span style="color:#b452cd">1&lt;/span>) {
-count++;
-}
-n = &lt;span style="color:#658b00">Math&lt;/span>.floor(n/&lt;span style="color:#b452cd">2&lt;/span>);
-}
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> count;
-};
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="2">2&lt;/h2>
-&lt;blockquote>
-&lt;p>Description:&lt;/p>
-&lt;p>In this kata, you are asked to square every digit of a number and concatenate them.&lt;/p>
-&lt;p>Note: The function accepts an integer and returns an integer&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Example: If we run 9119 through the function, 811181 will come out, because 9^2 is 81 and 1^2​ is 1.&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> squareDigits(num){
-&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> str = num.toString(&lt;span style="color:#b452cd">10&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> result = &lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> (&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> i=&lt;span style="color:#b452cd">0&lt;/span>;i&amp;lt;str.length;i++){
-&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> m = &lt;span style="color:#658b00">parseInt&lt;/span>(str[i]);
-m = &lt;span style="color:#658b00">Math&lt;/span>.pow(m, &lt;span style="color:#b452cd">2&lt;/span>);
-m = m.toString(&lt;span style="color:#b452cd">10&lt;/span>);
-result += m;
-}
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#658b00">parseInt&lt;/span>(result);
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="3">3&lt;/h2>
-&lt;blockquote>
-&lt;p>Description: Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition. The binary number returned should be a string.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Example: &lt;code>addBinary(1,1)='10'&lt;/code>&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> addBinary(a,b) {
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> (a+b).toString(&lt;span style="color:#b452cd">2&lt;/span>);
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="4">4&lt;/h2>
-&lt;blockquote>
-&lt;p>Description:&lt;/p>
-&lt;p>ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but &lt;strong>exactly&lt;/strong> 4 digits or exactly 6 digits.&lt;/p>
-&lt;p>If the function is passed a valid PIN string, return &lt;code>true&lt;/code>, else return &lt;code>false&lt;/code>.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Example: &amp;ldquo;1234&amp;rdquo; &amp;ndash;&amp;gt; true, &amp;ldquo;12345&amp;rdquo; &amp;ndash;&amp;gt; false, &amp;ldquo;a234&amp;rdquo; &amp;ndash;&amp;gt; false&lt;/p>
-&lt;/blockquote>
-&lt;p>My solutions:&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> validatePIN (pin) {
-&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> digits = pin.match(&lt;span style="color:#1c7e71">/\d/g&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> others = pin.match(&lt;span style="color:#1c7e71">/[^\d]/g&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> ( digits != &lt;span style="color:#8b008b;font-weight:bold">null&lt;/span> &amp;amp;&amp;amp; (digits.length ==&lt;span style="color:#b452cd">4&lt;/span> || digits.length == &lt;span style="color:#b452cd">6&lt;/span>) &amp;amp;&amp;amp; others == &lt;span style="color:#8b008b;font-weight:bold">null&lt;/span>) {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">true&lt;/span>;}
-&lt;span style="color:#8b008b;font-weight:bold">else&lt;/span> {&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">false&lt;/span>;}
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Best Practices:&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> validatePIN(pin) {
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#1c7e71">/^(\d{4}|\d{6})$/&lt;/span>.test(pin)
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="5">5&lt;/h2>
-&lt;blockquote>
-&lt;p>Description:&lt;/p>
-&lt;p>You might know some pretty large perfect squares. But what about the NEXT one?&lt;/p>
-&lt;p>Complete the &lt;code>findNextSquare&lt;/code> method that finds the next integral perfect square after the one passed as a parameter.&lt;/p>
-&lt;p>Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.&lt;/p>
-&lt;p>If the parameter is itself not a perfect square then &lt;code>-1&lt;/code> should be returned. You may assume the parameter is non-negative.&lt;/p>
-&lt;/blockquote>
-&lt;blockquote>
-&lt;p>Example:&lt;/p>
-&lt;p>findNextSquare(121) &amp;ndash;&amp;gt; returns 144&lt;/p>
-&lt;p>findNextSquare(625) &amp;ndash;&amp;gt; returns 676&lt;/p>
-&lt;p>findNextSquare(114) &amp;ndash;&amp;gt; returns -1 since 114 is not a perfect square&lt;/p>
-&lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span> findNextSquare(sq) {
-&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> n = &lt;span style="color:#658b00">Math&lt;/span>.sqrt(sq);
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (n%&lt;span style="color:#b452cd">1&lt;/span>==&lt;span style="color:#b452cd">0&lt;/span>){
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#658b00">Math&lt;/span>.pow(n+&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">2&lt;/span>);
-}
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> -&lt;span style="color:#b452cd">1&lt;/span>;
-}
-&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/codewars/js/algorithms/ - zzb2021.</description></item><item><title>python爬虫[1]--概述</title><link>https://a390177226.github.io/python/webscraper_overview/</link><pubDate>Tue, 01 Jun 2021 18:28:53 +0800</pubDate><guid>https://a390177226.github.io/python/webscraper_overview/</guid><description>ZZB's blog https://a390177226.github.io/python/webscraper_overview/ -&lt;h1 id="links">Links&lt;/h1>
+- https://a390177226.github.io/python/requests/ - zzb2021.</description></item><item><title>python爬虫[1]--概述</title><link>https://a390177226.github.io/python/webscraper_overview/</link><pubDate>Tue, 01 Jun 2021 18:28:53 +0800</pubDate><guid>https://a390177226.github.io/python/webscraper_overview/</guid><description>ZZB's blog https://a390177226.github.io/python/webscraper_overview/ -&lt;h1 id="links">Links&lt;/h1>
 &lt;p>视频教程&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://www.bilibili.com/video/BV1GQ4y197Vh?p=11">7天学会Python爬虫-轻松爬取各种网站数据实战(2021完整版)| b站&lt;/a>&lt;/li>
@@ -2032,4 +1925,4 @@ ax.set_title(&lt;span style="color:#cd5555">&amp;#39;Generation={}&amp;#39;&lt;/
 &lt;li>&lt;strong>Adaptive modelling of tumour volume dynamics under radiotherapy&lt;/strong>(有数据)&lt;/li>
 &lt;li>In vivo mathematical modeling of tumor growth from imaging data: Soon to come in the future?&lt;/li>
 &lt;/ol>
-- https://a390177226.github.io/research/lungcancer/ - zzb2021.</description></item></channel></rss>
+- https://a390177226.github.io/research/lungcancer/ - zzb2021.</description></item><item><title>MathematicalModeling</title><link>https://a390177226.github.io/research/mathematicalmodeling/</link><pubDate>Fri, 28 May 2021 10:27:32 +0800</pubDate><guid>https://a390177226.github.io/research/mathematicalmodeling/</guid><description>ZZB's blog https://a390177226.github.io/research/mathematicalmodeling/ -- https://a390177226.github.io/research/mathematicalmodeling/ - zzb2021.</description></item></channel></rss>

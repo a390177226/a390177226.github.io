@@ -3,12 +3,7 @@
 利用ajax可以做：
 注册时，输入用户名自动检测用户是否已经存在 登陆时，提示用户名密码错误 简单的例子 HTML页面：test.html
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;demo&amp;#34;&amp;gt; &amp;lt;h2&amp;gt;The XMLHttpRequest Object&amp;lt;/h2&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; onclick=&amp;#34;loadDoc()&amp;#34;&amp;gt;Change Content&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; function loadDoc() { const xhttp = new XMLHttpRequest(); xhttp.onload = function () { document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = this.responseText; } xhttp.open(&amp;#34;GET&amp;#34;, &amp;#34;ajax_info.txt&amp;#34;, true); xhttp.send(); } &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 文本：ajax_info.txt，在test.html同一级目录下
-AJAX 如何工作 网页中发生一个事件（页面加载、按钮点击） 由 JavaScript 创建 XMLHttpRequest 对象 XMLHttpRequest 对象向 web 服务器发送请求 服务器处理该请求 服务器将响应发送回网页 由 JavaScript 读取响应 由 JavaScript 执行正确的动作（比如更新页面） XHR对象 所有现代浏览器都支持 XMLHttpRequest（XHR） 对象。</description></item><item><title>JS刷题</title><link>https://a390177226.github.io/codewars/js/algorithms/</link><pubDate>Fri, 04 Jun 2021 13:44:05 +0800</pubDate><guid>https://a390177226.github.io/codewars/js/algorithms/</guid><description>Day 1 2021-06-04
-1 Description:
-Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
-Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
-My solution：
-var countBits = function(n) { var m = n.</description></item><item><title>JSON</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/</link><pubDate>Fri, 21 May 2021 13:51:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/</guid><description>Introduction What is JSON? JSON 指的是 JavaScript 对象表示（JavaScript Object Notation）
+AJAX 如何工作 网页中发生一个事件（页面加载、按钮点击） 由 JavaScript 创建 XMLHttpRequest 对象 XMLHttpRequest 对象向 web 服务器发送请求 服务器处理该请求 服务器将响应发送回网页 由 JavaScript 读取响应 由 JavaScript 执行正确的动作（比如更新页面） XHR对象 所有现代浏览器都支持 XMLHttpRequest（XHR） 对象。</description></item><item><title>JSON</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/</link><pubDate>Fri, 21 May 2021 13:51:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/</guid><description>Introduction What is JSON? JSON 指的是 JavaScript 对象表示（JavaScript Object Notation）
 JSON 是一种轻量级的文本格式，用于数据存储和交换
 JSON 具有自我描述性（self-describing），更易理解
 Why use JSON? 由于JSON格式是纯文本的，因此可以很容易地将其发送到服务器或从服务器发送出去，并被任何编程语言用作数据格式。

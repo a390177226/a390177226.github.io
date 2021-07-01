@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Fri, 25 Jun 2021 12:49:07 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>MathematicalModeling</title><link>https://a390177226.github.io/research/mathematicalmodeling/</link><pubDate>Fri, 28 May 2021 10:27:32 +0800</pubDate><guid>https://a390177226.github.io/research/mathematicalmodeling/</guid><description>ZZB's blog https://a390177226.github.io/research/mathematicalmodeling/ -- https://a390177226.github.io/research/mathematicalmodeling/ - zzb2021.</description></item><item><title>Cancer Facts</title><link>https://a390177226.github.io/research/cancerfacts/</link><pubDate>Fri, 28 May 2021 10:26:47 +0800</pubDate><guid>https://a390177226.github.io/research/cancerfacts/</guid><description>ZZB's blog https://a390177226.github.io/research/cancerfacts/ -&lt;h1 id="cancer-facts--figures-2021">Cancer Facts &amp;amp; Figures 2021&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Fri, 25 Jun 2021 12:49:07 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Cancer Facts</title><link>https://a390177226.github.io/research/cancerfacts/</link><pubDate>Fri, 28 May 2021 10:26:47 +0800</pubDate><guid>https://a390177226.github.io/research/cancerfacts/</guid><description>ZZB's blog https://a390177226.github.io/research/cancerfacts/ -&lt;h1 id="cancer-facts--figures-2021">Cancer Facts &amp;amp; Figures 2021&lt;/h1>
 &lt;p>links: &lt;a href="https://www.cancer.org/research/cancer-facts-statistics/all-cancer-facts-figures/cancer-facts-figures-2021.html">Cancer Facts &amp;amp; Figures 2021 | American Cancer Society&lt;/a>&lt;/p>
 &lt;h1 id="lung-cancer">Lung Cancer&lt;/h1>
 &lt;p>links: &lt;a href="https://www.cancer.org/cancer/lung-cancer.html">Lung Cancer Guide | American Cancer Society&lt;/a>&lt;/p>
@@ -2608,4 +2608,236 @@ Your browser does not support the audio element.
 &lt;li>其他内容，如图像和视频都有更优秀、更容易元素来处理&lt;/li>
 &lt;/ul>
 &lt;/blockquote>
-- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_intermediate_tutorial/ - zzb2021.</description></item></channel></rss>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_intermediate_tutorial/ - zzb2021.</description></item><item><title>HTML Beginner Tutorial</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_beginner_tutorial/</link><pubDate>Wed, 21 Apr 2021 18:23:09 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_beginner_tutorial/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_beginner_tutorial/ -&lt;h1 id="what-is-html">What is HTML?&lt;/h1>
+&lt;p>HTML 是用来描述网页的一种语言。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>HTML 指的是超文本标记语言 (&lt;strong>H&lt;/strong>yper &lt;strong>T&lt;/strong>ext &lt;strong>M&lt;/strong>arkup &lt;strong>L&lt;/strong>anguage)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>HTML 不是一种编程语言，而是一种&lt;strong>标记语言&lt;/strong> (markup language)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>标记语言是一套&lt;strong>标记标签&lt;/strong> (markup tag)&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>HTML 使用&lt;strong>标记标签&lt;/strong>来告知浏览器如何组织页面，即描述页面的结构&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="basic-document">Basic Document&lt;/h1>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">title&lt;/span>&amp;gt;Document&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">title&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;My First Heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;My first paragraph.&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
+&lt;li>&lt;code>&amp;lt;!DOCTYPE html&amp;gt;&lt;/code>告诉浏览器文档是HTML5版本编写，它不是 HTML 标签, 只是文档类型声明&lt;/li>
+&lt;li>&lt;code>&amp;lt;html&amp;gt;&amp;lt;/html&amp;gt;&lt;/code>是页面中最大的标签，称为&lt;strong>根标签&lt;/strong>&lt;/li>
+&lt;li>&lt;code>&amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;&lt;/code>定义文档的头部，包含了所有想包含在HTML页面中但不想在HTML页面中显示的内容&lt;/li>
+&lt;li>&lt;code>&amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;&lt;/code>定义文档的主体，包含了访问页面时所有显示在页面上的内容，文本，图片，游戏等等&lt;/li>
+&lt;/ul>
+&lt;h1 id="tags-attributes-and-elements">Tags, Attributes, and Elements&lt;/h1>
+&lt;h2 id="tags">Tags&lt;/h2>
+&lt;p>HTML 标记标签通常被称为 HTML 标签 (HTML tag)。&lt;/p>
+&lt;ul>
+&lt;li>HTML 标签是由&lt;strong>尖括号&lt;/strong>包围的关键词，比如 &lt;code>&amp;lt;html&amp;gt;&lt;/code>&lt;/li>
+&lt;li>HTML 标签通常是&lt;strong>成对出现&lt;/strong>的，我们称为&lt;strong>双标签&lt;/strong>，比如 &lt;code>&amp;lt;b&amp;gt;&lt;/code>和 &lt;code>&amp;lt;/b&amp;gt;&lt;/code>&lt;/li>
+&lt;li>标签对中的第一个标签是&lt;strong>开始标签&lt;/strong>（opening tag），第二个标签是&lt;strong>结束标签&lt;/strong>（closing tag）&lt;/li>
+&lt;li>有些特殊的标签必须是单个标签（极少情况），例如&lt;code>&amp;lt;br /&amp;gt;&lt;/code>，我们称为&lt;strong>单标签&lt;/strong>&lt;/li>
+&lt;li>HTML 标签大小写不敏感，但W3C推荐小写&lt;/li>
+&lt;/ul>
+&lt;h2 id="attributes">Attributes&lt;/h2>
+&lt;p>HTML 标签可以拥有&lt;strong>属性&lt;/strong>。属性提供了有关 HTML 元素的&lt;strong>更多的信息&lt;/strong>。&lt;/p>
+&lt;p>属性总是以名称/值对的形式出现，比如：&lt;strong>name=&amp;ldquo;value&amp;rdquo;&lt;/strong>。&lt;/p>
+&lt;p>属性总是在 HTML 元素的&lt;strong>开始标签&lt;/strong>中规定。&lt;/p>
+&lt;h2 id="elements">Elements&lt;/h2>
+&lt;p>HTML 元素指的是从开始标签到结束标签的所有代码。&lt;/p>
+&lt;ul>
+&lt;li>HTML 元素以开始标签起始,以结束标签终止,元素的内容是开始标签与结束标签之间的内容&lt;/li>
+&lt;li>某些 HTML 元素具有&lt;strong>空内容（empty content）&lt;/strong>，例如&lt;code>&amp;lt;br&amp;gt;&lt;/code>&lt;/li>
+&lt;li>空元素在开始标签中进行关闭（以开始标签的结束而结束）&lt;/li>
+&lt;li>HTML 元素可以嵌套&lt;/li>
+&lt;/ul>
+&lt;h1 id="basic-elements">Basic Elements&lt;/h1>
+&lt;h2 id="headings">Headings&lt;/h2>
+&lt;p>HTML 标题是要在网页上显示的标题或副标题。&lt;/p>
+&lt;ul>
+&lt;li>HTML 标题总共有六个&lt;code>&amp;lt;h1&amp;gt;-&amp;lt;h6&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>&amp;lt;h1&amp;gt;&lt;/code> 定义最大的标题，&lt;code>&amp;lt;h6&amp;gt;&lt;/code> 定义最小的标题&lt;/li>
+&lt;li>HTML 标题对于显示文档结构很重要&lt;/li>
+&lt;/ul>
+&lt;h2 id="paragraphs">Paragraphs&lt;/h2>
+&lt;p>段落总是从新行开始，通常是一个文本块。&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>段落是通过&lt;code> &amp;lt;p&amp;gt;&lt;/code> 标签定义的&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>换行使用&lt;code>&amp;lt;br&amp;gt;&lt;/code>标签&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>所有连续的空格或空行都会被算作一个空格&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="links">Links&lt;/h2>
+&lt;p>几乎可以在所有的网页中找到链接。点击链接可以从一张页面跳转到另一张页面。&lt;/p>
+&lt;ul>
+&lt;li>链接的基本语法是：&lt;code>&amp;lt;a href=&amp;quot;url&amp;quot;&amp;gt;link text&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>href&lt;/code>属性指定了链接目标的 URL&lt;/li>
+&lt;li>如果设置&lt;code>target=&amp;quot;_blank&amp;quot;&lt;/code>属性，则会在新窗口中打开该链接&lt;/li>
+&lt;li>&amp;ldquo;link text&amp;rdquo; 不必一定是文本，图片或其他 HTML 元素都可以成为链接&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>链接也可以实现页面内部跳转功能&lt;/p>
+&lt;ol>
+&lt;li>使用&lt;code>id&lt;/code>属性创建书签：&lt;code>&amp;lt;h2 id=&amp;quot;C4&amp;quot;&amp;gt;Chapter 4&amp;lt;/h2&amp;gt;&lt;/code>&lt;/li>
+&lt;li>添加指向书签的链接：&lt;code>&amp;lt;a href=&amp;quot;#C4&amp;quot;&amp;gt;Jump to Chapter 4&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;li>还可以在另一页上添加指向书签的链接：&lt;code>&amp;lt;a href=&amp;quot;html_demo.html#C4&amp;quot;&amp;gt;Jump to Chapter 4&amp;lt;/a&amp;gt;&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;/blockquote>
+&lt;h2 id="images">Images&lt;/h2>
+&lt;p>在 HTML 中，图像由 &lt;code>&amp;lt;img&amp;gt;&lt;/code> 标签定义，它并不会在网页中插入图像，而是从网页上链接图像。&lt;/p>
+&lt;ul>
+&lt;li>语法：&lt;code>&amp;lt;img src=&amp;quot;url&amp;quot; alt=&amp;quot;alternatetext&amp;quot;&amp;gt;&lt;/code>&lt;/li>
+&lt;li>&lt;code>src&lt;/code>属性指定图像的路径，必需属性&lt;/li>
+&lt;li>&lt;code>alt&lt;/code>属性指定图像无法显示时的备用文本，必需属性&lt;/li>
+&lt;li>&lt;code>width&lt;/code>和&lt;code>height&lt;/code>设置图片大小，不推荐使用，使用CSS样式代替&lt;/li>
+&lt;/ul>
+&lt;h2 id="lists">Lists&lt;/h2>
+&lt;p>HTML 支持有序、无序和自定义列表&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>列表&lt;/th>
+&lt;th>语法&lt;/th>
+&lt;th>特点&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>无序列表&lt;/td>
+&lt;td>无序列表始于 &lt;code>&amp;lt;ul&amp;gt;&lt;/code> 标签，每个列表项始于 &lt;code>&amp;lt;li&amp;gt;&lt;/code>&lt;/td>
+&lt;td>使用最多&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>有序列表&lt;/td>
+&lt;td>有序列表始于 &lt;code>&amp;lt;ol&amp;gt;&lt;/code> 标签，每个列表项始于 &lt;code>&amp;lt;li&amp;gt;&lt;/code>&lt;/td>
+&lt;td>使用较少&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>自定义列表&lt;/td>
+&lt;td>自定义列表以 &lt;code>&amp;lt;dl&amp;gt;&lt;/code> 标签开始，每个列表项以 &lt;code>&amp;lt;dt&amp;gt;&lt;/code> 开始，每个列表项的定义以 &lt;code>&amp;lt;dd&amp;gt;&lt;/code> 开始&lt;/td>
+&lt;td>使用最少&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="tables">Tables&lt;/h2>
+&lt;p>表格由 &lt;code>&amp;lt;table&amp;gt;&lt;/code> 标签来定义，主要用于&lt;strong>显示、展示数据&lt;/strong>。&lt;/p>
+&lt;p>表格的表头由 &lt;code>&amp;lt;th&amp;gt;&lt;/code> 标签定义，表格的每一行由 &lt;code>&amp;lt;tr&amp;gt;&lt;/code> 标签定义。&lt;/p>
+&lt;p>表格的每一个单元格由 &lt;code>&amp;lt;td&amp;gt;&lt;/code> 标签进行定义，单元格可以包含文本、图片、列表等等。&lt;/p>
+&lt;h2 id="forms">Forms&lt;/h2>
+&lt;p>表单用于收集用户输入的数据。例如，它们可以用作web应用程序的接口，或者通过web发送数据。&lt;/p>
+&lt;p>表单由表单域、表单元素、提示信息组成。&lt;/p>
+&lt;p>&lt;code>&amp;lt;form&amp;gt;&lt;/code>标签定义了表单域，即把它范围内的表单元素信息提交给服务器。&lt;/p>
+&lt;p>常用的表单元素：&lt;/p>
+&lt;ul>
+&lt;li>最重要的是&lt;code>&amp;lt;input&amp;gt;&lt;/code> 元素，类型很多，由&lt;code>type&lt;/code>属性指定&lt;/li>
+&lt;li>&lt;code>&amp;lt;select&amp;gt;&lt;/code> 元素定义下拉列表，&lt;code>&amp;lt;option&amp;gt;&lt;/code>元素定义待选择的选项&lt;/li>
+&lt;li>&lt;code>&amp;lt;textarea&amp;gt;&lt;/code> 元素定义多行输入字段（文本域）&lt;/li>
+&lt;li>&lt;code>&amp;lt;button&amp;gt;&lt;/code>元素定义按钮&lt;/li>
+&lt;/ul>
+&lt;blockquote>
+&lt;p>&lt;code>&amp;lt;input&amp;gt; &lt;/code>元素的输入类型&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>&amp;lt;input type=&amp;quot;text&amp;quot;&amp;gt;&lt;/code> 定义单行文本输入字段&lt;/li>
+&lt;li>&lt;code>&amp;lt;input type=&amp;quot;password&amp;quot;&amp;gt;&lt;/code> 定义密码字段&lt;/li>
+&lt;li>&lt;code>&amp;lt;input type=&amp;quot;radio&amp;quot;&amp;gt;&lt;/code> 定义单选按钮&lt;/li>
+&lt;li>&lt;code>&amp;lt;input type=&amp;quot;checkbox&amp;quot;&amp;gt;&lt;/code> 定义复选框&lt;/li>
+&lt;li>&lt;code>&amp;lt;input type=&amp;quot;submit&amp;quot;&amp;gt;&lt;/code> 定义提交表单数据至表单处理程序的按钮&lt;/li>
+&lt;li>&lt;code>&amp;lt;input type=&amp;quot;button&amp;gt;&lt;/code> 定义按钮&lt;/li>
+&lt;/ul>
+&lt;/blockquote>
+&lt;h1 id="others">Others&lt;/h1>
+&lt;h2 id="comments">Comments&lt;/h2>
+&lt;p>HTML 注释不会显示在浏览器中，但它们可以帮助记录HTML源代码。&lt;/p>
+&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#228b22">&amp;lt;!-- Write your comments here --&amp;gt;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="entities">Entities&lt;/h2>
+&lt;p>HTML 中的预留字符必须被替换为字符实体。&lt;/p>
+&lt;p>例如，在 HTML 中不能使用小于号（&amp;lt;）和大于号（&amp;gt;），这是因为浏览器会误认为它们是标签。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>常用&lt;/th>
+&lt;th>描述&lt;/th>
+&lt;th>实体名称&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>&lt;/td>
+&lt;td>空格符&lt;/td>
+&lt;td>&lt;code>&amp;amp;nbsp;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;lt;&lt;/td>
+&lt;td>less-than&lt;/td>
+&lt;td>&lt;code>&amp;amp;lt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;gt;&lt;/td>
+&lt;td>greater-than&lt;/td>
+&lt;td>&lt;code>&amp;amp;gt;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>&amp;amp;&lt;/td>
+&lt;td>ampersand&lt;/td>
+&lt;td>&lt;code>&amp;amp;amp;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>©&lt;/td>
+&lt;td>版权（copyright）&lt;/td>
+&lt;td>&lt;code>&amp;amp;copy;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>²&lt;/td>
+&lt;td>superscript 2&lt;/td>
+&lt;td>&lt;code>&amp;amp;sup2;&lt;/code>&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>如需完整的实体符号参考，请访问 &lt;a href="https://www.w3school.com.cn/tags/html_ref_entities.html">HTML 实体符号参考手册 (w3school.com.cn)&lt;/a>&lt;/p>
+&lt;h2 id="text-formatting">Text Formatting&lt;/h2>
+&lt;p>HTML 可定义很多供格式化输出的元素，比如粗体和斜体字。&lt;/p>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th style="text-align:left">常用标签&lt;/th>
+&lt;th style="text-align:left">描述&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;b&amp;gt;&amp;lt;/b&amp;gt;&lt;/code>或&lt;code>&amp;lt;strong&amp;gt;&amp;lt;/strong&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">加粗&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;i&amp;gt;&amp;lt;/i&amp;gt;&lt;/code>或&lt;code>&amp;lt;em&amp;gt;&amp;lt;/em&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">倾斜&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;del&amp;gt;&amp;lt;/del&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">删除线&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:left">&lt;code>&amp;lt;ins&amp;gt;&amp;lt;/ins&amp;gt;&lt;/code>&lt;/td>
+&lt;td style="text-align:left">下划线&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>如需完整的格式化标签，请访问&lt;a href="https://www.w3school.com.cn/html/html_formatting.asp">HTML 文本格式化 (w3school.com.cn)&lt;/a>&lt;/p>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_beginner_tutorial/ - zzb2021.</description></item></channel></rss>
