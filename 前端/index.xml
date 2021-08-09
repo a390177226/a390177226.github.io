@@ -1,76 +1,56 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>前端s on ZZB's blog</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/</link><description>Recent content in 前端s on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Thu, 01 Jul 2021 14:17:33 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>jQuery</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jquery/</link><pubDate>Thu, 01 Jul 2021 14:17:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jquery/</guid><description>Links jQuery 基础教程| 简单教程 jQuery 参考手册| 简单教程 简介 jQuery 是一个轻量级的 &amp;ldquo;写的少，做的多&amp;rdquo; 的 JavaScript 库 jQuery 极大地简化了 JavaScript 编程，优化了DOM操作、事件处理、动画设计和Ajax交互 jQuery 很容易学习，提高开发效率 优点：
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>前端s on ZZB's blog</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/</link><description>Recent content in 前端s on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Wed, 07 Jul 2021 12:32:07 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>Bootstrap 4</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/bootstrap4/</link><pubDate>Wed, 07 Jul 2021 12:32:07 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/bootstrap4/</guid><description>Links 官网
+Bootstrap | Bootstrap 英文网 Bootstrap v4 | Bootstrap 中文网 教程
+Bootstrap 4 Tutorial (w3schools.com) Bootstrap 4 基础教程 | 简单教程 What is Bootstrap? Bootstrap 是全球最受欢迎的前端框架，用于构建响应式、移动设备优先的网站
+Bootstrap 包括基于HTML和CSS的设计模板，用于排版、表单、按钮、表格、导航、modals、图像旋转木马和许多其他内容，以及可选的JavaScript插件
+Why Use Bootstrap? 简单易用：只要对HTML和CSS有基本了解的人都可以开始使用Bootstrap 响应特性：Bootstrap的响应CSS可以根据手机、平板电脑和台式机进行调整 mobile-first原则：mobile-first样式是核心框架的一部分 浏览器兼容性：bootstrap兼容所有现代浏览器 How To Use Bootstrap? Include Bootstrap 4 from a CDN Download Bootstrap 4 from getbootstrap.com 简单示例 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;en&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Bootstrap 4 Example&amp;lt;/title&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width, initial-scale=1&amp;#34;&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;https://maxcdn.</description></item><item><title>Sass</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/sass/</link><pubDate>Tue, 06 Jul 2021 15:14:37 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/sass/</guid><description>Links 官网（有教程和文档）
+Sass&amp;ndash;世界上最成熟、稳定和强大的CSS扩展语言 | Sass中文网 Sass: Syntactically Awesome Style Sheets (sass-lang.com) 教程
+Sass Tutorial (w3schools.com) What is Sass? Sass是Syntactically Awesome Stylesheet的缩写
+Sass是CSS的扩展
+Sass是一个CSS预处理器
+Sass与CSS的所有版本完全兼容
+Sass减少了CSS的重复，因此节省了时间
+Why Use Sass? 样式表越来越大，越来越复杂，也越来越难维护，这是CSS预处理器可以提供帮助的地方 Sass允许您使用CSS中不存在的特性，比如变量、嵌套规则、混合、导入、继承、内置函数等 How Does Sass Work? 由于浏览器不理解Sass代码，需要一个Sass预处理器来将Sass代码转换成标准CSS，这个过程称为transpiling Sass文件具有“.scss”文件扩展名 安装Sass 下面这个应用程序可以让你在几分钟内启动并运行Sass
+Scout-App 简单示例 // mystyle.scss /* Define standard variables and values for website */ $bgcolor: lightblue; $textcolor: darkblue; $fontsize: 18px; /* Use the variables */ body { background-color: $bgcolor; color: $textcolor; font-size: $fontsize; } // mystyle.</description></item><item><title>[Dig Deeper]--jQuery</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-jquery/</link><pubDate>Thu, 01 Jul 2021 14:17:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-jquery/</guid><description>Links jQuery 基础教程| 简单教程 jQuery 参考手册| 简单教程 简介 jQuery 是一个轻量级的 &amp;ldquo;写的少，做的多&amp;rdquo; 的 JavaScript 库 jQuery 极大地简化了 JavaScript 编程，优化了DOM操作、事件处理、动画设计和Ajax交互 jQuery 很容易学习，提高开发效率 优点：
 轻量级 跨浏览器兼容 免费、开源 安装和使用 下载使用（推荐）
 从 jquery.com 下载 jQuery 库 在工作目录下保存为jquery-3.6.0.min.js 引用jQuery：&amp;lt;script src=&amp;quot;jquery-2.2.4.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 不下载，通过CDN（Content Delivery Network）使用
 简单的例子 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;jquery-3.6.0.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt;aaaaaa&amp;lt;/p&amp;gt; &amp;lt;script&amp;gt;$(&amp;#39;p&amp;#39;).hide()&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; jQuery 语法 jQuery 通过选取 HTML 元素，并对选取的元素执行某些操作
 基础语法：$( selector ).action()
-美元符号$是jQuery 的别名</description></item><item><title>AJAX</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js_ajax/</link><pubDate>Fri, 25 Jun 2021 12:49:07 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js_ajax/</guid><description>简介 AJAX = Asynchronous JavaScript And XML（异步的JavaScript和XML） AJAX 是一种无需重新加载整个网页的情况下，能够更新部分网页的技术 AJAX 不是一种编程语言，而是一种用于创建更好更快以及交互性更强的Web应用程序的技术 传统网页（即不用ajax技术的网页），想要更新内容或者提交一个表单，都需要重新加载整个网页
+美元符号$是jQuery 的别名</description></item><item><title>[Dig Deeper]--AJAX</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/</link><pubDate>Fri, 25 Jun 2021 12:49:07 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/</guid><description>简介 AJAX = Asynchronous JavaScript And XML（异步的JavaScript和XML） AJAX 是一种无需重新加载整个网页的情况下，能够更新部分网页的技术 AJAX 不是一种编程语言，而是一种用于创建更好更快以及交互性更强的Web应用程序的技术 传统网页（即不用ajax技术的网页），想要更新内容或者提交一个表单，都需要重新加载整个网页
 使用ajax技术的网页，通过在后台服务器进行少量的数据交换，就可以实现异步局部更新
 利用ajax可以做：
 注册时，输入用户名自动检测用户是否已经存在 登陆时，提示用户名密码错误 简单的例子 HTML页面：test.html
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;demo&amp;#34;&amp;gt; &amp;lt;h2&amp;gt;The XMLHttpRequest Object&amp;lt;/h2&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; onclick=&amp;#34;loadDoc()&amp;#34;&amp;gt;Change Content&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; function loadDoc() { const xhttp = new XMLHttpRequest(); xhttp.onload = function () { document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = this.responseText; } xhttp.open(&amp;#34;GET&amp;#34;, &amp;#34;ajax_info.txt&amp;#34;, true); xhttp.send(); } &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 文本：ajax_info.txt，在test.html同一级目录下
-AJAX 如何工作 网页中发生一个事件（页面加载、按钮点击） 由 JavaScript 创建 XMLHttpRequest 对象 XMLHttpRequest 对象向 web 服务器发送请求 服务器处理该请求 服务器将响应发送回网页 由 JavaScript 读取响应 由 JavaScript 执行正确的动作（比如更新页面） XHR对象 所有现代浏览器都支持 XMLHttpRequest（XHR） 对象。</description></item><item><title>JS 正则表达式</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jsregexp/</link><pubDate>Fri, 21 May 2021 15:47:41 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jsregexp/</guid><description>Links 学习视频
-正则表达式30分钟入门~bilibili 文档
-正则表达式 – 教程 | 菜鸟教程 在线测试网站
-RegExr英文 RegExr中文 练习网站
-编程胶囊 (codejiaonang.com) 什么是正则表达式？ 正则表达式是构成搜索模式（search pattern）的字符序列。
-正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。
-正则表达式可用于执行所有类型的文本搜索和文本替换操作。
-语法
-/pattern/modifiers; 实例
-// 从字符串 str 中提取数字部分的内容(匹配一次)： var str = &amp;#34;abc123def&amp;#34;; var patt1 = /[0-9]+/; document.write(str.match(patt1)); // 输出123 修饰符 修饰符 描述 i 执行对大小写不敏感的匹配 g 执行全局匹配（查找所有匹配而非在找到第一个匹配后停止） m 执行多行匹配 常用模式 名称 语法 说明 实例 实例说明 字符组 [ABC] 匹配 [&amp;hellip;] 中的所有字符 [Pp]ython 匹配 “Python” 或 “python” 非集 [^ABC] 匹配不在集合中的任何字符 [^au] 除了au字母以外的所有字符 区间 [A-Z] 匹配所有大写字母 [a-zA-Z0-9] 匹配任何字母及数字 匹配特殊字符 \- 使用 \ 就可以进行对特殊符号进行转义 \+ 匹配1 + 1 = 2中的加号 元字符 描述 \w 与任意单词字符匹配，等价于[A-Za-z0-9_] \d 与任意数字匹配，[0-9] \s 匹配任何空白字符 (空格, 制表符, 换行符)，[ \f\n\r\t\v] \b 匹配的是单词的边界，例如er\b 可以匹配&amp;quot;never&amp;quot; 中的 &amp;lsquo;er&amp;rsquo;，但不能匹配 &amp;ldquo;verb&amp;rdquo; 中的 &amp;lsquo;er&amp;rsquo; ^和$ ^指定的是一个字符串的开始，$指定的是一个字符串的结束 .</description></item><item><title>JSON</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/</link><pubDate>Fri, 21 May 2021 13:51:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/json/</guid><description>Introduction What is JSON? JSON 指的是 JavaScript 对象表示（JavaScript Object Notation）
+AJAX 如何工作 网页中发生一个事件（页面加载、按钮点击） 由 JavaScript 创建 XMLHttpRequest 对象 XMLHttpRequest 对象向 web 服务器发送请求 服务器处理该请求 服务器将响应发送回网页 由 JavaScript 读取响应 由 JavaScript 执行正确的动作（比如更新页面） XHR对象 所有现代浏览器都支持 XMLHttpRequest（XHR） 对象。</description></item><item><title>[Dig Deeper]--JSON</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-json/</link><pubDate>Fri, 21 May 2021 13:51:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-json/</guid><description>Introduction What is JSON? JSON 指的是 JavaScript 对象表示（JavaScript Object Notation）
 JSON 是一种轻量级的文本格式，用于数据存储和交换
 JSON 具有自我描述性（self-describing），更易理解
 Why use JSON? 由于JSON格式是纯文本的，因此可以很容易地将其发送到服务器或从服务器发送出去，并被任何编程语言用作数据格式。
 JSON vs XML JSON和XML都可以用来从web服务器接收数据。
-JSON类似 XML JSON相比 XML 的不同之处 都是纯文本 JSON没有结束标签 具有“自我描述性”（人类可读） JSON更短 具有层级结构（值中存在值） JSON读写的速度更快 可通过 JavaScript 进行解析 JSON能够使用JS的内建方法进行解析 可使用 AJAX 进行传输 JSON可以使用数组，不使用保留字 Syntax JSON 语法是 JavaScript 语法的子集。</description></item><item><title>JS Web API</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/</link><pubDate>Wed, 19 May 2021 14:56:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jswebapi/</guid><description>Web API Web API是浏览器提供的一套操作浏览器功能和页面元素的API（BOM和DOM）。
-Web API主要是针对于浏览器提供的接口，主要针对于浏览器做交互效果。
-Web API一般都有输入和输出（函数的传参和返回值），Web API很多都是方法（函数）。
-DOM 文档对象类型（Document Object Model，DOM）是W3C定义的访问文档的标准：
+JSON类似 XML JSON相比 XML 的不同之处 都是纯文本 JSON没有结束标签 具有“自我描述性”（人类可读） JSON更短 具有层级结构（值中存在值） JSON读写的速度更快 可通过 JavaScript 进行解析 JSON能够使用JS的内建方法进行解析 可使用 AJAX 进行传输 JSON可以使用数组，不使用保留字 Syntax JSON 语法是 JavaScript 语法的子集。</description></item><item><title>[Learn the Basics]--DOM,BOM</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-dombom/</link><pubDate>Wed, 19 May 2021 14:56:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-dombom/</guid><description>DOM 文档对象类型（Document Object Model，DOM）是W3C定义的访问文档的标准：
 “W3C 文档对象模型（DOM）是中立于平台和语言的接口，它允许程序和脚本动态地访问、更新文档的内容、结构和样式。”
-W3C DOM 标准被分为 3 个不同的部分：
-Core DOM - 所有文档类型的标准模型 XML DOM - XML 文档的标准模型 HTML DOM - HTML 文档的标准模型 HTML DOM 是 HTML 的标准对象模型和编程接口。它定义了：
+HTML DOM 是 HTML 的标准对象模型和编程接口。它定义了：
 作为对象的 HTML 元素 所有 HTML 元素的属性 访问所有 HTML 元素的方法 所有 HTML 元素的事件 换言之：HTML DOM 是关于如何获取、更改、添加或删除 HTML 元素的标准。
-HTML DOM 树 文档：一个页面就是一个文档，DOM中使用doument表示 元素：页面中的所有标签都是元素，DOM中使用element表示 节点：网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示 DOM把以上内容都看作是对象</description></item><item><title>JS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js%E5%9F%BA%E7%A1%80/</guid><description>JS的组成 组成 描述 ECMAScript JavaScript的语法 DOM 页面文档对象类型 BOM 浏览器对象模型 JS使用 在 HTML 中，JavaScript 代码必须位于 &amp;lt;script&amp;gt; 与 &amp;lt;/script&amp;gt; 标签之间。
+HTML DOM 树 文档：一个页面就是一个文档，DOM中使用doument表示 元素：页面中的所有标签都是元素，DOM中使用element表示 节点：网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示 DOM把以上内容都看作是对象
+查找元素 方法 描述 document.getElementById(id) 通过元素 id 来查找元素 document.getElementsByTagName(name) 通过标签名来查找元素 document.getElementsByClassName(name) 通过类名来查找元素 document.querySelector(&amp;lsquo;选择器&amp;rsquo;) 通过 CSS 选择器查找 HTML 元素 document.</description></item><item><title>[Learn the Basics]--JavaScript(ES5)</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-javascriptes5/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-javascriptes5/</guid><description>JS的组成 组成 描述 ECMAScript JavaScript的语法 DOM 页面文档对象类型 BOM 浏览器对象模型 JS使用 在 HTML 中，JavaScript 代码必须位于 &amp;lt;script&amp;gt; 与 &amp;lt;/script&amp;gt; 标签之间。
 内部脚本 脚本可被放置与 HTML 页面的 &amp;lt;body&amp;gt; 或 &amp;lt;head&amp;gt; 部分中，或兼而有之。
 &amp;lt;script&amp;gt; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = &amp;#34;我的第一段 JavaScript&amp;#34;; &amp;lt;/script&amp;gt; 提示: 把脚本置于 &amp;lt;body&amp;gt;元素的底部，可改善显示速度，因为脚本编译会拖慢显示。
 外部脚本 脚本可放置与外部文件中：
 外部文件：myScript.js
 function myFunction() { document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = &amp;#34;段落被更改。&amp;#34;; } &amp;lt;script src=&amp;#34;myScript.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 注释: 外部脚本不能包含&amp;lt;script&amp;gt;标签。
 在外部文件中放置脚本有如下优势：
-分离了 HTML 和代码 使 HTML 和 JavaScript 更易于阅读和维护 已缓存的 JavaScript 文件可加速页面加载 输入输出语句 方法 说明 归属 window.</description></item><item><title>CSS高级</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</link><pubDate>Thu, 06 May 2021 12:51:44 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%AB%98%E7%BA%A7/</guid><description>精灵图 图像精灵（Image Sprites）是单个图像中包含的图像集合。
-包含许多图像的网页可能需要很长时间才能加载，同时会生成多个服务器请求。
-使用图像精灵将减少服务器请求的数量并节约带宽。
-字体图标 向 HTML 页面添加图标的最简单方法是使用图标库。
-如果遇到一些结构和样式比较简单的小图标，就用字体图片。
-如果遇到一些结构和样式比较复杂的小图标，就用精灵图。
-三角(Triangle) CSS Triangle | CSS-Tricks
-div { width: 0; height: 0; border: 5px solid transparent; border-left-color: pink; } 用户界面 属性 描述 cursor 更改用户的鼠标样式 outline 轮廓 outline: none;取消轮廓 resize 规定可以由用户调整 div 元素的大小 resize: none;防止表单拖拽 垂直对齐 vertical-align 属性设置元素的垂直对齐方式。
-只针对于行内元素或者行内块元素。
-使用场景：设置图片或者表单和文字垂直对齐。
-文本溢出 text-overflow 属性规定应如何向用户呈现未显示的溢出内容。
-p.test2 { white-space: nowrap; width: 200px; border: 1px solid #000000; overflow: hidden; text-overflow: ellipsis; } CSS初始化 css初始化是指重设浏览器的样式。不同的浏览器默认的样式可能不尽相同，所以开发时的第一件事可能就是如何把它们统一。如果没对CSS初始化往往会出现浏览器之间的页面差异。</description></item><item><title>CSS基础</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/</link><pubDate>Mon, 26 Apr 2021 13:24:55 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E5%9F%BA%E7%A1%80/</guid><description>字体属性 属性 描述 font 简写属性。在一条声明中设置所有字体属性。 font-family 规定文本的字体系列（字体族）。 font-size 规定文本的字体大小。 font-style 规定文本的字体样式。 font-variant 规定是否以小型大写字母的字体显示文本。 font-weight 规定字体的粗细。 文本属性 CSS使用某些文本格式属性来设置样式。
-属性 描述 注意点 color 文本颜色 通常用16进制 text-align 文本水平对齐方式 可以左对齐或右对齐，或居中对齐 text-indent 文本缩进 段落首行缩进两个字: text-indent=2em; text-decoration 文本装饰 text-decoration: none; 通常用于从链接上删除下划线 line-height 行高 背景属性 背景图片：实际开发常见于logo或者一些装饰性的小图片或者是超大的背景图片或者是精灵图，优点是便于控制位置。</description></item><item><title>CSS Beginner Tutorial</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css_beginner_tutorial/</link><pubDate>Fri, 23 Apr 2021 14:06:30 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css_beginner_tutorial/</guid><description>什么是 CSS？ CSS 指的是层叠样式表(Cascading Style Sheets) CSS 描述了如何在屏幕、纸张或其他媒体上显示 HTML 元素 CSS 也是一种标记语言，用于定义网页的样式，包括针对不同设备和屏幕尺寸的设计和布局 CSS 节省了大量工作。它可以同时控制多张网页的布局 外部样式表存储在 CSS 文件中，只需改一个文件即可更改整个网站的外观 CSS语法 CSS 语法由选择器和声明块组成：
-选择器指向需要设置样式的 HTML 元素 声明块用花括号括起来，包含一条或多条用分号分隔的声明 每条声明都包含一个 CSS 属性名称和一个值，以冒号分隔 如何添加 CSS Inline CSS 行内样式（也称内联样式）可用于为单个元素应用唯一的样式。
-特点：书写方便，权重高。
-例子：&amp;lt;p style=&amp;quot;color:red;&amp;quot;&amp;gt;Test&amp;lt;/p&amp;gt;
-Internal CSS 如果一张 HTML 页面拥有唯一的样式，那么可以使用内部样式表。
-内部样式是在 head 部分的 &amp;lt;style&amp;gt; 元素中进行定义。
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;style&amp;gt; body { background-color: linen;} &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;This is a heading&amp;lt;/h1&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; External CSS 通过使用外部样式表，只需修改一个文件即可改变整个网站的外观。</description></item><item><title>HTML Intermediate Tutorial</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_intermediate_tutorial/</link><pubDate>Wed, 21 Apr 2021 18:50:24 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_intermediate_tutorial/</guid><description>Block and Inline Elements 每个HTML元素都有一个默认的显示值，这取决于它是什么类型的元素。
-Display value 区别 例子 Block-level elements 总是从新行开始，占据可用的全部宽度，有上下外边距（margin） &amp;lt;p&amp;gt; Inline elements 不会从新行开始，只占用所需的宽度，没有上下外边距（margin） &amp;lt;a&amp;gt; 注意：行内元素不能包含块级元素！
-Div and Span 大多数HTML 标签都有语义（例如，p表示段落、h1表示标题），但是span和div标签没有特定的语义。
-&amp;lt;div&amp;gt; 元素是块级元素，通常是其他 HTML 元素的容器，另一个常见的用途是文档布局。
-&amp;lt;span&amp;gt; 元素是行内元素，可用作文本的容器。
-&amp;lt;div id=&amp;#34;scissors&amp;#34;&amp;gt; &amp;lt;p&amp;gt;This is &amp;lt;span class=&amp;#34;paper&amp;#34;&amp;gt;crazy&amp;lt;/span&amp;gt;&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt; 注：HTML5引入了许多新的语义标签，请尽可能的使用语义标签来代替&amp;lt;div&amp;gt;和&amp;lt;span&amp;gt;。
-Head Element HTML &amp;lt;head&amp;gt;元素是以下元素的容器：&amp;lt;title&amp;gt;、&amp;lt;style&amp;gt;、&amp;lt;meta&amp;gt;、&amp;lt;link&amp;gt;、&amp;lt;script&amp;gt;和&amp;lt;base&amp;gt;。
-标签 说明 &amp;lt;title&amp;gt; 定义文档的标题，是必需的 &amp;lt;style&amp;gt; 定义单个HTML页的样式信息 &amp;lt;link&amp;gt; 定义当前文档和外部资源之间的关系，最常用于链接外部样式表 &amp;lt;meta&amp;gt; 通常用于指定字符集、页面描述、关键字、文档作者和视口设置。 &amp;lt;script&amp;gt; 用于定义客户端JavaScripts &amp;lt;base&amp;gt; 为页面上的所有链接规定默认地址或默认目标（target） Meta Tags 元数据（metadata）是关于数据的信息。</description></item><item><title>HTML Beginner Tutorial</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_beginner_tutorial/</link><pubDate>Wed, 21 Apr 2021 18:23:09 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html_beginner_tutorial/</guid><description>What is HTML? HTML 是用来描述网页的一种语言。
+分离了 HTML 和代码 使 HTML 和 JavaScript 更易于阅读和维护 已缓存的 JavaScript 文件可加速页面加载 输入输出语句 方法 说明 归属 window.</description></item><item><title>CSS重点</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%87%8D%E7%82%B9/</link><pubDate>Fri, 23 Apr 2021 14:06:30 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%87%8D%E7%82%B9/</guid><description>CSS Mindmap 什么是 CSS？ CSS 指的是层叠样式表(Cascading Style Sheets) CSS 描述了如何在屏幕、纸张或其他媒体上显示 HTML 元素 CSS 也是一种标记语言，用于定义网页的样式，包括针对不同设备和屏幕尺寸的设计和布局 CSS 节省了大量工作。它可以同时控制多张网页的布局 外部样式表存储在 CSS 文件中，只需改一个文件即可更改整个网站的外观 如何添加 CSS 方式 位置 特点 Inline CSS 在相关元素的 &amp;ldquo;style&amp;rdquo; 属性中定义 书写方便，权重高 Internal CSS 在 HTML 页面&amp;lt;head&amp;gt; 部分内的 &amp;lt;style&amp;gt; 元素中定义 控制一张 HTML 页面的样式 External CSS 在 HTML 页面 &amp;lt;head&amp;gt; 部分内的 &amp;lt;link&amp;gt; 元素中定义 控制多个 HTML 页面的样式 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;mystyle.</description></item><item><title>HTML重点</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E9%87%8D%E7%82%B9/</link><pubDate>Wed, 21 Apr 2021 18:23:09 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E9%87%8D%E7%82%B9/</guid><description>Links 教程和文档
+简单教程(twle.cn) w3school 在线教程 W3Schools Online Web Tutorials MDN Web Docs (mozilla.org) HTML5
+HTML 5 基础教程 - 简单教程 HTML Mindmap What is HTML? HTML 是用来描述网页的一种语言。
 HTML 指的是超文本标记语言 (Hyper Text Markup Language)
 HTML 不是一种编程语言，而是一种标记语言 (markup language)
 标记语言是一套标记标签 (markup tag)
 HTML 使用标记标签来告知浏览器如何组织页面，即描述页面的结构
-Basic Document &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;Document&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;h1&amp;gt;My First Heading&amp;lt;/h1&amp;gt; &amp;lt;p&amp;gt;My first paragraph.&amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;!DOCTYPE html&amp;gt;告诉浏览器文档是HTML5版本编写，它不是 HTML 标签, 只是文档类型声明 &amp;lt;html&amp;gt;&amp;lt;/html&amp;gt;是页面中最大的标签，称为根标签 &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt;定义文档的头部，包含了所有想包含在HTML页面中但不想在HTML页面中显示的内容 &amp;lt;body&amp;gt;&amp;lt;/body&amp;gt;定义文档的主体，包含了访问页面时所有显示在页面上的内容，文本，图片，游戏等等 Tags, Attributes, and Elements Tags HTML 标记标签通常被称为 HTML 标签 (HTML tag)。
-HTML 标签是由尖括号包围的关键词，比如 &amp;lt;html&amp;gt; HTML 标签通常是成对出现的，我们称为双标签，比如 &amp;lt;b&amp;gt;和 &amp;lt;/b&amp;gt; 标签对中的第一个标签是开始标签（opening tag），第二个标签是结束标签（closing tag） 有些特殊的标签必须是单个标签（极少情况），例如&amp;lt;br /&amp;gt;，我们称为单标签 HTML 标签大小写不敏感，但W3C推荐小写 Attributes HTML 标签可以拥有属性。属性提供了有关 HTML 元素的更多的信息。</description></item><item><title>Web基础知识</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/</link><pubDate>Wed, 21 Apr 2021 17:59:55 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/web_basic/</guid><description>Web 标准 构成 主要包括结构(Structure)、表现(Presentation) 和 行为(Behavior) 三个方面。
-标准 说明 结构 结构用于对网页元素进行整理和分类，现阶段主要学的是HTML 表现 表现用于设置网页元素的版式、颜色、大小等外观样式，主要指的是CSS 行为 行为是指网页模型的定义及交互的编写，现阶段主要学的是JavaScript Web标准提出的最佳体验方案：结构、样式、行为相分离。
-简单理解：结构写到HTML文件中，表现写到CSS文件中，行为写到JavaScript文件中。</description></item><item><title>Overview of front-end web development</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</link><pubDate>Wed, 21 Apr 2021 14:55:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/overview/</guid><description>Links 参考手册：
-w3school中文 W3Schools英文 MDN Web Docs (mozilla.org) 路线视频：Frontend Learning Path in 2021 - YouTube
-a aaaa
-前端学习路线图 从开始到找到工作的六个阶段 阶段 需要学的东西 时间 1 HTML+CSS 1-2周 2 JavaScript 一个月左右 3 ES6、ES7、ES8、ES9 4 移动端和多端布局 在工作中不断精进 5 Node.js 6 Vue框架</description></item></channel></rss>
+What is HTML5? HTML5 是 最新的 HTML 标准，由W3C在 2014 年完成标准制定
+HTML5 是专门为承载丰富的 web 内容而设计的，并且无需额外插件 HTML5 拥有新的语义、图形以及多媒体元素 HTML5 提供的新元素和新的 API 简化了 web 应用程序的搭建 HTML5 是跨平台的，被设计为在不同类型的硬件（PC、平板、手机等）之上运行 Basic Document &amp;lt;!</description></item><item><title>前端学习路线</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/roadmap/</link><pubDate>Wed, 21 Apr 2021 14:55:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/roadmap/</guid><description>Links 教程网站
+简单教程(twle.cn)
+w3school 在线教程
+W3Schools Online Web Tutorials
+MDN Web Docs (mozilla.org)
+路线
+Web Development (w3schools.com)
+Frontend Learning Path in 2021 - YouTube
+Front-End Roadmap HTML Mindmap</description></item></channel></rss>

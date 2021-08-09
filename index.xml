@@ -1,4 +1,334 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Thu, 01 Jul 2021 14:17:33 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>jQuery</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jquery/</link><pubDate>Thu, 01 Jul 2021 14:17:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jquery/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jquery/ -&lt;h1 id="links">Links&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Mon, 09 Aug 2021 22:49:50 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Mac环境配置</title><link>https://a390177226.github.io/post/mac%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link><pubDate>Mon, 09 Aug 2021 22:49:50 +0800</pubDate><guid>https://a390177226.github.io/post/mac%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid><description>ZZB's blog https://a390177226.github.io/post/mac%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/ -&lt;h1 id="1-安装homebrew">1. 安装homebrew&lt;/h1>
+&lt;p>homebrew官网：https://brew.sh/&lt;/p>
+&lt;h2 id="install-homebrew">Install Homebrew&lt;/h2>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">/bin/bash -c &lt;span style="color:#cd5555">&amp;#34;&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">$(&lt;/span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh&lt;span style="color:#8b008b;font-weight:bold">)&lt;/span>&lt;span style="color:#cd5555">&amp;#34;&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="添加到环境变量">添加到环境变量&lt;/h2>
+&lt;p>可以修复&lt;code>zsh command not found: brew?&lt;/code>问题，具体见：&lt;a href="https://stackoverflow.com/questions/65619529/fixing-zsh-command-not-found-brew-installing-homebrew">Fixing zsh command not found: brew?｜stackoverflow &lt;/a>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-bash" data-lang="bash">&lt;span style="color:#658b00">cd&lt;/span> /opt/homebrew/bin/
+&lt;span style="color:#00688b">PATH&lt;/span>=&lt;span style="color:#00688b">$PATH&lt;/span>:/opt/homebrew/bin
+&lt;span style="color:#658b00">cd&lt;/span>
+touch .zshrc
+&lt;span style="color:#658b00">echo&lt;/span> &lt;span style="color:#658b00">export&lt;/span> &lt;span style="color:#00688b">PATH&lt;/span>=&lt;span style="color:#00688b">$PATH&lt;/span>:/opt/homebrew/bin &amp;gt;&amp;gt; .zshrc
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="2-配置github">2. 配置github&lt;/h1>
+&lt;p>&lt;a href="https://blog.csdn.net/smile0125/article/details/80885064">Mac 终端创建ssh key并添加到GitHub&lt;/a>&lt;/p>
+- https://a390177226.github.io/post/mac%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/ - zzb2021.</description></item><item><title>Bootstrap 4</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/bootstrap4/</link><pubDate>Wed, 07 Jul 2021 12:32:07 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/bootstrap4/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/bootstrap4/ -&lt;h1 id="links">Links&lt;/h1>
+&lt;p>官网&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://getbootstrap.com/">Bootstrap | Bootstrap 英文网&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://v4.bootcss.com/">Bootstrap v4 | Bootstrap 中文网&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>教程&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.w3schools.com/bootstrap4/default.asp">Bootstrap 4 Tutorial (w3schools.com)&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.twle.cn/l/yufei/bootstrap4/bootstrap-v4-index.html">Bootstrap 4 基础教程 | 简单教程&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="what-is-bootstrap">What is Bootstrap?&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>Bootstrap 是全球最受欢迎的前端框架，用于构建响应式、移动设备优先的网站&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Bootstrap 包括基于HTML和CSS的设计模板，用于排版、表单、按钮、表格、导航、modals、图像旋转木马和许多其他内容，以及可选的JavaScript插件&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="why-use-bootstrap">Why Use Bootstrap?&lt;/h1>
+&lt;ul>
+&lt;li>简单易用：只要对HTML和CSS有基本了解的人都可以开始使用Bootstrap&lt;/li>
+&lt;li>响应特性：Bootstrap的响应CSS可以根据手机、平板电脑和台式机进行调整&lt;/li>
+&lt;li>mobile-first原则：mobile-first样式是核心框架的一部分&lt;/li>
+&lt;li>浏览器兼容性：bootstrap兼容所有现代浏览器&lt;/li>
+&lt;/ul>
+&lt;h1 id="how-to-use-bootstrap">How To Use Bootstrap?&lt;/h1>
+&lt;ul>
+&lt;li>Include Bootstrap 4 from a CDN&lt;/li>
+&lt;li>Download Bootstrap 4 from getbootstrap.com&lt;/li>
+&lt;/ul>
+&lt;h1 id="简单示例">简单示例&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span> &lt;span style="color:#658b00">lang&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;en&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">title&lt;/span>&amp;gt;Bootstrap 4 Example&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">title&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">charset&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;utf-8&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">name&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;viewport&amp;#34;&lt;/span> &lt;span style="color:#658b00">content&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;width=device-width, initial-scale=1&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">link&lt;/span> &lt;span style="color:#658b00">rel&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#658b00">href&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;container&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;My First Bootstrap Page&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is some text.&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="containers">Containers&lt;/h1>
+&lt;p>容器用于填充其中的内容，有两个可用的容器类：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>.container&lt;/code>：提供响应性固定宽度容器&lt;/li>
+&lt;li>&lt;code>.container-fluid&lt;/code>：提供一个全宽容器，覆盖视口的整个宽度&lt;/li>
+&lt;/ul>
+&lt;h1 id="grids">Grids&lt;/h1>
+&lt;p>Bootstrap的网格系统是用flexbox构建的，允许页面上最多12列，列将根据屏幕大小自动重新排列&lt;/p>
+&lt;p>Bootstrap 4网格系统有五个类：&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>.col-&lt;/code> 针对所有设备&lt;/li>
+&lt;li>&lt;code>.col-sm-&lt;/code> 平板 - 屏幕宽度等于或大于 576px&lt;/li>
+&lt;li>&lt;code>.col-md-&lt;/code> 桌面显示器 - 屏幕宽度等于或大于 768px)&lt;/li>
+&lt;li>&lt;code>.col-lg-&lt;/code> 大桌面显示器 - 屏幕宽度等于或大于 992px)&lt;/li>
+&lt;li>&lt;code>.col-xl-&lt;/code> 超大桌面显示器 - 屏幕宽度等于或大于 1200px)&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#228b22">&amp;lt;!-- 自动控制列宽度，每个col的列宽度均为6 --&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;row&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;col&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;col&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&lt;span style="color:#228b22">&amp;lt;!-- 手动控制列宽度，每个col的列宽度分别为4、8 --&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;row&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;col-sm-4&amp;#34;&lt;/span>&amp;gt;.col-sm-4&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;col-sm-8&amp;#34;&lt;/span>&amp;gt;.col-sm-8&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/bootstrap4/ - zzb2021.</description></item><item><title>Sass</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/sass/</link><pubDate>Tue, 06 Jul 2021 15:14:37 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/sass/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/sass/ -&lt;h1 id="links">Links&lt;/h1>
+&lt;p>官网（有教程和文档）&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.sass.hk/">Sass&amp;ndash;世界上最成熟、稳定和强大的CSS扩展语言 | Sass中文网&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://sass-lang.com/">Sass: Syntactically Awesome Style Sheets (sass-lang.com)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;p>教程&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.w3schools.com/sass/default.php">Sass Tutorial (w3schools.com)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="what-is-sass">What is Sass?&lt;/h1>
+&lt;ul>
+&lt;li>
+&lt;p>Sass是&lt;strong>S&lt;/strong>yntactically &lt;strong>A&lt;/strong>wesome &lt;strong>S&lt;/strong>tyle&lt;strong>s&lt;/strong>heet的缩写&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Sass是CSS的扩展&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Sass是一个CSS预处理器&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Sass与CSS的所有版本完全兼容&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Sass减少了CSS的重复，因此节省了时间&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h1 id="why-use-sass">Why Use Sass?&lt;/h1>
+&lt;ul>
+&lt;li>样式表越来越大，越来越复杂，也越来越难维护，这是CSS预处理器可以提供帮助的地方&lt;/li>
+&lt;li>Sass允许您使用CSS中不存在的特性，比如变量、嵌套规则、混合、导入、继承、内置函数等&lt;/li>
+&lt;/ul>
+&lt;h1 id="how-does-sass-work">How Does Sass Work?&lt;/h1>
+&lt;ul>
+&lt;li>由于浏览器不理解Sass代码，需要一个Sass预处理器来将Sass代码转换成标准CSS，这个过程称为transpiling&lt;/li>
+&lt;li>Sass文件具有“.scss”文件扩展名&lt;/li>
+&lt;/ul>
+&lt;h1 id="安装sass">安装Sass&lt;/h1>
+&lt;p>下面这个应用程序可以让你在几分钟内启动并运行Sass&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="http://scout-app.io/">Scout-App&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="简单示例">简单示例&lt;/h1>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#228b22">// mystyle.scss
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>
+&lt;span style="color:#228b22">/* Define standard variables and values for website */&lt;/span>
+&lt;span style="color:#00688b">$bgcolor&lt;/span>: &lt;span style="color:#00688b">lightblue&lt;/span>;
+&lt;span style="color:#00688b">$textcolor&lt;/span>: &lt;span style="color:#00688b">darkblue&lt;/span>;
+&lt;span style="color:#00688b">$fontsize&lt;/span>: &lt;span style="color:#b452cd">18&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#228b22">/* Use the variables */&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span> {
+&lt;span style="color:#658b00">background-color&lt;/span>: &lt;span style="color:#00688b">$bgcolor&lt;/span>;
+&lt;span style="color:#658b00">color&lt;/span>: &lt;span style="color:#00688b">$textcolor&lt;/span>;
+&lt;span style="color:#658b00">font-size&lt;/span>: &lt;span style="color:#00688b">$fontsize&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">// &lt;span style="color:#8b008b;font-weight:bold">mystyle&lt;/span>.&lt;span style="color:#008b45;font-weight:bold">css&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">lightblue&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">darkblue&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">font-size&lt;/span>: &lt;span style="color:#b452cd">18&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;&lt;span style="color:#a61717;background-color:#e3d2d2">css&lt;/span>
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">// mypage.html
+&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">link&lt;/span> &lt;span style="color:#658b00">rel&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#658b00">href&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;mystyle.css&amp;#34;&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;Hello World&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;
+&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph.&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
+&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="sass-variables">Sass Variables&lt;/h1>
+&lt;p>变量是一种存储信息的方法，方便以后可以重用。&lt;/p>
+&lt;p>Sass声明变量语法：&lt;code>$variablename: value;&lt;/code>&lt;/p>
+&lt;p>变量范围：Sass变量仅在定义它们的嵌套级别可用&lt;/p>
+&lt;p>设置全局变量：&lt;code>!global&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#228b22">// mystyle.scss
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>
+&lt;span style="color:#00688b">$myColor&lt;/span>: &lt;span style="color:#00688b">red&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span> {
+&lt;span style="color:#00688b">$myColor&lt;/span>: &lt;span style="color:#00688b">green&lt;/span>;
+&lt;span style="color:#00688b">$globalColor&lt;/span>: &lt;span style="color:#00688b">green&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">!global&lt;/span>;
+&lt;span style="color:#658b00">color&lt;/span>: &lt;span style="color:#00688b">$myColor&lt;/span>;
+}
+&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> {
+&lt;span style="color:#658b00">color&lt;/span>: &lt;span style="color:#00688b">$myColor&lt;/span>;
+&lt;span style="color:#658b00">background-color&lt;/span>: &lt;span style="color:#00688b">$globalColor&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">// &lt;span style="color:#8b008b;font-weight:bold">mystyle&lt;/span>.&lt;span style="color:#008b45;font-weight:bold">css&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">green&lt;/span>;
+}
+&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">red&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">green&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="sass-nesting">Sass Nesting&lt;/h1>
+&lt;p>Sass允许您以与HTML相同的方式嵌套CSS选择器&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#228b22">// mystyle.scss
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">nav&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">ul&lt;/span> {
+&lt;span style="color:#658b00">margin&lt;/span>: &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#658b00">padding&lt;/span>: &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#658b00">list-style&lt;/span>: none;
+}
+&lt;span style="color:#8b008b;font-weight:bold">li&lt;/span> {
+&lt;span style="color:#658b00">display&lt;/span>: inline-block;
+}
+&lt;span style="color:#8b008b;font-weight:bold">a&lt;/span> {
+&lt;span style="color:#658b00">display&lt;/span>: block;
+&lt;span style="color:#658b00">padding&lt;/span>: &lt;span style="color:#b452cd">6&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">12&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#658b00">text-decoration&lt;/span>: none;
+}
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">// &lt;span style="color:#8b008b;font-weight:bold">mystyle&lt;/span>.&lt;span style="color:#008b45;font-weight:bold">css&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">nav&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">ul&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">margin&lt;/span>: &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">padding&lt;/span>: &lt;span style="color:#b452cd">0&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">list-style&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">none&lt;/span>;
+}
+&lt;span style="color:#8b008b;font-weight:bold">nav&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">li&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">display&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">inline-block&lt;/span>;
+}
+&lt;span style="color:#8b008b;font-weight:bold">nav&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">a&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">display&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">block&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">padding&lt;/span>: &lt;span style="color:#b452cd">6&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">12&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">text-decoration&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">none&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="sass-import-and-partials">Sass @import and Partials&lt;/h1>
+&lt;p>与CSS一样，Sass也支持&lt;code>@import&lt;/code>指令，该指令允许将一个文件的内容包含在另一个文件中&lt;/p>
+&lt;p>Sass导入语法：&lt;code>@import filename;&lt;/code>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#8b008b;font-weight:bold">@import&lt;/span> &lt;span style="color:#cd5555">&amp;#34;variables&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">@import&lt;/span> &lt;span style="color:#cd5555">&amp;#34;colors&amp;#34;&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">@import&lt;/span> &lt;span style="color:#cd5555">&amp;#34;reset&amp;#34;&lt;/span>;
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>通常，有些&lt;code>sass&lt;/code>文件用于导入，并不希望为每个这样的文件单独地生成一个&lt;code>css&lt;/code>文件&lt;/p>
+&lt;p>对此，&lt;code>sass&lt;/code>用一个特殊的约定来解决&lt;/p>
+&lt;ul>
+&lt;li>使用SASS Partials，文件名以下划线开头，例如：&lt;code>_base.scss&lt;/code>&lt;/li>
+&lt;li>然后使用&lt;code>@import 'base';&lt;/code>&lt;/li>
+&lt;li>&lt;code>sass&lt;/code>就不会在编译时单独编译这个文件输出&lt;code>css&lt;/code>，而只把这个文件用作导入&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#228b22">// _base.scss
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>
+&lt;span style="color:#00688b">$font-stack&lt;/span>: Helvetica, sans-serif;
+&lt;span style="color:#00688b">$primary-color&lt;/span>: &lt;span style="color:#b452cd">#333&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span> {
+&lt;span style="color:#658b00">font&lt;/span>: &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">%&lt;/span> &lt;span style="color:#00688b">$font-stack&lt;/span>;
+&lt;span style="color:#658b00">color&lt;/span>: &lt;span style="color:#00688b">$primary-color&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#228b22">// styles.scss
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">@import&lt;/span> &lt;span style="color:#cd5555">&amp;#39;base&amp;#39;&lt;/span>;
+&lt;span style="color:#008b45;font-weight:bold">.inverse&lt;/span> {
+&lt;span style="color:#658b00">background-color&lt;/span>: &lt;span style="color:#00688b">$primary-color&lt;/span>;
+&lt;span style="color:#658b00">color&lt;/span>: white;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">// &lt;span style="color:#8b008b;font-weight:bold">styles&lt;/span>.&lt;span style="color:#008b45;font-weight:bold">css&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">font&lt;/span>: &lt;span style="color:#b452cd">100&lt;/span>&lt;span style="color:#00688b;font-weight:bold">%&lt;/span> Helvetica, &lt;span style="color:#8b008b;font-weight:bold">sans-serif&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#b452cd">#333&lt;/span>;
+}
+.&lt;span style="color:#008b45;font-weight:bold">inverse&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#b452cd">#333&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">white&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="sass-mixin-and-include">Sass @mixin and @include&lt;/h1>
+&lt;h2 id="定义和使用mixin">定义和使用mixin&lt;/h2>
+&lt;p>&lt;code>@mixin&lt;/code>指令允许您创建在整个网站中重用的CSS代码，&lt;code>@include&lt;/code>指令是为了让您使用mixin&lt;/p>
+&lt;p>定义一个mixin，然后使用：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#8b008b;font-weight:bold">@mixin&lt;/span>&lt;span style="color:#008b45"> important-text&lt;/span> {
+&lt;span style="color:#658b00">color&lt;/span>: &lt;span style="color:#00688b">red&lt;/span>;
+&lt;span style="color:#658b00">font-size&lt;/span>: &lt;span style="color:#b452cd">25&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#658b00">font-weight&lt;/span>: bold;
+&lt;span style="color:#658b00">border&lt;/span>: &lt;span style="color:#b452cd">1&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> solid &lt;span style="color:#00688b">blue&lt;/span>;
+}
+&lt;span style="color:#008b45;font-weight:bold">.danger&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">@include&lt;/span>&lt;span style="color:#707a7c"> important-text&lt;/span>;
+&lt;span style="color:#658b00">background-color&lt;/span>: &lt;span style="color:#00688b">green&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Sass transpiler将上述内容转换为普通CSS：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">.&lt;span style="color:#008b45;font-weight:bold">danger&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">red&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">font-size&lt;/span>: &lt;span style="color:#b452cd">25&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">font-weight&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">bold&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">border&lt;/span>: &lt;span style="color:#b452cd">1&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">solid&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">blue&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">green&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="向mixin传递变量">向Mixin传递变量&lt;/h2>
+&lt;p>mixin可以接受参数，这样就可以将变量传递给mixin&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#228b22">/* Define mixin with two arguments */&lt;/span>
+&lt;span style="color:#8b008b;font-weight:bold">@mixin&lt;/span>&lt;span style="color:#008b45"> bordered&lt;/span>(&lt;span style="color:#00688b">$color&lt;/span>, &lt;span style="color:#00688b">$width&lt;/span>) {
+&lt;span style="color:#658b00">border&lt;/span>: &lt;span style="color:#00688b">$width&lt;/span> solid &lt;span style="color:#00688b">$color&lt;/span>;
+}
+&lt;span style="color:#008b45;font-weight:bold">.myArticle&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">@include&lt;/span>&lt;span style="color:#707a7c"> bordered&lt;/span>(&lt;span style="color:#00688b">blue&lt;/span>, &lt;span style="color:#b452cd">1&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>); &lt;span style="color:#228b22">// Call mixin with two values
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;span style="color:#008b45;font-weight:bold">.myNotes&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">@include&lt;/span>&lt;span style="color:#707a7c"> bordered&lt;/span>(&lt;span style="color:#00688b">red&lt;/span>, &lt;span style="color:#b452cd">2&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>); &lt;span style="color:#228b22">// Call mixin with two values
+&lt;/span>&lt;span style="color:#228b22">&lt;/span>}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>Mixin参数可以设置默认值&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#8b008b;font-weight:bold">@mixin&lt;/span>&lt;span style="color:#008b45"> bordered&lt;/span>(&lt;span style="color:#00688b">$color&lt;/span>: &lt;span style="color:#00688b">blue&lt;/span>, &lt;span style="color:#00688b">$width&lt;/span>: &lt;span style="color:#b452cd">1&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>) {
+&lt;span style="color:#658b00">border&lt;/span>: &lt;span style="color:#00688b">$width&lt;/span> solid &lt;span style="color:#00688b">$color&lt;/span>;
+}
+&lt;span style="color:#008b45;font-weight:bold">.myTips&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">@include&lt;/span>&lt;span style="color:#707a7c"> bordered&lt;/span>(&lt;span style="color:#00688b">$color&lt;/span>: &lt;span style="color:#00688b">orange&lt;/span>);
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="sass-extend-and-inheritance">Sass @extend and Inheritance&lt;/h1>
+&lt;p>&lt;code>@extend&lt;/code>指令允许您从一个选择器到另一个选择器共享一组CSS属性&lt;/p>
+&lt;p>如果您的元素样式几乎相同，但只是在一些小细节上有所不同，&lt;code>@extend&lt;/code>指令非常有用&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-scss" data-lang="scss">&lt;span style="color:#008b45;font-weight:bold">.button-basic&lt;/span> {
+&lt;span style="color:#658b00">border&lt;/span>: none;
+&lt;span style="color:#658b00">padding&lt;/span>: &lt;span style="color:#b452cd">15&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">30&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#658b00">text-align&lt;/span>: center;
+&lt;span style="color:#658b00">font-size&lt;/span>: &lt;span style="color:#b452cd">16&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#658b00">cursor&lt;/span>: pointer;
+}
+&lt;span style="color:#008b45;font-weight:bold">.button-report&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">@extend&lt;/span> &lt;span style="color:#008b45;font-weight:bold">.button-basic&lt;/span>;
+&lt;span style="color:#658b00">background-color&lt;/span>: &lt;span style="color:#00688b">red&lt;/span>;
+}
+&lt;span style="color:#008b45;font-weight:bold">.button-submit&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">@extend&lt;/span> &lt;span style="color:#008b45;font-weight:bold">.button-basic&lt;/span>;
+&lt;span style="color:#658b00">background-color&lt;/span>: &lt;span style="color:#00688b">green&lt;/span>;
+&lt;span style="color:#658b00">color&lt;/span>: white;
+}
+&lt;/code>&lt;/pre>&lt;/div>&lt;p>编译后，CSS将如下所示：&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">.&lt;span style="color:#008b45;font-weight:bold">button-basic&lt;/span>, .&lt;span style="color:#008b45;font-weight:bold">button-report&lt;/span>, .&lt;span style="color:#008b45;font-weight:bold">button-submit&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">border&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">none&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">padding&lt;/span>: &lt;span style="color:#b452cd">15&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span> &lt;span style="color:#b452cd">30&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">text-align&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">center&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">font-size&lt;/span>: &lt;span style="color:#b452cd">16&lt;/span>&lt;span style="color:#00688b;font-weight:bold">px&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">cursor&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">pointer&lt;/span>;
+}
+.&lt;span style="color:#008b45;font-weight:bold">button-report&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">red&lt;/span>;
+}
+.&lt;span style="color:#008b45;font-weight:bold">button-submit&lt;/span> {
+&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">green&lt;/span>;
+&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">white&lt;/span>;
+}
+&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/sass/ - zzb2021.</description></item><item><title>[Dig Deeper]--jQuery</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-jquery/</link><pubDate>Thu, 01 Jul 2021 14:17:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-jquery/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-jquery/ -&lt;h1 id="links">Links&lt;/h1>
 &lt;ul>
 &lt;li>&lt;a href="https://www.twle.cn/l/yufei/jquery/jquery-basic-index.html">jQuery 基础教程| 简单教程&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.twle.cn/l/yufei/jqueryref/jquery-ref-selectors.html">jQuery 参考手册| 简单教程&lt;/a>&lt;/li>
@@ -26,7 +356,7 @@
 &lt;/ol>
 &lt;p>不下载，通过CDN（Content Delivery Network）使用&lt;/p>
 &lt;h1 id="简单的例子">简单的例子&lt;/h1>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">charset&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;utf-8&amp;#34;&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;jquery-3.6.0.min.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
@@ -129,7 +459,7 @@
 &lt;h2 id="jquery-事件方法语法">jQuery 事件方法语法&lt;/h2>
 &lt;p>在 jQuery 中，大多数 DOM 事件都有一个等效的 jQuery 方法&lt;/p>
 &lt;p>比如页面中指定一个点击事件&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">$(&lt;span style="color:#cd5555">&amp;#34;p&amp;#34;&lt;/span>).click(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(){
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">$(&lt;span style="color:#cd5555">&amp;#34;p&amp;#34;&lt;/span>).click(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(){
 &lt;span style="color:#228b22">// 动作触发后执行的代码!!
 &lt;/span>&lt;span style="color:#228b22">&lt;/span>});
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="jquery-效果和动画">jQuery 效果和动画&lt;/h1>
@@ -160,7 +490,7 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">charset&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;utf-8&amp;#34;&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;jquery-3.6.0.min.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
@@ -203,7 +533,7 @@ $(&lt;span style="color:#cd5555">&amp;#34;p&amp;#34;&lt;/span>).toggle();
 &lt;h1 id="jquery-方法链--chaining-">jQuery 方法链 ( chaining )&lt;/h1>
 &lt;p>jQuery 还提供了一种一种名为链接（chaining）的技术，允许我们在相同的元素上运行多条 jQuery 命令，这样做的好处就是省去了多次查找相同的元素&lt;/p>
 &lt;p>下面的范例把 css()、slideUp() 和 slideDown() 链接在一起，&amp;ldquo;p1&amp;rdquo; 元素首先会变为红色，然后向上滑动，再然后向下滑动&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">charset&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;utf-8&amp;#34;&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;jquery-3.6.0.min.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
@@ -350,11 +680,11 @@ $(&lt;span style="color:#cd5555">&amp;#34;#p1&amp;#34;&lt;/span>).css(&lt;span s
 &lt;li>可选的 callback 参数是 load() 方法完成后所执行的回调函数&lt;/li>
 &lt;/ul>
 &lt;p>假设服务器上有一个文件 &lt;code>test.txt&lt;/code>，内容如下&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-txt" data-lang="txt">&amp;lt;h4&amp;gt;jQuery AJAX 是个非常棒的功能&amp;lt;/h4&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-txt" data-lang="txt">&amp;lt;h4&amp;gt;jQuery AJAX 是个非常棒的功能&amp;lt;/h4&amp;gt;
 &amp;lt;p&amp;gt;这是段落的一些文本&amp;lt;/p&amp;gt;
 &amp;lt;p&amp;gt;简单教程，简单编程&amp;lt;/p&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>下面的范例会把文件 &amp;ldquo;test.txt&amp;rdquo; 的内容加载到指定的 &lt;code>&amp;lt;div&amp;gt;&lt;/code> 元素中&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">meta&lt;/span> &lt;span style="color:#658b00">charset&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;utf-8&amp;#34;&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;jquery-3.6.0.min.js&amp;#34;&lt;/span>&amp;gt;&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">script&lt;/span>&amp;gt;
@@ -390,14 +720,14 @@ $(&lt;span style="color:#cd5555">&amp;#34;#div1&amp;#34;&lt;/span>).load(&lt;spa
 &lt;h1 id="jquery-noconflict方法">jQuery &lt;code>noConflict()&lt;/code>方法&lt;/h1>
 &lt;p>&lt;code>noConflict()&lt;/code> 用于处理和其它 JavaScript 框架 $ 符号冲突的情况&lt;/p>
 &lt;p>&lt;code>noConflict()&lt;/code> 方法会释放对 $ 标识符的控制，这样其它脚本就可以使用它了&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 创建自己的简写
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">&lt;span style="color:#228b22">// 创建自己的简写
 &lt;/span>&lt;span style="color:#228b22">&lt;/span>&lt;span style="color:#8b008b;font-weight:bold">var&lt;/span> jq = $.noConflict();
 jq(&lt;span style="color:#658b00">document&lt;/span>).ready(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(){
 jq(&lt;span style="color:#cd5555">&amp;#34;button&amp;#34;&lt;/span>).click(&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>(){
 jq(&lt;span style="color:#cd5555">&amp;#34;p&amp;#34;&lt;/span>).text(&lt;span style="color:#cd5555">&amp;#34;jQuery 仍然在工作!&amp;#34;&lt;/span>);
 });
 });
-&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/jquery/ - zzb2021.</description></item><item><title>AJAX</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js_ajax/</link><pubDate>Fri, 25 Jun 2021 12:49:07 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js_ajax/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js_ajax/ -&lt;h1 id="简介">简介&lt;/h1>
+&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-jquery/ - zzb2021.</description></item><item><title>[Dig Deeper]--AJAX</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/</link><pubDate>Fri, 25 Jun 2021 12:49:07 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/ -&lt;h1 id="简介">简介&lt;/h1>
 &lt;blockquote>
 &lt;ul>
 &lt;li>AJAX = &lt;strong>A&lt;/strong>synchronous &lt;strong>J&lt;/strong>avaScript &lt;strong>A&lt;/strong>nd &lt;strong>X&lt;/strong>ML（异步的JavaScript和XML）&lt;/li>
@@ -414,7 +744,7 @@ jq(&lt;span style="color:#cd5555">&amp;#34;p&amp;#34;&lt;/span>).text(&lt;span s
 &lt;/ul>
 &lt;h1 id="简单的例子">简单的例子&lt;/h1>
 &lt;p>HTML页面：test.html&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">id&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;demo&amp;#34;&lt;/span>&amp;gt;
@@ -462,14 +792,14 @@ xhttp.send();
 &lt;/blockquote>
 &lt;h2 id="创建xhr对象">创建XHR对象&lt;/h2>
 &lt;p>所有现代浏览器均内建 XMLHttpRequest 对象，创建一个XHR对象：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">xhttp = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> XMLHttpRequest();
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">xhttp = &lt;span style="color:#8b008b;font-weight:bold">new&lt;/span> XMLHttpRequest();
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="定义回调函数">定义回调函数&lt;/h2>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">xhttp.onload = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">xhttp.onload = &lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>() {
 &lt;span style="color:#228b22">// What do do when the response is ready
 &lt;/span>&lt;span style="color:#228b22">&lt;/span>}
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="向服务器发送请求">向服务器发送请求&lt;/h2>
 &lt;p>要向服务器发送请求，可以使用XHR对象的&lt;code>open()&lt;/code>和&lt;code>send()&lt;/code>方法：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">xhttp.open(&lt;span style="color:#cd5555">&amp;#34;GET&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;ajax_info.txt&amp;#34;&lt;/span>);
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-javascript" data-lang="javascript">xhttp.open(&lt;span style="color:#cd5555">&amp;#34;GET&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;ajax_info.txt&amp;#34;&lt;/span>);
 xhttp.send();
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;ul>
@@ -520,7 +850,7 @@ xhttp.send();
 &lt;li>数据库&lt;/li>
 &lt;li>XML&lt;/li>
 &lt;/ul>
-- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/js_ajax/ - zzb2021.</description></item><item><title>python爬虫[5]--Scrapy框架</title><link>https://a390177226.github.io/python/scrapy/</link><pubDate>Thu, 24 Jun 2021 16:12:14 +0800</pubDate><guid>https://a390177226.github.io/python/scrapy/</guid><description>ZZB's blog https://a390177226.github.io/python/scrapy/ -&lt;h1 id="简介">简介&lt;/h1>
+- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/ - zzb2021.</description></item><item><title>python爬虫[5]--Scrapy框架</title><link>https://a390177226.github.io/python/scrapy/</link><pubDate>Thu, 24 Jun 2021 16:12:14 +0800</pubDate><guid>https://a390177226.github.io/python/scrapy/</guid><description>ZZB's blog https://a390177226.github.io/python/scrapy/ -&lt;h1 id="简介">简介&lt;/h1>
 &lt;p>Scrapy是一个专门用于异步爬虫的框架&lt;/p>
 &lt;p>功能：高性能的数据解析、请求发送，持久化存储，全站数据爬取，中间件，分布式&lt;/p>
 &lt;p>安装：&lt;code>pip install scrapy&lt;/code>&lt;/p>
@@ -555,7 +885,7 @@ xhttp.send();
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 失败案例&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 失败案例&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
 headers = {
 &lt;span style="color:#cd5555">&amp;#39;user-agent&amp;#39;&lt;/span>:&lt;span style="color:#cd5555">&amp;#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 Edg/91.0.864.48&amp;#39;&lt;/span>
@@ -594,7 +924,7 @@ page_text= requests.get(url=url, headers=headers).json()
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 创建Session对象&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 创建Session对象&lt;/span>
 session = requests.Session()
 &lt;span style="color:#228b22"># 第1次使用Session&lt;/span>
 &lt;span style="color:#228b22"># 猜测对雪球网的首页发起的请求可能会产生cookie&lt;/span>
@@ -632,7 +962,7 @@ page_text= session.get(url=url, headers=headers).json()
 &lt;/ul>
 &lt;h2 id="案例-1">案例&lt;/h2>
 &lt;p>封装一个代理池&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">lxml&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> etree
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">lxml&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> etree
 url = &lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>
 page_text = requests.get(url=url,headers=headers).text
 tree = etree.HTML(page_text)
@@ -645,8 +975,8 @@ dic = {
 }
 http_proxy.append(dic)
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>对西祠代理发起一个高频的请求，让其将我本机ip禁掉&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># url模板&lt;/span>
-url = &lt;span style="color:#cd5555">&amp;#39;https://www.xicidaili.com/nn/{}&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># url模板&lt;/span>
+url = &lt;span style="color:#cd5555">&amp;#39;https://www.xicidaili.com/nn/&lt;/span>&lt;span style="color:#cd5555">{}&lt;/span>&lt;span style="color:#cd5555">&amp;#39;&lt;/span>
 ips = []
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> page &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">11&lt;/span>):
 new_url = url.format(page)
@@ -657,10 +987,10 @@ tr_list = tree.xpath(&lt;span style="color:#cd5555">&amp;#39;//*[@id=&amp;#34;ip
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> tr &lt;span style="color:#8b008b">in&lt;/span> tr_list:
 ip = tr.xpath(&lt;span style="color:#cd5555">&amp;#39;./td[2]/text()&amp;#39;&lt;/span>)[&lt;span style="color:#b452cd">0&lt;/span>]
 ips.append(ip)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#658b00">len&lt;/span>(ips))
+&lt;span style="color:#658b00">print&lt;/span>(&lt;span style="color:#658b00">len&lt;/span>(ips))
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>使用代理机制破解ip被封的效果&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># url模板&lt;/span>
-url = &lt;span style="color:#cd5555">&amp;#39;https://www.xicidaili.com/nn/{}&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># url模板&lt;/span>
+url = &lt;span style="color:#cd5555">&amp;#39;https://www.xicidaili.com/nn/&lt;/span>&lt;span style="color:#cd5555">{}&lt;/span>&lt;span style="color:#cd5555">&amp;#39;&lt;/span>
 ips = []
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> page &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">11&lt;/span>):
 new_url = url.format(page)
@@ -672,7 +1002,7 @@ tr_list = tree.xpath(&lt;span style="color:#cd5555">&amp;#39;//*[@id=&amp;#34;ip
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> tr &lt;span style="color:#8b008b">in&lt;/span> tr_list:
 ip = tr.xpath(&lt;span style="color:#cd5555">&amp;#39;./td[2]/text()&amp;#39;&lt;/span>)[&lt;span style="color:#b452cd">0&lt;/span>]
 ips.append(ip)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#658b00">len&lt;/span>(ips))
+&lt;span style="color:#658b00">print&lt;/span>(&lt;span style="color:#658b00">len&lt;/span>(ips))
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="验证码识别">验证码识别&lt;/h1>
 &lt;p>基于线上的打码平台识别验证码&lt;/p>
 &lt;p>打码平台&lt;/p>
@@ -735,7 +1065,7 @@ ips.append(ip)
 &lt;/li>
 &lt;/ul>
 &lt;h1 id="爬取一张图片">爬取一张图片&lt;/h1>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">url = &lt;span style="color:#cd5555">&amp;#39;https://pic.qiushibaike.com/system/pictures/12443/124437393/medium/6O8M8JJRDUFEGBAF.jpg&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">url = &lt;span style="color:#cd5555">&amp;#39;https://pic.qiushibaike.com/system/pictures/12443/124437393/medium/6O8M8JJRDUFEGBAF.jpg&amp;#39;&lt;/span>
 &lt;span style="color:#228b22"># content返回二进制形式的图片数据&lt;/span>
 &lt;span style="color:#228b22"># text（字符串） content（二进制） json() （对象）&lt;/span>
 img_data = requests.get(url=url).content
@@ -744,20 +1074,20 @@ img_data = requests.get(url=url).content
 fp.write(img_data)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="正则案例">正则案例&lt;/h1>
 &lt;h2 id="爬取糗事百科中热图板块第一页的所有图片">爬取糗事百科中热图板块第一页的所有图片&lt;/h2>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">url = &lt;span style="color:#cd5555">&amp;#39;https://www.qiushibaike.com/imgrank/&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">url = &lt;span style="color:#cd5555">&amp;#39;https://www.qiushibaike.com/imgrank/&amp;#39;&lt;/span>
 &lt;span style="color:#228b22"># 先爬取url对应的一整张页面&lt;/span>
 page = requests.get(url=url,headers=headers)
 page.encoding = &lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>
 page_text = page.text
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>使用开发者工具查看一张图片的html源码为&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;thumb&amp;#34;&lt;/span>&amp;gt;
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;thumb&amp;#34;&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">a&lt;/span> &lt;span style="color:#658b00">href&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;/article/124437391&amp;#34;&lt;/span> &lt;span style="color:#658b00">target&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;_blank&amp;#34;&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">img&lt;/span> &lt;span style="color:#658b00">src&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;//pic.qiushibaike.com/system/pictures/12443/124437391/medium/ZS4RPHR1F7GTTTGC.jpg&amp;#34;&lt;/span> &lt;span style="color:#658b00">alt&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;糗事#124437391&amp;#34;&lt;/span> &lt;span style="color:#658b00">class&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;illustration&amp;#34;&lt;/span> &lt;span style="color:#658b00">width&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;100%&amp;#34;&lt;/span> &lt;span style="color:#658b00">height&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;auto&amp;#34;&lt;/span>&amp;gt;
 &amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">a&lt;/span>&amp;gt;
 &amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">div&lt;/span>&amp;gt;
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>提取图片的src的正则表达式：&lt;/p>
 &lt;p>&lt;code>ex = '&amp;lt;div class=&amp;quot;thumb&amp;quot;&amp;gt;.*?&amp;lt;img src=&amp;quot;(.*?)&amp;quot; alt.*?&amp;lt;/div&amp;gt;'&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 对页面中的所有图片进行解析/提取&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 对页面中的所有图片进行解析/提取&lt;/span>
 ex = &lt;span style="color:#cd5555">&amp;#39;&amp;lt;div class=&amp;#34;thumb&amp;#34;&amp;gt;.*?&amp;lt;img src=&amp;#34;(.*?)&amp;#34; alt.*?&amp;lt;/div&amp;gt;&amp;#39;&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">re&lt;/span>
 img_src_list = re.findall(ex,page_text,re.S)
@@ -778,9 +1108,9 @@ img_name = src.split(&lt;span style="color:#cd5555">&amp;#39;/&amp;#39;&lt;/span
 img_path = &lt;span style="color:#cd5555">&amp;#39;./imgs/&amp;#39;&lt;/span> + img_name
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(img_path,&lt;span style="color:#cd5555">&amp;#39;wb&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 fp.write(img_data)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(img_name,&lt;span style="color:#cd5555">&amp;#39;下载成功！！！&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(img_name,&lt;span style="color:#cd5555">&amp;#39;下载成功！！！&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="爬取糗事百科中热图板块多个页面下的所有图片">爬取糗事百科中热图板块多个页面下的所有图片&lt;/h2>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">re&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">os&lt;/span>
 headers = {
@@ -790,11 +1120,11 @@ headers = {
 &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> &lt;span style="color:#8b008b">not&lt;/span> os.path.exists(&lt;span style="color:#cd5555">&amp;#39;./imgs&amp;#39;&lt;/span>) :
 os.mkdir(&lt;span style="color:#cd5555">&amp;#39;./imgs&amp;#39;&lt;/span>)
 &lt;span style="color:#228b22"># 设置一个通用的url模板&lt;/span>
-url = &lt;span style="color:#cd5555">&amp;#39;https://www.qiushibaike.com/imgrank/page/{}/&amp;#39;&lt;/span>
+url = &lt;span style="color:#cd5555">&amp;#39;https://www.qiushibaike.com/imgrank/page/&lt;/span>&lt;span style="color:#cd5555">{}&lt;/span>&lt;span style="color:#cd5555">/&amp;#39;&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> pageNum &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">3&lt;/span>):
 &lt;span style="color:#228b22"># 对应页码的url&lt;/span>
 new_url = url.format(pageNum)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(new_url)
+&lt;span style="color:#658b00">print&lt;/span>(new_url)
 &lt;span style="color:#228b22"># 先爬取url对应的一整张页面&lt;/span>
 page = requests.get(url=new_url, headers=headers)
 page.encoding = &lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>
@@ -814,7 +1144,7 @@ img_name = src.split(&lt;span style="color:#cd5555">&amp;#39;/&amp;#39;&lt;/span
 img_path = &lt;span style="color:#cd5555">&amp;#39;./imgs/&amp;#39;&lt;/span> + img_name
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(img_path,&lt;span style="color:#cd5555">&amp;#39;wb&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 fp.write(img_data)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(img_name,&lt;span style="color:#cd5555">&amp;#39;下载成功！！！&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(img_name,&lt;span style="color:#cd5555">&amp;#39;下载成功！！！&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="bs4">bs4&lt;/h1>
 &lt;h2 id="原理-1">原理&lt;/h2>
 &lt;ul>
@@ -827,7 +1157,7 @@ fp.write(img_data)
 &lt;li>&lt;code>pip install lxml&lt;/code>&lt;/li>
 &lt;/ul>
 &lt;h2 id="实例化beautifulsoup对象">实例化BeautifulSoup对象&lt;/h2>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">bs4&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> BeautifulSoup
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">bs4&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> BeautifulSoup
 &lt;span style="color:#228b22"># 对象的实例化：&lt;/span>
 &lt;span style="color:#228b22"># 第一种：将本地的html文档中的数据加载到该对象中&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;./test.html&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;r&amp;#39;&lt;/span>,encoding=&lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
@@ -838,7 +1168,7 @@ response = requests.get(url=url)
 page_text = response.text
 soup = BeautifulSoup(page_text,&lt;span style="color:#cd5555">&amp;#39;lxml&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="testhtml">test.html&lt;/h2>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
 &amp;lt;&lt;span style="color:#8b008b;font-weight:bold">title&lt;/span>&amp;gt;Document&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">title&lt;/span>&amp;gt;
@@ -864,25 +1194,25 @@ soup = BeautifulSoup(page_text,&lt;span style="color:#cd5555">&amp;#39;lxml&amp;
 &lt;li>soup.find_all()&lt;/li>
 &lt;li>soup.select()&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;./test.html&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;r&amp;#39;&lt;/span>,encoding=&lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;./test.html&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;r&amp;#39;&lt;/span>,encoding=&lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 soup = BeautifulSoup(fp,&lt;span style="color:#cd5555">&amp;#39;lxml&amp;#39;&lt;/span>)
 &lt;span style="color:#228b22"># soup.tagName 返回的是html中第1次出现的tagName对象的标签&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.p)
+&lt;span style="color:#658b00">print&lt;/span>(soup.p)
 &lt;span style="color:#228b22"># soup.find()&lt;/span>
 &lt;span style="color:#228b22"># 第一种：soup.find(&amp;#39;tagName&amp;#39;) 等同于soup.tagName&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.find(&lt;span style="color:#cd5555">&amp;#39;p&amp;#39;&lt;/span>))
+&lt;span style="color:#658b00">print&lt;/span>(soup.find(&lt;span style="color:#cd5555">&amp;#39;p&amp;#39;&lt;/span>))
 &lt;span style="color:#228b22"># 第二种：属性定位&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.find(&lt;span style="color:#cd5555">&amp;#39;p&amp;#39;&lt;/span>,class_= &lt;span style="color:#cd5555">&amp;#39;p1&amp;#39;&lt;/span>))
+&lt;span style="color:#658b00">print&lt;/span>(soup.find(&lt;span style="color:#cd5555">&amp;#39;p&amp;#39;&lt;/span>,class_= &lt;span style="color:#cd5555">&amp;#39;p1&amp;#39;&lt;/span>))
 &lt;span style="color:#228b22"># soup.find_all() 返回符合要求的所有标签（列表）&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.find_all(&lt;span style="color:#cd5555">&amp;#39;p&amp;#39;&lt;/span>))
+&lt;span style="color:#658b00">print&lt;/span>(soup.find_all(&lt;span style="color:#cd5555">&amp;#39;p&amp;#39;&lt;/span>))
 &lt;span style="color:#228b22"># soup.select() 返回一个列表&lt;/span>
 &lt;span style="color:#228b22"># 标签选择器&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.select(&lt;span style="color:#cd5555">&amp;#39;p&amp;#39;&lt;/span>))
+&lt;span style="color:#658b00">print&lt;/span>(soup.select(&lt;span style="color:#cd5555">&amp;#39;p&amp;#39;&lt;/span>))
 &lt;span style="color:#228b22"># 类选择器&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.select(&lt;span style="color:#cd5555">&amp;#39;.p1&amp;#39;&lt;/span>))
+&lt;span style="color:#658b00">print&lt;/span>(soup.select(&lt;span style="color:#cd5555">&amp;#39;.p1&amp;#39;&lt;/span>))
 &lt;span style="color:#228b22"># 层级选择器：&amp;#34;&amp;gt;&amp;#34;表示一个层级，空格表示多个层级&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.select(&lt;span style="color:#cd5555">&amp;#39;.d1 &amp;gt; ul &amp;gt; li &amp;gt; a&amp;#39;&lt;/span>))
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.select(&lt;span style="color:#cd5555">&amp;#39;.d1 &amp;gt; ul a&amp;#39;&lt;/span>))
+&lt;span style="color:#658b00">print&lt;/span>(soup.select(&lt;span style="color:#cd5555">&amp;#39;.d1 &amp;gt; ul &amp;gt; li &amp;gt; a&amp;#39;&lt;/span>))
+&lt;span style="color:#658b00">print&lt;/span>(soup.select(&lt;span style="color:#cd5555">&amp;#39;.d1 &amp;gt; ul a&amp;#39;&lt;/span>))
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>获取标签之间的文本数据&lt;/p>
 &lt;ul>
 &lt;li>soup.a.text&lt;/li>
@@ -893,19 +1223,19 @@ soup = BeautifulSoup(fp,&lt;span style="color:#cd5555">&amp;#39;lxml&amp;#39;&lt
 &lt;ul>
 &lt;li>soup.a[&amp;lsquo;href&amp;rsquo;]&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">a = soup.select(&lt;span style="color:#cd5555">&amp;#39;.d1 &amp;gt; ul&amp;#39;&lt;/span>)[&lt;span style="color:#b452cd">0&lt;/span>]
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">a = soup.select(&lt;span style="color:#cd5555">&amp;#39;.d1 &amp;gt; ul&amp;#39;&lt;/span>)[&lt;span style="color:#b452cd">0&lt;/span>]
 &lt;span style="color:#228b22"># .text和get_text() 返回某个标签下中所有的文本内容&lt;/span>
 &lt;span style="color:#228b22"># .string只返回该标签下直系的文本内容&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(a.text)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(a.string)
+&lt;span style="color:#658b00">print&lt;/span>(a.text)
+&lt;span style="color:#658b00">print&lt;/span>(a.string)
 &lt;span style="color:#228b22"># 获取属性值&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(soup.a[&lt;span style="color:#cd5555">&amp;#39;href&amp;#39;&lt;/span>])
+&lt;span style="color:#658b00">print&lt;/span>(soup.a[&lt;span style="color:#cd5555">&amp;#39;href&amp;#39;&lt;/span>])
 &lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="bs4案例">bs4案例&lt;/h2>
 &lt;p>爬取诗词名句网的三国演义&lt;/p>
 &lt;ul>
 &lt;li>url：&lt;a href="https://www.shicimingju.com/book/sanguoyanyi.html">https://www.shicimingju.com/book/sanguoyanyi.html&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 对书籍的页面数据进行爬取&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 对书籍的页面数据进行爬取&lt;/span>
 url = &lt;span style="color:#cd5555">&amp;#39;https://www.shicimingju.com/book/sanguoyanyi.html&amp;#39;&lt;/span>
 response = requests.get(url=url, headers=headers)
 response.encoding = &lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>
@@ -928,7 +1258,7 @@ detail_soup = BeautifulSoup(detail_page_text, &lt;span style="color:#cd5555">&am
 div_tag = detail_soup.find(&lt;span style="color:#cd5555">&amp;#39;div&amp;#39;&lt;/span>,class_=&lt;span style="color:#cd5555">&amp;#39;chapter_content&amp;#39;&lt;/span>)
 content = div_tag.text
 fp.write(title+&lt;span style="color:#cd5555">&amp;#39;:&amp;#39;&lt;/span>+content +&lt;span style="color:#cd5555">&amp;#39;&lt;/span>&lt;span style="color:#cd5555">\n&lt;/span>&lt;span style="color:#cd5555">&amp;#39;&lt;/span>)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;爬取成功！！！&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;爬取成功！！！&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="xpath">xpath&lt;/h1>
 &lt;h2 id="安装">安装&lt;/h2>
 &lt;p>&lt;code>pip install lxml&lt;/code>&lt;/p>
@@ -948,7 +1278,7 @@ fp.write(title+&lt;span style="color:#cd5555">&amp;#39;:&amp;#39;&lt;/span>+cont
 &lt;ul>
 &lt;li>tree.xpath()&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">lxml&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> etree
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">lxml&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> etree
 tree = etree.parse(&lt;span style="color:#cd5555">&amp;#39;./test.html&amp;#39;&lt;/span>)
 &lt;span style="color:#228b22"># 定位div&lt;/span>
 &lt;span style="color:#228b22"># 一个&amp;#34;/&amp;#34;表示一个层级&lt;/span>
@@ -968,7 +1298,7 @@ tree.xpath(&lt;span style="color:#cd5555">&amp;#39;//p[2]&amp;#39;&lt;/span>)
 &lt;li>//text()&lt;/li>
 &lt;li>/@attrName&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 取文本&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 取文本&lt;/span>
 &lt;span style="color:#228b22"># /text() 返回直系文本&lt;/span>
 tree.xpath(&lt;span style="color:#cd5555">&amp;#39;//div/text()&amp;#39;&lt;/span>)
 &lt;span style="color:#228b22"># //text() 返回所有文本&lt;/span>
@@ -982,7 +1312,7 @@ tree.xpath(&lt;span style="color:#cd5555">&amp;#39;//div//a/@href&amp;#39;&lt;/s
 &lt;li>重点：局部数据解析&lt;/li>
 &lt;li>xpath路径可以从开发者工具那里复制&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">os&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">lxml&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> etree
 headers = {
@@ -991,7 +1321,7 @@ headers = {
 &lt;span style="color:#228b22"># 创建文件夹&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> &lt;span style="color:#8b008b">not&lt;/span> os.path.exists(&lt;span style="color:#cd5555">&amp;#39;./imgs&amp;#39;&lt;/span>) :
 os.mkdir(&lt;span style="color:#cd5555">&amp;#39;./imgs&amp;#39;&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取第1页&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取第1页&lt;/span>
 url = &lt;span style="color:#cd5555">&amp;#39;https://pic.netbian.com/4kmeinv/&amp;#39;&lt;/span>
 response = requests.get(url=url, headers=headers)
 response.encoding = &lt;span style="color:#cd5555">&amp;#39;gbk&amp;#39;&lt;/span>
@@ -1011,10 +1341,10 @@ img_data = requests.get(url=img_src, headers=headers).content
 img_path = &lt;span style="color:#cd5555">&amp;#39;./imgs/&amp;#39;&lt;/span>+ title
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(img_path,&lt;span style="color:#cd5555">&amp;#39;wb&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 fp.write(img_data)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;保存成功了&amp;#39;&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取多页&lt;/span>
+&lt;span style="color:#658b00">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;保存成功了&amp;#39;&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取多页&lt;/span>
 &lt;span style="color:#228b22"># 定义一个通用的url模板：不可变&lt;/span>
-url = &lt;span style="color:#cd5555">&amp;#39;https://pic.netbian.com/4kmeinv/index_{}.html&amp;#39;&lt;/span>
+url = &lt;span style="color:#cd5555">&amp;#39;https://pic.netbian.com/4kmeinv/index_&lt;/span>&lt;span style="color:#cd5555">{}&lt;/span>&lt;span style="color:#cd5555">.html&amp;#39;&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> page &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">3&lt;/span>):
 &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> page ==&lt;span style="color:#b452cd">1&lt;/span>:
 new_url = &lt;span style="color:#cd5555">&amp;#39;https://pic.netbian.com/4kmeinv/index.html&amp;#39;&lt;/span>
@@ -1039,7 +1369,7 @@ img_data = requests.get(url=img_src, headers=headers).content
 img_path = &lt;span style="color:#cd5555">&amp;#39;./imgs/&amp;#39;&lt;/span>+ title
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(img_path,&lt;span style="color:#cd5555">&amp;#39;wb&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 fp.write(img_data)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;保存成功了&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;保存成功了&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>需求：要求解析出携带html标签的局部数据？&lt;/p>
 &lt;ul>
 &lt;li>使用bs4&lt;/li>
@@ -1053,7 +1383,7 @@ fp.write(img_data)
 &lt;ul>
 &lt;li>url：&lt;a href="https://sc.chinaz.com/jianli/">https://sc.chinaz.com/jianli/&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">os&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">lxml&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> etree
 headers = {
@@ -1062,7 +1392,7 @@ headers = {
 &lt;span style="color:#228b22"># 创建文件夹&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> &lt;span style="color:#8b008b">not&lt;/span> os.path.exists(&lt;span style="color:#cd5555">&amp;#39;./imgs&amp;#39;&lt;/span>) :
 os.mkdir(&lt;span style="color:#cd5555">&amp;#39;./imgs&amp;#39;&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取第1页&lt;/span>
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取第1页&lt;/span>
 url = &lt;span style="color:#cd5555">&amp;#39;https://sc.chinaz.com/jianli/&amp;#39;&lt;/span>
 response = requests.get(url=url, headers=headers)
 response.encoding = &lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>
@@ -1089,11 +1419,11 @@ jianli_data = requests.get(url=jianli_src, headers=headers).content
 jianli_path = &lt;span style="color:#cd5555">&amp;#39;./imgs/&amp;#39;&lt;/span>+ title
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(jianli_path,&lt;span style="color:#cd5555">&amp;#39;wb&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 fp.write(jianli_data)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;保存成功了&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;保存成功了&amp;#39;&lt;/span>)
 &lt;span style="color:#8b008b;font-weight:bold">except&lt;/span> &lt;span style="color:#008b45;font-weight:bold">Exception&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> err:
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;下载失败了&amp;#39;&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取多页&lt;/span>
-url = &lt;span style="color:#cd5555">&amp;#39;https://sc.chinaz.com/jianli/index_{}.html&amp;#39;&lt;/span>
+&lt;span style="color:#658b00">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;下载失败了&amp;#39;&lt;/span>)
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取多页&lt;/span>
+url = &lt;span style="color:#cd5555">&amp;#39;https://sc.chinaz.com/jianli/index_&lt;/span>&lt;span style="color:#cd5555">{}&lt;/span>&lt;span style="color:#cd5555">.html&amp;#39;&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> page &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">3&lt;/span>):
 &lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> page ==&lt;span style="color:#b452cd">1&lt;/span>:
 new_url = &lt;span style="color:#cd5555">&amp;#39;https://sc.chinaz.com/jianli/index.html&amp;#39;&lt;/span>
@@ -1125,9 +1455,9 @@ jianli_data = requests.get(url=jianli_src, headers=headers).content
 jianli_path = &lt;span style="color:#cd5555">&amp;#39;./imgs/&amp;#39;&lt;/span>+ title
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(jianli_path,&lt;span style="color:#cd5555">&amp;#39;wb&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 fp.write(jianli_data)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;&lt;/span>&lt;span style="color:#cd5555">\t\t\t&lt;/span>&lt;span style="color:#cd5555">保存成功了&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;&lt;/span>&lt;span style="color:#cd5555">\t\t\t&lt;/span>&lt;span style="color:#cd5555">保存成功了&amp;#39;&lt;/span>)
 &lt;span style="color:#8b008b;font-weight:bold">except&lt;/span> &lt;span style="color:#008b45;font-weight:bold">Exception&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> err:
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;&lt;/span>&lt;span style="color:#cd5555">\t\t\t&lt;/span>&lt;span style="color:#cd5555">下载失败了&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(title,&lt;span style="color:#cd5555">&amp;#39;&lt;/span>&lt;span style="color:#cd5555">\t\t\t&lt;/span>&lt;span style="color:#cd5555">下载失败了&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>站长素材高清图片下载&lt;/p>
 &lt;ul>
@@ -1159,7 +1489,7 @@ fp.write(jianli_data)
 &lt;/ul>
 &lt;h1 id="第一个例子">第一个例子&lt;/h1>
 &lt;p>爬取搜狗首页的页面数据&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">requests&lt;/span>
 &lt;span style="color:#228b22"># step1: 指定url&lt;/span>
 url = &lt;span style="color:#cd5555">&amp;#39;https://www.sogou.com/&amp;#39;&lt;/span>
 &lt;span style="color:#228b22"># step2：发起请求&lt;/span>
@@ -1173,7 +1503,7 @@ page_text = response.text
 fp.write(page_text)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="简易网页采集器">简易网页采集器&lt;/h1>
 &lt;p>基于搜狗针对指定不同的关键字将其对应的页面数据进行爬取&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">keyWord = &lt;span style="color:#658b00">input&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;enter a key word:&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">keyWord = &lt;span style="color:#658b00">input&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;enter a key word:&amp;#39;&lt;/span>)
 &lt;span style="color:#228b22"># 携带了请求参数的url，如果想要爬取不同关键字对应的页面，我们需要将url携带的参数进行动态化&lt;/span>
 &lt;span style="color:#228b22"># 实现参数动态化：&lt;/span>
 params = {
@@ -1188,7 +1518,7 @@ page_text = response.text
 fileName = keyWord + &lt;span style="color:#cd5555">&amp;#39;.html&amp;#39;&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(fileName, &lt;span style="color:#cd5555">&amp;#39;w&amp;#39;&lt;/span>, encoding=&lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 fp.write(page_text)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(fileName, &lt;span style="color:#cd5555">&amp;#39;爬取完毕！！！&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(fileName, &lt;span style="color:#cd5555">&amp;#39;爬取完毕！！！&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>页面显示【异常访问请求】导致请求数据的缺失&lt;/p>
 &lt;ul>
 &lt;li>
@@ -1231,7 +1561,7 @@ fp.write(page_text)
 &lt;/li>
 &lt;/ul>
 &lt;/blockquote>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">keyWord = &lt;span style="color:#658b00">input&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;enter a key word:&amp;#39;&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">keyWord = &lt;span style="color:#658b00">input&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;enter a key word:&amp;#39;&lt;/span>)
 &lt;span style="color:#228b22"># 用来实现UA伪装&lt;/span>
 headers = {
 &lt;span style="color:#cd5555">&amp;#39;user-agent&amp;#39;&lt;/span>:&lt;span style="color:#cd5555">&amp;#39;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36 Edg/91.0.864.48&amp;#39;&lt;/span>
@@ -1249,10 +1579,10 @@ page_text = response.text
 fileName = keyWord + &lt;span style="color:#cd5555">&amp;#39;.html&amp;#39;&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(fileName, &lt;span style="color:#cd5555">&amp;#39;w&amp;#39;&lt;/span>, encoding=&lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 fp.write(page_text)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(fileName, &lt;span style="color:#cd5555">&amp;#39;爬取完毕！！！&amp;#39;&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(fileName, &lt;span style="color:#cd5555">&amp;#39;爬取完毕！！！&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="爬取动态加载数据">爬取动态加载数据&lt;/h1>
 &lt;p>爬取豆瓣电影中的电影详情数据&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 一个爬取失败的例子&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 一个爬取失败的例子&lt;/span>
 url = &lt;span style="color:#cd5555">&amp;#39;https://movie.douban.com/typerank?type_name=&lt;/span>&lt;span style="color:#cd5555">%E&lt;/span>&lt;span style="color:#cd5555">5%8A%A8&lt;/span>&lt;span style="color:#cd5555">%E&lt;/span>&lt;span style="color:#cd5555">4%BD%9C&amp;amp;type=5&amp;amp;interval_id=100:90&amp;amp;action=&amp;#39;&lt;/span>
 response = requests.get(url=url, headers = headers)
 page_text = response.text
@@ -1292,7 +1622,7 @@ fp.write(page_text)
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">url = &lt;span style="color:#cd5555">&amp;#39;https://movie.douban.com/j/chart/top_list&amp;#39;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">url = &lt;span style="color:#cd5555">&amp;#39;https://movie.douban.com/j/chart/top_list&amp;#39;&lt;/span>
 params = {
 &lt;span style="color:#cd5555">&amp;#39;type&amp;#39;&lt;/span>: &lt;span style="color:#cd5555">&amp;#39;5&amp;#39;&lt;/span>,
 &lt;span style="color:#cd5555">&amp;#39;interval_id&amp;#39;&lt;/span>: &lt;span style="color:#cd5555">&amp;#39;100:90&amp;#39;&lt;/span>,
@@ -1307,7 +1637,7 @@ page_text = response.json()
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> movie &lt;span style="color:#8b008b">in&lt;/span> page_text:
 name = movie[&lt;span style="color:#cd5555">&amp;#39;title&amp;#39;&lt;/span>]
 score = movie[&lt;span style="color:#cd5555">&amp;#39;score&amp;#39;&lt;/span>]
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(name,score)
+&lt;span style="color:#658b00">print&lt;/span>(name,score)
 &lt;span style="color:#228b22"># 或者持久化存储 &lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(&lt;span style="color:#cd5555">&amp;#34;./test&amp;#34;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;w&amp;#34;&lt;/span>, encoding=&lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> movie &lt;span style="color:#8b008b">in&lt;/span> page_text:
@@ -1340,7 +1670,7 @@ fp.write(eachRow)
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取第1页的数据&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取第1页的数据&lt;/span>
 url = &lt;span style="color:#cd5555">&amp;#39;http://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&amp;#39;&lt;/span>
 &lt;span style="color:#228b22"># data参数是post方法中处理参数动态化的参数&lt;/span>
 data = {
@@ -1355,8 +1685,8 @@ page_text = response.json()
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> dic &lt;span style="color:#8b008b">in&lt;/span> page_text[&lt;span style="color:#cd5555">&amp;#39;Table1&amp;#39;&lt;/span>]:
 title = dic[&lt;span style="color:#cd5555">&amp;#39;storeName&amp;#39;&lt;/span>]
 addr = dic[&lt;span style="color:#cd5555">&amp;#39;addressDetail&amp;#39;&lt;/span>]
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,addr)
-&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取多页&lt;/span>
+&lt;span style="color:#658b00">print&lt;/span>(title,addr)
+&lt;/code>&lt;/pre>&lt;/div>&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取多页&lt;/span>
 url = &lt;span style="color:#cd5555">&amp;#39;http://www.kfc.com.cn/kfccda/ashx/GetStoreList.ashx?op=keyword&amp;#39;&lt;/span>
 data = {
 &lt;span style="color:#cd5555">&amp;#39;cname&amp;#39;&lt;/span>: &lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>,
@@ -1370,7 +1700,7 @@ page_text = response.json()
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> dic &lt;span style="color:#8b008b">in&lt;/span> page_text[&lt;span style="color:#cd5555">&amp;#39;Table1&amp;#39;&lt;/span>]:
 title = dic[&lt;span style="color:#cd5555">&amp;#39;storeName&amp;#39;&lt;/span>]
 addr = dic[&lt;span style="color:#cd5555">&amp;#39;addressDetail&amp;#39;&lt;/span>]
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(title,addr)
+&lt;span style="color:#658b00">print&lt;/span>(title,addr)
 &lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="作业">作业&lt;/h1>
 &lt;p>爬取化药监总局中的企业详情数据&lt;/p>
 &lt;ul>
@@ -1395,7 +1725,7 @@ addr = dic[&lt;span style="color:#cd5555">&amp;#39;addressDetail&amp;#39;&lt;/sp
 &lt;/ul>
 &lt;ol>
 &lt;li>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取第1、2页的公司ID&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 爬取第1、2页的公司ID&lt;/span>
 url = &lt;span style="color:#cd5555">&amp;#39;http://scxk.nmpa.gov.cn:81/xk/itownet/portalAction.do?method=getXkzsList&amp;#39;&lt;/span>
 all_id_list = []
 &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> page &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">3&lt;/span>):
@@ -1423,13 +1753,13 @@ post_data = {
 }
 response = requests.post(url=post_url,data=post_data,headers=headers)
 json_text = response.json()
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(json_text[&lt;span style="color:#cd5555">&amp;#39;businessPerson&amp;#39;&lt;/span>])
+&lt;span style="color:#658b00">print&lt;/span>(json_text[&lt;span style="color:#cd5555">&amp;#39;businessPerson&amp;#39;&lt;/span>])
 all_data_list.append(json_text)
 &lt;span style="color:#228b22"># 持久化存储&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">json&lt;/span>
 &lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;./allData.json&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;w&amp;#39;&lt;/span>,encoding=&lt;span style="color:#cd5555">&amp;#39;utf-8&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> fp:
-json.dump(all_data_list,fp=fp,ensure_ascii=False)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;Over!!!&amp;#39;&lt;/span>)
+json.dump(all_data_list,fp=fp,ensure_ascii=&lt;span style="color:#8b008b;font-weight:bold">False&lt;/span>)
+&lt;span style="color:#658b00">print&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;Over!!!&amp;#39;&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;/li>
 &lt;/ol>
 - https://a390177226.github.io/python/requests/ - zzb2021.</description></item><item><title>python爬虫[1]--概述</title><link>https://a390177226.github.io/python/webscraper_overview/</link><pubDate>Tue, 01 Jun 2021 18:28:53 +0800</pubDate><guid>https://a390177226.github.io/python/webscraper_overview/</guid><description>ZZB's blog https://a390177226.github.io/python/webscraper_overview/ -&lt;h1 id="links">Links&lt;/h1>
@@ -1458,870 +1788,4 @@ json.dump(all_data_list,fp=fp,ensure_ascii=False)
 &lt;/ol>
 &lt;h1 id="scrapy框架">scrapy框架&lt;/h1>
 &lt;p>异步的爬虫框架&lt;/p>
-- https://a390177226.github.io/python/webscraper_overview/ - zzb2021.</description></item><item><title>Python基础</title><link>https://a390177226.github.io/python/basic/</link><pubDate>Mon, 31 May 2021 18:43:42 +0800</pubDate><guid>https://a390177226.github.io/python/basic/</guid><description>ZZB's blog https://a390177226.github.io/python/basic/ -&lt;h1 id="简介">简介&lt;/h1>
-&lt;p>Python是一门面向对象的、解释型的编程语言。&lt;/p>
-&lt;p>优点：简洁、易学、几乎全能、支持面向对象。&lt;/p>
-&lt;p>应用：数据分析与挖掘、黑客逆向工程、网络爬虫、机器学习、开发Web项目、开发游戏、自动化运维&lt;/p>
-&lt;h1 id="if语句">if语句&lt;/h1>
-&lt;p>计算身体质量指数BMI&lt;/p>
-&lt;p>体质指数（BMI）= 1e4 * 体重（kg）÷ 身高²（cm）&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>分类&lt;/th>
-&lt;th>BMI范围&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>偏瘦&lt;/td>
-&lt;td>&amp;lt;= 18.4&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>正常&lt;/td>
-&lt;td>18.5 ~ 23.9&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>过重&lt;/td>
-&lt;td>24.0 ~ 27.9&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>肥胖&lt;/td>
-&lt;td>&amp;gt;= 28.0&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">height = &lt;span style="color:#658b00">eval&lt;/span>(&lt;span style="color:#658b00">input&lt;/span>(&lt;span style="color:#cd5555">&amp;#34;请输入身高(cm)：&amp;#34;&lt;/span>))
-weight = &lt;span style="color:#658b00">eval&lt;/span>(&lt;span style="color:#658b00">input&lt;/span>(&lt;span style="color:#cd5555">&amp;#34;请输入体重(kg)：&amp;#34;&lt;/span>))
-BMI = &lt;span style="color:#b452cd">1e4&lt;/span> * weight / height**&lt;span style="color:#b452cd">2&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> BMI &amp;lt; &lt;span style="color:#b452cd">18.5&lt;/span>:
-category = &lt;span style="color:#cd5555">&amp;#34;偏瘦&amp;#34;&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">elif&lt;/span> BMI &amp;lt; &lt;span style="color:#b452cd">24.0&lt;/span>:
-category = &lt;span style="color:#cd5555">&amp;#34;正常&amp;#34;&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">elif&lt;/span> BMI &amp;lt; &lt;span style="color:#b452cd">28.0&lt;/span>:
-category = &lt;span style="color:#cd5555">&amp;#34;过重&amp;#34;&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">else&lt;/span>:
-category = &lt;span style="color:#cd5555">&amp;#34;肥胖&amp;#34;&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#cd5555">&amp;#34;BMI数值为：{:.1f}&amp;#34;&lt;/span>.format(BMI))
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#cd5555">&amp;#34;BMI指标为：{}&amp;#34;&lt;/span>.format(category))
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="for语句">for语句&lt;/h1>
-&lt;p>求和：1+2+&amp;hellip;+100&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#658b00">sum&lt;/span> = &lt;span style="color:#b452cd">0&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> i &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">101&lt;/span>):
-&lt;span style="color:#658b00">sum&lt;/span> += i
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#658b00">sum&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>遍历列表&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">a = [&lt;span style="color:#cd5555">&amp;#39;1&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;2&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;3&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;4&amp;#39;&lt;/span>]
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> i &lt;span style="color:#8b008b">in&lt;/span> a:
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(i)
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>遍历列表，可用enumerate() 函数可以同时取出位置索引和对应的值&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> i, v &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">enumerate&lt;/span>([&lt;span style="color:#cd5555">&amp;#39;tic&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;tac&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;toe&amp;#39;&lt;/span>]):
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(i, v)
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>遍历字典，可用 items() 方法可同时取出键和对应的值&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#658b00">dict&lt;/span> = {&lt;span style="color:#cd5555">&amp;#39;name&amp;#39;&lt;/span>: &lt;span style="color:#cd5555">&amp;#39;zzb&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;age&amp;#39;&lt;/span>: &lt;span style="color:#b452cd">24&lt;/span>}
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> key, value &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">dict&lt;/span>.items():
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#cd5555">&amp;#34;{}={}&amp;#34;&lt;/span>.format(key,value))
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>同时循环两个或多个列表时，用 zip() 函数可以将其内的元素一一匹配&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">questions = [&lt;span style="color:#cd5555">&amp;#39;name&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;quest&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;favorite color&amp;#39;&lt;/span>]
-answers = [&lt;span style="color:#cd5555">&amp;#39;lancelot&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;the holy grail&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;blue&amp;#39;&lt;/span>]
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> q, a &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">zip&lt;/span>(questions, answers):
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;What is your {0}? It is {1}.&amp;#39;&lt;/span>.format(q, a))
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>一般来说，在循环中修改列表的内容时，创建新列表比较简单，且安全：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">math&lt;/span>
-raw_data = [&lt;span style="color:#b452cd">56.2&lt;/span>, &lt;span style="color:#658b00">float&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;NaN&amp;#39;&lt;/span>), &lt;span style="color:#b452cd">51.7&lt;/span>, &lt;span style="color:#b452cd">55.3&lt;/span>, &lt;span style="color:#b452cd">52.5&lt;/span>, &lt;span style="color:#658b00">float&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;NaN&amp;#39;&lt;/span>), &lt;span style="color:#b452cd">47.8&lt;/span>]
-filtered_data = []
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> value &lt;span style="color:#8b008b">in&lt;/span> raw_data:
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> &lt;span style="color:#8b008b">not&lt;/span> math.isnan(value):
-filtered_data.append(value)
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="函数">函数&lt;/h1>
-&lt;p>输出限定数值（n）内的斐波那契数列函数&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> &lt;span style="color:#008b45">fib&lt;/span>(n):
-&lt;span style="color:#cd5555">&amp;#34;&amp;#34;&amp;#34;Return a list containing the Fibonacci series up to n.&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-result = []
-a, b = &lt;span style="color:#b452cd">0&lt;/span>, &lt;span style="color:#b452cd">1&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">while&lt;/span> a &amp;lt; n:
-result.append(a)
-a, b = b, a+b
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> result
-f100 = fib(&lt;span style="color:#b452cd">100&lt;/span>) &lt;span style="color:#228b22"># f100=[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>lambda 表达式用于创建小巧的匿名函数&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">f = &lt;span style="color:#8b008b;font-weight:bold">lambda&lt;/span> a, b: a+b
-f(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">2&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>lambda 还可以把匿名函数用作传递的实参&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">pairs = [(&lt;span style="color:#b452cd">1&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;d&amp;#39;&lt;/span>), (&lt;span style="color:#b452cd">2&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;c&amp;#39;&lt;/span>), (&lt;span style="color:#b452cd">3&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;b&amp;#39;&lt;/span>), (&lt;span style="color:#b452cd">4&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;a&amp;#39;&lt;/span>)]
-pairs.sort(key=&lt;span style="color:#8b008b;font-weight:bold">lambda&lt;/span> pair: pair[&lt;span style="color:#b452cd">1&lt;/span>]) &lt;span style="color:#228b22"># 按元组的第二个元素进行排序&lt;/span>
-pairs &lt;span style="color:#228b22"># pairs = [(4, &amp;#39;a&amp;#39;), (3, &amp;#39;b&amp;#39;), (2, &amp;#39;c&amp;#39;), (1, &amp;#39;d&amp;#39;)]&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="模块和包">模块和包&lt;/h1>
-&lt;p>模块是一些常见的功能（函数）的组合，主要是为了代码的复用。&lt;/p>
-&lt;p>包是模块的集合。&lt;/p>
-&lt;p>导入模块&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">fibo&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">fib&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">from&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">fibo&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> fib, fib2
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="print">print()&lt;/h1>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(value,...,sep=&lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>,end=&lt;span style="color:#cd5555">&amp;#39;&lt;/span>&lt;span style="color:#cd5555">\n&lt;/span>&lt;span style="color:#cd5555">&amp;#39;&lt;/span>,&lt;span style="color:#658b00">file&lt;/span>=sys.stdout,flush=False)
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>value 参数可以接受多个变量或值&lt;/li>
-&lt;li>sep 可自定义value之前的间隔符，默认为空值&lt;/li>
-&lt;li>end 可自定义value结尾的符号，默认为换号符&lt;/li>
-&lt;li>file 可以指定输出的目标，默认sys.stdout，即系统标准输出，也就是屏幕输出&lt;/li>
-&lt;/ul>
-&lt;h2 id="格式化输出">格式化输出&lt;/h2>
-&lt;ul>
-&lt;li>使用格式化字符串字面值 ，要在字符串开头的引号/三引号前添加 f 或 F 。在这种字符串中，可以 在 { 和 } 字符之间输入引用的变量，或字面值的 Python 表达式。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">year = &lt;span style="color:#b452cd">2016&lt;/span>
-event = &lt;span style="color:#cd5555">&amp;#39;Referendum&amp;#39;&lt;/span>
-&lt;span style="color:#658b00">str&lt;/span> = f&lt;span style="color:#cd5555">&amp;#39;Results of the {year} {event}&amp;#39;&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#658b00">str&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>字符串的 str.format() 方法需要更多手动操作。该方法也用 { 和 } 标记替换变量的位置，虽然 这种方法支持详细的格式化指令，但需要提供格式化信息。&lt;/li>
-&lt;/ul>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">yes_votes = &lt;span style="color:#b452cd">42&lt;/span>_572_654
-no_votes = &lt;span style="color:#b452cd">43&lt;/span>_132_495
-percentage = yes_votes / (yes_votes + no_votes)
-&lt;span style="color:#658b00">str&lt;/span> = &lt;span style="color:#cd5555">&amp;#39;{:-9} YES votes {:2.2%}&amp;#39;&lt;/span>.format(yes_votes, percentage)
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#658b00">str&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="文件读写">文件读写&lt;/h1>
-&lt;h2 id="打开文件">打开文件&lt;/h2>
-&lt;p>open() 返回file object，最常用的参数有两个: open(filename, mode)&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">f = &lt;span style="color:#658b00">open&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;workfile&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;w&amp;#39;&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;ul>
-&lt;li>filename是文件名字符串。&lt;/li>
-&lt;li>mode是包含描述文件使用方式字符的字符串。mode 的值包括 &amp;lsquo;r&amp;rsquo; ， 表示文件只能读取；&amp;lsquo;w&amp;rsquo; 表示只能写入（现有同名文件会被覆盖）；&amp;lsquo;a&amp;rsquo; 表示打开文件并追加内容，任何写入的数据会自动添加到文件末尾。&amp;lsquo;r+&amp;rsquo; 表示打开文件进行读写。mode 实参是可选的，省略时的默认值为 &amp;lsquo;r&amp;rsquo;。&lt;/li>
-&lt;/ul>
-&lt;p>在处理文件对象时，最好使用 with 关键字。优点是，子句体结束后，文件会正确关闭，即便触发异常也可以。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">with&lt;/span> &lt;span style="color:#658b00">open&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;workfile&amp;#39;&lt;/span>) &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> f:
-read_data = f.read()
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>如果没有使用 with 关键字，则应调用 f.close() 关闭文件，即可释放文件占用的系统资源。&lt;/p>
-&lt;h2 id="读取文件">读取文件&lt;/h2>
-&lt;p>f.read(size) 可用于读取文件内容，它会读取一些数据，并返回字符串（文本模式），或字节串对象 （在二进制模式下）。size 是可选的数值参数。省略 size 或 size 为负数时，读取并返回整个文件的内容。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">f.read()
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>f.readline() 从文件中读取单行数据；字符串末尾保留换行符（\n），只有在文件不以换行符结尾时， 文件的最后一行才会省略换行符。这种方式让返回值清晰明确；只要 f.readline() 返回空字符串，就 表示已经到达了文件末尾，空行使用 &amp;lsquo;\n&amp;rsquo; 表示，该字符串只包含一个换行符。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">f.readline()
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>从文件中读取多行时，可以用循环遍历整个文件对象。这种操作能高效利用内存，快速，且代码简单：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> line &lt;span style="color:#8b008b">in&lt;/span> f:
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(line, end=&lt;span style="color:#cd5555">&amp;#39;&amp;#39;&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>如需以列表形式读取文件中的所有行，可以用 list(f) 或 f.readlines()。&lt;/p>
-&lt;h2 id="写入文件">写入文件&lt;/h2>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">data =&lt;span style="color:#cd5555">&amp;#34;first line!&amp;#34;&lt;/span>
-f = &lt;span style="color:#658b00">open&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;C:/Users/Administrator/Desktop/test.txt&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#34;a+&amp;#34;&lt;/span>)
-f.write(data)
-f.close()
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="异常处理">异常处理&lt;/h1>
-&lt;p>Python程序在执行的时候，经常会遇到异常，如果中间异常不处理，经常会导致程序崩溃。&lt;/p>
-&lt;p>下例会要求用户一直输入内容，直到输入有效的整数，但允许用户中断程序&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">while&lt;/span> True:
-&lt;span style="color:#8b008b;font-weight:bold">try&lt;/span>:
-x = &lt;span style="color:#658b00">int&lt;/span>(&lt;span style="color:#658b00">input&lt;/span>(&lt;span style="color:#cd5555">&amp;#34;Please enter a number: &amp;#34;&lt;/span>))
-&lt;span style="color:#8b008b;font-weight:bold">break&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">except&lt;/span> &lt;span style="color:#008b45;font-weight:bold">Exception&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> err:
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(&lt;span style="color:#cd5555">&amp;#34;Oops! That was no valid number. Try again...&amp;#34;&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>让异常后的程序继续&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> i &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">10&lt;/span>):
-&lt;span style="color:#8b008b;font-weight:bold">try&lt;/span>:
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(i)
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span>(i==&lt;span style="color:#b452cd">4&lt;/span>):
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(jkj)
-&lt;span style="color:#8b008b;font-weight:bold">except&lt;/span> &lt;span style="color:#008b45;font-weight:bold">Exception&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> err:
-&lt;span style="color:#8b008b;font-weight:bold">print&lt;/span>(err)
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="面向对象编程">面向对象编程&lt;/h1>
-&lt;h2 id="类和对象">类和对象&lt;/h2>
-&lt;ul>
-&lt;li>类：具有某种特征的事物的集合，是抽象的&lt;/li>
-&lt;li>对象：群体（类）里面的个体，是具体的&lt;/li>
-&lt;/ul>
-&lt;h2 id="创建类和实例化">创建类和实例化&lt;/h2>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">class&lt;/span> &lt;span style="color:#008b45;font-weight:bold">MyClass&lt;/span>:
-&lt;span style="color:#cd5555">&amp;#34;&amp;#34;&amp;#34;A simple example class&amp;#34;&amp;#34;&amp;#34;&lt;/span>
-i = &lt;span style="color:#b452cd">12345&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> &lt;span style="color:#008b45">f&lt;/span>(self):
-&lt;span style="color:#8b008b;font-weight:bold">return&lt;/span> &lt;span style="color:#cd5555">&amp;#39;hello world&amp;#39;&lt;/span>
-&lt;span style="color:#228b22"># 类对象支持两种操作：属性引用和实例化。&lt;/span>
-&lt;span style="color:#228b22"># 属性引用&lt;/span>
-MyClass.i &lt;span style="color:#228b22"># 返回一个整数&lt;/span>
-MyClass.f &lt;span style="color:#228b22"># 返回一个函数对象&lt;/span>
-MyClass.__doc__ &lt;span style="color:#228b22"># 返回所属类的文档字符串: &amp;#34;A simple example class&amp;#34;&lt;/span>
-&lt;span style="color:#228b22"># 实例化&lt;/span>
-x = MyClass()
-x.i &lt;span style="color:#228b22"># 返回一个整数12345&lt;/span>
-x.f() &lt;span style="color:#228b22"># 返回字符串&amp;#39;hello world&amp;#39;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="构造函数">构造函数&lt;/h2>
-&lt;p>当 一 个 类 定 义 了 &lt;code>__init__()&lt;/code> 方 法 时， 类 的 实 例 化 操 作 会 自 动 为 新 创 建 的 类 实 例 发 起 调 用 &lt;code>__init__()&lt;/code>。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">class&lt;/span> &lt;span style="color:#008b45;font-weight:bold">Complex&lt;/span>:
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> __init__(self, realpart, imagpart):
-self.r = realpart
-self.i = imagpart
-x = Complex(&lt;span style="color:#b452cd">3.0&lt;/span>, -&lt;span style="color:#b452cd">4.5&lt;/span>)
-x.r, x.i
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>self: 在类中的方法必须加上self参数。&lt;/p>
-&lt;h2 id="属性和方法">属性和方法&lt;/h2>
-&lt;ul>
-&lt;li>属性：静态的特征，类中的变量，如头发、手臂等&lt;/li>
-&lt;li>方法：动态的特征，类中的函数，如唱歌、写字等&lt;/li>
-&lt;/ul>
-&lt;h2 id="继承和重载">继承和重载&lt;/h2>
-&lt;ul>
-&lt;li>继承：把某一个类或多个类（基类）的特征拿过来&lt;/li>
-&lt;li>重载：在子类（派生类）里面继承过来的特征重新定义&lt;/li>
-&lt;li>父类：基类&lt;/li>
-&lt;li>子类：派生类&lt;/li>
-&lt;/ul>
-&lt;h2 id="私有变量">私有变量&lt;/h2>
-&lt;p>&lt;code>_xx&lt;/code>：前置单下划线，私有化属性或方法，一般来讲，变量名&lt;code>_xx&lt;/code>被看作是“私有 的”，在模块或类外不可以使用。当变量是私有的时候，用_xx 来表示变量是很好的习惯。类对象和子类可以访问,这并不能完全做到真正的私有，只是约定俗成的而已，这样写表示不希望这个变量在外部被直接调用&lt;/p>
-&lt;p>&lt;code>__xx&lt;/code>：前置双下划线，私有化属性或方法，无法在外部直接访问（名字重整所以访问不到,只能是允许这个类本身进行访问了。连子类也不可以）&lt;/p>
-&lt;p>&lt;code>__xx__&lt;/code>：前后双下划线，系统定义名字（这就是在python中强大的魔法方法），因为变量名&lt;code>__xx__&lt;/code>对Python 来说有特殊含义，对于普通的变量应当避免这种命名风格。&lt;/p>
-&lt;p>&lt;code>xx_&lt;/code>：后置单下划线，用于避免与Python关键词的冲突&lt;/p>
-- https://a390177226.github.io/python/basic/ - zzb2021.</description></item><item><title>Cellular Automata</title><link>https://a390177226.github.io/post/cellularautomata/</link><pubDate>Fri, 28 May 2021 14:51:05 +0800</pubDate><guid>https://a390177226.github.io/post/cellularautomata/</guid><description>ZZB's blog https://a390177226.github.io/post/cellularautomata/ -&lt;h1 id="links">Links&lt;/h1>
-&lt;h2 id="main-references">Main references&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://natureofcode.com/book/chapter-7-cellular-automata/">Chapter 7. Cellular Automata | The Nature of Code&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://www.tiem.utk.edu/~gavrila/504.html">gavrila | Material for the first Cellular Automata lecture&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>A lot of Links about CA&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="http://cell-auto.com/links/">Cellular Automata Links (cell-auto.com)&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Others&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>&lt;a href="http://www.wolframscience.com/nksonline/toc.html">A New Kind of Science | Stephen Wolfram’s 1,280-page, 2002&lt;/a>.&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;a href="https://github.com/nature-of-code">The Nature of Code · GitHub&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ul>
-&lt;h2 id="1d-elementary-ca">1D: Elementary CA&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://mathworld.wolfram.com/ElementaryCellularAutomaton.html">Elementary Cellular Automaton &amp;ndash; from Wolfram MathWorld&lt;/a>&lt;/li>
-&lt;li>&lt;a href="http://atlas.wolfram.com/01/01/">Wolfram Atlas: Elementary Cellular Automata:Home&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="2d--game-of-life">2D: Game of Life&lt;/h2>
-&lt;p>&lt;strong>Cleve Moler, MATLAB&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://blogs.mathworks.com/cleve/2012/09/10/game-of-life-part-2-sparse-matrices/">Game of Life, Part 2, Sparse Matrices&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.mathworks.com/moler/exm/chapters.html">Chapter 12 Game of Life| Experiments with MATLAB&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;p>&lt;strong>Online Demonstration&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>&lt;a href="https://playgameoflife.com/">Play John Conway’s Game of Life&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h1 id="what-is-cellular-automata">What Is Cellular Automata?&lt;/h1>
-&lt;p>细胞自动机 (CA) 是一种离散模型，在可计算性理论、数学及理论生物学都有相关研究。&lt;/p>
-&lt;p>细胞自动机是具有以下特征的“细胞”对象系统的模型：&lt;/p>
-&lt;ul>
-&lt;li>细胞生活在网格里&lt;/li>
-&lt;li>每个细胞都有一个状态，状态数量通常是有限的&lt;/li>
-&lt;li>每个细胞都有一个邻域&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_01.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>细胞自动机最早由冯·诺依曼在1950年代为模拟生物细胞的自我复制而提出的。但是并未受到学术界重视。直到1970年，任教于剑桥大学的英国数学家约翰·何顿·康威设计了生命游戏，经马丁·葛登在《科学美国人》杂志上介绍，才吸引了科学家们的注意。此后，英国学者史蒂芬·沃尔夫勒姆对初等元胞机256种规则所产生的模型进行了深入研究，并用熵来描述其演化行为，将细胞自动机分为平稳型、周期型、混沌型和复杂型。&lt;/p>
-&lt;h2 id="general-strategy-of-modeling-ca">General strategy of modeling CA&lt;/h2>
-&lt;ul>
-&lt;li>set parameters&lt;/li>
-&lt;li>set initial conditions&lt;/li>
-&lt;li>set update rule&lt;/li>
-&lt;li>set graphics&lt;/li>
-&lt;/ul>
-&lt;h2 id="what-are-ca-good-for">What are CA good for?&lt;/h2>
-&lt;ul>
-&lt;li>provide an alternative simple method for studying connections between microscopic and macroscopic world&lt;/li>
-&lt;li>examine, by virtue of speedy computations, huge numbers of parameter ranges&lt;/li>
-&lt;li>provide a simple testing tool for qualitative predictions such as: “a local mechanism X can generate phenomenon Y”&lt;/li>
-&lt;/ul>
-&lt;p>However, CA models are almost never able to make precise quantitative predictions. They are suitable for modeling processes in which basic laws are hard to identify.&lt;/p>
-&lt;h1 id="1d-ca-elementary-cellular-automata">1D CA: Elementary Cellular Automata&lt;/h1>
-&lt;h2 id="simplest-ca">Simplest CA&lt;/h2>
-&lt;p>CA的三个关键要素是什么？&lt;/p>
-&lt;ul>
-&lt;li>网格。最简单的网格是一维的：一行单元格。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_02.png" alt="Nature of Code Image">&lt;/p>
-&lt;ul>
-&lt;li>状态。最简单的一组状态（除了只有一个状态之外）是两个状态：0或1。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_03.png" alt="Nature of Code Image">&lt;/p>
-&lt;ul>
-&lt;li>邻域。对于任何给定的单元，一维中最简单的邻域就是单元本身及其两个相邻的邻域：一个在左边，一个在右边。&lt;/li>
-&lt;/ul>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_04.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>然后，我们从一行单元格开始，每个单元格有一个初始状态（假设它是随机的），每个单元格有两个相邻的单元格。我们必须弄清楚我们想对边缘的细胞做什么（因为这些细胞每个只有一个邻居），但这是我们以后可以解决的问题。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_05.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>然而，我们还没有讨论细胞自动机如何工作的最重要的细节——时间。我们这里并不是在谈论真实世界的时间，而是关于CA在一段时间内的生活，这也可以称为一代，在我们的例子中，很可能是指动画的帧数。上面的数字向我们展示了时间等于0或第0代时的CA。我们要问自己的问题是：如何计算第1代时所有细胞的状态？第二代呢？以此类推。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_06.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>假设CA中有一个单独的细胞，我们称之为CELL。计算任意给定时间t的CELL状态的公式如下：&lt;/p>
-&lt;p>&lt;code>CELL state at time t = f(CELL neighborhood at time t - 1)&lt;/code>&lt;/p>
-&lt;p>换句话说，一个细胞的新状态是前一时刻（或前一代期间）细胞邻域中所有状态的函数。我们通过查看所有以前的相邻状态来计算一个新的状态值。&lt;/p>
-&lt;p>我们有三个细胞，每个细胞的状态为0或1。有多少种可能的方式可以配置这些状态？如果你喜欢二进制，你会注意到三个单元格定义了一个3位的数字，你能用3位数到多高？最多8个。让我们看看。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_08.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>一旦定义了所有可能的邻域，就需要为每个邻域配置定义一个结果（新状态值：0或1）。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_09.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>标准的Wolfram模型是从第0代开始，除了中间细胞的状态应该是1之外，所有细胞的状态都是0。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_10.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>参考上面的规则集，让我们看看给定的细胞（我们将选择中间的细胞）如何从第0代更改为第1代。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_11.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>尝试对上面的所有细胞应用相同的逻辑并填充空细胞。&lt;/p>
-&lt;p>现在，让我们回顾一下一代，给细胞上色-0表示白色，1表示黑色，然后将各代叠加，每一代都显示在前一代的下方。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_12.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>这个特殊的结果不是偶然发生的。我之所以选择这组规则是因为它生成的模式。注意有八种可能的邻域配置；因此，我们将“规则集”定义为8位的列表。这个特殊的规则可以说明如下：&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_14.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>8个0和1表示8位数字，一共有256个0和1的组合。因此，对于Wolfram初等CA，有256个可能的规则集。上面的规则集通常称为“Rule 90”，因为将二进制序列01011010转换为十进制数，则会得到整数90。&lt;/p>
-&lt;h2 id="matlab-code">Matlab Code&lt;/h2>
-&lt;p>这个，我是根据&lt;a href="https://natureofcode.com/book/chapter-7-cellular-automata/">Chapter 7. Cellular Automata | The Nature of Code&lt;/a>中的代码改成Matlab的。&lt;/p>
-&lt;p>在Matlab中，可以使用数组来描述以下的CA：&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_17.png" alt="Nature of Code Image">&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">CA = [&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>];
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>可视化方案也很简单：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">colormap([&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>;&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>])
-image(&lt;span style="color:#b452cd">2&lt;/span>-CA)
-axis image
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>接下来，正式开始编程了。首先，定义基本信息：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#228b22">% ruleset: 规则集，本例中为&amp;#34;Rule 90&amp;#34;&lt;/span>
-&lt;span style="color:#228b22">% time: 时间&lt;/span>
-&lt;span style="color:#228b22">% cells: 1-D CA的网格数&lt;/span>
-ruleset = [&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>];
-time = &lt;span style="color:#b452cd">100&lt;/span>;
-cells = &lt;span style="color:#b452cd">100&lt;/span>;
-&lt;span style="color:#228b22">% init: 初始状态&lt;/span>
-&lt;span style="color:#228b22">% init = round(rand(1,100)); % random initial states&lt;/span>
-init = &lt;span style="color:#658b00">zeros&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,cells); &lt;span style="color:#228b22">% single red in the middle&lt;/span>
-init(cells/&lt;span style="color:#b452cd">2&lt;/span>) = &lt;span style="color:#b452cd">1&lt;/span>;
-&lt;span style="color:#228b22">% Grid: (time,col)大小的网格&lt;/span>
-Grid = &lt;span style="color:#658b00">zeros&lt;/span>(time,cells);
-Grid(&lt;span style="color:#b452cd">1&lt;/span>,:) = init;
-&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
-&lt;p>如何处理那些左右两边都没有邻居的边缘细胞？以下是解决这个问题的三种可能的方法：&lt;/p>
-&lt;ol>
-&lt;li>边缘保持不变。这也许是最简单的解决办法，不费心计算边，总是保持它们的状态值不变（0或1）。&lt;/li>
-&lt;li>边缘环绕。把CA想象成一张绕成圆环的纸条。最左边的单元格是右边单元格的邻居，反之亦然。这可能是最常用的解决方案。&lt;/li>
-&lt;li>边缘有不同的邻域和规则。可以用不同的方法处理边缘单元，并为邻域为2而不是3的单元格创建规则。在某些情况下，可能希望这样做，但在这个例子中，这将是大量额外的代码行，几乎没有什么好处。&lt;/li>
-&lt;/ol>
-&lt;/blockquote>
-&lt;p>然后，根据规则更新Grid，Grid的第一行表示CA的第一代，以此类推。&lt;/p>
-&lt;p>为了使代码现在更容易阅读和理解，我们将使用选项1，跳过边缘情况，保持它们的值不变。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> generation = &lt;span style="color:#b452cd">2&lt;/span>:time
-previous = Grid(generation-&lt;span style="color:#b452cd">1&lt;/span>,:);
-newState = &lt;span style="color:#658b00">zeros&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,col);
-&lt;span style="color:#228b22">% a loop that ignores the first and last cell&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> &lt;span style="color:#658b00">i&lt;/span>=&lt;span style="color:#b452cd">2&lt;/span>:col-&lt;span style="color:#b452cd">1&lt;/span>
-left = previous(&lt;span style="color:#658b00">i&lt;/span>-&lt;span style="color:#b452cd">1&lt;/span>);
-middle = previous(&lt;span style="color:#658b00">i&lt;/span>);
-right = previous(&lt;span style="color:#658b00">i&lt;/span>+&lt;span style="color:#b452cd">1&lt;/span>);
-current = rules(left,middle,right);
-newState(&lt;span style="color:#658b00">i&lt;/span>) = current;
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;span style="color:#228b22">% update Grid&lt;/span>
-Grid(generation,:) = newState;
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>定义&lt;code>rules()&lt;/code>函数，即更新规则。下图为Rule 90。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_14.png" alt="Nature of Code Image">&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>&lt;span style="color:#bbb"> &lt;/span>out =&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#008b45">rules&lt;/span>(a, b, c)&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>ruleset = [&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>];
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (a == &lt;span style="color:#b452cd">1&lt;/span> &amp;amp;&amp;amp; b == &lt;span style="color:#b452cd">1&lt;/span> &amp;amp;&amp;amp; c == &lt;span style="color:#b452cd">1&lt;/span>)
-out=ruleset(&lt;span style="color:#b452cd">1&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> (a == &lt;span style="color:#b452cd">1&lt;/span> &amp;amp;&amp;amp; b == &lt;span style="color:#b452cd">1&lt;/span> &amp;amp;&amp;amp; c == &lt;span style="color:#b452cd">0&lt;/span>)
-out=ruleset(&lt;span style="color:#b452cd">2&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> (a == &lt;span style="color:#b452cd">1&lt;/span> &amp;amp;&amp;amp; b == &lt;span style="color:#b452cd">0&lt;/span> &amp;amp;&amp;amp; c == &lt;span style="color:#b452cd">1&lt;/span>)
-out=ruleset(&lt;span style="color:#b452cd">3&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> (a == &lt;span style="color:#b452cd">1&lt;/span> &amp;amp;&amp;amp; b == &lt;span style="color:#b452cd">0&lt;/span> &amp;amp;&amp;amp; c == &lt;span style="color:#b452cd">0&lt;/span>)
-out=ruleset(&lt;span style="color:#b452cd">4&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> (a == &lt;span style="color:#b452cd">0&lt;/span> &amp;amp;&amp;amp; b == &lt;span style="color:#b452cd">1&lt;/span> &amp;amp;&amp;amp; c == &lt;span style="color:#b452cd">1&lt;/span>)
-out=ruleset(&lt;span style="color:#b452cd">5&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> (a == &lt;span style="color:#b452cd">0&lt;/span> &amp;amp;&amp;amp; b == &lt;span style="color:#b452cd">1&lt;/span> &amp;amp;&amp;amp; c == &lt;span style="color:#b452cd">0&lt;/span>)
-out=ruleset(&lt;span style="color:#b452cd">6&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> (a == &lt;span style="color:#b452cd">0&lt;/span> &amp;amp;&amp;amp; b == &lt;span style="color:#b452cd">0&lt;/span> &amp;amp;&amp;amp; c == &lt;span style="color:#b452cd">1&lt;/span>)
-out=ruleset(&lt;span style="color:#b452cd">7&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> (a == &lt;span style="color:#b452cd">0&lt;/span> &amp;amp;&amp;amp; b == &lt;span style="color:#b452cd">0&lt;/span> &amp;amp;&amp;amp; c == &lt;span style="color:#b452cd">0&lt;/span>)
-out=ruleset(&lt;span style="color:#b452cd">8&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>rules()&lt;/code>第二种写法：&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>二进制&lt;/th>
-&lt;th>111&lt;/th>
-&lt;th>110&lt;/th>
-&lt;th>101&lt;/th>
-&lt;th>100&lt;/th>
-&lt;th>011&lt;/th>
-&lt;th>010&lt;/th>
-&lt;th>001&lt;/th>
-&lt;th>000&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>十进制&lt;/td>
-&lt;td>7&lt;/td>
-&lt;td>6&lt;/td>
-&lt;td>5&lt;/td>
-&lt;td>4&lt;/td>
-&lt;td>3&lt;/td>
-&lt;td>2&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>0&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>输出&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>0&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>&lt;span style="color:#bbb"> &lt;/span>out =&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#008b45">rules&lt;/span>(a, b, c, ruleset)&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>str = [num2str(a),num2str(b),num2str(c)];
-index = bin2dec(str);
-out = ruleset(&lt;span style="color:#b452cd">8&lt;/span>-index);
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>有的时候，我们把规则中输出的'01011010&amp;rsquo;转成十进制为90，采用十进制来表示。&lt;/p>
-&lt;p>因此，&lt;code>rules()&lt;/code>第二种写法可以改进，其中rule为一个[0,255]的十进制数：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>&lt;span style="color:#bbb"> &lt;/span>out =&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#008b45">rules&lt;/span>(a, b, c, rule)&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>ruleset = dec2bin(rule,&lt;span style="color:#b452cd">8&lt;/span>); &lt;span style="color:#228b22">% 把十进制转换成8位二进制的字符串&lt;/span>
-ruleset = &lt;span style="color:#658b00">abs&lt;/span>(ruleset)-&lt;span style="color:#b452cd">48&lt;/span>; &lt;span style="color:#228b22">% 如果X是字符串，abs(X)返回ASCII码值，0对48,1对49&lt;/span>
-str = [num2str(a),num2str(b),num2str(c)];
-index = bin2dec(str);
-out = ruleset(&lt;span style="color:#b452cd">8&lt;/span>-index);
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>最后，将整个Grid可视化：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">colormap([&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>;&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>])
-image(&lt;span style="color:#b452cd">2&lt;/span>-Grid)
-axis image
-xlabel(&lt;span style="color:#cd5555">&amp;#39;space&amp;#39;&lt;/span>)
-ylabel(&lt;span style="color:#cd5555">&amp;#39;time&amp;#39;&lt;/span>)
-title(&lt;span style="color:#cd5555">&amp;#39;Rule 90&amp;#39;&lt;/span>)
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="2d-ca-conways-game-of-life">2D CA: Conway’s Game of Life&lt;/h1>
-&lt;h2 id="basics">Basics&lt;/h2>
-&lt;p>“生命游戏”是由约翰·霍顿·康威发明的。&lt;/p>
-&lt;p>生命游戏的规则是&lt;/p>
-&lt;ul>
-&lt;li>
-&lt;p>每个cell的状态是“alive”（state = 1）或“dead”（state = 0）&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>每个cell的邻域有8个cell（即Moore neighborhood）&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Death&lt;/strong>. If a cell is alive (state = 1) it will die (state becomes 0) under the following circumstances.&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Overpopulation&lt;/strong>: If the cell has four or more alive neighbors, it dies.&lt;/li>
-&lt;li>&lt;strong>Loneliness&lt;/strong>: If the cell has one or fewer alive neighbors, it dies.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Birth&lt;/strong>. If a cell is dead (state = 0) it will come to life (state becomes 1) if it has exactly three alive neighbors (no more, no less).&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>&lt;strong>Stasis&lt;/strong>. In all other cases, the cell state does not change. To be thorough, let’s describe those scenarios.&lt;/p>
-&lt;ul>
-&lt;li>&lt;strong>Staying Alive&lt;/strong>: If a cell is alive and has exactly two or three live neighbors, it stays alive.&lt;/li>
-&lt;li>&lt;strong>Staying Dead&lt;/strong>: If a cell is dead and has anything other than three live neighbors, it stays dead.&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;blockquote>
-&lt;p>规则可以总结为：&lt;/p>
-&lt;p>At each step, the fate of each cell is determined by the vitality of its eight nearest neighbors and this rule:
-A live cell with two live neighbors, or any cell with three live neighbors, is alive at the next step.&lt;/p>
-&lt;/blockquote>
-&lt;h2 id="initial-patterns">Initial Patterns&lt;/h2>
-&lt;p>生命游戏中一个令人兴奋的方面是，最初的模式（initial patterns）会产生有趣的结果。&lt;/p>
-&lt;p>例如，有些保持不变，从不改变。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_24.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>这是在两个状态之间来回振荡的模式。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_25.png" alt="Nature of Code Image">&lt;/p>
-&lt;p>还有一种模式，一代一代地在网格中移动(需要注意的是，细胞本身实际上并没有移动，尽管我们可以看到细胞打开和关闭时结果中出现的运动）&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_26.png" alt="Nature of Code Image">&lt;/p>
-&lt;h2 id="cleve-molers-code">Cleve Moler‘s Code&lt;/h2>
-&lt;h3 id="step-by-step">Step by step&lt;/h3>
-&lt;p>这里的代码来自&lt;a href="https://blogs.mathworks.com/cleve/2012/09/10/game-of-life-part-2-sparse-matrices/">Game of Life, Part 2, Sparse Matrices&lt;/a>&lt;/p>
-&lt;p>生命游戏中的宇宙是由一个稀疏矩阵X来表示的，因为该矩阵的元素几乎全是0。唯一的非零元素是那些活着的细胞。让我们从描述实现康威规则的代码开始：&lt;/p>
-&lt;ul>
-&lt;li>A live cell with two live neighbors, or any cell with three live neighbors, is alive at the next step.&lt;/li>
-&lt;/ul>
-&lt;p>一个基本的操作是计算活着的邻居。这涉及一个避免边缘元素的索引向量p。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#228b22">% m = size(X,1);&lt;/span>
-&lt;span style="color:#228b22">% p = 2:m-1;&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>下面的代码创建一个稀疏矩阵N，其中的元素介于0和8之间，表示活着邻居的计数。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#228b22">% N = sparse(m,m);&lt;/span>
-&lt;span style="color:#228b22">% N(p,p) = X(p-1,p-1) + X(p,p-1) + X(p+1,p-1) + X(p-1,p) + ...&lt;/span>
-&lt;span style="color:#228b22">% X(p-1,p+1) + X(p,p+1) + X(p+1,p+1) + X(p+1,p);&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>对于稀疏矩阵上的MATLAB矩阵逻辑运算，这是康威规则的实现：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#228b22">% X = (X &amp;amp; (N == 2)) | (N == 3);&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>下面，我们从the glider这一个初始模式来看看结果如何：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">X = sparse(&lt;span style="color:#b452cd">7&lt;/span>,&lt;span style="color:#b452cd">7&lt;/span>);
-X(&lt;span style="color:#b452cd">3&lt;/span>:&lt;span style="color:#b452cd">5&lt;/span>,&lt;span style="color:#b452cd">3&lt;/span>:&lt;span style="color:#b452cd">5&lt;/span>) = [&lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">0&lt;/span>; &lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">1&lt;/span>; &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">1&lt;/span>];
-&lt;span style="color:#658b00">disp&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;X&amp;#39;&lt;/span>)
-t = int2str(X); t(t==&lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span>) = &lt;span style="color:#cd5555">&amp;#39;.&amp;#39;&lt;/span>; &lt;span style="color:#658b00">disp&lt;/span>(t)
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>X
-. . . . . . .
-. . . . . . .
-. . . 1 . . .
-. . . . 1 . .
-. . 1 1 1 . .
-. . . . . . .
-. . . . . . .
-&lt;/code>&lt;/pre>&lt;p>数一数八个邻居中有多少还活着。我们在the glider周围得到了他们的计数值。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">m = &lt;span style="color:#658b00">size&lt;/span>(X,&lt;span style="color:#b452cd">1&lt;/span>);
-p = &lt;span style="color:#b452cd">2&lt;/span>:m-&lt;span style="color:#b452cd">1&lt;/span>;
-N = sparse(m,m);
-N(p,p) = X(p-&lt;span style="color:#b452cd">1&lt;/span>,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p-&lt;span style="color:#b452cd">1&lt;/span>,p) + &lt;span style="color:#228b22">...&lt;/span>
-X(p-&lt;span style="color:#b452cd">1&lt;/span>,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p);
-&lt;span style="color:#658b00">disp&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;N&amp;#39;&lt;/span>)
-t = int2str(N); t(t==&lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span>) = &lt;span style="color:#cd5555">&amp;#39;.&amp;#39;&lt;/span>; &lt;span style="color:#658b00">disp&lt;/span>(t)
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>N
-. . . . . . .
-. . 1 1 1 . .
-. . 1 1 2 1 .
-. 1 3 5 3 2 .
-. 1 1 3 2 2 .
-. 1 2 3 2 1 .
-. . . . . . .
-&lt;/code>&lt;/pre>&lt;p>只有the glider的头部还活着，并且还有两个活着的邻居。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#658b00">disp&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;X &amp;amp; (N == 2)&amp;#39;&lt;/span>)
-t = int2str(X &amp;amp; (N == &lt;span style="color:#b452cd">2&lt;/span>)); t(t==&lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span>) = &lt;span style="color:#cd5555">&amp;#39;.&amp;#39;&lt;/span>; &lt;span style="color:#658b00">disp&lt;/span>(t)
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>X &amp;amp; (N == 2)
-. . . . . . .
-. . . . . . .
-. . . . . . .
-. . . . . . .
-. . . . 1 . .
-. . . . . . .
-. . . . . . .
-&lt;/code>&lt;/pre>&lt;p>另外四个细胞有三个活着的邻居。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#658b00">disp&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;N == 3&amp;#39;&lt;/span>)
-t = int2str(N == &lt;span style="color:#b452cd">3&lt;/span>); t(t==&lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span>) = &lt;span style="color:#cd5555">&amp;#39;.&amp;#39;&lt;/span>; &lt;span style="color:#658b00">disp&lt;/span>(t)
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>N == 3
-. . . . . . .
-. . . . . . .
-. . . . . . .
-. . 1 . 1 . .
-. . . 1 . . .
-. . . 1 . . .
-. . . . . . .
-&lt;/code>&lt;/pre>&lt;p>使用&amp;quot;|&amp;quot;，对这后面两个矩阵进行或操作可以得到the glider的下一代。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#658b00">disp&lt;/span>(&lt;span style="color:#cd5555">&amp;#39;(X &amp;amp; (N == 2)) | (N == 3)&amp;#39;&lt;/span>)
-t = int2str((X &amp;amp; (N == &lt;span style="color:#b452cd">2&lt;/span>)) | (N == &lt;span style="color:#b452cd">3&lt;/span>)); t(t==&lt;span style="color:#cd5555">&amp;#39;0&amp;#39;&lt;/span>) = &lt;span style="color:#cd5555">&amp;#39;.&amp;#39;&lt;/span>; &lt;span style="color:#658b00">disp&lt;/span>(t)
-&lt;/code>&lt;/pre>&lt;/div>&lt;pre>&lt;code>(X &amp;amp; (N == 2)) | (N == 3)
-. . . . . . .
-. . . . . . .
-. . . . . . .
-. . 1 . 1 . .
-. . . 1 1 . .
-. . . 1 . . .
-. . . . . . .
-&lt;/code>&lt;/pre>&lt;p>再重复以上过程三次，the glider就会向下向右移动一步。&lt;/p>
-&lt;h3 id="the-whole-thing">The whole thing&lt;/h3>
-&lt;p>这里的代码来自&lt;a href="https://www.mathworks.com/moler/exm/chapters.html">Chapter 12 Game of Life | Experiments with MATLAB&lt;/a>&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">X = sparse(&lt;span style="color:#b452cd">50&lt;/span>,&lt;span style="color:#b452cd">50&lt;/span>);
-X(&lt;span style="color:#b452cd">21&lt;/span>:&lt;span style="color:#b452cd">30&lt;/span>,&lt;span style="color:#b452cd">21&lt;/span>:&lt;span style="color:#b452cd">30&lt;/span>) = (&lt;span style="color:#658b00">rand&lt;/span>(&lt;span style="color:#b452cd">10&lt;/span>,&lt;span style="color:#b452cd">10&lt;/span>) &amp;gt; .&lt;span style="color:#b452cd">75&lt;/span>);
-&lt;span style="color:#228b22">% Loop over 100 generations&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> t = &lt;span style="color:#b452cd">1&lt;/span>:&lt;span style="color:#b452cd">100&lt;/span>
-spy(X) &lt;span style="color:#228b22">% Visualize sparsity pattern&lt;/span>
-str_title = sprintf(&lt;span style="color:#cd5555">&amp;#39;Generation:%d&amp;#39;&lt;/span>,num2str(t));
-title(str_title)
-drawnow
-&lt;span style="color:#228b22">% Whether cells stay alive, die, or generate new cells depends&lt;/span>
-&lt;span style="color:#228b22">% upon how many of their eight possible neighbors are alive.&lt;/span>
-m = &lt;span style="color:#658b00">size&lt;/span>(X,&lt;span style="color:#b452cd">1&lt;/span>);
-p = &lt;span style="color:#b452cd">2&lt;/span>:m-&lt;span style="color:#b452cd">1&lt;/span>;
-&lt;span style="color:#228b22">% Count how many of the eight neighbors are alive.&lt;/span>
-N = sparse(m,m);
-N(p,p) = X(p-&lt;span style="color:#b452cd">1&lt;/span>,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p-&lt;span style="color:#b452cd">1&lt;/span>,p) + &lt;span style="color:#228b22">...&lt;/span>
-X(p-&lt;span style="color:#b452cd">1&lt;/span>,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p);
-&lt;span style="color:#228b22">% A live cell with two live neighbors, or any cell with&lt;/span>
-&lt;span style="color:#228b22">% three live neigbhors, is alive at the next step.&lt;/span>
-X = (X &amp;amp; (N == &lt;span style="color:#b452cd">2&lt;/span>)) | (N == &lt;span style="color:#b452cd">3&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>Matlab里面也自带了生命游戏，在命令行输入&lt;code>life&lt;/code>即可打开。&lt;/p>
-&lt;h3 id="with-simple-gui">With Simple GUI&lt;/h3>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#228b22">%=============================================&lt;/span>
-&lt;span style="color:#228b22">%build the GUI&lt;/span>
-&lt;span style="color:#228b22">%define the plot button&lt;/span>
-plotbutton=uicontrol(&lt;span style="color:#cd5555">&amp;#39;style&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;pushbutton&amp;#39;&lt;/span>,&lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;string&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;Run&amp;#39;&lt;/span>, &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;fontsize&amp;#39;&lt;/span>,&lt;span style="color:#b452cd">12&lt;/span>, &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;position&amp;#39;&lt;/span>,[&lt;span style="color:#b452cd">500&lt;/span>,&lt;span style="color:#b452cd">300&lt;/span>,&lt;span style="color:#b452cd">50&lt;/span>,&lt;span style="color:#b452cd">50&lt;/span>], &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;callback&amp;#39;&lt;/span>, &lt;span style="color:#cd5555">&amp;#39;run=1;&amp;#39;&lt;/span>);
-&lt;span style="color:#228b22">%define the stop button&lt;/span>
-erasebutton=uicontrol(&lt;span style="color:#cd5555">&amp;#39;style&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;pushbutton&amp;#39;&lt;/span>,&lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;string&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;Stop&amp;#39;&lt;/span>, &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;fontsize&amp;#39;&lt;/span>,&lt;span style="color:#b452cd">12&lt;/span>, &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;position&amp;#39;&lt;/span>,[&lt;span style="color:#b452cd">500&lt;/span>,&lt;span style="color:#b452cd">200&lt;/span>,&lt;span style="color:#b452cd">50&lt;/span>,&lt;span style="color:#b452cd">50&lt;/span>], &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;callback&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;freeze=1;&amp;#39;&lt;/span>);
-&lt;span style="color:#228b22">%define the Quit button&lt;/span>
-quitbutton=uicontrol(&lt;span style="color:#cd5555">&amp;#39;style&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;pushbutton&amp;#39;&lt;/span>,&lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;string&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;Quit&amp;#39;&lt;/span>, &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;fontsize&amp;#39;&lt;/span>,&lt;span style="color:#b452cd">12&lt;/span>, &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;position&amp;#39;&lt;/span>,[&lt;span style="color:#b452cd">500&lt;/span>,&lt;span style="color:#b452cd">100&lt;/span>,&lt;span style="color:#b452cd">50&lt;/span>,&lt;span style="color:#b452cd">50&lt;/span>], &lt;span style="color:#228b22">...&lt;/span>
-&lt;span style="color:#cd5555">&amp;#39;callback&amp;#39;&lt;/span>,&lt;span style="color:#cd5555">&amp;#39;stop=1;close;&amp;#39;&lt;/span>);
-&lt;span style="color:#228b22">%=============================================&lt;/span>
-&lt;span style="color:#228b22">%CA setup&lt;/span>
-n=&lt;span style="color:#b452cd">50&lt;/span>;
-stepnumber = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#228b22">%initialize&lt;/span>
-X = sparse(n,n);
-&lt;span style="color:#228b22">% X(21:30,21:30) = (rand(10,10) &amp;gt; .75);&lt;/span>
-X(&lt;span style="color:#b452cd">3&lt;/span>:&lt;span style="color:#b452cd">5&lt;/span>,&lt;span style="color:#b452cd">3&lt;/span>:&lt;span style="color:#b452cd">5&lt;/span>) = [&lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">0&lt;/span>; &lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">1&lt;/span>; &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">1&lt;/span>];
-&lt;span style="color:#228b22">%build an image and display it&lt;/span>
-colormap([&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>;&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>])
-imh = image(&lt;span style="color:#b452cd">2&lt;/span>-X);
-axis image
-xlabel(&lt;span style="color:#cd5555">&amp;#39;columns&amp;#39;&lt;/span>)
-ylabel(&lt;span style="color:#cd5555">&amp;#39;rows&amp;#39;&lt;/span>)
-title(&lt;span style="color:#cd5555">&amp;#39;generation=0&amp;#39;&lt;/span>)
-&lt;span style="color:#228b22">%index definition for cell update&lt;/span>
-p = &lt;span style="color:#b452cd">2&lt;/span>:n-&lt;span style="color:#b452cd">1&lt;/span>;
-&lt;span style="color:#228b22">%Main event loop&lt;/span>
-stop= &lt;span style="color:#b452cd">0&lt;/span>; &lt;span style="color:#228b22">%wait for a quit button push&lt;/span>
-run = &lt;span style="color:#b452cd">0&lt;/span>; &lt;span style="color:#228b22">%wait for a draw &lt;/span>
-freeze = &lt;span style="color:#b452cd">0&lt;/span>; &lt;span style="color:#228b22">%wait for a freeze&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">while&lt;/span> (stop==&lt;span style="color:#b452cd">0&lt;/span>)
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (run==&lt;span style="color:#b452cd">1&lt;/span>)
-&lt;span style="color:#228b22">%nearest neighbor sum&lt;/span>
-N = sparse(n,n);
-N(p,p) = X(p-&lt;span style="color:#b452cd">1&lt;/span>,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p-&lt;span style="color:#b452cd">1&lt;/span>) + X(p-&lt;span style="color:#b452cd">1&lt;/span>,p) + &lt;span style="color:#228b22">...&lt;/span>
-X(p-&lt;span style="color:#b452cd">1&lt;/span>,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p+&lt;span style="color:#b452cd">1&lt;/span>) + X(p+&lt;span style="color:#b452cd">1&lt;/span>,p);
-&lt;span style="color:#228b22">% The CA rule&lt;/span>
-X = (X &amp;amp; (N == &lt;span style="color:#b452cd">2&lt;/span>)) | (N == &lt;span style="color:#b452cd">3&lt;/span>);
-&lt;span style="color:#228b22">%draw the new image&lt;/span>
-set(imh, &lt;span style="color:#cd5555">&amp;#39;cdata&amp;#39;&lt;/span>, &lt;span style="color:#b452cd">2&lt;/span>-X )
-&lt;span style="color:#228b22">%update the step number diaplay&lt;/span>
-stepnumber = stepnumber + &lt;span style="color:#b452cd">1&lt;/span>;
-title([&lt;span style="color:#cd5555">&amp;#39;generation=&amp;#39;&lt;/span>,num2str(stepnumber)])
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> (freeze == &lt;span style="color:#b452cd">1&lt;/span>)
-run = &lt;span style="color:#b452cd">0&lt;/span>;
-freeze = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-drawnow &lt;span style="color:#228b22">%need this in the loop for controls to work&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="another-code">Another Code&lt;/h2>
-&lt;p>根据&lt;a href="https://natureofcode.com/book/chapter-7-cellular-automata/">Chapter 7. Cellular Automata | The Nature of Code&lt;/a>中的代码改成Matlab和python的。&lt;/p>
-&lt;h3 id="面向过程-matlab">面向过程-Matlab&lt;/h3>
-&lt;p>首先，定义参数和网格，并初始化：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#228b22">% 定义参数&lt;/span>
-rows = &lt;span style="color:#b452cd">50&lt;/span>;
-columns = &lt;span style="color:#b452cd">50&lt;/span>;
-time = &lt;span style="color:#b452cd">50&lt;/span>;
-&lt;span style="color:#228b22">% 定义网格,大小为(rows,columns,time)&lt;/span>
-Grid = &lt;span style="color:#658b00">zeros&lt;/span>(rows,columns,time);
-&lt;span style="color:#228b22">% 网格的初始化&lt;/span>
-&lt;span style="color:#228b22">% Grid(21:30,21:30) = (rand(10,10) &amp;gt; .75); % set random initial pattern&lt;/span>
-Grid(&lt;span style="color:#b452cd">21&lt;/span>:&lt;span style="color:#b452cd">23&lt;/span>,&lt;span style="color:#b452cd">21&lt;/span>:&lt;span style="color:#b452cd">23&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>) = [&lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">0&lt;/span>; &lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">0&lt;/span> &lt;span style="color:#b452cd">1&lt;/span>; &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">1&lt;/span> &lt;span style="color:#b452cd">1&lt;/span>]; &lt;span style="color:#228b22">% set initial pattern: the glider&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>然后，根据现在的邻域信息，计算下一代的状态。&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#228b22">% compute the next generation&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> generation=&lt;span style="color:#b452cd">2&lt;/span>:time
-previous = Grid(:,:,generation-&lt;span style="color:#b452cd">1&lt;/span>);
-next = &lt;span style="color:#658b00">zeros&lt;/span>(rows,columns);
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> x=&lt;span style="color:#b452cd">2&lt;/span>:columns-&lt;span style="color:#b452cd">1&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> y=&lt;span style="color:#b452cd">2&lt;/span>:rows-&lt;span style="color:#b452cd">1&lt;/span>
-next(y,x) = rules(y,x,previous);
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-Grid(:,:,generation) = next;
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>定义规则&lt;code>rules()&lt;/code>，先得到邻域信息，计算活着的邻居数目。&lt;/p>
-&lt;p>&lt;img src="https://natureofcode.com/book/imgs/chapter07/ch07_27.png" alt="Nature of Code Image">&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>&lt;span style="color:#bbb"> &lt;/span>out =&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#008b45">rules&lt;/span>(previous)&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#228b22">% 得到邻域信息&lt;/span>
-neighbor1 = previous(y-&lt;span style="color:#b452cd">1&lt;/span>,x-&lt;span style="color:#b452cd">1&lt;/span>); &lt;span style="color:#228b22">% Top row of neighbors&lt;/span>
-neighbor2 = previous(y-&lt;span style="color:#b452cd">1&lt;/span>,x);
-neighbor3 = previous(y-&lt;span style="color:#b452cd">1&lt;/span>,x+&lt;span style="color:#b452cd">1&lt;/span>);
-neighbor4 = previous(y,x-&lt;span style="color:#b452cd">1&lt;/span>); &lt;span style="color:#228b22">% Middle row of neighbors&lt;/span>
-neighbor6 = previous(y,x+&lt;span style="color:#b452cd">1&lt;/span>);
-neighbor7 = previous(y+&lt;span style="color:#b452cd">1&lt;/span>,x-&lt;span style="color:#b452cd">1&lt;/span>); &lt;span style="color:#228b22">% Bottom row of neighbors&lt;/span>
-neighbor8 = previous(y+&lt;span style="color:#b452cd">1&lt;/span>,x);
-neighbor9 = previous(y+&lt;span style="color:#b452cd">1&lt;/span>,x+&lt;span style="color:#b452cd">1&lt;/span>);
-&lt;span style="color:#228b22">% 计算活着的邻居数量&lt;/span>
-countAlive = &lt;span style="color:#b452cd">0&lt;/span>;
-countAlive = neighbor1+neighbor2+neighbor3+&lt;span style="color:#228b22">...&lt;/span>
-neighbor4+neighbor6+&lt;span style="color:#228b22">... % note we don&amp;#39;t count self&lt;/span>
-neighbor7+neighbor8+neighbor9;
-&lt;span style="color:#228b22">% the rules of life&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> ((previous(y,x) == &lt;span style="color:#b452cd">1&lt;/span>) &amp;amp;&amp;amp; (countAlive &amp;lt; &lt;span style="color:#b452cd">2&lt;/span>))
-out = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> ((previous(y,x) == &lt;span style="color:#b452cd">1&lt;/span>) &amp;amp;&amp;amp; (countAlive &amp;gt; &lt;span style="color:#b452cd">3&lt;/span>))
-out = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> ((previous(y,x) == &lt;span style="color:#b452cd">0&lt;/span>) &amp;amp;&amp;amp; (countAlive == &lt;span style="color:#b452cd">3&lt;/span>))
-out = &lt;span style="color:#b452cd">1&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">else&lt;/span>
-out = previous(y,x);
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;code>rules()&lt;/code>改进&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#8b008b;font-weight:bold">function&lt;/span>&lt;span style="color:#bbb"> &lt;/span>out =&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#008b45">rules&lt;/span>(y,x,previous)&lt;span style="color:#bbb">
-&lt;/span>&lt;span style="color:#bbb"> &lt;/span>&lt;span style="color:#228b22">% 计算活着的邻居数量&lt;/span>
-countAlive = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> &lt;span style="color:#658b00">i&lt;/span> = -&lt;span style="color:#b452cd">1&lt;/span>:&lt;span style="color:#b452cd">1&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> &lt;span style="color:#658b00">j&lt;/span> = -&lt;span style="color:#b452cd">1&lt;/span>:&lt;span style="color:#b452cd">1&lt;/span>
-countAlive = countAlive + previous(y+&lt;span style="color:#658b00">j&lt;/span>,x+&lt;span style="color:#658b00">i&lt;/span>);
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;span style="color:#228b22">% note we don&amp;#39;t count self&lt;/span>
-countAlive = countAlive - previous(y,x);
-&lt;span style="color:#228b22">% the rules of life&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> ((previous(y,x) == &lt;span style="color:#b452cd">1&lt;/span>) &amp;amp;&amp;amp; (countAlive &amp;lt; &lt;span style="color:#b452cd">2&lt;/span>))
-out = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> ((previous(y,x) == &lt;span style="color:#b452cd">1&lt;/span>) &amp;amp;&amp;amp; (countAlive &amp;gt; &lt;span style="color:#b452cd">3&lt;/span>))
-out = &lt;span style="color:#b452cd">0&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">elseif&lt;/span> ((previous(y,x) == &lt;span style="color:#b452cd">0&lt;/span>) &amp;amp;&amp;amp; (countAlive == &lt;span style="color:#b452cd">3&lt;/span>))
-out = &lt;span style="color:#b452cd">1&lt;/span>;
-&lt;span style="color:#8b008b;font-weight:bold">else&lt;/span>
-out = previous(y,x);
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>可视化：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-matlab" data-lang="matlab">&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> t=&lt;span style="color:#b452cd">1&lt;/span>:time
-colormap([&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>,&lt;span style="color:#b452cd">0&lt;/span>;&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">1&lt;/span>])
-A = Grid(:,:,t);
-image(&lt;span style="color:#b452cd">2&lt;/span>-A)
-axis image
-xlabel(&lt;span style="color:#cd5555">&amp;#39;columns&amp;#39;&lt;/span>)
-ylabel(&lt;span style="color:#cd5555">&amp;#39;rows&amp;#39;&lt;/span>)
-title(time)
-drawnow
-pause(&lt;span style="color:#b452cd">0.1&lt;/span>)
-&lt;span style="color:#8b008b;font-weight:bold">end&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="面向对象-python">面向对象-python&lt;/h3>
-&lt;p>首先，导入包&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">random&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">matplotlib.pyplot&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">plt&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">import&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">matplotlib.patches&lt;/span> &lt;span style="color:#8b008b;font-weight:bold">as&lt;/span> &lt;span style="color:#008b45;text-decoration:underline">mpathes&lt;/span>
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>定义基本的Cell类：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">class&lt;/span> &lt;span style="color:#008b45;font-weight:bold">Cell&lt;/span>:
-&lt;span style="color:#228b22"># Location and size&lt;/span>
-x = &lt;span style="color:#b452cd">0&lt;/span>
-y = &lt;span style="color:#b452cd">0&lt;/span>
-w = &lt;span style="color:#b452cd">0&lt;/span>
-&lt;span style="color:#228b22"># Current state and previous state&lt;/span>
-state = &lt;span style="color:#b452cd">0&lt;/span>
-previous = &lt;span style="color:#b452cd">0&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> __init__(self, x_, y_, w_):
-self.x = x_
-self.y = y_
-self.w = w_
-&lt;span style="color:#228b22"># self.state = random.randint(0,1)&lt;/span>
-self.state = &lt;span style="color:#b452cd">0&lt;/span>
-self.previous = self.state
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> &lt;span style="color:#008b45">savePrevious&lt;/span>(self):
-self.previous = self.state
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> &lt;span style="color:#008b45">newState&lt;/span>(self, s):
-self.state = s
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> &lt;span style="color:#008b45">display&lt;/span>(self, ax):
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> self.state == &lt;span style="color:#b452cd">1&lt;/span>:
-rect = mpathes.Rectangle([self.y, self.x], self.w, self.w, color=&lt;span style="color:#cd5555">&amp;#39;k&amp;#39;&lt;/span>)
-&lt;span style="color:#8b008b;font-weight:bold">else&lt;/span>:
-rect = mpathes.Rectangle([self.y, self.x], self.w, self.w, color=&lt;span style="color:#cd5555">&amp;#39;w&amp;#39;&lt;/span>)
-ax.add_patch(rect)
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>定义生命游戏GOL：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#8b008b;font-weight:bold">class&lt;/span> &lt;span style="color:#008b45;font-weight:bold">GOL&lt;/span>:
-w = &lt;span style="color:#b452cd">1&lt;/span>
-width = &lt;span style="color:#b452cd">20&lt;/span>
-height = &lt;span style="color:#b452cd">20&lt;/span>
-cols = &lt;span style="color:#658b00">int&lt;/span>(width/w)
-rows = &lt;span style="color:#658b00">int&lt;/span>(height/w)
-&lt;span style="color:#228b22"># Game of life board&lt;/span>
-board = []
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> __init__(self):
-self.board = [[ Cell(i*self.w, j*self.w, self.w) &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> j &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(self.cols)] &lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> i &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(self.rows)]
-&lt;span style="color:#228b22"># initial pattern: the glider&lt;/span>
-self.board[&lt;span style="color:#b452cd">8&lt;/span>][&lt;span style="color:#b452cd">2&lt;/span>].newState(&lt;span style="color:#b452cd">1&lt;/span>)
-self.board[&lt;span style="color:#b452cd">7&lt;/span>][&lt;span style="color:#b452cd">3&lt;/span>].newState(&lt;span style="color:#b452cd">1&lt;/span>)
-self.board[&lt;span style="color:#b452cd">6&lt;/span>][&lt;span style="color:#b452cd">1&lt;/span>].newState(&lt;span style="color:#b452cd">1&lt;/span>)
-self.board[&lt;span style="color:#b452cd">6&lt;/span>][&lt;span style="color:#b452cd">2&lt;/span>].newState(&lt;span style="color:#b452cd">1&lt;/span>)
-self.board[&lt;span style="color:#b452cd">6&lt;/span>][&lt;span style="color:#b452cd">3&lt;/span>].newState(&lt;span style="color:#b452cd">1&lt;/span>)
-&lt;span style="color:#228b22"># The process of creating the new generation&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> &lt;span style="color:#008b45">generate&lt;/span>(self):
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> i &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(self.rows):
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> j &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(self.cols):
-self.board[i][j].savePrevious()
-&lt;span style="color:#228b22"># Loop through every spot in our 2D array and check spots neighbors&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> i &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>, self.rows-&lt;span style="color:#b452cd">1&lt;/span>):
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> j &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>, self.cols-&lt;span style="color:#b452cd">1&lt;/span>):
-&lt;span style="color:#228b22"># 得到邻域信息&lt;/span>
-board = self.board
-neighbor1 = board[i-&lt;span style="color:#b452cd">1&lt;/span>][j-&lt;span style="color:#b452cd">1&lt;/span>].previous; &lt;span style="color:#228b22"># Top row of neighbors&lt;/span>
-neighbor2 = board[i-&lt;span style="color:#b452cd">1&lt;/span>][j].previous;
-neighbor3 = board[i-&lt;span style="color:#b452cd">1&lt;/span>][j+&lt;span style="color:#b452cd">1&lt;/span>].previous;
-neighbor4 = board[i][j-&lt;span style="color:#b452cd">1&lt;/span>].previous; &lt;span style="color:#228b22"># Middle row of neighbors&lt;/span>
-neighbor6 = board[i][j+&lt;span style="color:#b452cd">1&lt;/span>].previous;
-neighbor7 = board[i+&lt;span style="color:#b452cd">1&lt;/span>][j-&lt;span style="color:#b452cd">1&lt;/span>].previous; &lt;span style="color:#228b22"># Bottom row of neighbors&lt;/span>
-neighbor8 = board[i+&lt;span style="color:#b452cd">1&lt;/span>][j].previous;
-neighbor9 = board[i+&lt;span style="color:#b452cd">1&lt;/span>][j+&lt;span style="color:#b452cd">1&lt;/span>].previous;
-&lt;span style="color:#228b22"># 计算活着的邻居数量, note we don&amp;#39;t count self&lt;/span>
-countAlive = &lt;span style="color:#b452cd">0&lt;/span>
-countAlive = neighbor1+neighbor2+neighbor3+neighbor4+neighbor6+neighbor7+neighbor8+neighbor9
-&lt;span style="color:#228b22"># 根据规则更新状态&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">if&lt;/span> ((board[i][j].state == &lt;span style="color:#b452cd">1&lt;/span>) &lt;span style="color:#8b008b">and&lt;/span> (countAlive &amp;lt; &lt;span style="color:#b452cd">2&lt;/span>)): &lt;span style="color:#228b22"># Loneliness&lt;/span>
-board[i][j].newState(&lt;span style="color:#b452cd">0&lt;/span>)
-&lt;span style="color:#8b008b;font-weight:bold">elif&lt;/span> ((board[i][j].state == &lt;span style="color:#b452cd">1&lt;/span>) &lt;span style="color:#8b008b">and&lt;/span> (countAlive &amp;gt; &lt;span style="color:#b452cd">3&lt;/span>)): &lt;span style="color:#228b22"># Overpopulation&lt;/span>
-board[i][j].newState(&lt;span style="color:#b452cd">0&lt;/span>)
-&lt;span style="color:#8b008b;font-weight:bold">elif&lt;/span> ((board[i][j].state == &lt;span style="color:#b452cd">0&lt;/span>) &lt;span style="color:#8b008b">and&lt;/span> (countAlive == &lt;span style="color:#b452cd">3&lt;/span>)): &lt;span style="color:#228b22"># Reproduction&lt;/span>
-board[i][j].newState(&lt;span style="color:#b452cd">1&lt;/span>)
-&lt;span style="color:#228b22"># else do nothing!&lt;/span>
-&lt;span style="color:#228b22"># This is the easy part, just draw the cells, black for &amp;#39;1&amp;#39;, white for &amp;#39;0&amp;#39;&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">def&lt;/span> &lt;span style="color:#008b45">display&lt;/span>(self):
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> i &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(self.rows):
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> j &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(self.cols):
-self.board[i][j].display(ax)
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>实例化，并可视化：&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-python" data-lang="python">&lt;span style="color:#228b22"># 实例化&lt;/span>
-gol = GOL()
-&lt;span style="color:#228b22"># 创建画布&lt;/span>
-fig,ax = plt.subplots(figsize=(&lt;span style="color:#b452cd">8&lt;/span>, &lt;span style="color:#b452cd">8&lt;/span>))
-ax.axis([&lt;span style="color:#b452cd">0&lt;/span>,gol.rows,&lt;span style="color:#b452cd">0&lt;/span>,gol.cols])
-ax.xaxis.set_major_locator(plt.MultipleLocator(gol.w))
-ax.yaxis.set_major_locator(plt.MultipleLocator(gol.w))
-ax.set_title(&lt;span style="color:#cd5555">&amp;#39;Generation=0&amp;#39;&lt;/span>)
-ax.grid()
-&lt;span style="color:#228b22"># 显示第0代&lt;/span>
-gol.display()
-&lt;span style="color:#228b22"># 循环，不断地产生下一代，然后显示&lt;/span>
-&lt;span style="color:#8b008b;font-weight:bold">for&lt;/span> generation &lt;span style="color:#8b008b">in&lt;/span> &lt;span style="color:#658b00">range&lt;/span>(&lt;span style="color:#b452cd">1&lt;/span>,&lt;span style="color:#b452cd">10&lt;/span>):
-gol.generate()
-gol.display()
-ax.set_title(&lt;span style="color:#cd5555">&amp;#39;Generation={}&amp;#39;&lt;/span>.format(generation))
-&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/post/cellularautomata/ - zzb2021.</description></item><item><title>Lung Cancer</title><link>https://a390177226.github.io/research/lungcancer/</link><pubDate>Fri, 28 May 2021 10:37:43 +0800</pubDate><guid>https://a390177226.github.io/research/lungcancer/</guid><description>ZZB's blog https://a390177226.github.io/research/lungcancer/ -&lt;h1 id="medical-knowledge">Medical Knowledge&lt;/h1>
-&lt;h2 id="links">Links&lt;/h2>
-&lt;ul>
-&lt;li>&lt;a href="https://www.cancer.org/cancer/lung-cancer.html">Lung Cancer Guide | American Cancer Society&lt;/a>&lt;/li>
-&lt;li>&lt;a href="https://www.cancer.net/cancer-types/lung-cancer-non-small-cell/introduction">Lung Cancer - Non-Small Cell| Cancer.Net&lt;/a>&lt;/li>
-&lt;/ul>
-&lt;h2 id="types">Types&lt;/h2>
-&lt;p>有两种主要类型的肺癌，他们的治疗非常不同。&lt;/p>
-&lt;h3 id="small-cell-lung-cancer-sclc">Small cell lung cancer (SCLC)&lt;/h3>
-&lt;p>大约10%到15%的肺癌是小细胞肺癌。&lt;/p>
-&lt;p>这种类型的肺癌比非小细胞肺癌生长和扩散快。大约70%的小细胞肺癌患者在确诊时，癌症已经扩散了。由于这种癌症生长迅速，它往往对化疗和放疗反应良好。不幸的是，对大多数人来说，癌症会在某个时候复发。&lt;/p>
-&lt;h3 id="non-small-cell-lung-cancer-nsclc">Non-small cell lung cancer (NSCLC)&lt;/h3>
-&lt;p>肺癌中约80%至85%为非小细胞肺癌。NSCLC的主要亚型为腺癌、鳞癌和大细胞癌。&lt;/p>
-&lt;p>&lt;strong>腺癌（Adenocarcinoma）&lt;/strong>：腺癌发生于正常分泌粘液等物质的细胞。&lt;/p>
-&lt;p>这种类型的肺癌主要发生在现在或以前的吸烟者身上，但它也是非吸烟者身上最常见的肺癌类型。它在女性中比男性更常见，并且比其他类型的肺癌更容易发生在年轻人中。&lt;/p>
-&lt;p>腺癌通常发现于肺的外部，在扩散之前更容易被发现。&lt;/p>
-&lt;p>患有一种叫做原位腺癌的腺癌（以前称为细支气管肺泡癌）的人比患有其他类型肺癌的人有更好的前景。&lt;/p>
-&lt;p>&lt;strong>鳞状细胞癌&lt;/strong>（&lt;strong>Squamous cell carcinoma&lt;/strong>）：鳞状细胞癌起源于鳞状细胞，鳞状细胞是排列在肺部气道内部的扁平细胞。它们通常与吸烟史有关，往往出现在肺部中央，靠近主气道（支气管）。&lt;/p>
-&lt;p>&lt;strong>大细胞（未分化）癌（Large cell (undifferentiated) carcinoma）&lt;/strong>：大细胞癌可出现在肺的任何部位。它往往生长迅速，传播迅速，这会使它更难治疗。大细胞癌的一种亚型，称为大细胞神经内分泌癌，是一种生长迅速的癌症，与小细胞肺癌非常相似。&lt;/p>
-&lt;p>&lt;strong>其他亚型&lt;/strong>：一些其他亚型的非小细胞肺癌，如腺鳞癌和肉瘤样癌，是不常见的。&lt;/p>
-&lt;h2 id="research-and-statistics">Research and Statistics&lt;/h2>
-&lt;h3 id="key-statistics">Key Statistics&lt;/h3>
-&lt;ol>
-&lt;li>大多数肺癌统计数据包括小细胞肺癌 （SCLC） 和非小细胞肺癌 （NSCLC）。一般来说，大约13%的肺癌是SCLC，84%是NSCLC。&lt;/li>
-&lt;li>肺癌是男性和女性中第二常见的癌症（不包括皮肤癌）。在男性中，前列腺癌更为常见，而女性乳腺癌则更为常见。&lt;/li>
-&lt;li>肺癌主要发生在老年人中。大多数被诊断出患有肺癌的人是65岁或以上：年龄在45岁以下被诊断出的人很少。确诊时的平均年龄约为70岁。&lt;/li>
-&lt;li>肺癌是迄今为止男性和女性癌症死亡的主要原因，几乎占所有癌症死亡的25%。每年死于肺癌的人数比结肠癌、乳腺癌和前列腺癌的总和还要多。&lt;/li>
-&lt;li>总的来说，一个人一生中患肺癌的几率大约是1/15：对于女性来说，风险大约是1/17。这些数字包括吸烟者和不吸烟者。对于吸烟者来说，风险要高得多，而对于不吸烟者来说，风险要低得多。&lt;/li>
-&lt;/ol>
-&lt;h1 id="mathematical-modeling">Mathematical Modeling&lt;/h1>
-&lt;ol>
-&lt;li>Quantitative mathematical modeling of clinical brain metastasis dynamics in non-small cell lung cancer&lt;/li>
-&lt;li>Mathematical modeling for Phase I cancer trials: A study of metronomic vinorelbine for advanced non-small cell lung cancer (NSCLC) and mesothelioma patients&lt;/li>
-&lt;li>Modeling small cell lung cancer (SCLC) biology through deterministic and stochastic mathematical models&lt;/li>
-&lt;li>&lt;strong>Adaptive modelling of tumour volume dynamics under radiotherapy&lt;/strong>(有数据)&lt;/li>
-&lt;li>In vivo mathematical modeling of tumor growth from imaging data: Soon to come in the future?&lt;/li>
-&lt;/ol>
-- https://a390177226.github.io/research/lungcancer/ - zzb2021.</description></item></channel></rss>
+- https://a390177226.github.io/python/webscraper_overview/ - zzb2021.</description></item></channel></rss>

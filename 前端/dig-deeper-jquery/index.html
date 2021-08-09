@@ -1,0 +1,915 @@
+<!doctype html><html><head>
+<title>[Dig Deeper]--jQuery</title>
+<meta charset=utf-8>
+<meta name=X-UA-Compatible content="IE=edge">
+<meta name=google-site-verification content>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport>
+<meta content="telephone=no" name=format-detection>
+<meta name=description content>
+<meta name=renderer content="webkit">
+<meta name=theme-color content="#ffffff">
+<script src=/vendor/js/jquery.min.js></script>
+<script src=/vendor/js/popper.min.js></script>
+<script src=/vendor/js/bootstrap.min.js></script>
+<script src=/vendor/js/smooth-scroll.polyfills.min.js></script>
+<link type=text/css rel=stylesheet href=/vendor/css/bootstrap.min.css>
+<script src=/vendor/js/vue.min.js></script>
+<link rel=stylesheet href=https://a390177226.github.io/scss/journal.min.579b9706a9598d23683f569ff063cd9cae54a7a2832e27345bc621e5d9b61d58.css integrity="sha256-V5uXBqlZjSNoP1af8GPNnK5Up6KDLic0W8Yh5dm2HVg=" media=screen>
+<link rel=stylesheet href=https://a390177226.github.io/scss/dark-mode.min.c8808fcf21682127815c96de88e1b749dcb247b5937d839340d8146cf0945a25.css integrity="sha256-yICPzyFoISeBXJbeiOG3SdyyR7WTfYOTQNgUbPCUWiU=" media=screen>
+<script src=https://a390177226.github.io//js/loadCSS.js></script>
+<script>loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons")</script>
+<script src=https://a390177226.github.io//js/toc-collapse.js></script>
+</head>
+<body>
+<div id=app><div ref=sideContainer class=side-container>
+<a class="a-block nav-head false" href=https://a390177226.github.io/>
+<div class=nav-title>
+ZZB's blog
+</div>
+<div class=nav-subtitle>
+Record my study.
+</div>
+</a>
+<div class=nav-link-list>
+<a class="a-block nav-link-item false" href=/categories>
+Categories
+</a>
+<a class="a-block nav-link-item false" href=/tags>
+Tags
+</a>
+<a class="a-block nav-link-item false" href=/post>
+文章
+</a>
+<a class="a-block nav-link-item active" href=/%E5%89%8D%E7%AB%AF>
+前端
+</a>
+<a class="a-block nav-link-item false" href=/research>
+Research
+</a>
+<a class="a-block nav-link-item false" href=/python>
+Python
+</a>
+</div>
+<div class=nav-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+zzb2021.
+</div>
+</div><div ref=extraContainer class=extra-container>
+<div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+<div class=toc-content>
+<center>- TOC -</center>
+<ul>
+<li>
+<a href=#links onclick="onNavClick(`#links-nav`)" id=links-nav>
+Links
+</a>
+</li>
+<li>
+<a href=#%e7%ae%80%e4%bb%8b onclick="onNavClick(`#简介-nav`)" id=简介-nav>
+简介
+</a>
+</li>
+<li>
+<a href=#%e5%ae%89%e8%a3%85%e5%92%8c%e4%bd%bf%e7%94%a8 onclick="onNavClick(`#安装和使用-nav`)" id=安装和使用-nav>
+安装和使用
+</a>
+</li>
+<li>
+<a href=#%e7%ae%80%e5%8d%95%e7%9a%84%e4%be%8b%e5%ad%90 onclick="onNavClick(`#简单的例子-nav`)" id=简单的例子-nav>
+简单的例子
+</a>
+</li>
+<li>
+<a href=#jquery-%e8%af%ad%e6%b3%95 onclick="onNavClick(`#jquery-语法-nav`)" id=jquery-语法-nav>
+jQuery 语法
+</a>
+</li>
+<li>
+<a href=#jquery-%e9%80%89%e6%8b%a9%e5%99%a8 onclick="onNavClick(`#jquery-选择器-nav`)" id=jquery-选择器-nav>
+jQuery 选择器
+</a>
+</li>
+<li>
+<a href=#jquery-%e4%ba%8b%e4%bb%b6 onclick="onNavClick(`#jquery-事件-nav`)" id=jquery-事件-nav>
+jQuery 事件
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e5%b8%b8%e8%a7%81-html-dom-%e4%ba%8b%e4%bb%b6 onclick="onNavClick(`#常见-html-dom-事件-nav`)" id=常见-html-dom-事件-nav>
+常见 HTML DOM 事件
+</a>
+</li>
+<li>
+<a href=#jquery-%e4%ba%8b%e4%bb%b6%e6%96%b9%e6%b3%95%e8%af%ad%e6%b3%95 onclick="onNavClick(`#jquery-事件方法语法-nav`)" id=jquery-事件方法语法-nav>
+jQuery 事件方法语法
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-%e6%95%88%e6%9e%9c%e5%92%8c%e5%8a%a8%e7%94%bb onclick="onNavClick(`#jquery-效果和动画-nav`)" id=jquery-效果和动画-nav>
+jQuery 效果和动画
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e9%9a%90%e8%97%8f%e5%92%8c%e6%98%be%e7%a4%ba onclick="onNavClick(`#隐藏和显示-nav`)" id=隐藏和显示-nav>
+隐藏和显示
+</a>
+</li>
+<li>
+<a href=#%e6%b7%a1%e5%85%a5%e6%b7%a1%e5%87%ba onclick="onNavClick(`#淡入淡出-nav`)" id=淡入淡出-nav>
+淡入淡出
+</a>
+</li>
+<li>
+<a href=#%e6%bb%91%e5%8a%a8 onclick="onNavClick(`#滑动-nav`)" id=滑动-nav>
+滑动
+</a>
+</li>
+<li>
+<a href=#%e5%8a%a8%e7%94%bb%e5%92%8c%e5%81%9c%e6%ad%a2%e5%8a%a8%e7%94%bb onclick="onNavClick(`#动画和停止动画-nav`)" id=动画和停止动画-nav>
+动画和停止动画
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-%e6%96%b9%e6%b3%95%e9%93%be--chaining- onclick="onNavClick(`#jquery-方法链--chaining--nav`)" id=jquery-方法链--chaining--nav>
+jQuery 方法链 ( chaining )
+</a>
+</li>
+<li>
+<a href=#jquery-dom-%e6%93%8d%e4%bd%9c onclick="onNavClick(`#jquery-dom-操作-nav`)" id=jquery-dom-操作-nav>
+jQuery DOM 操作
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e8%8e%b7%e5%8f%96%e5%86%85%e5%ae%b9%e5%92%8c%e5%b1%9e%e6%80%a7 onclick="onNavClick(`#获取内容和属性-nav`)" id=获取内容和属性-nav>
+获取内容和属性
+</a>
+</li>
+<li>
+<a href=#%e8%ae%be%e7%bd%ae%e5%86%85%e5%ae%b9%e5%92%8c%e5%b1%9e%e6%80%a7 onclick="onNavClick(`#设置内容和属性-nav`)" id=设置内容和属性-nav>
+设置内容和属性
+</a>
+</li>
+<li>
+<a href=#%e6%b7%bb%e5%8a%a0%e5%85%83%e7%b4%a0 onclick="onNavClick(`#添加元素-nav`)" id=添加元素-nav>
+添加元素
+</a>
+</li>
+<li>
+<a href=#%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0 onclick="onNavClick(`#删除元素-nav`)" id=删除元素-nav>
+删除元素
+</a>
+</li>
+<li>
+<a href=#%e8%8e%b7%e5%8f%96%e5%b9%b6%e8%ae%be%e7%bd%ae-css-%e7%b1%bb onclick="onNavClick(`#获取并设置-css-类-nav`)" id=获取并设置-css-类-nav>
+获取并设置 CSS 类
+</a>
+</li>
+<li>
+<a href=#jquery-%e5%b0%ba%e5%af%b8 onclick="onNavClick(`#jquery-尺寸-nav`)" id=jquery-尺寸-nav>
+jQuery 尺寸
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-%e9%81%8d%e5%8e%86 onclick="onNavClick(`#jquery-遍历-nav`)" id=jquery-遍历-nav>
+jQuery 遍历
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e5%90%91%e4%b8%8a%e9%81%8d%e5%8e%86-dom-%e6%a0%91 onclick="onNavClick(`#向上遍历-dom-树-nav`)" id=向上遍历-dom-树-nav>
+向上遍历 DOM 树
+</a>
+</li>
+<li>
+<a href=#%e5%90%91%e4%b8%8b%e9%81%8d%e5%8e%86-dom-%e6%a0%91 onclick="onNavClick(`#向下遍历-dom-树-nav`)" id=向下遍历-dom-树-nav>
+向下遍历 DOM 树
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-ajax onclick="onNavClick(`#jquery-ajax-nav`)" id=jquery-ajax-nav>
+jQuery AJAX
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#load-%e6%96%b9%e6%b3%95 onclick="onNavClick(`#load-方法-nav`)" id=load-方法-nav>
+load() 方法
+</a>
+</li>
+<li>
+<a href=#get-%e5%92%8c-post-%e6%96%b9%e6%b3%95 onclick="onNavClick(`#get-和-post-方法-nav`)" id=get-和-post-方法-nav>
+get() 和 post() 方法
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-noconflict%e6%96%b9%e6%b3%95 onclick="onNavClick(`#jquery-noconflict方法-nav`)" id=jquery-noconflict方法-nav>
+jQuery noConflict()方法
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class=pagination>
+<a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }">
+<i class="material-icons pagination-action-icon">
+keyboard_arrow_up
+</i>
+</a>
+<a class=pagination-action v-on:click=toggleDarkMode>
+<i class="material-icons pagination-action-icon" v-if=isDarkMode>
+brightness_4
+</i>
+<i class="material-icons pagination-action-icon" v-else=isDarkMode>
+brightness_7
+</i>
+</a>
+</div>
+</div>
+<div class=single-column-drawer-container ref=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+<div class=drawer-content>
+<div class=drawer-menu>
+<a class="a-block drawer-menu-item false" href=/categories>
+Categories
+</a>
+<a class="a-block drawer-menu-item false" href=/tags>
+Tags
+</a>
+<a class="a-block drawer-menu-item false" href=/post>
+文章
+</a>
+<a class="a-block drawer-menu-item active" href=/%E5%89%8D%E7%AB%AF>
+前端
+</a>
+<a class="a-block drawer-menu-item false" href=/research>
+Research
+</a>
+<a class="a-block drawer-menu-item false" href=/python>
+Python
+</a>
+<div class=toc>
+<div class=toc-content>
+<center>- TOC -</center>
+<ul>
+<li>
+<a href=#links onclick="onNavClick(`#links-nav`)" id=links-nav>
+Links
+</a>
+</li>
+<li>
+<a href=#%e7%ae%80%e4%bb%8b onclick="onNavClick(`#简介-nav`)" id=简介-nav>
+简介
+</a>
+</li>
+<li>
+<a href=#%e5%ae%89%e8%a3%85%e5%92%8c%e4%bd%bf%e7%94%a8 onclick="onNavClick(`#安装和使用-nav`)" id=安装和使用-nav>
+安装和使用
+</a>
+</li>
+<li>
+<a href=#%e7%ae%80%e5%8d%95%e7%9a%84%e4%be%8b%e5%ad%90 onclick="onNavClick(`#简单的例子-nav`)" id=简单的例子-nav>
+简单的例子
+</a>
+</li>
+<li>
+<a href=#jquery-%e8%af%ad%e6%b3%95 onclick="onNavClick(`#jquery-语法-nav`)" id=jquery-语法-nav>
+jQuery 语法
+</a>
+</li>
+<li>
+<a href=#jquery-%e9%80%89%e6%8b%a9%e5%99%a8 onclick="onNavClick(`#jquery-选择器-nav`)" id=jquery-选择器-nav>
+jQuery 选择器
+</a>
+</li>
+<li>
+<a href=#jquery-%e4%ba%8b%e4%bb%b6 onclick="onNavClick(`#jquery-事件-nav`)" id=jquery-事件-nav>
+jQuery 事件
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e5%b8%b8%e8%a7%81-html-dom-%e4%ba%8b%e4%bb%b6 onclick="onNavClick(`#常见-html-dom-事件-nav`)" id=常见-html-dom-事件-nav>
+常见 HTML DOM 事件
+</a>
+</li>
+<li>
+<a href=#jquery-%e4%ba%8b%e4%bb%b6%e6%96%b9%e6%b3%95%e8%af%ad%e6%b3%95 onclick="onNavClick(`#jquery-事件方法语法-nav`)" id=jquery-事件方法语法-nav>
+jQuery 事件方法语法
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-%e6%95%88%e6%9e%9c%e5%92%8c%e5%8a%a8%e7%94%bb onclick="onNavClick(`#jquery-效果和动画-nav`)" id=jquery-效果和动画-nav>
+jQuery 效果和动画
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e9%9a%90%e8%97%8f%e5%92%8c%e6%98%be%e7%a4%ba onclick="onNavClick(`#隐藏和显示-nav`)" id=隐藏和显示-nav>
+隐藏和显示
+</a>
+</li>
+<li>
+<a href=#%e6%b7%a1%e5%85%a5%e6%b7%a1%e5%87%ba onclick="onNavClick(`#淡入淡出-nav`)" id=淡入淡出-nav>
+淡入淡出
+</a>
+</li>
+<li>
+<a href=#%e6%bb%91%e5%8a%a8 onclick="onNavClick(`#滑动-nav`)" id=滑动-nav>
+滑动
+</a>
+</li>
+<li>
+<a href=#%e5%8a%a8%e7%94%bb%e5%92%8c%e5%81%9c%e6%ad%a2%e5%8a%a8%e7%94%bb onclick="onNavClick(`#动画和停止动画-nav`)" id=动画和停止动画-nav>
+动画和停止动画
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-%e6%96%b9%e6%b3%95%e9%93%be--chaining- onclick="onNavClick(`#jquery-方法链--chaining--nav`)" id=jquery-方法链--chaining--nav>
+jQuery 方法链 ( chaining )
+</a>
+</li>
+<li>
+<a href=#jquery-dom-%e6%93%8d%e4%bd%9c onclick="onNavClick(`#jquery-dom-操作-nav`)" id=jquery-dom-操作-nav>
+jQuery DOM 操作
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e8%8e%b7%e5%8f%96%e5%86%85%e5%ae%b9%e5%92%8c%e5%b1%9e%e6%80%a7 onclick="onNavClick(`#获取内容和属性-nav`)" id=获取内容和属性-nav>
+获取内容和属性
+</a>
+</li>
+<li>
+<a href=#%e8%ae%be%e7%bd%ae%e5%86%85%e5%ae%b9%e5%92%8c%e5%b1%9e%e6%80%a7 onclick="onNavClick(`#设置内容和属性-nav`)" id=设置内容和属性-nav>
+设置内容和属性
+</a>
+</li>
+<li>
+<a href=#%e6%b7%bb%e5%8a%a0%e5%85%83%e7%b4%a0 onclick="onNavClick(`#添加元素-nav`)" id=添加元素-nav>
+添加元素
+</a>
+</li>
+<li>
+<a href=#%e5%88%a0%e9%99%a4%e5%85%83%e7%b4%a0 onclick="onNavClick(`#删除元素-nav`)" id=删除元素-nav>
+删除元素
+</a>
+</li>
+<li>
+<a href=#%e8%8e%b7%e5%8f%96%e5%b9%b6%e8%ae%be%e7%bd%ae-css-%e7%b1%bb onclick="onNavClick(`#获取并设置-css-类-nav`)" id=获取并设置-css-类-nav>
+获取并设置 CSS 类
+</a>
+</li>
+<li>
+<a href=#jquery-%e5%b0%ba%e5%af%b8 onclick="onNavClick(`#jquery-尺寸-nav`)" id=jquery-尺寸-nav>
+jQuery 尺寸
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-%e9%81%8d%e5%8e%86 onclick="onNavClick(`#jquery-遍历-nav`)" id=jquery-遍历-nav>
+jQuery 遍历
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e5%90%91%e4%b8%8a%e9%81%8d%e5%8e%86-dom-%e6%a0%91 onclick="onNavClick(`#向上遍历-dom-树-nav`)" id=向上遍历-dom-树-nav>
+向上遍历 DOM 树
+</a>
+</li>
+<li>
+<a href=#%e5%90%91%e4%b8%8b%e9%81%8d%e5%8e%86-dom-%e6%a0%91 onclick="onNavClick(`#向下遍历-dom-树-nav`)" id=向下遍历-dom-树-nav>
+向下遍历 DOM 树
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-ajax onclick="onNavClick(`#jquery-ajax-nav`)" id=jquery-ajax-nav>
+jQuery AJAX
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#load-%e6%96%b9%e6%b3%95 onclick="onNavClick(`#load-方法-nav`)" id=load-方法-nav>
+load() 方法
+</a>
+</li>
+<li>
+<a href=#get-%e5%92%8c-post-%e6%96%b9%e6%b3%95 onclick="onNavClick(`#get-和-post-方法-nav`)" id=get-和-post-方法-nav>
+get() 和 post() 方法
+</a>
+</li>
+</ul>
+<li>
+<a href=#jquery-noconflict%e6%96%b9%e6%b3%95 onclick="onNavClick(`#jquery-noconflict方法-nav`)" id=jquery-noconflict方法-nav>
+jQuery noConflict()方法
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<transition name=fade>
+<div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div>
+</transition>
+<nav ref=navBar class="navbar sticky-top navbar-light single-column-nav-container">
+<div ref=navBackground class=nav-background></div>
+<div class="container container-narrow nav-content">
+<button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
+<i class=material-icons>
+menu
+</i>
+</button>
+<a ref=navTitle class=navbar-brand href=https://a390177226.github.io/>
+ZZB's blog
+</a>
+<button type=button class=nav-darkmode-toggle v-on:click=toggleDarkMode>
+<i class=material-icons v-if=isDarkMode>
+brightness_4
+</i>
+<i class=material-icons v-else=isDarkMode>
+brightness_7
+</i>
+</button>
+</div>
+</nav>
+<div class=single-column-header-container ref=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+<a href=https://a390177226.github.io/>
+<div class=single-column-header-title>ZZB's blog</div>
+<div class=single-column-header-subtitle>Record my study.</div>
+</a>
+</div>
+<div id=content>
+<div ref=streamContainer class=stream-container>
+<div class="post-list-container post-list-container-shadow">
+<div class=post>
+<div class=post-head-wrapper-text-only>
+<div class=post-title>
+[Dig Deeper]--jQuery
+<div class=post-meta>
+<time itemprop=datePublished>
+2021-07-01 14:17
+</time>
+<i class=material-icons>label</i>
+<a href=/tags/javascript>JavaScript</a>
+&nbsp;
+</div>
+</div>
+</div>
+<div class=post-body-wrapper>
+<div class=post-body v-pre>
+<h1 id=links>Links</h1>
+<ul>
+<li><a href=https://www.twle.cn/l/yufei/jquery/jquery-basic-index.html>jQuery 基础教程| 简单教程</a></li>
+<li><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-selectors.html>jQuery 参考手册| 简单教程</a></li>
+</ul>
+<h1 id=简介>简介</h1>
+<blockquote>
+<ul>
+<li>jQuery 是一个轻量级的 &ldquo;写的少，做的多&rdquo; 的 JavaScript 库</li>
+<li>jQuery 极大地简化了 JavaScript 编程，优化了DOM操作、事件处理、动画设计和Ajax交互</li>
+<li>jQuery 很容易学习，提高开发效率</li>
+</ul>
+</blockquote>
+<p>优点：</p>
+<ul>
+<li>轻量级</li>
+<li>跨浏览器兼容</li>
+<li>免费、开源</li>
+</ul>
+<h1 id=安装和使用>安装和使用</h1>
+<p>下载使用（推荐）</p>
+<ol>
+<li>从 <a href=https://jquery.com/download/>jquery.com</a> 下载 jQuery 库</li>
+<li>在工作目录下保存为<code>jquery-3.6.0.min.js</code></li>
+<li>引用jQuery：<code>&lt;script src="jquery-2.2.4.min.js">&lt;/script></code></li>
+</ol>
+<p>不下载，通过CDN（Content Delivery Network）使用</p>
+<h1 id=简单的例子>简单的例子</h1>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#1e889b>&lt;!DOCTYPE html&gt;</span>
+&lt;<span style=color:#8b008b;font-weight:700>head</span>&gt;
+&lt;<span style=color:#8b008b;font-weight:700>meta</span> <span style=color:#658b00>charset</span>=<span style=color:#cd5555>&#34;utf-8&#34;</span>&gt;
+&lt;<span style=color:#8b008b;font-weight:700>script</span> <span style=color:#658b00>src</span>=<span style=color:#cd5555>&#34;jquery-3.6.0.min.js&#34;</span>&gt;&lt;/<span style=color:#8b008b;font-weight:700>script</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>head</span>&gt;
+
+&lt;<span style=color:#8b008b;font-weight:700>body</span>&gt;
+&lt;<span style=color:#8b008b;font-weight:700>p</span>&gt;aaaaaa&lt;/<span style=color:#8b008b;font-weight:700>p</span>&gt;
+
+&lt;<span style=color:#8b008b;font-weight:700>script</span>&gt;$(<span style=color:#cd5555>&#39;p&#39;</span>).hide()&lt;/<span style=color:#8b008b;font-weight:700>script</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>body</span>&gt;
+</code></pre></div><h1 id=jquery-语法>jQuery 语法</h1>
+<p>jQuery 通过选取 HTML 元素，并对选取的元素执行某些操作</p>
+<p>基础语法：<code>$( selector ).action()</code></p>
+<ul>
+<li>
+<p>美元符号<code>$</code>是jQuery 的别名</p>
+</li>
+<li>
+<p>选择符（selector）&ldquo;查询&rdquo; 和 &ldquo;查找&rdquo; HTML 元素</p>
+</li>
+<li>
+<p>jQuery 的 action() 执行对元素的操作</p>
+</li>
+</ul>
+<h1 id=jquery-选择器>jQuery 选择器</h1>
+<p>jQuery 选择器可以对 HTML 元素组或单个元素进行操作</p>
+<table>
+<thead>
+<tr>
+<th>选择器</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>元素选择器</td>
+<td>基于元素名选取元素</td>
+<td>选取所有 <code>&lt;p> </code>元素：<code>$("p")</code></td>
+</tr>
+<tr>
+<td>#id 选择器</td>
+<td>通过 HTML 元素的 id 属性选取指定的元素</td>
+<td><code>$("#test")</code></td>
+</tr>
+<tr>
+<td>.class 选择器</td>
+<td>通过指定的 class 查找元素</td>
+<td><code>$(".test")</code></td>
+</tr>
+<tr>
+<td>属性选择器</td>
+<td>选取带有 href 属性的元素</td>
+<td><code>$("[href]")</code></td>
+</tr>
+<tr>
+<td>属性值选择器</td>
+<td>选取所有 target 属性值等于 &ldquo;_blank&rdquo; 的 <code>&lt;a></code> 元素</td>
+<td><code>$("a[target='_blank']")</code></td>
+</tr>
+</tbody>
+</table>
+<h1 id=jquery-事件>jQuery 事件</h1>
+<p>jQuery 是为 HTML DOM 事件处理特别设计的</p>
+<h2 id=常见-html-dom-事件>常见 HTML DOM 事件</h2>
+<table>
+<thead>
+<tr>
+<th>鼠标事件</th>
+<th>键盘事件</th>
+<th>表单事件</th>
+<th>文档/窗口事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-click.html>click</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-keypress.html>keypress</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-submit.html>submit</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-load.html>load</a></td>
+</tr>
+<tr>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-dblclick.html>dblclick</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-keydown.html>keydown</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-change.html>change</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-resize.html>resize</a></td>
+</tr>
+<tr>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-mouseenter.html>mouseenter</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-keyup.html>keyup</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-focus.html>focus</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-scroll.html>scroll</a></td>
+</tr>
+<tr>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-mouseleave.html>mouseleave</a></td>
+<td></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-blur.html>blur</a></td>
+<td><a href=https://www.twle.cn/l/yufei/jqueryref/jquery-ref-event-unload.html>unload</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id=jquery-事件方法语法>jQuery 事件方法语法</h2>
+<p>在 jQuery 中，大多数 DOM 事件都有一个等效的 jQuery 方法</p>
+<p>比如页面中指定一个点击事件</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript>$(<span style=color:#cd5555>&#34;p&#34;</span>).click(<span style=color:#8b008b;font-weight:700>function</span>(){
+    <span style=color:#228b22>// 动作触发后执行的代码!!
+</span><span style=color:#228b22></span>});
+</code></pre></div><h1 id=jquery-效果和动画>jQuery 效果和动画</h1>
+<h2 id=隐藏和显示>隐藏和显示</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hide()</code></td>
+<td>隐藏 HTML 元素</td>
+<td></td>
+</tr>
+<tr>
+<td><code>show()</code></td>
+<td>显示 HTML 元素</td>
+<td></td>
+</tr>
+<tr>
+<td><code>toggle()</code></td>
+<td>切换<code>hide()</code>和<code>show()</code>方法</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#1e889b>&lt;!DOCTYPE html&gt;</span>
+
+&lt;<span style=color:#8b008b;font-weight:700>head</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>meta</span> <span style=color:#658b00>charset</span>=<span style=color:#cd5555>&#34;utf-8&#34;</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>script</span> <span style=color:#658b00>src</span>=<span style=color:#cd5555>&#34;jquery-3.6.0.min.js&#34;</span>&gt;&lt;/<span style=color:#8b008b;font-weight:700>script</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>head</span>&gt;
+
+&lt;<span style=color:#8b008b;font-weight:700>body</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>p</span>&gt;123456789&lt;/<span style=color:#8b008b;font-weight:700>p</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>button</span> <span style=color:#658b00>id</span>=<span style=color:#cd5555>&#34;toggle&#34;</span>&gt;toggle&lt;/<span style=color:#8b008b;font-weight:700>button</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>button</span> <span style=color:#658b00>id</span>=<span style=color:#cd5555>&#34;hide&#34;</span>&gt;hide&lt;/<span style=color:#8b008b;font-weight:700>button</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>button</span> <span style=color:#658b00>id</span>=<span style=color:#cd5555>&#34;show&#34;</span>&gt;show&lt;/<span style=color:#8b008b;font-weight:700>button</span>&gt;
+
+    &lt;<span style=color:#8b008b;font-weight:700>script</span>&gt;
+        $(<span style=color:#cd5555>&#34;#hide&#34;</span>).click(<span style=color:#8b008b;font-weight:700>function</span> () {
+            $(<span style=color:#cd5555>&#34;p&#34;</span>).hide();
+        });
+        $(<span style=color:#cd5555>&#34;#show&#34;</span>).click(<span style=color:#8b008b;font-weight:700>function</span> () {
+            $(<span style=color:#cd5555>&#34;p&#34;</span>).show();
+        });
+        $(<span style=color:#cd5555>&#34;#toggle&#34;</span>).click(<span style=color:#8b008b;font-weight:700>function</span> () {
+            $(<span style=color:#cd5555>&#34;p&#34;</span>).toggle();
+        });
+    &lt;/<span style=color:#8b008b;font-weight:700>script</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>body</span>&gt;
+</code></pre></div><h2 id=淡入淡出>淡入淡出</h2>
+<p>jQuery 提供四种实现元素的淡入淡出效果的方法</p>
+<ul>
+<li><code>fadeIn()</code>：淡入已隐藏的元素</li>
+<li><code>fadeOut()</code>：淡出可见元素</li>
+<li><code>fadeToggle()</code>：在 <code>fadeIn()</code> 与 <code>fadeOut()</code>方法之间进行切换</li>
+<li><code>fadeTo()</code>：渐变为给定的不透明度 ( 值介于 0 与 1 之间 )</li>
+</ul>
+<h2 id=滑动>滑动</h2>
+<p>jQuery 提供了三个方法来创建元素的滑动效果</p>
+<ul>
+<li><code>slideDown()</code>：向下滑动元素</li>
+<li><code>slideUp()</code>：向上滑动元素</li>
+<li><code>slideToggle()</code>：在 <code>slideDown()</code> 与 <code>slideUp()</code> 方法之间进行切换</li>
+</ul>
+<h2 id=动画和停止动画>动画和停止动画</h2>
+<p>jQuery 中的<code>animate()</code> 函数可以创建自定义动画</p>
+<p>jQuery 中的<code>stop() </code>方法用于停止动画或效果，包括滑动、淡入淡出和自定义动画</p>
+<h1 id=jquery-方法链--chaining->jQuery 方法链 ( chaining )</h1>
+<p>jQuery 还提供了一种一种名为链接（chaining）的技术，允许我们在相同的元素上运行多条 jQuery 命令，这样做的好处就是省去了多次查找相同的元素</p>
+<p>下面的范例把 css()、slideUp() 和 slideDown() 链接在一起，&ldquo;p1&rdquo; 元素首先会变为红色，然后向上滑动，再然后向下滑动</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#1e889b>&lt;!DOCTYPE html&gt;</span>
+
+&lt;<span style=color:#8b008b;font-weight:700>head</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>meta</span> <span style=color:#658b00>charset</span>=<span style=color:#cd5555>&#34;utf-8&#34;</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>script</span> <span style=color:#658b00>src</span>=<span style=color:#cd5555>&#34;jquery-3.6.0.min.js&#34;</span>&gt;&lt;/<span style=color:#8b008b;font-weight:700>script</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>head</span>&gt;
+
+&lt;<span style=color:#8b008b;font-weight:700>body</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>p</span> <span style=color:#658b00>id</span>=<span style=color:#cd5555>&#34;p1&#34;</span>&gt;zzb&lt;/<span style=color:#8b008b;font-weight:700>p</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>button</span>&gt;点我&lt;/<span style=color:#8b008b;font-weight:700>button</span>&gt;
+
+    &lt;<span style=color:#8b008b;font-weight:700>script</span>&gt;
+        $(<span style=color:#cd5555>&#34;button&#34;</span>).click(<span style=color:#8b008b;font-weight:700>function</span> () {
+            $(<span style=color:#cd5555>&#34;#p1&#34;</span>).css(<span style=color:#cd5555>&#34;color&#34;</span>, <span style=color:#cd5555>&#34;red&#34;</span>).slideUp(<span style=color:#b452cd>2000</span>).slideDown(<span style=color:#b452cd>2000</span>);
+        });
+    &lt;/<span style=color:#8b008b;font-weight:700>script</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>body</span>&gt;
+</code></pre></div><h1 id=jquery-dom-操作>jQuery DOM 操作</h1>
+<p>jQuery 中非常重要的部分，就是操作 DOM 的能力。</p>
+<p>jQuery 提供一系列与 DOM 相关的方法，这使访问和操作元素和属性变得很容易。</p>
+<h2 id=获取内容和属性>获取内容和属性</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text()</code></td>
+<td>获取所选元素的文本内容</td>
+<td><code>$("#test").text()</code></td>
+</tr>
+<tr>
+<td><code>html()</code></td>
+<td>获取所选元素的内容（包括 HTML 标记）</td>
+<td><code>$("#test").html()</code></td>
+</tr>
+<tr>
+<td><code>val()</code></td>
+<td>获取表单字段的值</td>
+<td><code>$("#test").val()</code></td>
+</tr>
+<tr>
+<td><code>attr()</code></td>
+<td>获取属性值</td>
+<td><code>$("#twle").attr("href")</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=设置内容和属性>设置内容和属性</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+<th>例子</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>text()</code></td>
+<td>设置所选元素的文本内容</td>
+<td><code>$("#test1").text("Hello world!")</code></td>
+</tr>
+<tr>
+<td><code>html()</code></td>
+<td>设置所选元素的内容（包括 HTML 标记）</td>
+<td><code>$("#test2").html("&lt;b>Hello world!&lt;/b>")</code></td>
+</tr>
+<tr>
+<td><code>val()</code></td>
+<td>设置表单字段的值</td>
+<td><code>$("#test3").val("TWLE")</code></td>
+</tr>
+<tr>
+<td><code>attr()</code></td>
+<td>设置属性值</td>
+<td><code>$("#twle").attr("href","http://www.twle.cn/jquery")</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id=添加元素>添加元素</h2>
+<p>jQuery 提供了四个简单使用的方法用于添加新内容或元素</p>
+<ol>
+<li><code>append()</code> - 在被选元素内部结尾插入内容</li>
+<li><code>prepend()</code> - 在被选元素内部开头插入内容</li>
+<li><code>after()</code> - 在被选元素外部之后插入内容</li>
+<li><code>before()</code> - 在被选元素外部之前插入内容</li>
+</ol>
+<h2 id=删除元素>删除元素</h2>
+<p>如果想要删除元素和内容，可以使用下面的 jQuery 方法</p>
+<ol>
+<li><code>remove()</code> - 删除被选元素及其子元素</li>
+<li><code>empty()</code> - 从被选元素中删除子元素</li>
+</ol>
+<h2 id=获取并设置-css-类>获取并设置 CSS 类</h2>
+<p>jQuery 拥有若干进行 CSS 操作的方法</p>
+<ol>
+<li><code>addClass()</code> - 向被选元素添加一个或多个类</li>
+<li><code>removeClass()</code> - 从被选元素删除一个或多个类</li>
+<li><code>toggleClass()</code> - 对被选元素进行添加/删除类的切换操作</li>
+<li><code>css()</code> - 设置或返回样式属性</li>
+</ol>
+<h2 id=jquery-尺寸>jQuery 尺寸</h2>
+<p>jQuery 提供了六个方法用来设置或返回元素和浏览器窗口的尺寸</p>
+<ol>
+<li><code>width()</code></li>
+<li><code>height()</code></li>
+<li><code>innerWidth()</code></li>
+<li><code>innerHeight()</code></li>
+<li><code>outerWidth()</code></li>
+<li><code>outerHeight()</code></li>
+</ol>
+<p><img src=/images/html/img_jquerydim.gif alt="jQuery Dimensions"></p>
+<h1 id=jquery-遍历>jQuery 遍历</h1>
+<h2 id=向上遍历-dom-树>向上遍历 DOM 树</h2>
+<p>jQuery 提供了下面三个方法用于向上遍历 DOM 树</p>
+<ol>
+<li><code>parent()</code></li>
+<li><code>parents()</code></li>
+<li><code>parentsUntil()</code></li>
+</ol>
+<h2 id=向下遍历-dom-树>向下遍历 DOM 树</h2>
+<p>jQuery 提供了下面两个用于向下遍历 DOM 树</p>
+<ol>
+<li><code>children()</code> - 返回被选元素的所有直接子元素</li>
+<li><code>find()</code> - 返回被选元素的后代元素，一路向下直到最后一个后代</li>
+</ol>
+<h1 id=jquery-ajax>jQuery AJAX</h1>
+<p>jQuery 提供多个与 AJAX 有关的方法</p>
+<p>通过 jQuery AJAX 方法，可以使用 HTTP Get 和 HTTP Post 从远程服务器上请求文本、HTML、XML 或 JSON，而且还可以把这些外部数据直接载入网页的被选元素中</p>
+<blockquote>
+<p>jQuery 解放了 AjAx</p>
+<ul>
+<li>编写常规的 AJAX 代码并不容易，因为不同的浏览器对 AJAX 的实现并不相同，这意味着您必须编写额外的代码对浏览器进行测试</li>
+<li>jQuery 团队为我们解决了这个难题，我们只需要一行简单的代码，就可以实现 AJAX 功能</li>
+</ul>
+</blockquote>
+<h2 id=load-方法><code>load()</code> 方法</h2>
+<p>jQuery <code>load()</code> 方法可以从服务器加载数据，并把返回的数据放入被选元素中</p>
+<p>基本语法：<code>$(selector).load(URL,data,callback);</code></p>
+<ul>
+<li>必需的 URL 参数设置了希望加载的 URL</li>
+<li>可选的 data 参数规定与请求一同发送的查询字符串键/值对集合</li>
+<li>可选的 callback 参数是 load() 方法完成后所执行的回调函数</li>
+</ul>
+<p>假设服务器上有一个文件 <code>test.txt</code>，内容如下</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>&lt;h4&gt;jQuery AJAX 是个非常棒的功能&lt;/h4&gt;
+&lt;p&gt;这是段落的一些文本&lt;/p&gt;
+&lt;p&gt;简单教程，简单编程&lt;/p&gt;
+</code></pre></div><p>下面的范例会把文件 &ldquo;test.txt&rdquo; 的内容加载到指定的 <code>&lt;div></code> 元素中</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html><span style=color:#1e889b>&lt;!DOCTYPE html&gt;</span>
+
+&lt;<span style=color:#8b008b;font-weight:700>head</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>meta</span> <span style=color:#658b00>charset</span>=<span style=color:#cd5555>&#34;utf-8&#34;</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>script</span> <span style=color:#658b00>src</span>=<span style=color:#cd5555>&#34;jquery-3.6.0.min.js&#34;</span>&gt;&lt;/<span style=color:#8b008b;font-weight:700>script</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>head</span>&gt;
+
+&lt;<span style=color:#8b008b;font-weight:700>body</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>div</span> <span style=color:#658b00>id</span>=<span style=color:#cd5555>&#34;div1&#34;</span>&gt;
+        &lt;<span style=color:#8b008b;font-weight:700>h2</span>&gt;使用 jQuery AJAX 修改文本内容&lt;/<span style=color:#8b008b;font-weight:700>h2</span>&gt;
+    &lt;/<span style=color:#8b008b;font-weight:700>div</span>&gt;
+    &lt;<span style=color:#8b008b;font-weight:700>button</span>&gt;获取外部内容&lt;/<span style=color:#8b008b;font-weight:700>button</span>&gt;
+
+    &lt;<span style=color:#8b008b;font-weight:700>script</span>&gt;
+        $(<span style=color:#cd5555>&#34;button&#34;</span>).click(<span style=color:#8b008b;font-weight:700>function</span> () {
+            $(<span style=color:#cd5555>&#34;#div1&#34;</span>).load(<span style=color:#cd5555>&#34;./test.txt&#34;</span>);
+        });
+    &lt;/<span style=color:#8b008b;font-weight:700>script</span>&gt;
+&lt;/<span style=color:#8b008b;font-weight:700>body</span>&gt;
+</code></pre></div><h2 id=get-和-post-方法><code>get()</code> 和 <code>post()</code> 方法</h2>
+<p>jQuery <code>get()</code> 和 <code>post()</code> 方法用于通过 HTTP GET 或 POST 请求从服务器请求数据</p>
+<ul>
+<li>
+<p><code>$.get(URL,callback)</code></p>
+<ul>
+<li>必需的 URL 参数用于设置希望请求的 URL</li>
+<li>可选的 callback 参数是请求成功后所执行的回调函数</li>
+</ul>
+</li>
+<li>
+<p><code>$.post( URL,data,callback )</code></p>
+<ul>
+<li>可选的 data 参数规定连同请求发送的数据</li>
+</ul>
+</li>
+</ul>
+<h1 id=jquery-noconflict方法>jQuery <code>noConflict()</code>方法</h1>
+<p><code>noConflict()</code> 用于处理和其它 JavaScript 框架 $ 符号冲突的情况</p>
+<p><code>noConflict()</code> 方法会释放对 $ 标识符的控制，这样其它脚本就可以使用它了</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-javascript data-lang=javascript><span style=color:#228b22>// 创建自己的简写
+</span><span style=color:#228b22></span><span style=color:#8b008b;font-weight:700>var</span> jq = $.noConflict();
+jq(<span style=color:#658b00>document</span>).ready(<span style=color:#8b008b;font-weight:700>function</span>(){
+  jq(<span style=color:#cd5555>&#34;button&#34;</span>).click(<span style=color:#8b008b;font-weight:700>function</span>(){
+    jq(<span style=color:#cd5555>&#34;p&#34;</span>).text(<span style=color:#cd5555>&#34;jQuery 仍然在工作!&#34;</span>);
+  });
+});
+</code></pre></div>
+<hr width=100% id=EOF>
+<p style=color:#777>最后修改于 2021-07-01</p>
+</div>
+</div>
+<nav class=post-pagination>
+<a class=newer-posts href=https://a390177226.github.io/%E5%89%8D%E7%AB%AF/sass/>
+Next<br>Sass
+</a>
+<a class=older-posts href=https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/>
+Previous<br>[Dig Deeper]--AJAX
+</a>
+</nav>
+<div class=post-comment-wrapper>
+</div>
+</div>
+</div>
+</div>
+</div><div id=single-column-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+zzb2021.
+</div>
+</div>
+<script>let app;app=new Vue({el:'#app',data:{scrollY:0,navOpacity:0,isDrawerOpen:!1,mounted:!1,isDarkMode:!1},methods:{sgn(a,b){let c=1/(1-2*a);return b<=a?0:b>=1-a?1:c*(b-a)},handleScroll(){this.scrollY=window.scrollY,this.navOpacity=this.sgn(0,Math.min(1,Math.max(0,window.scrollY/(this.pageHeadHeight()-this.navBarHeight()*.8))));const{navBar:c,navBackground:a,navTitle:b,extraContainer:d,streamContainer:e}=this.$refs;this.navOpacity>=1?(a.style.opacity=1,b.style.opacity=1):(a.style.opacity=0,b.style.opacity=0)},handleResize(){const{navBar:c,navBackground:d,navTitle:e,extraContainer:a,streamContainer:b}=this.$refs;a.style.left=b.offsetWidth-a.offsetWidth+'px'},navBarHeight(){return this.$refs.navBar.offsetHeight},pageHeadHeight(){return this.$refs.pageHead.offsetHeight},toggleDrawer(){this.isDrawerOpen=!this.isDrawerOpen,document.getElementsByTagName('html')[0].style.overflow=this.isDrawerOpen?'hidden':'unset'},closeDrawer(){this.isDrawerOpen=!1,document.getElementsByTagName('html')[0].style.overflow=this.isDrawerOpen?'hidden':'unset'},toggleDarkMode(){this.isDarkMode=!this.isDarkMode,this.isDarkMode==!0?(document.cookie="night=1;path=/",document.body.classList.add("night")):(document.cookie="night=0;path=/",document.body.classList.remove("night"))}},created(){window.addEventListener('scroll',this.handleScroll),window.addEventListener('resize',this.handleResize),window._nonDesktop=function(){let a=!1;return function(b){(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(b)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(b.substr(0,4)))&&(a=!0)}(navigator.userAgent||navigator.vendor||window.opera),a};var a=document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,"$1");a==""?window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches:a=="1"&&this.toggleDarkMode()},mounted(){this.handleScroll(),this.handleResize(),this.mounted=!0},destroyed(){window.removeEventListener('scroll',this.handleScroll),window.removeEventListener('resize',this.handleResize)}})</script>
+<script src=https://a390177226.github.io//js/journal.js></script>
+</body>
+</html>

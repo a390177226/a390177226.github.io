@@ -1,29 +1,492 @@
-<!doctype html><html><head><title>Cellular Automata</title><meta charset=utf-8><meta name=X-UA-Compatible content="IE=edge"><meta name=google-site-verification content><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport><meta content="telephone=no" name=format-detection><meta name=description content><meta name=renderer content="webkit"><meta name=theme-color content="#ffffff"><script src=/vendor/js/jquery.min.js></script><script src=/vendor/js/popper.min.js></script><script src=/vendor/js/bootstrap.min.js></script><script src=/vendor/js/smooth-scroll.polyfills.min.js></script><link type=text/css rel=stylesheet href=/vendor/css/bootstrap.min.css><script src=/vendor/js/vue.min.js></script><link rel=stylesheet href=https://a390177226.github.io/scss/journal.min.579b9706a9598d23683f569ff063cd9cae54a7a2832e27345bc621e5d9b61d58.css integrity="sha256-V5uXBqlZjSNoP1af8GPNnK5Up6KDLic0W8Yh5dm2HVg=" media=screen><link rel=stylesheet href=https://a390177226.github.io/scss/dark-mode.min.c8808fcf21682127815c96de88e1b749dcb247b5937d839340d8146cf0945a25.css integrity="sha256-yICPzyFoISeBXJbeiOG3SdyyR7WTfYOTQNgUbPCUWiU=" media=screen><script src=https://a390177226.github.io//js/loadCSS.js></script><script>loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons")</script><script src=https://a390177226.github.io//js/toc-collapse.js></script></head><body><div id=app><div ref=sideContainer class=side-container><a class="a-block nav-head false" href=https://a390177226.github.io/><div class=nav-title>ZZB's blog</div><div class=nav-subtitle>Record my study.</div></a><div class=nav-link-list><a class="a-block nav-link-item false" href=/categories>Categories</a>
-<a class="a-block nav-link-item false" href=/tags>Tags</a>
-<a class="a-block nav-link-item active" href=/post>文章</a>
-<a class="a-block nav-link-item false" href=/%E5%89%8D%E7%AB%AF>前端</a>
-<a class="a-block nav-link-item false" href=/research>Research</a>
-<a class="a-block nav-link-item false" href=/python>Python</a></div><div class=nav-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
-zzb2021.</div></div><div ref=extraContainer class=extra-container><div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }"><div class=toc-content><center>- TOC -</center><ul><li><a href=#links onclick="onNavClick(`#links-nav`)" id=links-nav>Links</a></li><ul class=collapse data-toggle=collapse><li><a href=#main-references onclick="onNavClick(`#main-references-nav`)" id=main-references-nav>Main references</a></li><li><a href=#1d-elementary-ca onclick="onNavClick(`#1d-elementary-ca-nav`)" id=1d-elementary-ca-nav>1D: Elementary CA</a></li><li><a href=#2d--game-of-life onclick="onNavClick(`#2d--game-of-life-nav`)" id=2d--game-of-life-nav>2D: Game of Life</a></li></ul><li><a href=#what-is-cellular-automata onclick="onNavClick(`#what-is-cellular-automata-nav`)" id=what-is-cellular-automata-nav>What Is Cellular Automata?</a></li><ul class=collapse data-toggle=collapse><li><a href=#general-strategy-of-modeling-ca onclick="onNavClick(`#general-strategy-of-modeling-ca-nav`)" id=general-strategy-of-modeling-ca-nav>General strategy of modeling CA</a></li><li><a href=#what-are-ca-good-for onclick="onNavClick(`#what-are-ca-good-for-nav`)" id=what-are-ca-good-for-nav>What are CA good for?</a></li></ul><li><a href=#1d-ca-elementary-cellular-automata onclick="onNavClick(`#1d-ca-elementary-cellular-automata-nav`)" id=1d-ca-elementary-cellular-automata-nav>1D CA: Elementary Cellular Automata</a></li><ul class=collapse data-toggle=collapse><li><a href=#simplest-ca onclick="onNavClick(`#simplest-ca-nav`)" id=simplest-ca-nav>Simplest CA</a></li><li><a href=#matlab-code onclick="onNavClick(`#matlab-code-nav`)" id=matlab-code-nav>Matlab Code</a></li></ul><li><a href=#2d-ca-conways-game-of-life onclick="onNavClick(`#2d-ca-conways-game-of-life-nav`)" id=2d-ca-conways-game-of-life-nav>2D CA: Conway’s Game of Life</a></li><ul class=collapse data-toggle=collapse><li><a href=#basics onclick="onNavClick(`#basics-nav`)" id=basics-nav>Basics</a></li><li><a href=#initial-patterns onclick="onNavClick(`#initial-patterns-nav`)" id=initial-patterns-nav>Initial Patterns</a></li><li><a href=#cleve-molers-code onclick="onNavClick(`#cleve-molers-code-nav`)" id=cleve-molers-code-nav>Cleve Moler‘s Code</a></li><ul class=collapse data-toggle=collapse><li><a href=#step-by-step onclick="onNavClick(`#step-by-step-nav`)" id=step-by-step-nav>Step by step</a></li><li><a href=#the-whole-thing onclick="onNavClick(`#the-whole-thing-nav`)" id=the-whole-thing-nav>The whole thing</a></li><li><a href=#with-simple-gui onclick="onNavClick(`#with-simple-gui-nav`)" id=with-simple-gui-nav>With Simple GUI</a></li></ul><li><a href=#another-code onclick="onNavClick(`#another-code-nav`)" id=another-code-nav>Another Code</a></li><ul class=collapse data-toggle=collapse><li><a href=#%e9%9d%a2%e5%90%91%e8%bf%87%e7%a8%8b-matlab onclick="onNavClick(`#面向过程-matlab-nav`)" id=面向过程-matlab-nav>面向过程-Matlab</a></li><li><a href=#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1-python onclick="onNavClick(`#面向对象-python-nav`)" id=面向对象-python-nav>面向对象-python</a></li></ul></div></div><div class=pagination><a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }"><i class="material-icons pagination-action-icon">keyboard_arrow_up</i></a>
-<a class=pagination-action v-on:click=toggleDarkMode><i class="material-icons pagination-action-icon" v-if=isDarkMode>brightness_4</i>
-<i class="material-icons pagination-action-icon" v-else=isDarkMode>brightness_7</i></a></div></div><div class=single-column-drawer-container ref=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }"><div class=drawer-content><div class=drawer-menu><a class="a-block drawer-menu-item false" href=/categories>Categories</a>
-<a class="a-block drawer-menu-item false" href=/tags>Tags</a>
-<a class="a-block drawer-menu-item active" href=/post>文章</a>
-<a class="a-block drawer-menu-item false" href=/%E5%89%8D%E7%AB%AF>前端</a>
-<a class="a-block drawer-menu-item false" href=/research>Research</a>
-<a class="a-block drawer-menu-item false" href=/python>Python</a><div class=toc><div class=toc-content><center>- TOC -</center><ul><li><a href=#links onclick="onNavClick(`#links-nav`)" id=links-nav>Links</a></li><ul class=collapse data-toggle=collapse><li><a href=#main-references onclick="onNavClick(`#main-references-nav`)" id=main-references-nav>Main references</a></li><li><a href=#1d-elementary-ca onclick="onNavClick(`#1d-elementary-ca-nav`)" id=1d-elementary-ca-nav>1D: Elementary CA</a></li><li><a href=#2d--game-of-life onclick="onNavClick(`#2d--game-of-life-nav`)" id=2d--game-of-life-nav>2D: Game of Life</a></li></ul><li><a href=#what-is-cellular-automata onclick="onNavClick(`#what-is-cellular-automata-nav`)" id=what-is-cellular-automata-nav>What Is Cellular Automata?</a></li><ul class=collapse data-toggle=collapse><li><a href=#general-strategy-of-modeling-ca onclick="onNavClick(`#general-strategy-of-modeling-ca-nav`)" id=general-strategy-of-modeling-ca-nav>General strategy of modeling CA</a></li><li><a href=#what-are-ca-good-for onclick="onNavClick(`#what-are-ca-good-for-nav`)" id=what-are-ca-good-for-nav>What are CA good for?</a></li></ul><li><a href=#1d-ca-elementary-cellular-automata onclick="onNavClick(`#1d-ca-elementary-cellular-automata-nav`)" id=1d-ca-elementary-cellular-automata-nav>1D CA: Elementary Cellular Automata</a></li><ul class=collapse data-toggle=collapse><li><a href=#simplest-ca onclick="onNavClick(`#simplest-ca-nav`)" id=simplest-ca-nav>Simplest CA</a></li><li><a href=#matlab-code onclick="onNavClick(`#matlab-code-nav`)" id=matlab-code-nav>Matlab Code</a></li></ul><li><a href=#2d-ca-conways-game-of-life onclick="onNavClick(`#2d-ca-conways-game-of-life-nav`)" id=2d-ca-conways-game-of-life-nav>2D CA: Conway’s Game of Life</a></li><ul class=collapse data-toggle=collapse><li><a href=#basics onclick="onNavClick(`#basics-nav`)" id=basics-nav>Basics</a></li><li><a href=#initial-patterns onclick="onNavClick(`#initial-patterns-nav`)" id=initial-patterns-nav>Initial Patterns</a></li><li><a href=#cleve-molers-code onclick="onNavClick(`#cleve-molers-code-nav`)" id=cleve-molers-code-nav>Cleve Moler‘s Code</a></li><ul class=collapse data-toggle=collapse><li><a href=#step-by-step onclick="onNavClick(`#step-by-step-nav`)" id=step-by-step-nav>Step by step</a></li><li><a href=#the-whole-thing onclick="onNavClick(`#the-whole-thing-nav`)" id=the-whole-thing-nav>The whole thing</a></li><li><a href=#with-simple-gui onclick="onNavClick(`#with-simple-gui-nav`)" id=with-simple-gui-nav>With Simple GUI</a></li></ul><li><a href=#another-code onclick="onNavClick(`#another-code-nav`)" id=another-code-nav>Another Code</a></li><ul class=collapse data-toggle=collapse><li><a href=#%e9%9d%a2%e5%90%91%e8%bf%87%e7%a8%8b-matlab onclick="onNavClick(`#面向过程-matlab-nav`)" id=面向过程-matlab-nav>面向过程-Matlab</a></li><li><a href=#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1-python onclick="onNavClick(`#面向对象-python-nav`)" id=面向对象-python-nav>面向对象-python</a></li></ul></div></div></div></div></div><transition name=fade><div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div></transition><nav ref=navBar class="navbar sticky-top navbar-light single-column-nav-container"><div ref=navBackground class=nav-background></div><div class="container container-narrow nav-content"><button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
-<i class=material-icons>menu</i></button>
-<a ref=navTitle class=navbar-brand href=https://a390177226.github.io/>ZZB's blog</a>
+<!doctype html><html><head>
+<title>Cellular Automata</title>
+<meta charset=utf-8>
+<meta name=X-UA-Compatible content="IE=edge">
+<meta name=google-site-verification content>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport>
+<meta content="telephone=no" name=format-detection>
+<meta name=description content>
+<meta name=renderer content="webkit">
+<meta name=theme-color content="#ffffff">
+<script src=/vendor/js/jquery.min.js></script>
+<script src=/vendor/js/popper.min.js></script>
+<script src=/vendor/js/bootstrap.min.js></script>
+<script src=/vendor/js/smooth-scroll.polyfills.min.js></script>
+<link type=text/css rel=stylesheet href=/vendor/css/bootstrap.min.css>
+<script src=/vendor/js/vue.min.js></script>
+<link rel=stylesheet href=https://a390177226.github.io/scss/journal.min.579b9706a9598d23683f569ff063cd9cae54a7a2832e27345bc621e5d9b61d58.css integrity="sha256-V5uXBqlZjSNoP1af8GPNnK5Up6KDLic0W8Yh5dm2HVg=" media=screen>
+<link rel=stylesheet href=https://a390177226.github.io/scss/dark-mode.min.c8808fcf21682127815c96de88e1b749dcb247b5937d839340d8146cf0945a25.css integrity="sha256-yICPzyFoISeBXJbeiOG3SdyyR7WTfYOTQNgUbPCUWiU=" media=screen>
+<script src=https://a390177226.github.io//js/loadCSS.js></script>
+<script>loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons")</script>
+<script src=https://a390177226.github.io//js/toc-collapse.js></script>
+</head>
+<body>
+<div id=app><div ref=sideContainer class=side-container>
+<a class="a-block nav-head false" href=https://a390177226.github.io/>
+<div class=nav-title>
+ZZB's blog
+</div>
+<div class=nav-subtitle>
+Record my study.
+</div>
+</a>
+<div class=nav-link-list>
+<a class="a-block nav-link-item false" href=/categories>
+Categories
+</a>
+<a class="a-block nav-link-item false" href=/tags>
+Tags
+</a>
+<a class="a-block nav-link-item active" href=/post>
+文章
+</a>
+<a class="a-block nav-link-item false" href=/%E5%89%8D%E7%AB%AF>
+前端
+</a>
+<a class="a-block nav-link-item false" href=/research>
+Research
+</a>
+<a class="a-block nav-link-item false" href=/python>
+Python
+</a>
+</div>
+<div class=nav-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+zzb2021.
+</div>
+</div><div ref=extraContainer class=extra-container>
+<div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+<div class=toc-content>
+<center>- TOC -</center>
+<ul>
+<li>
+<a href=#links onclick="onNavClick(`#links-nav`)" id=links-nav>
+Links
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#main-references onclick="onNavClick(`#main-references-nav`)" id=main-references-nav>
+Main references
+</a>
+</li>
+<li>
+<a href=#1d-elementary-ca onclick="onNavClick(`#1d-elementary-ca-nav`)" id=1d-elementary-ca-nav>
+1D: Elementary CA
+</a>
+</li>
+<li>
+<a href=#2d--game-of-life onclick="onNavClick(`#2d--game-of-life-nav`)" id=2d--game-of-life-nav>
+2D: Game of Life
+</a>
+</li>
+</ul>
+<li>
+<a href=#what-is-cellular-automata onclick="onNavClick(`#what-is-cellular-automata-nav`)" id=what-is-cellular-automata-nav>
+What Is Cellular Automata?
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#general-strategy-of-modeling-ca onclick="onNavClick(`#general-strategy-of-modeling-ca-nav`)" id=general-strategy-of-modeling-ca-nav>
+General strategy of modeling CA
+</a>
+</li>
+<li>
+<a href=#what-are-ca-good-for onclick="onNavClick(`#what-are-ca-good-for-nav`)" id=what-are-ca-good-for-nav>
+What are CA good for?
+</a>
+</li>
+</ul>
+<li>
+<a href=#1d-ca-elementary-cellular-automata onclick="onNavClick(`#1d-ca-elementary-cellular-automata-nav`)" id=1d-ca-elementary-cellular-automata-nav>
+1D CA: Elementary Cellular Automata
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#simplest-ca onclick="onNavClick(`#simplest-ca-nav`)" id=simplest-ca-nav>
+Simplest CA
+</a>
+</li>
+<li>
+<a href=#matlab-code onclick="onNavClick(`#matlab-code-nav`)" id=matlab-code-nav>
+Matlab Code
+</a>
+</li>
+</ul>
+<li>
+<a href=#2d-ca-conways-game-of-life onclick="onNavClick(`#2d-ca-conways-game-of-life-nav`)" id=2d-ca-conways-game-of-life-nav>
+2D CA: Conway’s Game of Life
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#basics onclick="onNavClick(`#basics-nav`)" id=basics-nav>
+Basics
+</a>
+</li>
+<li>
+<a href=#initial-patterns onclick="onNavClick(`#initial-patterns-nav`)" id=initial-patterns-nav>
+Initial Patterns
+</a>
+</li>
+<li>
+<a href=#cleve-molers-code onclick="onNavClick(`#cleve-molers-code-nav`)" id=cleve-molers-code-nav>
+Cleve Moler‘s Code
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#step-by-step onclick="onNavClick(`#step-by-step-nav`)" id=step-by-step-nav>
+Step by step
+</a>
+</li>
+<li>
+<a href=#the-whole-thing onclick="onNavClick(`#the-whole-thing-nav`)" id=the-whole-thing-nav>
+The whole thing
+</a>
+</li>
+<li>
+<a href=#with-simple-gui onclick="onNavClick(`#with-simple-gui-nav`)" id=with-simple-gui-nav>
+With Simple GUI
+</a>
+</li>
+</ul>
+<li>
+<a href=#another-code onclick="onNavClick(`#another-code-nav`)" id=another-code-nav>
+Another Code
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e9%9d%a2%e5%90%91%e8%bf%87%e7%a8%8b-matlab onclick="onNavClick(`#面向过程-matlab-nav`)" id=面向过程-matlab-nav>
+面向过程-Matlab
+</a>
+</li>
+<li>
+<a href=#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1-python onclick="onNavClick(`#面向对象-python-nav`)" id=面向对象-python-nav>
+面向对象-python
+</a>
+</li>
+</ul>
+</div>
+</div>
+<div class=pagination>
+<a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }">
+<i class="material-icons pagination-action-icon">
+keyboard_arrow_up
+</i>
+</a>
+<a class=pagination-action v-on:click=toggleDarkMode>
+<i class="material-icons pagination-action-icon" v-if=isDarkMode>
+brightness_4
+</i>
+<i class="material-icons pagination-action-icon" v-else=isDarkMode>
+brightness_7
+</i>
+</a>
+</div>
+</div>
+<div class=single-column-drawer-container ref=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
+<div class=drawer-content>
+<div class=drawer-menu>
+<a class="a-block drawer-menu-item false" href=/categories>
+Categories
+</a>
+<a class="a-block drawer-menu-item false" href=/tags>
+Tags
+</a>
+<a class="a-block drawer-menu-item active" href=/post>
+文章
+</a>
+<a class="a-block drawer-menu-item false" href=/%E5%89%8D%E7%AB%AF>
+前端
+</a>
+<a class="a-block drawer-menu-item false" href=/research>
+Research
+</a>
+<a class="a-block drawer-menu-item false" href=/python>
+Python
+</a>
+<div class=toc>
+<div class=toc-content>
+<center>- TOC -</center>
+<ul>
+<li>
+<a href=#links onclick="onNavClick(`#links-nav`)" id=links-nav>
+Links
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#main-references onclick="onNavClick(`#main-references-nav`)" id=main-references-nav>
+Main references
+</a>
+</li>
+<li>
+<a href=#1d-elementary-ca onclick="onNavClick(`#1d-elementary-ca-nav`)" id=1d-elementary-ca-nav>
+1D: Elementary CA
+</a>
+</li>
+<li>
+<a href=#2d--game-of-life onclick="onNavClick(`#2d--game-of-life-nav`)" id=2d--game-of-life-nav>
+2D: Game of Life
+</a>
+</li>
+</ul>
+<li>
+<a href=#what-is-cellular-automata onclick="onNavClick(`#what-is-cellular-automata-nav`)" id=what-is-cellular-automata-nav>
+What Is Cellular Automata?
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#general-strategy-of-modeling-ca onclick="onNavClick(`#general-strategy-of-modeling-ca-nav`)" id=general-strategy-of-modeling-ca-nav>
+General strategy of modeling CA
+</a>
+</li>
+<li>
+<a href=#what-are-ca-good-for onclick="onNavClick(`#what-are-ca-good-for-nav`)" id=what-are-ca-good-for-nav>
+What are CA good for?
+</a>
+</li>
+</ul>
+<li>
+<a href=#1d-ca-elementary-cellular-automata onclick="onNavClick(`#1d-ca-elementary-cellular-automata-nav`)" id=1d-ca-elementary-cellular-automata-nav>
+1D CA: Elementary Cellular Automata
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#simplest-ca onclick="onNavClick(`#simplest-ca-nav`)" id=simplest-ca-nav>
+Simplest CA
+</a>
+</li>
+<li>
+<a href=#matlab-code onclick="onNavClick(`#matlab-code-nav`)" id=matlab-code-nav>
+Matlab Code
+</a>
+</li>
+</ul>
+<li>
+<a href=#2d-ca-conways-game-of-life onclick="onNavClick(`#2d-ca-conways-game-of-life-nav`)" id=2d-ca-conways-game-of-life-nav>
+2D CA: Conway’s Game of Life
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#basics onclick="onNavClick(`#basics-nav`)" id=basics-nav>
+Basics
+</a>
+</li>
+<li>
+<a href=#initial-patterns onclick="onNavClick(`#initial-patterns-nav`)" id=initial-patterns-nav>
+Initial Patterns
+</a>
+</li>
+<li>
+<a href=#cleve-molers-code onclick="onNavClick(`#cleve-molers-code-nav`)" id=cleve-molers-code-nav>
+Cleve Moler‘s Code
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#step-by-step onclick="onNavClick(`#step-by-step-nav`)" id=step-by-step-nav>
+Step by step
+</a>
+</li>
+<li>
+<a href=#the-whole-thing onclick="onNavClick(`#the-whole-thing-nav`)" id=the-whole-thing-nav>
+The whole thing
+</a>
+</li>
+<li>
+<a href=#with-simple-gui onclick="onNavClick(`#with-simple-gui-nav`)" id=with-simple-gui-nav>
+With Simple GUI
+</a>
+</li>
+</ul>
+<li>
+<a href=#another-code onclick="onNavClick(`#another-code-nav`)" id=another-code-nav>
+Another Code
+</a>
+</li>
+<ul class=collapse data-toggle=collapse>
+<li>
+<a href=#%e9%9d%a2%e5%90%91%e8%bf%87%e7%a8%8b-matlab onclick="onNavClick(`#面向过程-matlab-nav`)" id=面向过程-matlab-nav>
+面向过程-Matlab
+</a>
+</li>
+<li>
+<a href=#%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1-python onclick="onNavClick(`#面向对象-python-nav`)" id=面向对象-python-nav>
+面向对象-python
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<transition name=fade>
+<div v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if=isDrawerOpen v-on:click=toggleDrawer></div>
+</transition>
+<nav ref=navBar class="navbar sticky-top navbar-light single-column-nav-container">
+<div ref=navBackground class=nav-background></div>
+<div class="container container-narrow nav-content">
+<button id=nav_dropdown_btn class=nav-dropdown-toggle type=button v-on:click=toggleDrawer>
+<i class=material-icons>
+menu
+</i>
+</button>
+<a ref=navTitle class=navbar-brand href=https://a390177226.github.io/>
+ZZB's blog
+</a>
 <button type=button class=nav-darkmode-toggle v-on:click=toggleDarkMode>
-<i class=material-icons v-if=isDarkMode>brightness_4</i>
-<i class=material-icons v-else=isDarkMode>brightness_7</i></button></div></nav><div class=single-column-header-container ref=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }"><a href=https://a390177226.github.io/><div class=single-column-header-title>ZZB's blog</div><div class=single-column-header-subtitle>Record my study.</div></a></div><div id=content><div ref=streamContainer class=stream-container><div class="post-list-container post-list-container-shadow"><div class=post><div class=post-head-wrapper-text-only><div class=post-title>Cellular Automata<div class=post-meta><time itemprop=datePublished>2021-05-28 14:51</time>
+<i class=material-icons v-if=isDarkMode>
+brightness_4
+</i>
+<i class=material-icons v-else=isDarkMode>
+brightness_7
+</i>
+</button>
+</div>
+</nav>
+<div class=single-column-header-container ref=pageHead v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
+<a href=https://a390177226.github.io/>
+<div class=single-column-header-title>ZZB's blog</div>
+<div class=single-column-header-subtitle>Record my study.</div>
+</a>
+</div>
+<div id=content>
+<div ref=streamContainer class=stream-container>
+<div class="post-list-container post-list-container-shadow">
+<div class=post>
+<div class=post-head-wrapper-text-only>
+<div class=post-title>
+Cellular Automata
+<div class=post-meta>
+<time itemprop=datePublished>
+2021-05-28 14:51
+</time>
 <i class=material-icons>label</i>
 <a href=/tags/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1>数学建模</a>
-&nbsp;</div></div></div><div class=post-body-wrapper><div class=post-body v-pre><h1 id=links>Links</h1><h2 id=main-references>Main references</h2><ul><li><a href=https://natureofcode.com/book/chapter-7-cellular-automata/>Chapter 7. Cellular Automata | The Nature of Code</a></li><li><a href=http://www.tiem.utk.edu/~gavrila/504.html>gavrila | Material for the first Cellular Automata lecture</a></li></ul><p><strong>A lot of Links about CA</strong></p><ul><li><a href=http://cell-auto.com/links/>Cellular Automata Links (cell-auto.com)</a></li></ul><p><strong>Others</strong></p><ul><li><p><a href=http://www.wolframscience.com/nksonline/toc.html>A New Kind of Science | Stephen Wolfram’s 1,280-page, 2002</a>.</p></li><li><p><a href=https://github.com/nature-of-code>The Nature of Code · GitHub</a></p></li></ul><h2 id=1d-elementary-ca>1D: Elementary CA</h2><ul><li><a href=https://mathworld.wolfram.com/ElementaryCellularAutomaton.html>Elementary Cellular Automaton &ndash; from Wolfram MathWorld</a></li><li><a href=http://atlas.wolfram.com/01/01/>Wolfram Atlas: Elementary Cellular Automata:Home</a></li></ul><h2 id=2d--game-of-life>2D: Game of Life</h2><p><strong>Cleve Moler, MATLAB</strong></p><ul><li><a href=https://blogs.mathworks.com/cleve/2012/09/10/game-of-life-part-2-sparse-matrices/>Game of Life, Part 2, Sparse Matrices</a></li><li><a href=https://www.mathworks.com/moler/exm/chapters.html>Chapter 12 Game of Life| Experiments with MATLAB</a></li></ul><p><strong>Online Demonstration</strong></p><ul><li><a href=https://playgameoflife.com/>Play John Conway’s Game of Life</a></li></ul><h1 id=what-is-cellular-automata>What Is Cellular Automata?</h1><p>细胞自动机 (CA) 是一种离散模型，在可计算性理论、数学及理论生物学都有相关研究。</p><p>细胞自动机是具有以下特征的“细胞”对象系统的模型：</p><ul><li>细胞生活在网格里</li><li>每个细胞都有一个状态，状态数量通常是有限的</li><li>每个细胞都有一个邻域</li></ul><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_01.png alt="Nature of Code Image"></p><p>细胞自动机最早由冯·诺依曼在1950年代为模拟生物细胞的自我复制而提出的。但是并未受到学术界重视。直到1970年，任教于剑桥大学的英国数学家约翰·何顿·康威设计了生命游戏，经马丁·葛登在《科学美国人》杂志上介绍，才吸引了科学家们的注意。此后，英国学者史蒂芬·沃尔夫勒姆对初等元胞机256种规则所产生的模型进行了深入研究，并用熵来描述其演化行为，将细胞自动机分为平稳型、周期型、混沌型和复杂型。</p><h2 id=general-strategy-of-modeling-ca>General strategy of modeling CA</h2><ul><li>set parameters</li><li>set initial conditions</li><li>set update rule</li><li>set graphics</li></ul><h2 id=what-are-ca-good-for>What are CA good for?</h2><ul><li>provide an alternative simple method for studying connections between microscopic and macroscopic world</li><li>examine, by virtue of speedy computations, huge numbers of parameter ranges</li><li>provide a simple testing tool for qualitative predictions such as: “a local mechanism X can generate phenomenon Y”</li></ul><p>However, CA models are almost never able to make precise quantitative predictions. They are suitable for modeling processes in which basic laws are hard to identify.</p><h1 id=1d-ca-elementary-cellular-automata>1D CA: Elementary Cellular Automata</h1><h2 id=simplest-ca>Simplest CA</h2><p>CA的三个关键要素是什么？</p><ul><li>网格。最简单的网格是一维的：一行单元格。</li></ul><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_02.png alt="Nature of Code Image"></p><ul><li>状态。最简单的一组状态（除了只有一个状态之外）是两个状态：0或1。</li></ul><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_03.png alt="Nature of Code Image"></p><ul><li>邻域。对于任何给定的单元，一维中最简单的邻域就是单元本身及其两个相邻的邻域：一个在左边，一个在右边。</li></ul><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_04.png alt="Nature of Code Image"></p><p>然后，我们从一行单元格开始，每个单元格有一个初始状态（假设它是随机的），每个单元格有两个相邻的单元格。我们必须弄清楚我们想对边缘的细胞做什么（因为这些细胞每个只有一个邻居），但这是我们以后可以解决的问题。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_05.png alt="Nature of Code Image"></p><p>然而，我们还没有讨论细胞自动机如何工作的最重要的细节——时间。我们这里并不是在谈论真实世界的时间，而是关于CA在一段时间内的生活，这也可以称为一代，在我们的例子中，很可能是指动画的帧数。上面的数字向我们展示了时间等于0或第0代时的CA。我们要问自己的问题是：如何计算第1代时所有细胞的状态？第二代呢？以此类推。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_06.png alt="Nature of Code Image"></p><p>假设CA中有一个单独的细胞，我们称之为CELL。计算任意给定时间t的CELL状态的公式如下：</p><p><code>CELL state at time t = f(CELL neighborhood at time t - 1)</code></p><p>换句话说，一个细胞的新状态是前一时刻（或前一代期间）细胞邻域中所有状态的函数。我们通过查看所有以前的相邻状态来计算一个新的状态值。</p><p>我们有三个细胞，每个细胞的状态为0或1。有多少种可能的方式可以配置这些状态？如果你喜欢二进制，你会注意到三个单元格定义了一个3位的数字，你能用3位数到多高？最多8个。让我们看看。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_08.png alt="Nature of Code Image"></p><p>一旦定义了所有可能的邻域，就需要为每个邻域配置定义一个结果（新状态值：0或1）。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_09.png alt="Nature of Code Image"></p><p>标准的Wolfram模型是从第0代开始，除了中间细胞的状态应该是1之外，所有细胞的状态都是0。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_10.png alt="Nature of Code Image"></p><p>参考上面的规则集，让我们看看给定的细胞（我们将选择中间的细胞）如何从第0代更改为第1代。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_11.png alt="Nature of Code Image"></p><p>尝试对上面的所有细胞应用相同的逻辑并填充空细胞。</p><p>现在，让我们回顾一下一代，给细胞上色-0表示白色，1表示黑色，然后将各代叠加，每一代都显示在前一代的下方。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_12.png alt="Nature of Code Image"></p><p>这个特殊的结果不是偶然发生的。我之所以选择这组规则是因为它生成的模式。注意有八种可能的邻域配置；因此，我们将“规则集”定义为8位的列表。这个特殊的规则可以说明如下：</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_14.png alt="Nature of Code Image"></p><p>8个0和1表示8位数字，一共有256个0和1的组合。因此，对于Wolfram初等CA，有256个可能的规则集。上面的规则集通常称为“Rule 90”，因为将二进制序列01011010转换为十进制数，则会得到整数90。</p><h2 id=matlab-code>Matlab Code</h2><p>这个，我是根据<a href=https://natureofcode.com/book/chapter-7-cellular-automata/>Chapter 7. Cellular Automata | The Nature of Code</a>中的代码改成Matlab的。</p><p>在Matlab中，可以使用数组来描述以下的CA：</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_17.png alt="Nature of Code Image"></p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>CA = [<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>];
-</code></pre></div><p>可视化方案也很简单：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>colormap([<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>;<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>])
+&nbsp;
+</div>
+</div>
+</div>
+<div class=post-body-wrapper>
+<div class=post-body v-pre>
+<h1 id=links>Links</h1>
+<h2 id=main-references>Main references</h2>
+<ul>
+<li><a href=https://natureofcode.com/book/chapter-7-cellular-automata/>Chapter 7. Cellular Automata | The Nature of Code</a></li>
+<li><a href=http://www.tiem.utk.edu/~gavrila/504.html>gavrila | Material for the first Cellular Automata lecture</a></li>
+</ul>
+<p><strong>A lot of Links about CA</strong></p>
+<ul>
+<li><a href=http://cell-auto.com/links/>Cellular Automata Links (cell-auto.com)</a></li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>
+<p><a href=http://www.wolframscience.com/nksonline/toc.html>A New Kind of Science | Stephen Wolfram’s 1,280-page, 2002</a>.</p>
+</li>
+<li>
+<p><a href=https://github.com/nature-of-code>The Nature of Code · GitHub</a></p>
+</li>
+</ul>
+<h2 id=1d-elementary-ca>1D: Elementary CA</h2>
+<ul>
+<li><a href=https://mathworld.wolfram.com/ElementaryCellularAutomaton.html>Elementary Cellular Automaton &ndash; from Wolfram MathWorld</a></li>
+<li><a href=http://atlas.wolfram.com/01/01/>Wolfram Atlas: Elementary Cellular Automata:Home</a></li>
+</ul>
+<h2 id=2d--game-of-life>2D: Game of Life</h2>
+<p><strong>Cleve Moler, MATLAB</strong></p>
+<ul>
+<li><a href=https://blogs.mathworks.com/cleve/2012/09/10/game-of-life-part-2-sparse-matrices/>Game of Life, Part 2, Sparse Matrices</a></li>
+<li><a href=https://www.mathworks.com/moler/exm/chapters.html>Chapter 12 Game of Life| Experiments with MATLAB</a></li>
+</ul>
+<p><strong>Online Demonstration</strong></p>
+<ul>
+<li><a href=https://playgameoflife.com/>Play John Conway’s Game of Life</a></li>
+</ul>
+<h1 id=what-is-cellular-automata>What Is Cellular Automata?</h1>
+<p>细胞自动机 (CA) 是一种离散模型，在可计算性理论、数学及理论生物学都有相关研究。</p>
+<p>细胞自动机是具有以下特征的“细胞”对象系统的模型：</p>
+<ul>
+<li>细胞生活在网格里</li>
+<li>每个细胞都有一个状态，状态数量通常是有限的</li>
+<li>每个细胞都有一个邻域</li>
+</ul>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_01.png alt="Nature of Code Image"></p>
+<p>细胞自动机最早由冯·诺依曼在1950年代为模拟生物细胞的自我复制而提出的。但是并未受到学术界重视。直到1970年，任教于剑桥大学的英国数学家约翰·何顿·康威设计了生命游戏，经马丁·葛登在《科学美国人》杂志上介绍，才吸引了科学家们的注意。此后，英国学者史蒂芬·沃尔夫勒姆对初等元胞机256种规则所产生的模型进行了深入研究，并用熵来描述其演化行为，将细胞自动机分为平稳型、周期型、混沌型和复杂型。</p>
+<h2 id=general-strategy-of-modeling-ca>General strategy of modeling CA</h2>
+<ul>
+<li>set parameters</li>
+<li>set initial conditions</li>
+<li>set update rule</li>
+<li>set graphics</li>
+</ul>
+<h2 id=what-are-ca-good-for>What are CA good for?</h2>
+<ul>
+<li>provide an alternative simple method for studying connections between microscopic and macroscopic world</li>
+<li>examine, by virtue of speedy computations, huge numbers of parameter ranges</li>
+<li>provide a simple testing tool for qualitative predictions such as: “a local mechanism X can generate phenomenon Y”</li>
+</ul>
+<p>However, CA models are almost never able to make precise quantitative predictions. They are suitable for modeling processes in which basic laws are hard to identify.</p>
+<h1 id=1d-ca-elementary-cellular-automata>1D CA: Elementary Cellular Automata</h1>
+<h2 id=simplest-ca>Simplest CA</h2>
+<p>CA的三个关键要素是什么？</p>
+<ul>
+<li>网格。最简单的网格是一维的：一行单元格。</li>
+</ul>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_02.png alt="Nature of Code Image"></p>
+<ul>
+<li>状态。最简单的一组状态（除了只有一个状态之外）是两个状态：0或1。</li>
+</ul>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_03.png alt="Nature of Code Image"></p>
+<ul>
+<li>邻域。对于任何给定的单元，一维中最简单的邻域就是单元本身及其两个相邻的邻域：一个在左边，一个在右边。</li>
+</ul>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_04.png alt="Nature of Code Image"></p>
+<p>然后，我们从一行单元格开始，每个单元格有一个初始状态（假设它是随机的），每个单元格有两个相邻的单元格。我们必须弄清楚我们想对边缘的细胞做什么（因为这些细胞每个只有一个邻居），但这是我们以后可以解决的问题。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_05.png alt="Nature of Code Image"></p>
+<p>然而，我们还没有讨论细胞自动机如何工作的最重要的细节——时间。我们这里并不是在谈论真实世界的时间，而是关于CA在一段时间内的生活，这也可以称为一代，在我们的例子中，很可能是指动画的帧数。上面的数字向我们展示了时间等于0或第0代时的CA。我们要问自己的问题是：如何计算第1代时所有细胞的状态？第二代呢？以此类推。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_06.png alt="Nature of Code Image"></p>
+<p>假设CA中有一个单独的细胞，我们称之为CELL。计算任意给定时间t的CELL状态的公式如下：</p>
+<p><code>CELL state at time t = f(CELL neighborhood at time t - 1)</code></p>
+<p>换句话说，一个细胞的新状态是前一时刻（或前一代期间）细胞邻域中所有状态的函数。我们通过查看所有以前的相邻状态来计算一个新的状态值。</p>
+<p>我们有三个细胞，每个细胞的状态为0或1。有多少种可能的方式可以配置这些状态？如果你喜欢二进制，你会注意到三个单元格定义了一个3位的数字，你能用3位数到多高？最多8个。让我们看看。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_08.png alt="Nature of Code Image"></p>
+<p>一旦定义了所有可能的邻域，就需要为每个邻域配置定义一个结果（新状态值：0或1）。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_09.png alt="Nature of Code Image"></p>
+<p>标准的Wolfram模型是从第0代开始，除了中间细胞的状态应该是1之外，所有细胞的状态都是0。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_10.png alt="Nature of Code Image"></p>
+<p>参考上面的规则集，让我们看看给定的细胞（我们将选择中间的细胞）如何从第0代更改为第1代。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_11.png alt="Nature of Code Image"></p>
+<p>尝试对上面的所有细胞应用相同的逻辑并填充空细胞。</p>
+<p>现在，让我们回顾一下一代，给细胞上色-0表示白色，1表示黑色，然后将各代叠加，每一代都显示在前一代的下方。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_12.png alt="Nature of Code Image"></p>
+<p>这个特殊的结果不是偶然发生的。我之所以选择这组规则是因为它生成的模式。注意有八种可能的邻域配置；因此，我们将“规则集”定义为8位的列表。这个特殊的规则可以说明如下：</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_14.png alt="Nature of Code Image"></p>
+<p>8个0和1表示8位数字，一共有256个0和1的组合。因此，对于Wolfram初等CA，有256个可能的规则集。上面的规则集通常称为“Rule 90”，因为将二进制序列01011010转换为十进制数，则会得到整数90。</p>
+<h2 id=matlab-code>Matlab Code</h2>
+<p>这个，我是根据<a href=https://natureofcode.com/book/chapter-7-cellular-automata/>Chapter 7. Cellular Automata | The Nature of Code</a>中的代码改成Matlab的。</p>
+<p>在Matlab中，可以使用数组来描述以下的CA：</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_17.png alt="Nature of Code Image"></p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>CA = [<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>];
+</code></pre></div><p>可视化方案也很简单：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>colormap([<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>;<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>])
 image(<span style=color:#b452cd>2</span>-CA)
 axis image
-</code></pre></div><p>接下来，正式开始编程了。首先，定义基本信息：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>% ruleset: 规则集，本例中为&#34;Rule 90&#34;</span>
+</code></pre></div><p>接下来，正式开始编程了。首先，定义基本信息：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>% ruleset: 规则集，本例中为&#34;Rule 90&#34;</span>
 <span style=color:#228b22>% time: 时间</span>
 <span style=color:#228b22>% cells: 1-D CA的网格数</span>
 ruleset = [<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>];
@@ -36,7 +499,17 @@ init(cells/<span style=color:#b452cd>2</span>) = <span style=color:#b452cd>1</sp
 <span style=color:#228b22>% Grid: (time,col)大小的网格</span>
 Grid = <span style=color:#658b00>zeros</span>(time,cells);
 Grid(<span style=color:#b452cd>1</span>,:) =  init;
-</code></pre></div><blockquote><p>如何处理那些左右两边都没有邻居的边缘细胞？以下是解决这个问题的三种可能的方法：</p><ol><li>边缘保持不变。这也许是最简单的解决办法，不费心计算边，总是保持它们的状态值不变（0或1）。</li><li>边缘环绕。把CA想象成一张绕成圆环的纸条。最左边的单元格是右边单元格的邻居，反之亦然。这可能是最常用的解决方案。</li><li>边缘有不同的邻域和规则。可以用不同的方法处理边缘单元，并为邻域为2而不是3的单元格创建规则。在某些情况下，可能希望这样做，但在这个例子中，这将是大量额外的代码行，几乎没有什么好处。</li></ol></blockquote><p>然后，根据规则更新Grid，Grid的第一行表示CA的第一代，以此类推。</p><p>为了使代码现在更容易阅读和理解，我们将使用选项1，跳过边缘情况，保持它们的值不变。</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>for</span> generation = <span style=color:#b452cd>2</span>:time
+</code></pre></div><blockquote>
+<p>如何处理那些左右两边都没有邻居的边缘细胞？以下是解决这个问题的三种可能的方法：</p>
+<ol>
+<li>边缘保持不变。这也许是最简单的解决办法，不费心计算边，总是保持它们的状态值不变（0或1）。</li>
+<li>边缘环绕。把CA想象成一张绕成圆环的纸条。最左边的单元格是右边单元格的邻居，反之亦然。这可能是最常用的解决方案。</li>
+<li>边缘有不同的邻域和规则。可以用不同的方法处理边缘单元，并为邻域为2而不是3的单元格创建规则。在某些情况下，可能希望这样做，但在这个例子中，这将是大量额外的代码行，几乎没有什么好处。</li>
+</ol>
+</blockquote>
+<p>然后，根据规则更新Grid，Grid的第一行表示CA的第一代，以此类推。</p>
+<p>为了使代码现在更容易阅读和理解，我们将使用选项1，跳过边缘情况，保持它们的值不变。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>for</span> generation = <span style=color:#b452cd>2</span>:time
     previous = Grid(generation-<span style=color:#b452cd>1</span>,:);
     newState = <span style=color:#658b00>zeros</span>(<span style=color:#b452cd>1</span>,col);
     <span style=color:#228b22>% a loop that ignores the first and last cell</span>
@@ -50,7 +523,9 @@ Grid(<span style=color:#b452cd>1</span>,:) =  init;
     <span style=color:#228b22>% update Grid</span>
     Grid(generation,:) = newState;
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><p>定义<code>rules()</code>函数，即更新规则。下图为Rule 90。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_14.png alt="Nature of Code Image"></p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(a, b, c)<span style=color:#bbb>
+</code></pre></div><p>定义<code>rules()</code>函数，即更新规则。下图为Rule 90。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_14.png alt="Nature of Code Image"></p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(a, b, c)<span style=color:#bbb>
 </span><span style=color:#bbb>    </span>ruleset = [<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>0</span>];
     <span style=color:#8b008b;font-weight:700>if</span>     (a == <span style=color:#b452cd>1</span> &amp;&amp; b == <span style=color:#b452cd>1</span> &amp;&amp; c == <span style=color:#b452cd>1</span>)
         out=ruleset(<span style=color:#b452cd>1</span>);
@@ -70,32 +545,127 @@ Grid(<span style=color:#b452cd>1</span>,:) =  init;
         out=ruleset(<span style=color:#b452cd>8</span>);
     <span style=color:#8b008b;font-weight:700>end</span> 
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><p><code>rules()</code>第二种写法：</p><table><thead><tr><th>二进制</th><th>111</th><th>110</th><th>101</th><th>100</th><th>011</th><th>010</th><th>001</th><th>000</th></tr></thead><tbody><tr><td>十进制</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td></tr><tr><td>输出</td><td>0</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td></tr></tbody></table><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(a, b, c, ruleset)<span style=color:#bbb>
+</code></pre></div><p><code>rules()</code>第二种写法：</p>
+<table>
+<thead>
+<tr>
+<th>二进制</th>
+<th>111</th>
+<th>110</th>
+<th>101</th>
+<th>100</th>
+<th>011</th>
+<th>010</th>
+<th>001</th>
+<th>000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>十进制</td>
+<td>7</td>
+<td>6</td>
+<td>5</td>
+<td>4</td>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td>输出</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(a, b, c, ruleset)<span style=color:#bbb>
 </span><span style=color:#bbb>    </span>str = [num2str(a),num2str(b),num2str(c)];
     index = bin2dec(str);
     out = ruleset(<span style=color:#b452cd>8</span>-index);
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><p>有的时候，我们把规则中输出的'01011010&rsquo;转成十进制为90，采用十进制来表示。</p><p>因此，<code>rules()</code>第二种写法可以改进，其中rule为一个[0,255]的十进制数：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(a, b, c, rule)<span style=color:#bbb>
+</code></pre></div><p>有的时候，我们把规则中输出的'01011010&rsquo;转成十进制为90，采用十进制来表示。</p>
+<p>因此，<code>rules()</code>第二种写法可以改进，其中rule为一个[0,255]的十进制数：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(a, b, c, rule)<span style=color:#bbb>
 </span><span style=color:#bbb>    </span>ruleset = dec2bin(rule,<span style=color:#b452cd>8</span>);  <span style=color:#228b22>% 把十进制转换成8位二进制的字符串</span>
     ruleset = <span style=color:#658b00>abs</span>(ruleset)-<span style=color:#b452cd>48</span>;  <span style=color:#228b22>% 如果X是字符串，abs(X)返回ASCII码值，0对48,1对49</span>
     str = [num2str(a),num2str(b),num2str(c)];
     index = bin2dec(str);
     out = ruleset(<span style=color:#b452cd>8</span>-index);
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><p>最后，将整个Grid可视化：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>colormap([<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>;<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>])
+</code></pre></div><p>最后，将整个Grid可视化：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>colormap([<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>;<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>])
 image(<span style=color:#b452cd>2</span>-Grid)
 axis image
 xlabel(<span style=color:#cd5555>&#39;space&#39;</span>)
 ylabel(<span style=color:#cd5555>&#39;time&#39;</span>)
 title(<span style=color:#cd5555>&#39;Rule 90&#39;</span>)
-</code></pre></div><h1 id=2d-ca-conways-game-of-life>2D CA: Conway’s Game of Life</h1><h2 id=basics>Basics</h2><p>“生命游戏”是由约翰·霍顿·康威发明的。</p><p>生命游戏的规则是</p><ul><li><p>每个cell的状态是“alive”（state = 1）或“dead”（state = 0）</p></li><li><p>每个cell的邻域有8个cell（即Moore neighborhood）</p></li><li><p><strong>Death</strong>. If a cell is alive (state = 1) it will die (state becomes 0) under the following circumstances.</p><ul><li><strong>Overpopulation</strong>: If the cell has four or more alive neighbors, it dies.</li><li><strong>Loneliness</strong>: If the cell has one or fewer alive neighbors, it dies.</li></ul></li><li><p><strong>Birth</strong>. If a cell is dead (state = 0) it will come to life (state becomes 1) if it has exactly three alive neighbors (no more, no less).</p></li><li><p><strong>Stasis</strong>. In all other cases, the cell state does not change. To be thorough, let’s describe those scenarios.</p><ul><li><strong>Staying Alive</strong>: If a cell is alive and has exactly two or three live neighbors, it stays alive.</li><li><strong>Staying Dead</strong>: If a cell is dead and has anything other than three live neighbors, it stays dead.</li></ul></li></ul><blockquote><p>规则可以总结为：</p><p>At each step, the fate of each cell is determined by the vitality of its eight nearest neighbors and this rule:
-A live cell with two live neighbors, or any cell with three live neighbors, is alive at the next step.</p></blockquote><h2 id=initial-patterns>Initial Patterns</h2><p>生命游戏中一个令人兴奋的方面是，最初的模式（initial patterns）会产生有趣的结果。</p><p>例如，有些保持不变，从不改变。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_24.png alt="Nature of Code Image"></p><p>这是在两个状态之间来回振荡的模式。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_25.png alt="Nature of Code Image"></p><p>还有一种模式，一代一代地在网格中移动(需要注意的是，细胞本身实际上并没有移动，尽管我们可以看到细胞打开和关闭时结果中出现的运动）</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_26.png alt="Nature of Code Image"></p><h2 id=cleve-molers-code>Cleve Moler‘s Code</h2><h3 id=step-by-step>Step by step</h3><p>这里的代码来自<a href=https://blogs.mathworks.com/cleve/2012/09/10/game-of-life-part-2-sparse-matrices/>Game of Life, Part 2, Sparse Matrices</a></p><p>生命游戏中的宇宙是由一个稀疏矩阵X来表示的，因为该矩阵的元素几乎全是0。唯一的非零元素是那些活着的细胞。让我们从描述实现康威规则的代码开始：</p><ul><li>A live cell with two live neighbors, or any cell with three live neighbors, is alive at the next step.</li></ul><p>一个基本的操作是计算活着的邻居。这涉及一个避免边缘元素的索引向量p。</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>%    m = size(X,1);</span>
+</code></pre></div><h1 id=2d-ca-conways-game-of-life>2D CA: Conway’s Game of Life</h1>
+<h2 id=basics>Basics</h2>
+<p>“生命游戏”是由约翰·霍顿·康威发明的。</p>
+<p>生命游戏的规则是</p>
+<ul>
+<li>
+<p>每个cell的状态是“alive”（state = 1）或“dead”（state = 0）</p>
+</li>
+<li>
+<p>每个cell的邻域有8个cell（即Moore neighborhood）</p>
+</li>
+<li>
+<p><strong>Death</strong>. If a cell is alive (state = 1) it will die (state becomes 0) under the following circumstances.</p>
+<ul>
+<li><strong>Overpopulation</strong>: If the cell has four or more alive neighbors, it dies.</li>
+<li><strong>Loneliness</strong>: If the cell has one or fewer alive neighbors, it dies.</li>
+</ul>
+</li>
+<li>
+<p><strong>Birth</strong>. If a cell is dead (state = 0) it will come to life (state becomes 1) if it has exactly three alive neighbors (no more, no less).</p>
+</li>
+<li>
+<p><strong>Stasis</strong>. In all other cases, the cell state does not change. To be thorough, let’s describe those scenarios.</p>
+<ul>
+<li><strong>Staying Alive</strong>: If a cell is alive and has exactly two or three live neighbors, it stays alive.</li>
+<li><strong>Staying Dead</strong>: If a cell is dead and has anything other than three live neighbors, it stays dead.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>规则可以总结为：</p>
+<p>At each step, the fate of each cell is determined by the vitality of its eight nearest neighbors and this rule:
+A live cell with two live neighbors, or any cell with three live neighbors, is alive at the next step.</p>
+</blockquote>
+<h2 id=initial-patterns>Initial Patterns</h2>
+<p>生命游戏中一个令人兴奋的方面是，最初的模式（initial patterns）会产生有趣的结果。</p>
+<p>例如，有些保持不变，从不改变。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_24.png alt="Nature of Code Image"></p>
+<p>这是在两个状态之间来回振荡的模式。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_25.png alt="Nature of Code Image"></p>
+<p>还有一种模式，一代一代地在网格中移动(需要注意的是，细胞本身实际上并没有移动，尽管我们可以看到细胞打开和关闭时结果中出现的运动）</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_26.png alt="Nature of Code Image"></p>
+<h2 id=cleve-molers-code>Cleve Moler‘s Code</h2>
+<h3 id=step-by-step>Step by step</h3>
+<p>这里的代码来自<a href=https://blogs.mathworks.com/cleve/2012/09/10/game-of-life-part-2-sparse-matrices/>Game of Life, Part 2, Sparse Matrices</a></p>
+<p>生命游戏中的宇宙是由一个稀疏矩阵X来表示的，因为该矩阵的元素几乎全是0。唯一的非零元素是那些活着的细胞。让我们从描述实现康威规则的代码开始：</p>
+<ul>
+<li>A live cell with two live neighbors, or any cell with three live neighbors, is alive at the next step.</li>
+</ul>
+<p>一个基本的操作是计算活着的邻居。这涉及一个避免边缘元素的索引向量p。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>%    m = size(X,1);</span>
 <span style=color:#228b22>%    p = 2:m-1;</span>
-</code></pre></div><p>下面的代码创建一个稀疏矩阵N，其中的元素介于0和8之间，表示活着邻居的计数。</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>%    N = sparse(m,m);</span>
+</code></pre></div><p>下面的代码创建一个稀疏矩阵N，其中的元素介于0和8之间，表示活着邻居的计数。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>%    N = sparse(m,m);</span>
 <span style=color:#228b22>%    N(p,p) = X(p-1,p-1) + X(p,p-1) + X(p+1,p-1) + X(p-1,p) + ...</span>
 <span style=color:#228b22>%       X(p-1,p+1) + X(p,p+1) + X(p+1,p+1) + X(p+1,p);</span>
-</code></pre></div><p>对于稀疏矩阵上的MATLAB矩阵逻辑运算，这是康威规则的实现：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>%    X = (X &amp; (N == 2)) | (N == 3);</span>
-</code></pre></div><p>下面，我们从the glider这一个初始模式来看看结果如何：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>X = sparse(<span style=color:#b452cd>7</span>,<span style=color:#b452cd>7</span>);
+</code></pre></div><p>对于稀疏矩阵上的MATLAB矩阵逻辑运算，这是康威规则的实现：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>%    X = (X &amp; (N == 2)) | (N == 3);</span>
+</code></pre></div><p>下面，我们从the glider这一个初始模式来看看结果如何：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>X = sparse(<span style=color:#b452cd>7</span>,<span style=color:#b452cd>7</span>);
 X(<span style=color:#b452cd>3</span>:<span style=color:#b452cd>5</span>,<span style=color:#b452cd>3</span>:<span style=color:#b452cd>5</span>) = [<span style=color:#b452cd>0</span> <span style=color:#b452cd>1</span> <span style=color:#b452cd>0</span>; <span style=color:#b452cd>0</span> <span style=color:#b452cd>0</span> <span style=color:#b452cd>1</span>; <span style=color:#b452cd>1</span> <span style=color:#b452cd>1</span> <span style=color:#b452cd>1</span>];
 <span style=color:#658b00>disp</span>(<span style=color:#cd5555>&#39;X&#39;</span>)
 t = int2str(X); t(t==<span style=color:#cd5555>&#39;0&#39;</span>) = <span style=color:#cd5555>&#39;.&#39;</span>; <span style=color:#658b00>disp</span>(t)
@@ -107,7 +677,8 @@ t = int2str(X); t(t==<span style=color:#cd5555>&#39;0&#39;</span>) = <span style
 .  .  1  1  1  .  .
 .  .  .  .  .  .  .
 .  .  .  .  .  .  .
-</code></pre><p>数一数八个邻居中有多少还活着。我们在the glider周围得到了他们的计数值。</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>m = <span style=color:#658b00>size</span>(X,<span style=color:#b452cd>1</span>);
+</code></pre><p>数一数八个邻居中有多少还活着。我们在the glider周围得到了他们的计数值。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>m = <span style=color:#658b00>size</span>(X,<span style=color:#b452cd>1</span>);
 p = <span style=color:#b452cd>2</span>:m-<span style=color:#b452cd>1</span>;
 N = sparse(m,m);
 N(p,p) = X(p-<span style=color:#b452cd>1</span>,p-<span style=color:#b452cd>1</span>) + X(p,p-<span style=color:#b452cd>1</span>) + X(p+<span style=color:#b452cd>1</span>,p-<span style=color:#b452cd>1</span>) + X(p-<span style=color:#b452cd>1</span>,p) + <span style=color:#228b22>...</span>
@@ -122,7 +693,8 @@ t = int2str(N); t(t==<span style=color:#cd5555>&#39;0&#39;</span>) = <span style
 .  1  1  3  2  2  .
 .  1  2  3  2  1  .
 .  .  .  .  .  .  .
-</code></pre><p>只有the glider的头部还活着，并且还有两个活着的邻居。</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#658b00>disp</span>(<span style=color:#cd5555>&#39;X &amp; (N == 2)&#39;</span>)
+</code></pre><p>只有the glider的头部还活着，并且还有两个活着的邻居。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#658b00>disp</span>(<span style=color:#cd5555>&#39;X &amp; (N == 2)&#39;</span>)
 t = int2str(X &amp; (N == <span style=color:#b452cd>2</span>)); t(t==<span style=color:#cd5555>&#39;0&#39;</span>) = <span style=color:#cd5555>&#39;.&#39;</span>; <span style=color:#658b00>disp</span>(t)
 </code></pre></div><pre><code>X &amp; (N == 2)
 .  .  .  .  .  .  .
@@ -132,7 +704,8 @@ t = int2str(X &amp; (N == <span style=color:#b452cd>2</span>)); t(t==<span style
 .  .  .  .  1  .  .
 .  .  .  .  .  .  .
 .  .  .  .  .  .  .
-</code></pre><p>另外四个细胞有三个活着的邻居。</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#658b00>disp</span>(<span style=color:#cd5555>&#39;N == 3&#39;</span>)
+</code></pre><p>另外四个细胞有三个活着的邻居。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#658b00>disp</span>(<span style=color:#cd5555>&#39;N == 3&#39;</span>)
 t = int2str(N == <span style=color:#b452cd>3</span>); t(t==<span style=color:#cd5555>&#39;0&#39;</span>) = <span style=color:#cd5555>&#39;.&#39;</span>; <span style=color:#658b00>disp</span>(t)
 </code></pre></div><pre><code>N == 3
 .  .  .  .  .  .  .
@@ -142,7 +715,8 @@ t = int2str(N == <span style=color:#b452cd>3</span>); t(t==<span style=color:#cd
 .  .  .  1  .  .  .
 .  .  .  1  .  .  .
 .  .  .  .  .  .  .
-</code></pre><p>使用"|"，对这后面两个矩阵进行或操作可以得到the glider的下一代。</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#658b00>disp</span>(<span style=color:#cd5555>&#39;(X &amp; (N == 2)) | (N == 3)&#39;</span>)
+</code></pre><p>使用"|"，对这后面两个矩阵进行或操作可以得到the glider的下一代。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#658b00>disp</span>(<span style=color:#cd5555>&#39;(X &amp; (N == 2)) | (N == 3)&#39;</span>)
 t = int2str((X &amp; (N == <span style=color:#b452cd>2</span>)) | (N == <span style=color:#b452cd>3</span>)); t(t==<span style=color:#cd5555>&#39;0&#39;</span>) = <span style=color:#cd5555>&#39;.&#39;</span>; <span style=color:#658b00>disp</span>(t)
 </code></pre></div><pre><code>(X &amp; (N == 2)) | (N == 3)
 .  .  .  .  .  .  .
@@ -152,7 +726,10 @@ t = int2str((X &amp; (N == <span style=color:#b452cd>2</span>)) | (N == <span st
 .  .  .  1  1  .  .
 .  .  .  1  .  .  .
 .  .  .  .  .  .  .
-</code></pre><p>再重复以上过程三次，the glider就会向下向右移动一步。</p><h3 id=the-whole-thing>The whole thing</h3><p>这里的代码来自<a href=https://www.mathworks.com/moler/exm/chapters.html>Chapter 12 Game of Life | Experiments with MATLAB</a></p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>X = sparse(<span style=color:#b452cd>50</span>,<span style=color:#b452cd>50</span>);
+</code></pre><p>再重复以上过程三次，the glider就会向下向右移动一步。</p>
+<h3 id=the-whole-thing>The whole thing</h3>
+<p>这里的代码来自<a href=https://www.mathworks.com/moler/exm/chapters.html>Chapter 12 Game of Life | Experiments with MATLAB</a></p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab>X = sparse(<span style=color:#b452cd>50</span>,<span style=color:#b452cd>50</span>);
 X(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>30</span>,<span style=color:#b452cd>21</span>:<span style=color:#b452cd>30</span>) = (<span style=color:#658b00>rand</span>(<span style=color:#b452cd>10</span>,<span style=color:#b452cd>10</span>) &gt; .<span style=color:#b452cd>75</span>);
    
 <span style=color:#228b22>% Loop over 100 generations</span>
@@ -181,7 +758,9 @@ X(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>30</span>,<span 
   X = (X &amp; (N == <span style=color:#b452cd>2</span>)) | (N == <span style=color:#b452cd>3</span>);
 
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><p>Matlab里面也自带了生命游戏，在命令行输入<code>life</code>即可打开。</p><h3 id=with-simple-gui>With Simple GUI</h3><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>%=============================================</span>
+</code></pre></div><p>Matlab里面也自带了生命游戏，在命令行输入<code>life</code>即可打开。</p>
+<h3 id=with-simple-gui>With Simple GUI</h3>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>%=============================================</span>
 <span style=color:#228b22>%build the GUI</span>
 <span style=color:#228b22>%define the plot button</span>
 plotbutton=uicontrol(<span style=color:#cd5555>&#39;style&#39;</span>,<span style=color:#cd5555>&#39;pushbutton&#39;</span>,<span style=color:#228b22>...</span>
@@ -256,7 +835,11 @@ freeze = <span style=color:#b452cd>0</span>; <span style=color:#228b22>%wait for
     drawnow  <span style=color:#228b22>%need this in the loop for controls to work</span>
     
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><h2 id=another-code>Another Code</h2><p>根据<a href=https://natureofcode.com/book/chapter-7-cellular-automata/>Chapter 7. Cellular Automata | The Nature of Code</a>中的代码改成Matlab和python的。</p><h3 id=面向过程-matlab>面向过程-Matlab</h3><p>首先，定义参数和网格，并初始化：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>% 定义参数</span>
+</code></pre></div><h2 id=another-code>Another Code</h2>
+<p>根据<a href=https://natureofcode.com/book/chapter-7-cellular-automata/>Chapter 7. Cellular Automata | The Nature of Code</a>中的代码改成Matlab和python的。</p>
+<h3 id=面向过程-matlab>面向过程-Matlab</h3>
+<p>首先，定义参数和网格，并初始化：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>% 定义参数</span>
 rows = <span style=color:#b452cd>50</span>;
 columns = <span style=color:#b452cd>50</span>;
 time = <span style=color:#b452cd>50</span>;
@@ -265,7 +848,8 @@ Grid = <span style=color:#658b00>zeros</span>(rows,columns,time);
 <span style=color:#228b22>% 网格的初始化</span>
 <span style=color:#228b22>% Grid(21:30,21:30) = (rand(10,10) &gt; .75); % set random initial pattern</span>
 Grid(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>23</span>,<span style=color:#b452cd>21</span>:<span style=color:#b452cd>23</span>,<span style=color:#b452cd>1</span>) = [<span style=color:#b452cd>0</span> <span style=color:#b452cd>1</span> <span style=color:#b452cd>0</span>; <span style=color:#b452cd>0</span> <span style=color:#b452cd>0</span> <span style=color:#b452cd>1</span>; <span style=color:#b452cd>1</span> <span style=color:#b452cd>1</span> <span style=color:#b452cd>1</span>]; <span style=color:#228b22>% set initial pattern: the glider</span>
-</code></pre></div><p>然后，根据现在的邻域信息，计算下一代的状态。</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>% compute the next generation</span>
+</code></pre></div><p>然后，根据现在的邻域信息，计算下一代的状态。</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#228b22>% compute the next generation</span>
 <span style=color:#8b008b;font-weight:700>for</span> generation=<span style=color:#b452cd>2</span>:time
     previous = Grid(:,:,generation-<span style=color:#b452cd>1</span>);
     next = <span style=color:#658b00>zeros</span>(rows,columns);
@@ -276,7 +860,9 @@ Grid(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>23</span>,<sp
     <span style=color:#8b008b;font-weight:700>end</span>
     Grid(:,:,generation) = next;
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><p>定义规则<code>rules()</code>，先得到邻域信息，计算活着的邻居数目。</p><p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_27.png alt="Nature of Code Image"></p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(previous)<span style=color:#bbb>
+</code></pre></div><p>定义规则<code>rules()</code>，先得到邻域信息，计算活着的邻居数目。</p>
+<p><img src=https://natureofcode.com/book/imgs/chapter07/ch07_27.png alt="Nature of Code Image"></p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(previous)<span style=color:#bbb>
 </span><span style=color:#bbb>    </span><span style=color:#228b22>% 得到邻域信息</span>
     neighbor1 = previous(y-<span style=color:#b452cd>1</span>,x-<span style=color:#b452cd>1</span>);  <span style=color:#228b22>% Top row of neighbors</span>
     neighbor2 = previous(y-<span style=color:#b452cd>1</span>,x);
@@ -303,7 +889,8 @@ Grid(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>23</span>,<sp
         out = previous(y,x);
 	<span style=color:#8b008b;font-weight:700>end</span>
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><p><code>rules()</code>改进</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(y,x,previous)<span style=color:#bbb>
+</code></pre></div><p><code>rules()</code>改进</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>function</span><span style=color:#bbb> </span>out =<span style=color:#bbb> </span><span style=color:#008b45>rules</span>(y,x,previous)<span style=color:#bbb>
 </span><span style=color:#bbb>    </span><span style=color:#228b22>% 计算活着的邻居数量</span>
     countAlive = <span style=color:#b452cd>0</span>;
     <span style=color:#8b008b;font-weight:700>for</span> <span style=color:#658b00>i</span> = -<span style=color:#b452cd>1</span>:<span style=color:#b452cd>1</span>
@@ -325,7 +912,8 @@ Grid(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>23</span>,<sp
         out = previous(y,x);
 	<span style=color:#8b008b;font-weight:700>end</span>
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><p>可视化：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>for</span> t=<span style=color:#b452cd>1</span>:time
+</code></pre></div><p>可视化：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-matlab data-lang=matlab><span style=color:#8b008b;font-weight:700>for</span> t=<span style=color:#b452cd>1</span>:time
     colormap([<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>,<span style=color:#b452cd>0</span>;<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>,<span style=color:#b452cd>1</span>])
     A = Grid(:,:,t);
     image(<span style=color:#b452cd>2</span>-A)
@@ -336,10 +924,13 @@ Grid(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>23</span>,<sp
     drawnow
     pause(<span style=color:#b452cd>0.1</span>)
 <span style=color:#8b008b;font-weight:700>end</span>
-</code></pre></div><h3 id=面向对象-python>面向对象-python</h3><p>首先，导入包</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>random</span>
+</code></pre></div><h3 id=面向对象-python>面向对象-python</h3>
+<p>首先，导入包</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>random</span>
 <span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>matplotlib.pyplot</span> <span style=color:#8b008b;font-weight:700>as</span> <span style=color:#008b45;text-decoration:underline>plt</span>
 <span style=color:#8b008b;font-weight:700>import</span> <span style=color:#008b45;text-decoration:underline>matplotlib.patches</span> <span style=color:#8b008b;font-weight:700>as</span> <span style=color:#008b45;text-decoration:underline>mpathes</span>
-</code></pre></div><p>定义基本的Cell类：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>class</span> <span style=color:#008b45;font-weight:700>Cell</span>:
+</code></pre></div><p>定义基本的Cell类：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>class</span> <span style=color:#008b45;font-weight:700>Cell</span>:
     <span style=color:#228b22># Location and size</span>
     x = <span style=color:#b452cd>0</span>
     y = <span style=color:#b452cd>0</span>
@@ -368,7 +959,8 @@ Grid(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>23</span>,<sp
         <span style=color:#8b008b;font-weight:700>else</span>:
             rect = mpathes.Rectangle([self.y, self.x], self.w, self.w, color=<span style=color:#cd5555>&#39;w&#39;</span>)
         ax.add_patch(rect)
-</code></pre></div><p>定义生命游戏GOL：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>class</span> <span style=color:#008b45;font-weight:700>GOL</span>:
+</code></pre></div><p>定义生命游戏GOL：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#8b008b;font-weight:700>class</span> <span style=color:#008b45;font-weight:700>GOL</span>:
 
     w = <span style=color:#b452cd>1</span>
     width = <span style=color:#b452cd>20</span>
@@ -425,7 +1017,8 @@ Grid(<span style=color:#b452cd>21</span>:<span style=color:#b452cd>23</span>,<sp
         <span style=color:#8b008b;font-weight:700>for</span> i <span style=color:#8b008b>in</span> <span style=color:#658b00>range</span>(self.rows):
             <span style=color:#8b008b;font-weight:700>for</span> j <span style=color:#8b008b>in</span> <span style=color:#658b00>range</span>(self.cols):
                 self.board[i][j].display(ax)
-</code></pre></div><p>实例化，并可视化：</p><div class=highlight><pre style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 实例化</span>
+</code></pre></div><p>实例化，并可视化：</p>
+<div class=highlight><pre tabindex=0 style=background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#228b22># 实例化</span>
 gol = GOL()
 
 <span style=color:#228b22># 创建画布</span>
@@ -443,7 +1036,35 @@ gol.display()
 <span style=color:#8b008b;font-weight:700>for</span> generation <span style=color:#8b008b>in</span> <span style=color:#658b00>range</span>(<span style=color:#b452cd>1</span>,<span style=color:#b452cd>10</span>): 
     gol.generate() 
     gol.display()
-    ax.set_title(<span style=color:#cd5555>&#39;Generation={}&#39;</span>.format(generation))
-</code></pre></div><hr width=100% id=EOF><p style=color:#777>最后修改于 2021-05-28</p></div></div><nav class=post-pagination><a class=newer-posts href=https://a390177226.github.io/python/basic/>Next<br>Python基础</a>
-<a class=older-posts href=https://a390177226.github.io/research/lungcancer/>Previous<br>Lung Cancer</a></nav><div class=post-comment-wrapper></div></div></div></div></div><div id=single-column-footer>Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a><br>Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a><br><br>&copy;
-zzb2021.</div></div><script>let app;app=new Vue({el:'#app',data:{scrollY:0,navOpacity:0,isDrawerOpen:!1,mounted:!1,isDarkMode:!1},methods:{sgn(a,b){let c=1/(1-2*a);return b<=a?0:b>=1-a?1:c*(b-a)},handleScroll(){this.scrollY=window.scrollY,this.navOpacity=this.sgn(0,Math.min(1,Math.max(0,window.scrollY/(this.pageHeadHeight()-this.navBarHeight()*.8))));const{navBar:c,navBackground:a,navTitle:b,extraContainer:d,streamContainer:e}=this.$refs;this.navOpacity>=1?(a.style.opacity=1,b.style.opacity=1):(a.style.opacity=0,b.style.opacity=0)},handleResize(){const{navBar:c,navBackground:d,navTitle:e,extraContainer:a,streamContainer:b}=this.$refs;a.style.left=b.offsetWidth-a.offsetWidth+'px'},navBarHeight(){return this.$refs.navBar.offsetHeight},pageHeadHeight(){return this.$refs.pageHead.offsetHeight},toggleDrawer(){this.isDrawerOpen=!this.isDrawerOpen,document.getElementsByTagName('html')[0].style.overflow=this.isDrawerOpen?'hidden':'unset'},closeDrawer(){this.isDrawerOpen=!1,document.getElementsByTagName('html')[0].style.overflow=this.isDrawerOpen?'hidden':'unset'},toggleDarkMode(){this.isDarkMode=!this.isDarkMode,this.isDarkMode==!0?(document.cookie="night=1;path=/",document.body.classList.add("night")):(document.cookie="night=0;path=/",document.body.classList.remove("night"))}},created(){window.addEventListener('scroll',this.handleScroll),window.addEventListener('resize',this.handleResize),window._nonDesktop=function(){let a=!1;return function(b){(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(b)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(b.substr(0,4)))&&(a=!0)}(navigator.userAgent||navigator.vendor||window.opera),a};var a=document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,"$1");a==""?window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches:a=="1"&&this.toggleDarkMode()},mounted(){this.handleScroll(),this.handleResize(),this.mounted=!0},destroyed(){window.removeEventListener('scroll',this.handleScroll),window.removeEventListener('resize',this.handleResize)}})</script><script src=https://a390177226.github.io//js/journal.js></script></body></html>
+    ax.set_title(<span style=color:#cd5555>&#39;Generation=</span><span style=color:#cd5555>{}</span><span style=color:#cd5555>&#39;</span>.format(generation))
+</code></pre></div>
+<hr width=100% id=EOF>
+<p style=color:#777>最后修改于 2021-05-28</p>
+</div>
+</div>
+<nav class=post-pagination>
+<a class=newer-posts href=https://a390177226.github.io/python/basic/>
+Next<br>Python基础
+</a>
+<a class=older-posts href=https://a390177226.github.io/research/lungcancer/>
+Previous<br>Lung Cancer
+</a>
+</nav>
+<div class=post-comment-wrapper>
+</div>
+</div>
+</div>
+</div>
+</div><div id=single-column-footer>
+Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
+<br>
+Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>
+<br>
+&copy;
+zzb2021.
+</div>
+</div>
+<script>let app;app=new Vue({el:'#app',data:{scrollY:0,navOpacity:0,isDrawerOpen:!1,mounted:!1,isDarkMode:!1},methods:{sgn(a,b){let c=1/(1-2*a);return b<=a?0:b>=1-a?1:c*(b-a)},handleScroll(){this.scrollY=window.scrollY,this.navOpacity=this.sgn(0,Math.min(1,Math.max(0,window.scrollY/(this.pageHeadHeight()-this.navBarHeight()*.8))));const{navBar:c,navBackground:a,navTitle:b,extraContainer:d,streamContainer:e}=this.$refs;this.navOpacity>=1?(a.style.opacity=1,b.style.opacity=1):(a.style.opacity=0,b.style.opacity=0)},handleResize(){const{navBar:c,navBackground:d,navTitle:e,extraContainer:a,streamContainer:b}=this.$refs;a.style.left=b.offsetWidth-a.offsetWidth+'px'},navBarHeight(){return this.$refs.navBar.offsetHeight},pageHeadHeight(){return this.$refs.pageHead.offsetHeight},toggleDrawer(){this.isDrawerOpen=!this.isDrawerOpen,document.getElementsByTagName('html')[0].style.overflow=this.isDrawerOpen?'hidden':'unset'},closeDrawer(){this.isDrawerOpen=!1,document.getElementsByTagName('html')[0].style.overflow=this.isDrawerOpen?'hidden':'unset'},toggleDarkMode(){this.isDarkMode=!this.isDarkMode,this.isDarkMode==!0?(document.cookie="night=1;path=/",document.body.classList.add("night")):(document.cookie="night=0;path=/",document.body.classList.remove("night"))}},created(){window.addEventListener('scroll',this.handleScroll),window.addEventListener('resize',this.handleResize),window._nonDesktop=function(){let a=!1;return function(b){(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino|android|ipad|playbook|silk/i.test(b)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(b.substr(0,4)))&&(a=!0)}(navigator.userAgent||navigator.vendor||window.opera),a};var a=document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/,"$1");a==""?window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches:a=="1"&&this.toggleDarkMode()},mounted(){this.handleScroll(),this.handleResize(),this.mounted=!0},destroyed(){window.removeEventListener('scroll',this.handleScroll),window.removeEventListener('resize',this.handleResize)}})</script>
+<script src=https://a390177226.github.io//js/journal.js></script>
+</body>
+</html>

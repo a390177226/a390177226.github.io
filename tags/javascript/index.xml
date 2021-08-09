@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JavaScript on ZZB's blog</title><link>https://a390177226.github.io/tags/javascript/</link><description>Recent content in JavaScript on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Thu, 01 Jul 2021 14:17:33 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml"/><item><title>[Dig Deeper]--jQuery</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-jquery/</link><pubDate>Thu, 01 Jul 2021 14:17:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-jquery/</guid><description>Links jQuery 基础教程| 简单教程 jQuery 参考手册| 简单教程 简介 jQuery 是一个轻量级的 &amp;ldquo;写的少，做的多&amp;rdquo; 的 JavaScript 库 jQuery 极大地简化了 JavaScript 编程，优化了DOM操作、事件处理、动画设计和Ajax交互 jQuery 很容易学习，提高开发效率 优点：
+轻量级 跨浏览器兼容 免费、开源 安装和使用 下载使用（推荐）
+从 jquery.com 下载 jQuery 库 在工作目录下保存为jquery-3.6.0.min.js 引用jQuery：&amp;lt;script src=&amp;quot;jquery-2.2.4.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; 不下载，通过CDN（Content Delivery Network）使用
+简单的例子 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;&amp;gt; &amp;lt;script src=&amp;#34;jquery-3.6.0.min.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt;aaaaaa&amp;lt;/p&amp;gt; &amp;lt;script&amp;gt;$(&amp;#39;p&amp;#39;).hide()&amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; jQuery 语法 jQuery 通过选取 HTML 元素，并对选取的元素执行某些操作
+基础语法：$( selector ).action()
+美元符号$是jQuery 的别名</description></item><item><title>[Dig Deeper]--AJAX</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/</link><pubDate>Fri, 25 Jun 2021 12:49:07 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-ajax/</guid><description>简介 AJAX = Asynchronous JavaScript And XML（异步的JavaScript和XML） AJAX 是一种无需重新加载整个网页的情况下，能够更新部分网页的技术 AJAX 不是一种编程语言，而是一种用于创建更好更快以及交互性更强的Web应用程序的技术 传统网页（即不用ajax技术的网页），想要更新内容或者提交一个表单，都需要重新加载整个网页
+使用ajax技术的网页，通过在后台服务器进行少量的数据交换，就可以实现异步局部更新
+利用ajax可以做：
+注册时，输入用户名自动检测用户是否已经存在 登陆时，提示用户名密码错误 简单的例子 HTML页面：test.html
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;demo&amp;#34;&amp;gt; &amp;lt;h2&amp;gt;The XMLHttpRequest Object&amp;lt;/h2&amp;gt; &amp;lt;button type=&amp;#34;button&amp;#34; onclick=&amp;#34;loadDoc()&amp;#34;&amp;gt;Change Content&amp;lt;/button&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; function loadDoc() { const xhttp = new XMLHttpRequest(); xhttp.onload = function () { document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = this.responseText; } xhttp.open(&amp;#34;GET&amp;#34;, &amp;#34;ajax_info.txt&amp;#34;, true); xhttp.send(); } &amp;lt;/script&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 文本：ajax_info.txt，在test.html同一级目录下
+AJAX 如何工作 网页中发生一个事件（页面加载、按钮点击） 由 JavaScript 创建 XMLHttpRequest 对象 XMLHttpRequest 对象向 web 服务器发送请求 服务器处理该请求 服务器将响应发送回网页 由 JavaScript 读取响应 由 JavaScript 执行正确的动作（比如更新页面） XHR对象 所有现代浏览器都支持 XMLHttpRequest（XHR） 对象。</description></item><item><title>JavaScript正则表达式</title><link>https://a390177226.github.io/post/jsregexp/</link><pubDate>Fri, 21 May 2021 15:47:41 +0800</pubDate><guid>https://a390177226.github.io/post/jsregexp/</guid><description>Links 学习视频
+正则表达式30分钟入门~bilibili 文档
+正则表达式 – 教程 | 菜鸟教程 在线测试网站
+RegExr英文 RegExr中文 练习网站
+编程胶囊 (codejiaonang.com) 什么是正则表达式？ 正则表达式是构成搜索模式（search pattern）的字符序列。
+正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。
+正则表达式可用于执行所有类型的文本搜索和文本替换操作。
+语法
+/pattern/modifiers; 实例
+// 从字符串 str 中提取数字部分的内容(匹配一次)： var str = &amp;#34;abc123def&amp;#34;; var patt1 = /[0-9]+/; document.write(str.match(patt1)); // 输出123 修饰符 修饰符 描述 i 执行对大小写不敏感的匹配 g 执行全局匹配（查找所有匹配而非在找到第一个匹配后停止） m 执行多行匹配 常用模式 名称 语法 说明 实例 实例说明 字符组 [ABC] 匹配 [&amp;hellip;] 中的所有字符 [Pp]ython 匹配 “Python” 或 “python” 非集 [^ABC] 匹配不在集合中的任何字符 [^au] 除了au字母以外的所有字符 区间 [A-Z] 匹配所有大写字母 [a-zA-Z0-9] 匹配任何字母及数字 匹配特殊字符 \- 使用 \ 就可以进行对特殊符号进行转义 \+ 匹配1 + 1 = 2中的加号 元字符 描述 \w 与任意单词字符匹配，等价于[A-Za-z0-9_] \d 与任意数字匹配，[0-9] \s 匹配任何空白字符 (空格, 制表符, 换行符)，[ \f\n\r\t\v] \b 匹配的是单词的边界，例如er\b 可以匹配&amp;quot;never&amp;quot; 中的 &amp;lsquo;er&amp;rsquo;，但不能匹配 &amp;ldquo;verb&amp;rdquo; 中的 &amp;lsquo;er&amp;rsquo; ^和$ ^指定的是一个字符串的开始，$指定的是一个字符串的结束 .</description></item><item><title>[Dig Deeper]--JSON</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-json/</link><pubDate>Fri, 21 May 2021 13:51:34 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/dig-deeper-json/</guid><description>Introduction What is JSON? JSON 指的是 JavaScript 对象表示（JavaScript Object Notation）
+JSON 是一种轻量级的文本格式，用于数据存储和交换
+JSON 具有自我描述性（self-describing），更易理解
+Why use JSON? 由于JSON格式是纯文本的，因此可以很容易地将其发送到服务器或从服务器发送出去，并被任何编程语言用作数据格式。
+JSON vs XML JSON和XML都可以用来从web服务器接收数据。
+JSON类似 XML JSON相比 XML 的不同之处 都是纯文本 JSON没有结束标签 具有“自我描述性”（人类可读） JSON更短 具有层级结构（值中存在值） JSON读写的速度更快 可通过 JavaScript 进行解析 JSON能够使用JS的内建方法进行解析 可使用 AJAX 进行传输 JSON可以使用数组，不使用保留字 Syntax JSON 语法是 JavaScript 语法的子集。</description></item><item><title>[Learn the Basics]--DOM,BOM</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-dombom/</link><pubDate>Wed, 19 May 2021 14:56:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-dombom/</guid><description>DOM 文档对象类型（Document Object Model，DOM）是W3C定义的访问文档的标准：
+“W3C 文档对象模型（DOM）是中立于平台和语言的接口，它允许程序和脚本动态地访问、更新文档的内容、结构和样式。”
+HTML DOM 是 HTML 的标准对象模型和编程接口。它定义了：
+作为对象的 HTML 元素 所有 HTML 元素的属性 访问所有 HTML 元素的方法 所有 HTML 元素的事件 换言之：HTML DOM 是关于如何获取、更改、添加或删除 HTML 元素的标准。
+HTML DOM 树 文档：一个页面就是一个文档，DOM中使用doument表示 元素：页面中的所有标签都是元素，DOM中使用element表示 节点：网页中的所有内容都是节点（标签、属性、文本、注释等），DOM中使用node表示 DOM把以上内容都看作是对象
+查找元素 方法 描述 document.getElementById(id) 通过元素 id 来查找元素 document.getElementsByTagName(name) 通过标签名来查找元素 document.getElementsByClassName(name) 通过类名来查找元素 document.querySelector(&amp;lsquo;选择器&amp;rsquo;) 通过 CSS 选择器查找 HTML 元素 document.</description></item><item><title>[Learn the Basics]--JavaScript(ES5)</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-javascriptes5/</link><pubDate>Tue, 11 May 2021 10:11:33 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-javascriptes5/</guid><description>JS的组成 组成 描述 ECMAScript JavaScript的语法 DOM 页面文档对象类型 BOM 浏览器对象模型 JS使用 在 HTML 中，JavaScript 代码必须位于 &amp;lt;script&amp;gt; 与 &amp;lt;/script&amp;gt; 标签之间。
+内部脚本 脚本可被放置与 HTML 页面的 &amp;lt;body&amp;gt; 或 &amp;lt;head&amp;gt; 部分中，或兼而有之。
+&amp;lt;script&amp;gt; document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = &amp;#34;我的第一段 JavaScript&amp;#34;; &amp;lt;/script&amp;gt; 提示: 把脚本置于 &amp;lt;body&amp;gt;元素的底部，可改善显示速度，因为脚本编译会拖慢显示。
+外部脚本 脚本可放置与外部文件中：
+外部文件：myScript.js
+function myFunction() { document.getElementById(&amp;#34;demo&amp;#34;).innerHTML = &amp;#34;段落被更改。&amp;#34;; } &amp;lt;script src=&amp;#34;myScript.js&amp;#34;&amp;gt;&amp;lt;/script&amp;gt; 注释: 外部脚本不能包含&amp;lt;script&amp;gt;标签。
+在外部文件中放置脚本有如下优势：
+分离了 HTML 和代码 使 HTML 和 JavaScript 更易于阅读和维护 已缓存的 JavaScript 文件可加速页面加载 输入输出语句 方法 说明 归属 window.</description></item></channel></rss>
