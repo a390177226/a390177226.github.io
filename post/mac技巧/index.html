@@ -1,6 +1,5 @@
 <!doctype html><html><head>
-<meta name=generator content="Hugo 0.87.0">
-<title>ZZB's blog</title>
+<title>Mac技巧</title>
 <meta charset=utf-8>
 <meta name=X-UA-Compatible content="IE=edge">
 <meta name=google-site-verification content>
@@ -19,10 +18,11 @@
 <link rel=stylesheet href=https://a390177226.github.io/scss/dark-mode.min.c8808fcf21682127815c96de88e1b749dcb247b5937d839340d8146cf0945a25.css integrity="sha256-yICPzyFoISeBXJbeiOG3SdyyR7WTfYOTQNgUbPCUWiU=" media=screen>
 <script src=https://a390177226.github.io//js/loadCSS.js></script>
 <script>loadCSS("https://fonts.googleapis.com/css?family=Lora|Montserrat|Fira+Mono|Noto+Serif+SC|Material+Icons")</script>
+<script src=https://a390177226.github.io//js/toc-collapse.js></script>
 </head>
 <body>
 <div id=app><div ref=sideContainer class=side-container>
-<a class="a-block nav-head active" href=https://a390177226.github.io/>
+<a class="a-block nav-head false" href=https://a390177226.github.io/>
 <div class=nav-title>
 ZZB's blog
 </div>
@@ -37,7 +37,7 @@ Categories
 <a class="a-block nav-link-item false" href=/tags>
 Tags
 </a>
-<a class="a-block nav-link-item false" href=/post>
+<a class="a-block nav-link-item active" href=/post>
 文章
 </a>
 <a class="a-block nav-link-item false" href=/%E5%89%8D%E7%AB%AF>
@@ -59,6 +59,18 @@ Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">M
 zzb2021.
 </div>
 </div><div ref=extraContainer class=extra-container>
+<div class="toc animated-visibility" :class="{ invisible: scrollY <= 140 }">
+<div class=toc-content>
+<center>- TOC -</center>
+<ul>
+<li>
+<a href=#1 onclick="onNavClick(`#1-nav`)" id=1-nav>
+1
+</a>
+</li>
+</ul>
+</div>
+</div>
 <div class=pagination>
 <a id=globalBackToTop class="pagination-action animated-visibility" href=#top :class="{ invisible: scrollY == 0 }">
 <i class="material-icons pagination-action-icon">
@@ -73,16 +85,6 @@ brightness_4
 brightness_7
 </i>
 </a>
-<div class=pagination-indicator>
-<span style=text-align:center>
-3<br><div style=display:inline-block;transform:rotate(-28deg)>-</div><br>3
-</span>
-</div>
-<a class=pagination-action href=/page/2/>
-<i class="material-icons pagination-action-icon">
-chevron_left
-</i>
-</a>
 </div>
 </div>
 <div class=single-column-drawer-container ref=drawer v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
@@ -94,7 +96,7 @@ Categories
 <a class="a-block drawer-menu-item false" href=/tags>
 Tags
 </a>
-<a class="a-block drawer-menu-item false" href=/post>
+<a class="a-block drawer-menu-item active" href=/post>
 文章
 </a>
 <a class="a-block drawer-menu-item false" href=/%E5%89%8D%E7%AB%AF>
@@ -106,6 +108,18 @@ Research
 <a class="a-block drawer-menu-item false" href=/python>
 Python
 </a>
+<div class=toc>
+<div class=toc-content>
+<center>- TOC -</center>
+<ul>
+<li>
+<a href=#1 onclick="onNavClick(`#1-nav`)" id=1-nav>
+1
+</a>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -141,108 +155,42 @@ brightness_7
 </div>
 <div id=content>
 <div ref=streamContainer class=stream-container>
-<div class="post-list-container post-list-container-no-background">
-<a href=https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%87%8D%E7%82%B9/ class=a-block>
-<div class=post-item-wrapper>
-<div class="post-item post-item-no-divider">
-<div class=post-item-info-wrapper>
-<div class=post-item-title>
-CSS重点
-</div>
-<div class=post-item-summary>
-</div>
-<div class=post-item-meta>
-2021-04-23
-&emsp;
-&emsp;
-</div>
-</div>
-<div class=post-item-image-wrapper>
-<div class=post-item-image style=background-image:url(https://a390177226.github.io/images/html/css.png)></div>
+<div class="post-list-container post-list-container-shadow">
+<div class=post>
+<div class=post-head-wrapper-text-only>
+<div class=post-title>
+Mac技巧
+<div class=post-meta>
+<time itemprop=datePublished>
+2021-08-10 00:20
+</time>
+<i class=material-icons>folder</i>
+<a href=/categories/template>Template</a>
+&nbsp;
 </div>
 </div>
 </div>
-<a href=https://a390177226.github.io/%E5%89%8D%E7%AB%AF/html%E9%87%8D%E7%82%B9/ class=a-block>
-<div class=post-item-wrapper>
-<div class="post-item post-item-no-divider">
-<div class=post-item-info-wrapper>
-<div class=post-item-title>
-HTML重点
-</div>
-<div class=post-item-summary>
-</div>
-<div class=post-item-meta>
-2021-04-21
-&emsp;
-&emsp;
+<div class=post-body-wrapper>
+<div class=post-body v-pre>
+<h1 id=1>1</h1>
+<hr width=100% id=EOF>
+<p style=color:#777>最后修改于 2021-08-10</p>
 </div>
 </div>
-<div class=post-item-image-wrapper>
-<div class=post-item-image style=background-image:url(https://a390177226.github.io/images/html/html.png)></div>
-</div>
-</div>
-</div>
-<a href=https://a390177226.github.io/%E5%89%8D%E7%AB%AF/roadmap/ class=a-block>
-<div class=post-item-wrapper>
-<div class="post-item post-item-no-divider">
-<div class=post-item-info-wrapper>
-<div class=post-item-title>
-前端学习路线
-</div>
-<div class=post-item-summary>
-</div>
-<div class=post-item-meta>
-2021-04-21
-&emsp;
-&emsp;
-</div>
-</div>
-<div class=post-item-image-wrapper>
-<div class=post-item-image style=background-image:url(https://a390177226.github.io/images/html/html+css+js.png)></div>
-</div>
-</div>
-</div>
-<a href=https://a390177226.github.io/post/hugo/ class=a-block>
-<div class=post-item-wrapper>
-<div class="post-item post-item-no-divider">
-<div class=post-item-info-wrapper>
-<div class=post-item-title>
-Hugo+github pages创建个人博客
-</div>
-<div class=post-item-summary>
-My hugo blog
-</div>
-<div class=post-item-meta>
-2021-04-20
-&emsp;
-&emsp;
-</div>
-</div>
-<div class=post-item-image-wrapper>
-<div class=post-item-image style=background-image:url(https://a390177226.github.io/images/hugo-logo-wide.svg)></div>
-</div>
-</div>
-</div>
+<nav class=post-pagination>
+<a class=newer-posts>
+Next<br>No newer posts.
 </a>
-</div>
-</div>
-</div>
-<div class=pagination>
-<a class=pagination-action href=/page/2/ style=opacity:1>
-<i class="material-icons pagination-action-icon">
-chevron_left
-</i>
+<a class=older-posts href=https://a390177226.github.io/post/mac%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/>
+Previous<br>Mac环境配置
 </a>
-<div class=pagination-indicator>
-<span>3/3</span>
+</nav>
+<div class=post-comment-wrapper>
 </div>
-<a class=pagination-action style=opacity:0>
-<i class="material-icons pagination-action-icon">
-chevron_right
-</i>
-</a>
 </div>
-<div id=single-column-footer>
+</div>
+</div>
+</div><div id=single-column-footer>
 Hugo Theme <a href=https://github.com/amazingrise/hugo-theme-diary>Diary</a> by <a href=https://amazingrise.net>Rise</a>
 <br>
 Ported from <a href=https://mak1t0.cc/ target=_blank rel="noreferrer noopener">Makito</a>'s <a href=https://github.com/SumiMakito/hexo-theme-journal/ target=_blank rel="noreferrer noopener">Journal.</a> <br>

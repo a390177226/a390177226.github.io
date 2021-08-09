@@ -1,4 +1,30 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Mon, 09 Aug 2021 22:49:50 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python基础</title><link>https://a390177226.github.io/python/basic/</link><pubDate>Mon, 31 May 2021 18:43:42 +0800</pubDate><guid>https://a390177226.github.io/python/basic/</guid><description>ZZB's blog https://a390177226.github.io/python/basic/ -&lt;h1 id="简介">简介&lt;/h1>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ZZB's blog</title><link>https://a390177226.github.io/</link><description>Recent content on ZZB's blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><copyright>zzb2021.</copyright><lastBuildDate>Tue, 10 Aug 2021 00:20:58 +0800</lastBuildDate><atom:link href="https://a390177226.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>python爬虫[1]--概述</title><link>https://a390177226.github.io/python/webscraper_overview/</link><pubDate>Tue, 01 Jun 2021 18:28:53 +0800</pubDate><guid>https://a390177226.github.io/python/webscraper_overview/</guid><description>ZZB's blog https://a390177226.github.io/python/webscraper_overview/ -&lt;h1 id="links">Links&lt;/h1>
+&lt;p>视频教程&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://www.bilibili.com/video/BV1GQ4y197Vh?p=11">7天学会Python爬虫-轻松爬取各种网站数据实战(2021完整版)| b站&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.bilibili.com/video/BV1Ch411a762?p=4">18天学会Python爬虫基础到进阶（爬虫逆向到起飞）| b站&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://book.apeland.cn/details/79/">路飞学城-学习文档 (apeland.cn)&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h1 id="概述">概述&lt;/h1>
+&lt;p>简单来说，网络爬虫就是自动从互联网中定向或不定向地采集信息的一种程序。&lt;/p>
+&lt;p>应用：搜索引擎、采集数据&lt;/p>
+&lt;h1 id="爬虫的分类">爬虫的分类&lt;/h1>
+&lt;ul>
+&lt;li>&lt;strong>通用爬虫&lt;/strong>：通用爬虫是搜索引擎（Baidu、Google、Yahoo等）“抓取系统”的重要组成部分。主要目的是将互联网上的网页下载到本地，形成一个互联网内容的镜像备份。 简单来讲就是尽可能的；把互联网上的所有的网页下载下来，放到本地服务器里形成备分，在对这些网页做相关处理(提取关键字、去掉广告)，最后提供一个用户检索接口。&lt;/li>
+&lt;li>&lt;strong>聚焦爬虫&lt;/strong>：聚焦爬虫是根据指定的需求抓取网络上指定的数据。例如：获取豆瓣上电影的名称和影评，而不是获取整张页面中所有的数据值。&lt;/li>
+&lt;li>&lt;strong>增量式爬虫&lt;/strong>：增量式是用来检测网站数据更新的情况，且可以将网站更新的数据进行爬取（后期会有章节单独对其展开详细的讲解）。&lt;/li>
+&lt;/ul>
+&lt;h1 id="数据爬取的流程">数据爬取的流程&lt;/h1>
+&lt;ol>
+&lt;li>指定url&lt;/li>
+&lt;li>发起请求&lt;/li>
+&lt;li>获取响应数据&lt;/li>
+&lt;li>数据解析&lt;/li>
+&lt;li>持久化存储&lt;/li>
+&lt;/ol>
+&lt;h1 id="scrapy框架">scrapy框架&lt;/h1>
+&lt;p>异步的爬虫框架&lt;/p>
+- https://a390177226.github.io/python/webscraper_overview/ - zzb2021.</description></item><item><title>Python基础</title><link>https://a390177226.github.io/python/basic/</link><pubDate>Mon, 31 May 2021 18:43:42 +0800</pubDate><guid>https://a390177226.github.io/python/basic/</guid><description>ZZB's blog https://a390177226.github.io/python/basic/ -&lt;h1 id="简介">简介&lt;/h1>
 &lt;p>Python是一门面向对象的、解释型的编程语言。&lt;/p>
 &lt;p>优点：简洁、易学、几乎全能、支持面向对象。&lt;/p>
 &lt;p>应用：数据分析与挖掘、黑客逆向工程、网络爬虫、机器学习、开发Web项目、开发游戏、自动化运维&lt;/p>
@@ -2599,243 +2625,4 @@ ch = k;
 }
 }
 console.log(&lt;span style="color:#cd5555">&amp;#39;最多的字符是&amp;#39;&lt;/span> + ch + &lt;span style="color:#cd5555">&amp;#39;, 出现了&amp;#39;&lt;/span> + max +&lt;span style="color:#cd5555">&amp;#39;次。&amp;#39;&lt;/span>);
-&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-javascriptes5/ - zzb2021.</description></item><item><title>CSS重点</title><link>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%87%8D%E7%82%B9/</link><pubDate>Fri, 23 Apr 2021 14:06:30 +0800</pubDate><guid>https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%87%8D%E7%82%B9/</guid><description>ZZB's blog https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%87%8D%E7%82%B9/ -&lt;h1 id="css-mindmap">CSS Mindmap&lt;/h1>
-&lt;p>&lt;img src="https://a390177226.github.io/images/html/CSS-Mindmap.png" alt="CSS-Mindmap">&lt;/p>
-&lt;h1 id="什么是-css">什么是 CSS？&lt;/h1>
-&lt;ul>
-&lt;li>CSS 指的是层叠样式表(&lt;strong>C&lt;/strong>ascading &lt;strong>S&lt;/strong>tyle &lt;strong>S&lt;/strong>heets)&lt;/li>
-&lt;li>CSS 描述了&lt;strong>如何在屏幕、纸张或其他媒体上显示 HTML 元素&lt;/strong>&lt;/li>
-&lt;li>CSS 也是一种标记语言，用于定义网页的样式，包括针对不同设备和屏幕尺寸的设计和布局&lt;/li>
-&lt;li>CSS &lt;strong>节省了大量工作&lt;/strong>。它可以同时控制多张网页的布局&lt;/li>
-&lt;li>外部样式表存储在 &lt;strong>CSS 文件&lt;/strong>中，只需改一个文件即可更改整个网站的外观&lt;/li>
-&lt;/ul>
-&lt;h1 id="如何添加-css">如何添加 CSS&lt;/h1>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>方式&lt;/th>
-&lt;th>位置&lt;/th>
-&lt;th>特点&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>Inline CSS&lt;/td>
-&lt;td>在相关元素的 &amp;ldquo;style&amp;rdquo; 属性中定义&lt;/td>
-&lt;td>书写方便，权重高&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>Internal CSS&lt;/td>
-&lt;td>在 HTML 页面&lt;code>&amp;lt;head&amp;gt;&lt;/code> 部分内的 &lt;code>&amp;lt;style&amp;gt;&lt;/code> 元素中定义&lt;/td>
-&lt;td>控制一张 HTML 页面的样式&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>External CSS&lt;/td>
-&lt;td>在 HTML 页面 &lt;code>&amp;lt;head&amp;gt;&lt;/code> 部分内的 &lt;code>&amp;lt;link&amp;gt;&lt;/code> 元素中定义&lt;/td>
-&lt;td>控制多个 HTML 页面的样式&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-html" data-lang="html">&lt;span style="color:#1e889b">&amp;lt;!DOCTYPE html&amp;gt;&lt;/span>
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">link&lt;/span> &lt;span style="color:#658b00">rel&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;stylesheet&amp;#34;&lt;/span> &lt;span style="color:#658b00">href&lt;/span>=&lt;span style="color:#cd5555">&amp;#34;mystyle.css&amp;#34;&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">style&lt;/span>&amp;gt;
-&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span> {&lt;span style="color:#8b008b;font-weight:bold">color&lt;/span>:&lt;span style="color:#8b008b;font-weight:bold">blue&lt;/span>}
-&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">style&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">head&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span> &lt;span style="color:#658b00">style&lt;/span>=&lt;span style="color:#cd5555">&amp;#39;color:red&amp;#39;&lt;/span>&amp;gt;This is a heading&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">h1&lt;/span>&amp;gt;
-&amp;lt;&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;This is a paragraph.&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">p&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span>&amp;gt;
-&amp;lt;/&lt;span style="color:#8b008b;font-weight:bold">html&lt;/span>&amp;gt;
-&lt;/code>&lt;/pre>&lt;/div>&lt;p>&amp;ldquo;mystyle.css&amp;rdquo;：&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#eed;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-css" data-lang="css">&lt;span style="color:#8b008b;font-weight:bold">body&lt;/span> {
-&lt;span style="color:#8b008b;font-weight:bold">background-color&lt;/span>: &lt;span style="color:#8b008b;font-weight:bold">lightblue&lt;/span>;
-}
-&lt;/code>&lt;/pre>&lt;/div>&lt;h1 id="css语法">CSS语法&lt;/h1>
-&lt;p>CSS 语法由&lt;strong>选择器&lt;/strong>和&lt;strong>声明块&lt;/strong>组成：&lt;/p>
-&lt;p>&lt;img src="https://a390177226.github.io/images/html/selector.gif" alt="rule-set">&lt;/p>
-&lt;ul>
-&lt;li>选择器指向需要设置样式的 HTML 元素&lt;/li>
-&lt;li>声明块用花括号括起来，包含一条或多条用分号分隔的声明&lt;/li>
-&lt;li>每条声明都包含一个 CSS 属性名称和一个值，以冒号分隔&lt;/li>
-&lt;/ul>
-&lt;h1 id="selectors">Selectors&lt;/h1>
-&lt;p>CSS 选择器用于“查找”（或选取）要设置样式的 HTML 元素。&lt;/p>
-&lt;p>我们可以将 CSS 选择器分为五类：&lt;/p>
-&lt;ul>
-&lt;li>简单选择器（根据名称、id、类来选取元素）&lt;/li>
-&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_combinators.asp">组合器选择器&lt;/a>（根据它们之间的特定关系来选取元素）&lt;/li>
-&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_pseudo_classes.asp">伪类选择器&lt;/a>（根据特定状态选取元素）&lt;/li>
-&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_pseudo_elements.asp">伪元素选择器&lt;/a>（选取元素的一部分并设置其样式）&lt;/li>
-&lt;li>&lt;a href="https://www.w3school.com.cn/css/css_attribute_selectors.asp">属性选择器&lt;/a>（根据属性或属性值来选取元素）&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th style="text-align:left">Simple selectors&lt;/th>
-&lt;th style="text-align:left">Example&lt;/th>
-&lt;th style="text-align:left">Example description&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td style="text-align:left">#id&lt;/td>
-&lt;td style="text-align:left">#firstname&lt;/td>
-&lt;td style="text-align:left">Selects the element with id=“firstname”&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">class&lt;/td>
-&lt;td style="text-align:left">.intro&lt;/td>
-&lt;td style="text-align:left">Selects all elements with class=“intro”&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">element.class&lt;/td>
-&lt;td style="text-align:left">p.intro&lt;/td>
-&lt;td style="text-align:left">Selects only &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements with class=“intro”&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">*&lt;/td>
-&lt;td style="text-align:left">*&lt;/td>
-&lt;td style="text-align:left">Selects all elements&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">element&lt;/td>
-&lt;td style="text-align:left">p&lt;/td>
-&lt;td style="text-align:left">Selects all &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td style="text-align:left">element,element,&amp;hellip;&lt;/td>
-&lt;td style="text-align:left">div, p&lt;/td>
-&lt;td style="text-align:left">Selects all &lt;code>&amp;lt;div&amp;gt;&lt;/code> elements and all &lt;code>&amp;lt;p&amp;gt;&lt;/code> elements&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h1 id="box-model">Box Model&lt;/h1>
-&lt;p>盒模型实质上是一个包围每个 HTML 元素的盒子。它包括：外边距、边框、内边距以及实际的内容。&lt;/p>
-&lt;p>&lt;img src="https://a390177226.github.io/images/html/boxModel.png" alt="Box Model">&lt;/p>
-&lt;h2 id="标准盒模型">标准盒模型&lt;/h2>
-&lt;p>在标准模型中，如果你给盒设置 &lt;code>width&lt;/code> 和 &lt;code>height&lt;/code>，实际设置的是 content。&lt;/p>
-&lt;p>padding 和 border 再加上设置的宽高一起决定整个盒子的大小。&lt;/p>
-&lt;p>&lt;img src="https://a390177226.github.io/images/html/standard-box-model.png" alt="Showing the size of the box when the standard box model is being used.">&lt;/p>
-&lt;h2 id="替代ie盒模型">替代(IE)盒模型&lt;/h2>
-&lt;p>通过设置&lt;code>box-sizing: border-box;&lt;/code>使用IE盒模型，所有宽度都是可见宽度，所以内容宽度是该宽度减去边框和填充部分。&lt;/p>
-&lt;p>&lt;img src="https://a390177226.github.io/images/html/alternate-box-model.png" alt="Showing the size of the box when the alternate box model is being used.">&lt;/p>
-&lt;h1 id="cascade-specificity-inheritance">Cascade, Specificity, Inheritance&lt;/h1>
-&lt;p>层叠、优先级和继承，决定着如何将CSS应用到HTML中，以及如何解决冲突&lt;/p>
-&lt;ul>
-&lt;li>层叠顺序，重要性排序
-&lt;ol>
-&lt;li>&lt;code>!important&lt;/code>可以用来覆盖所有所有优先级计算&lt;/li>
-&lt;li>当应用两条不同级别的规则到一个元素的时候，会根据优先级来选择&lt;/li>
-&lt;li>当应用两条同级别的规则到一个元素的时候，后面的规则覆盖前面的规则&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;li>优先级&lt;/li>
-&lt;/ul>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>选择器&lt;/th>
-&lt;th>千位&lt;/th>
-&lt;th>百位&lt;/th>
-&lt;th>十位&lt;/th>
-&lt;th>个位&lt;/th>
-&lt;th>优先级&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>元素、伪元素选择器&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>&lt;code>0001&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>类、属性、伪类选择器&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>&lt;code>0010&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>id选择器&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>&lt;code>0100&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>内联样式&lt;/td>
-&lt;td>1&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>0&lt;/td>
-&lt;td>&lt;code>1000&lt;/code>&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;blockquote>
-&lt;p>&lt;strong>Note:&lt;/strong> 在进行计算时不允许进行进位，例如，20 个类选择器仅仅意味着 20 个十位，而不能视为两个百位，也就是说，无论多少个类选择器的权重叠加，都不会超过一个 ID 选择器。&lt;/p>
-&lt;/blockquote>
-&lt;ul>
-&lt;li>继承：需要在上下文中去理解
-&lt;ul>
-&lt;li>一些设置在父元素上的css属性是可以被子元素继承的，有些则不能&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;h1 id="layouts">Layouts&lt;/h1>
-&lt;h2 id="display-float-position">Display, float, position&lt;/h2>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Display&lt;/th>
-&lt;th>float&lt;/th>
-&lt;th>position&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>用于控制布局的最重要的 CSS 属性&lt;/td>
-&lt;td>用于定位和格式化内容&lt;/td>
-&lt;td>用于让盒子自由的在某个盒子内移动位置或者固定屏幕中某个位置，并且可以压住其他盒子&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>规定是否/如何显示元素&lt;/td>
-&lt;td>最典型的应用：可以让多个块级元素在一行内排列显示&lt;/td>
-&lt;td>定位=定位模式+边偏移（top、bottom、left 和 right）&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>大多数元素的默认 display 值为 block 或 inline&lt;/td>
-&lt;td>为了避免元素浮动后周围的元素会重新排列，使用 clear 属性清除浮动&lt;/td>
-&lt;td>子绝父相比较常见；z-index 属性指定元素的叠放顺序&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-&lt;h2 id="flexbox-grid">Flexbox, grid&lt;/h2>
-&lt;p>长久以来，CSS 布局中唯一可靠且跨浏览器兼容的创建工具只有 &lt;a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Floats">floats&lt;/a> 和 &lt;a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Positioning">positioning&lt;/a>。这两个工具大部分情况下都很好使，但是在某些方面它们具有一定的局限性，让人难以完成任务。&lt;/p>
-&lt;table>
-&lt;thead>
-&lt;tr>
-&lt;th>Flexbox&lt;/th>
-&lt;th>grid&lt;/th>
-&lt;/tr>
-&lt;/thead>
-&lt;tbody>
-&lt;tr>
-&lt;td>用于按行或按列布局元素的一维布局方法&lt;/td>
-&lt;td>用于web的二维布局系统&lt;/td>
-&lt;/tr>
-&lt;tr>
-&lt;td>可以更轻松地设计灵活的响应式布局结构，而无需使用浮动或定位&lt;/td>
-&lt;td>非常轻松地实现一些复杂的布局&lt;/td>
-&lt;/tr>
-&lt;/tbody>
-&lt;/table>
-- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/css%E9%87%8D%E7%82%B9/ - zzb2021.</description></item></channel></rss>
+&lt;/code>&lt;/pre>&lt;/div>- https://a390177226.github.io/%E5%89%8D%E7%AB%AF/learn-the-basics-javascriptes5/ - zzb2021.</description></item></channel></rss>
